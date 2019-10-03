@@ -26,6 +26,103 @@
 
 
 
+  <xsl:template match="category">
+    <xsl:variable name="d">
+      <xsl:text>../</xsl:text>
+      <xsl:value-of select="$lang"/>
+      <xsl:text>/</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>.xml</xsl:text>
+    </xsl:variable>
+    <xsl:variable name="p">
+      <xsl:text>document('</xsl:text>
+      <xsl:value-of select="$d"/>
+      <xsl:text>')/styleguide/category[@id='</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>']</xsl:text>
+    </xsl:variable>
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates>
+	<xsl:with-param name="t" select="$p"/>
+      </xsl:apply-templates>
+    </xsl:element>
+  </xsl:template>
+
+
+
+  <xsl:template match="category/subcategory">
+    <xsl:variable name="d">
+      <xsl:text>../</xsl:text>
+      <xsl:value-of select="$lang"/>
+      <xsl:text>/</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>.xml</xsl:text>
+    </xsl:variable>
+    <xsl:variable name="p">
+      <xsl:text>document('</xsl:text>
+      <xsl:value-of select="$d"/>
+      <xsl:text>')/styleguide/category/subcategory[@id='</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>']</xsl:text>
+    </xsl:variable>
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates>
+	<xsl:with-param name="t" select="$p"/>
+      </xsl:apply-templates>
+    </xsl:element>
+  </xsl:template>
+
+
+
+  <xsl:template match="category/subcategory/subcategory">
+    <xsl:variable name="d">
+      <xsl:text>../</xsl:text>
+      <xsl:value-of select="$lang"/>
+      <xsl:text>/</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>.xml</xsl:text>
+    </xsl:variable>
+    <xsl:variable name="p">
+      <xsl:text>document('</xsl:text>
+      <xsl:value-of select="$d"/>
+      <xsl:text>')/styleguide/category/subcategory/subcategory[@id='</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>']</xsl:text>
+    </xsl:variable>
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates>
+	<xsl:with-param name="t" select="$p"/>
+      </xsl:apply-templates>
+    </xsl:element>
+  </xsl:template>
+
+
+
+  <xsl:template match="name|description|overall-impression|aroma|appearance|flavor|mouthfeel|comments|history|characteristic-ingredients|style-comparison|entry-instructions|commercial-examples">
+    <xsl:param name="t"/>
+    <xsl:variable name="p">
+      <xsl:value-of select="$t"/>
+      <xsl:text>/</xsl:text>
+      <xsl:value-of select="local-name(.)"/>
+    </xsl:variable>
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates select="@*"/>
+      <xsl:choose>
+	<xsl:when test="dyn:evaluate($p)">
+	  <xsl:apply-templates select="dyn:evaluate($p)/* | dyn:evaluate($p)/text()"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:apply-templates/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
+
+
+
   <xsl:template match="@*">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -36,6 +133,10 @@
 
 
   <xsl:template match="text()">
+    <xsl:copy>
+      <xsl:apply-templates/>
+    </xsl:copy>
+<!--
     <xsl:variable name="d">
       <xsl:value-of select="$lang"/>
       <xsl:text>/</xsl:text>
@@ -52,6 +153,7 @@
 	</xsl:copy>
       </xsl:otherwise>
     </xsl:choose>
+-->
   </xsl:template>
 
 

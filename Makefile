@@ -15,10 +15,11 @@ orig: bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-split.xsl
 	if [ ! -d orig ] ; then mkdir orig ; fi
 	xsltproc xsl/bjcp-2015-styleguide-split.xsl bjcp-2015-styleguide-orig.xml
 
-bjcp-2015-styleguide-de.xml: orig xsl/bjcp-2015-styleguide-translate.xsl
+bjcp-2015-styleguide-de.xml: orig de xsl/bjcp-2015-styleguide-translate.xsl
 	xsltproc --stringparam lang de xsl/bjcp-2015-styleguide-translate.xsl bjcp-2015-styleguide-orig.xml > bjcp-2015-styleguide-de.xml
 
 clean:
 	rm -rf cache orig
 	rm -f bjcp-2015-styleguide-orig.xml
+	rm -f bjcp-2015-styleguide-de.xml
 
