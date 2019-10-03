@@ -5,14 +5,15 @@ before_script:
 
 stages:
   - build
-  - test
 
 build:
   stage: build
   script:
     - make
-test:
-  stage: test
-  script:
     - make test
+  artifacts:
+    paths:
+    - bjcp-2015-styleguide-orig.xml
+    - bjcp-2015-styleguide-de.xml
+    expire_in: 1 week
 
