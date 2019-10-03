@@ -1,7 +1,4 @@
 <?xml version="1.0"?>
-
-
-
 <xsl:stylesheet 
     version="1.0" 
     xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
@@ -12,6 +9,10 @@
     xmlns:date="http://exslt.org/dates-and-times"
     xmlns:dyn="http://exslt.org/dynamic"
     extension-element-prefixes="exsl str dyn date">
+
+
+
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
 

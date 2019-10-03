@@ -1,7 +1,4 @@
 <?xml version="1.0"?>
-
-
-
 <xsl:stylesheet 
     version="1.0" 
     xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
@@ -85,7 +82,7 @@
         </xsl:element>
       </xsl:if>
 
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro"/>
+      <xsl:call-template name="style-intro"/>
 
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Entry Instructions</xsl:with-param>
@@ -144,7 +141,7 @@
         </xsl:element>
       </xsl:if>
 
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro"/>
+      <xsl:call-template name="style-intro"/>
 
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Overall Impression</xsl:with-param>
@@ -506,20 +503,33 @@
 
 
 
-  <xsl:template match="w:p" mode="style-intro">
+  <xsl:template name="style-intro">
+    <xsl:variable name="nodeset">
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro-recur"/>
+    </xsl:variable>
+    <xsl:if test="string-length($nodeset) >= 1">
+      <xsl:element name="description">
+	<xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro-recur"/>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
+ 
+
+
+  <xsl:template match="w:p" mode="style-intro-recur">
     <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
       <xsl:if test="((w:pPr/w:pStyle/@w:val = 'StyleIntro') or (w:pPr/w:pStyle/@w:val = 'StyleIntroLast')) and (not(w:r/w:t = 'Entry Instructions:'))">
-        <xsl:element name="description">
+        <xsl:element name="p">
           <xsl:apply-templates select="w:r"/>
         </xsl:element>
         <xsl:if test="add-de">
-          <xsl:element name="description">
+          <xsl:element name="p">
             <xsl:attribute name="lang">de</xsl:attribute>
             <!-- translation to be entered here --><xsl:text> </xsl:text>
           </xsl:element>
         </xsl:if>
       </xsl:if>
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro"/>
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro-recur"/>
     </xsl:if>
   </xsl:template>
  
