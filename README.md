@@ -49,3 +49,4 @@ Contact:
 - Add clear words to honor the original BJCP work.
 - Care about copyright questions. Add LICENSE file.
 - Add Acknowledgements to all contributors.
+- Implement links.
