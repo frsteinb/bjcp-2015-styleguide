@@ -4,22 +4,21 @@
 
 This is a new approach to achieve two goals:
 
-- tranlating BJCP documents (primarily the beer styleguide 2015) to the German language (in a way that easily allows to add further languages),
+- tranlating BJCP documents (so far, we care only about the 2015 beer styleguide) to the German language (in a way that easily allows to add further languages),
 - establishing an XML form of the styleguide in order to support a flexible transformation architecture for a variety of destination formats.
 
 ## Concept & Roadmap
 
-- Create a consistent XML representation from the original BJCP styleguide docx document.
-- Double-check its consitency, which is not implcit, because of potential typos and inconsistencies in the manually crafted original Word document.
-- Continuously add and update translated content in the German "de" folder.
+- Create a consistent XML representation from the original BJCP styleguide docx document. This will require some hacks, since the original document is hand-crafted and thus shows some inconsistencies.
+- Continuously add and update translated content.
 - Develop a XSL tranformation to rebuild a (partially) translated XML styleguide.
 - Develop XSL / XSL-FO (maybe LaTeX) backends to create PDF, HTML and potentially other destination documents.
 
 ## Procedure
 
-- If you are just curious about the current state of this project's results, you make take a look at the so called "[artifacts](https://gitlab.ibr.cs.tu-bs.de/steinb/bjcp-2015-styleguide/-/jobs/artifacts/master/download?job=build)" at the GitLab repository at  which are automatically rebuilt after each commit.
+- If you are just curious about the current state of this project's results, you may take a look at the so called "[artifacts](https://gitlab.ibr.cs.tu-bs.de/steinb/bjcp-2015-styleguide/-/jobs/artifacts/master/download?job=build)" of the GitLab repository which get automatically rebuilt after each commit.
 
-- MacOS systems should have the required tools. On Linux you should install some packages, e.g. on Ubuntu:
+- MacOS systems should have the required tools when the XCode App is installed. On Linux you should install some packages, e.g. on Ubuntu:
   ```
   apt install make curl libxml2-utils xsltproc
   ```
