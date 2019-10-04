@@ -4,7 +4,7 @@
 
 This is a new approach to achieve two goals:
 
-- tranlating BJCP documents (primarily the beer styleguide 2015) to the German language (in a war that easily allows to add further languages),
+- tranlating BJCP documents (primarily the beer styleguide 2015) to the German language (in a way that easily allows to add further languages),
 - establishing an XML form of the styleguide in order to support a flexible transformation architecture for a variety of destination formats.
 
 ## Concept & Roadmap
@@ -49,7 +49,8 @@ Contact:
 
 - Add clear words to honor the original BJCP word.
 - Care about copyright questions. Add LICENSE file.
-- pay special attention to:
+- Add Acknowledgements to all contributors.
+- Minor: Pay special attention to:
   - specs: Saison (standard, pale, dark, ...)
   - specs: Lambic (varies w/ fruit)
   - specs: Tropical Stout (missing some numbers)

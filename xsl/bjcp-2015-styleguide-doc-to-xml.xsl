@@ -2,13 +2,10 @@
 <xsl:stylesheet 
     version="1.0" 
     xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common"
     xmlns:str="http://exslt.org/strings"
-    xmlns:date="http://exslt.org/dates-and-times"
-    xmlns:dyn="http://exslt.org/dynamic"
-    extension-element-prefixes="exsl str dyn date">
+    extension-element-prefixes="exsl str">
 
 
 

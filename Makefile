@@ -1,5 +1,5 @@
 
-default: bjcp-2015-styleguide-orig.xml orig bjcp-2015-styleguide-de.xml
+default: bjcp-2015-styleguide-orig.xml orig bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html
 
 cache/2015_Guidelines_Beer.docx:
 	if [ ! -d cache ] ; then mkdir cache ; fi
@@ -17,6 +17,12 @@ orig: bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-split.xsl
 
 bjcp-2015-styleguide-de.xml: orig de xsl/bjcp-2015-styleguide-translate.xsl
 	xsltproc --stringparam lang de xsl/bjcp-2015-styleguide-translate.xsl bjcp-2015-styleguide-orig.xml > bjcp-2015-styleguide-de.xml
+
+bjcp-2015-styleguide-orig.html: xsl/bjcp-2015-styleguide-html.xsl
+	xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-orig.xml > bjcp-2015-styleguide-orig.html
+
+bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl
+	xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.html
 
 test: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	xmllint --noout bjcp-2015-styleguide-orig.xml
