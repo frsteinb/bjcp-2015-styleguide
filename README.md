@@ -47,11 +47,10 @@ Contact:
 
 ## TODO
 
-- Add clear words to honor the original BJCP word.
+- Add clear words to honor the original BJCP work.
 - Care about copyright questions. Add LICENSE file.
 - Add Acknowledgements to all contributors.
 - Minor: Pay special attention to:
-  - specs: Saison (standard, pale, dark, ...)
-  - specs: Lambic (varies w/ fruit)
-  - specs: Tropical Stout (missing some numbers)
-  - specs: Specialty IPA (Strength classification)
+  - specs variants: 25B Saison (standard, pale, dark)
+    --> fix/* !!!
+

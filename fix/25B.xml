@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide>
+  <category id="25">
+    <subcategory id="25B">
+      <!-- This subcategory is the only one that sub-groups the style in the vital statistics section. For a consistent machine readbale specs section, we would like to have pure numbers here. Therefore we move the "sub-specs" to the entry instructions section, where we think it really belongs. -->
+      <entry-instructions>The entrant <span class="bold">must</span> specify the <span class="italic">strength</span> (table: 3.5-5.0%, standard: 5.0-7.0%, super: 7.0-9.5%) and the <span class="italic">color</span> (pale: SRM 5-14, dark: SRM 15-22).</entry-instructions>
+      <specs>
+        <ibu min="20" max="35"/>
+        <srm min="5" max="22" ebc-min="10" ebc-max="43"/>
+        <og min="1.048" max="1.065" plato-min="11.9" plato-max="15.9"/>
+        <fg min="1.002" max="1.008" plato-min="0.5" plato-max="2.1"/>
+        <abv min="3.5" max="9.5"/>
+      </specs>
+    </subcategory>
+  </category>
+</styleguide>

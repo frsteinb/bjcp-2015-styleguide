@@ -32,4 +32,6 @@ clean:
 	rm -rf cache orig
 	rm -f bjcp-2015-styleguide-orig.xml
 	rm -f bjcp-2015-styleguide-de.xml
+	rm -f bjcp-2015-styleguide-orig.html
+	rm -f bjcp-2015-styleguide-de.html
 

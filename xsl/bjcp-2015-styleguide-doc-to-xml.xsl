@@ -5,7 +5,11 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common"
     xmlns:str="http://exslt.org/strings"
-    extension-element-prefixes="exsl str">
+    xmlns:math="http://exslt.org/math"
+    xmlns:dyn="http://exslt.org/dynamic"
+    xmlns:func="http://exslt.org/functions"
+    xmlns:b="http://frankensteiner.familie-steinberg.org/bjcp-tools"
+    extension-element-prefixes="exsl str math dyn func">
 
 
 
@@ -14,6 +18,22 @@
 
 
   <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+
+
+
+  <func:function name="b:srmToEbc">
+    <xsl:param name="in"/>
+    <!--<func:result select="round($in div 0.508 * 10) div 10"/>-->
+    <func:result select="round($in div 0.508)"/>
+  </func:function>
+
+
+
+  <func:function name="b:sgToPlato">
+    <xsl:param name="in"/>
+    <!-- https://www.brewersfriend.com/plato-to-sg-conversion-chart/ -->
+    <func:result select="round(((-1 * 616.868) + (1111.14 * $in) - (630.272 * math:power($in,2)) + (135.997 * math:power($in,3))) * 10) div 10"/>
+  </func:function>
 
 
 
@@ -110,16 +130,19 @@
   <xsl:template name="subcategory">
     <xsl:param name="id"/>
     <xsl:param name="title"/>
+    <xsl:variable name="id0">
+      <xsl:choose>
+	<xsl:when test="contains($title,'.')">
+	  <xsl:value-of select="substring-before($title,'. ')"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="$id"/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:element name="subcategory">
       <xsl:attribute name="id">
-        <xsl:choose>
-          <xsl:when test="contains($title,'.')">
-            <xsl:value-of select="substring-before($title,'. ')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="$id"/>
-          </xsl:otherwise>
-        </xsl:choose>
+	<xsl:value-of select="$id0"/>
       </xsl:attribute>
       <xsl:element name="name">
         <xsl:choose>
@@ -142,50 +165,69 @@
 
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Overall Impression</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Aroma</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Appearance</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Flavor</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Mouthfeel</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Comments</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">History</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Characteristic Ingredients</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Style Comparison</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Entry Instructions</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
 
       <!--
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Currently Defined Types</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       -->
       <!-- TODO: Currently Defined Types sollte implizit klar sein. -->
 
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="specs"/>
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="specs">
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
+      </xsl:apply-templates>
 
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="strengths"/>
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="strengths">
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
+      </xsl:apply-templates>
 
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Commercial Examples</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="tags"/>
+
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="tags">
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
+      </xsl:apply-templates>
 
       <xsl:if test="not($id)">
         <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-subcategory">
@@ -203,125 +245,228 @@
 
   <xsl:template match="w:p" mode="attribute">
     <xsl:param name="attribute"/>
-    <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
-      <xsl:if test="translate(substring(w:r/w:t,1,string-length($attribute)),'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-') = translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')">
-        <xsl:variable name="n">
-          <xsl:value-of select="translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/>
-        </xsl:variable>
-        <xsl:element name="{$n}">
-          <xsl:apply-templates select="w:r[position() >= 2]"/>
-        </xsl:element>
-        <xsl:if test="add-de">
-          <xsl:element name="{$n}">
-            <xsl:attribute name="lang">de</xsl:attribute>
-            <!-- translation to be entered here --><xsl:text> </xsl:text>
-          </xsl:element>
-        </xsl:if>
-      </xsl:if>
+    <xsl:param name="id"/>
+    <xsl:variable name="n">
+      <xsl:value-of select="translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/>
+    </xsl:variable>
+    <xsl:variable name="p">
+      <xsl:text>document('../fix/</xsl:text>
+      <xsl:value-of select="$id"/>
+      <xsl:text>.xml')/styleguide//*[@id='</xsl:text>
+      <xsl:value-of select="$id"/>
+      <xsl:text>']/</xsl:text>
+      <xsl:value-of select="$n"/>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="(string-length($id) > 0) and (string-length(dyn:evaluate($p)/text()) > 0)">
+	<xsl:apply-templates select="dyn:evaluate($p)" mode="copy"/>
+	<xsl:if test="add-de">
+	  <xsl:element name="{$n}">
+	    <xsl:attribute name="lang">de</xsl:attribute>
+	    <!-- translation to be entered here --><xsl:text> </xsl:text>
+	  </xsl:element>
+	</xsl:if>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
+          <xsl:if test="translate(substring(w:r/w:t,1,string-length($attribute)),'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-') = translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')">
+            <xsl:element name="{$n}">
+              <xsl:apply-templates select="w:r[position() >= 2]"/>
+            </xsl:element>
+            <xsl:if test="add-de">
+              <xsl:element name="{$n}">
+                <xsl:attribute name="lang">de</xsl:attribute>
+                <!-- translation to be entered here --><xsl:text> </xsl:text>
+              </xsl:element>
+            </xsl:if>
+          </xsl:if>
 
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
-        <xsl:with-param name="attribute">
-          <xsl:value-of select="$attribute"/>
-        </xsl:with-param>
-      </xsl:apply-templates>
-    </xsl:if>
+          <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
+            <xsl:with-param name="attribute">
+              <xsl:value-of select="$attribute"/>
+            </xsl:with-param>
+          </xsl:apply-templates>
+        </xsl:if>
+
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
  
 
 
   <xsl:template match="w:p" mode="specs">
-    <xsl:variable name="s1">
-      <xsl:apply-templates select="." mode="specs-recur"/>
+    <xsl:param name="id"/>
+    <xsl:variable name="p">
+      <xsl:text>document('../fix/</xsl:text>
+      <xsl:value-of select="$id"/>
+      <xsl:text>.xml')/styleguide//*[@id='</xsl:text>
+      <xsl:value-of select="$id"/>
+      <xsl:text>']/specs</xsl:text>
     </xsl:variable>
-    <xsl:variable name="s2">
-      <xsl:value-of select="str:replace($s1,'Vital Statistics:','')"/>
-    </xsl:variable>
-    <xsl:variable name="s3">
-      <xsl:value-of select="str:replace($s2,'::',':')"/>
-    </xsl:variable>
-    <xsl:variable name="s4">
-      <xsl:value-of select="str:replace($s3,' ','')"/>
-    </xsl:variable>
-    <xsl:variable name="s5">
-      <xsl:value-of select="str:replace($s4,'%','')"/>
-    </xsl:variable>
-    <xsl:variable name="s">
-      <xsl:value-of select="str:replace($s5,'(variesw/fruit)','')"/>
-    </xsl:variable>
-    <xsl:if test="(string-length($s) > 0) and (contains($s,'IBU'))">
-      <xsl:element name="specs">
-
-        <xsl:if test="contains($s,'IBUs:')">
-          <xsl:element name="ibu">
-            <xsl:attribute name="min">
-              <xsl:value-of select="substring-before(substring-after($s,'IBUs:'),'–')"/>
-            </xsl:attribute>
-            <xsl:attribute name="max">
-              <xsl:value-of select="substring-before(substring-after(substring-after($s,'IBUs:'),'–'),':')"/>
-            </xsl:attribute>
-          </xsl:element>
-        </xsl:if>
-
-        <xsl:if test="contains($s,'SRM:')">
-          <xsl:element name="srm">
-            <xsl:attribute name="min">
-              <xsl:value-of select="substring-before(substring-after($s,'SRM:'),'–')"/>
-            </xsl:attribute>
-            <xsl:attribute name="max">
-              <xsl:value-of select="substring-before(substring-after(substring-after($s,'SRM:'),'–'),':')"/>
-            </xsl:attribute>
-          </xsl:element>
-        </xsl:if>
-
-        <xsl:if test="contains($s,'OG:')">
-          <xsl:element name="og">
-            <xsl:attribute name="min">
-              <xsl:value-of select="substring-before(substring-after($s,'OG:'),'–')"/>
-            </xsl:attribute>
-            <xsl:attribute name="max">
-              <xsl:value-of select="substring-before(substring-after(substring-after($s,'OG:'),'–'),':')"/>
-            </xsl:attribute>
-          </xsl:element>
-        </xsl:if>
-
-        <xsl:if test="contains($s,'FG:')">
-          <xsl:element name="fg">
-            <xsl:attribute name="min">
-              <xsl:value-of select="substring-before(substring-after($s,'FG:'),'–')"/>
-            </xsl:attribute>
-            <xsl:attribute name="max">
-              <xsl:value-of select="substring-before(substring-after(substring-after($s,'FG:'),'–'),':')"/>
-            </xsl:attribute>
-          </xsl:element>
-        </xsl:if>
-
-        <xsl:if test="contains($s,'ABV:')">
-          <xsl:element name="abv">
-            <xsl:attribute name="min">
-              <xsl:value-of select="substring-before(substring-after($s,'ABV:'),'–')"/>
-            </xsl:attribute>
-            <xsl:attribute name="max">
-              <xsl:value-of select="substring-before(substring-after(substring-after($s,'ABV:'),'–'),':')"/>
-            </xsl:attribute>
-          </xsl:element>
-        </xsl:if>
-
-      </xsl:element>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="(string-length($id) > 0) and (string-length(dyn:evaluate($p)/text()) > 0)">
+	<xsl:apply-templates select="dyn:evaluate($p)" mode="copy"/>
+	<xsl:if test="add-de">
+	  <xsl:element name="{$n}">
+	    <xsl:attribute name="lang">de</xsl:attribute>
+	    <!-- translation to be entered here --><xsl:text> </xsl:text>
+	  </xsl:element>
+	</xsl:if>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:variable name="s1">
+	  <xsl:apply-templates select="." mode="specs-recur"/>
+	</xsl:variable>
+	<xsl:variable name="s2">
+	  <xsl:value-of select="str:replace($s1,'Vital Statistics:','')"/>
+	</xsl:variable>
+	<xsl:variable name="s3">
+	  <xsl:value-of select="str:replace($s2,'::',':')"/>
+	</xsl:variable>
+	<xsl:variable name="s4">
+	  <xsl:value-of select="str:replace($s3,'%','')"/>
+	</xsl:variable>
+	<xsl:variable name="s5">
+	  <xsl:value-of select="str:replace($s4,'(varies w/ fruit)','')"/>
+	</xsl:variable>
+	<xsl:variable name="s">
+	  <xsl:value-of select="str:replace($s5,' ','')"/>
+	</xsl:variable>
+	<xsl:if test="string-length($s) > 0">
+	  <xsl:choose>
+	    <xsl:when test="contains($s,'IBUs:')">
+	      <xsl:element name="specs">
+		<xsl:if test="contains($s,'IBUs:')">
+		  <xsl:element name="ibu">
+		    <xsl:choose>
+		      <xsl:when test="contains(substring-before(substring-after($s5,'IBUs:'),':'),'–')">
+			<xsl:attribute name="min">
+			  <xsl:value-of select="substring-before(substring-after($s,'IBUs:'),'–')"/>
+			</xsl:attribute>
+			<xsl:attribute name="max">
+			  <xsl:value-of select="substring-before(substring-after(substring-after($s,'IBUs:'),'–'),':')"/>
+			</xsl:attribute>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:value-of select="normalize-space(substring-before(substring-after($s5,'IBUs:'),':'))"/>
+		      </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:element>
+		</xsl:if>
+		<xsl:if test="contains($s,'SRM:')">
+		  <xsl:element name="srm">
+		    <xsl:choose>
+		      <xsl:when test="contains(substring-before(substring-after($s5,'SRM:'),':'),'–')">
+			<xsl:attribute name="min">
+			  <xsl:value-of select="substring-before(substring-after($s,'SRM:'),'–')"/>
+			</xsl:attribute>
+			<xsl:attribute name="max">
+			  <xsl:value-of select="substring-before(substring-after(substring-after($s,'SRM:'),'–'),':')"/>
+			</xsl:attribute>
+			<xsl:attribute name="ebc-min">
+			  <xsl:value-of select="b:srmToEbc(substring-before(substring-after($s,'SRM:'),'–'))"/>
+			</xsl:attribute>
+			<xsl:attribute name="ebc-max">
+			  <xsl:value-of select="b:srmToEbc(substring-before(substring-after(substring-after($s,'SRM:'),'–'),':'))"/>
+			</xsl:attribute>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:value-of select="normalize-space(substring-before(substring-after($s5,'SRM:'),':'))"/>
+		      </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:element>
+		</xsl:if>
+		<xsl:if test="contains($s,'OG:')">
+		  <xsl:element name="og">
+		    <xsl:choose>
+		      <xsl:when test="contains(substring-before(substring-after($s5,'OG:'),':'),'–')">
+			<xsl:attribute name="min">
+			  <xsl:value-of select="substring-before(substring-after($s,'OG:'),'–')"/>
+			</xsl:attribute>
+			<xsl:attribute name="max">
+			  <xsl:value-of select="substring-before(substring-after(substring-after($s,'OG:'),'–'),':')"/>
+			</xsl:attribute>
+			<xsl:attribute name="plato-min">
+			  <xsl:value-of select="b:sgToPlato(substring-before(substring-after($s,'OG:'),'–'))"/>
+			</xsl:attribute>
+			<xsl:attribute name="plato-max">
+			  <xsl:value-of select="b:sgToPlato(substring-before(substring-after(substring-after($s,'OG:'),'–'),':'))"/>
+			</xsl:attribute>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:value-of select="normalize-space(substring-before(substring-after($s5,'OG:'),':'))"/>
+		      </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:element>
+		</xsl:if>
+		<xsl:if test="contains($s,'FG:')">
+		  <xsl:element name="fg">
+		    <xsl:choose>
+		      <xsl:when test="contains(substring-before(substring-after($s5,'FG:'),':'),'–')">
+			<xsl:attribute name="min">
+			  <xsl:value-of select="substring-before(substring-after($s,'FG:'),'–')"/>
+			</xsl:attribute>
+			<xsl:attribute name="max">
+			  <xsl:value-of select="substring-before(substring-after(substring-after($s,'FG:'),'–'),':')"/>
+			</xsl:attribute>
+			<xsl:attribute name="plato-min">
+			  <xsl:value-of select="b:sgToPlato(substring-before(substring-after($s,'FG:'),'–'))"/>
+			</xsl:attribute>
+			<xsl:attribute name="plato-max">
+			  <xsl:value-of select="b:sgToPlato(substring-before(substring-after(substring-after($s,'FG:'),'–'),':'))"/>
+			</xsl:attribute>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:value-of select="normalize-space(substring-before(substring-after($s5,'FG:'),':'))"/>
+		      </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:element>
+		</xsl:if>
+		<xsl:if test="contains($s,'ABV:')">
+		  <xsl:element name="abv">
+		    <xsl:choose>
+		      <xsl:when test="contains(substring-before(substring-after($s5,'ABV:'),':'),'–')">
+			<xsl:attribute name="min">
+			  <xsl:value-of select="substring-before(substring-after($s,'ABV:'),'–')"/>
+			</xsl:attribute>
+			<xsl:attribute name="max">
+			  <xsl:value-of select="substring-before(substring-after(substring-after($s,'ABV:'),'–'),':')"/>
+			</xsl:attribute>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:value-of select="normalize-space(substring-before(substring-after($s5,'ABV:'),':'))"/>
+		      </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:element>
+		</xsl:if>
+	      </xsl:element>      
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <xsl:element name="specs">
+		<xsl:value-of select="normalize-space(str:replace($s5,':',''))"/>
+	      </xsl:element>
+	    </xsl:otherwise>
+	  </xsl:choose>
+	</xsl:if>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
-
+    
 
 
   <xsl:template match="w:p" mode="specs-recur">
-    <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
-      <xsl:if test="w:pPr/w:pStyle/@w:val = 'Specs' or w:pPr/w:pStyle/@w:val = 'SpecsLast' or w:r/w:t = 'SRM:'">
+    <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2') and not(w:r/w:t = 'Strength classifications:')">
+      <xsl:if test="w:pPr/w:pStyle/@w:val = 'Specs' or w:pPr/w:pStyle/@w:val = 'SpecsLast' or w:r/w:t = 'SRM:' or w:r/w:t = 'IBUs:' or normalize-space(w:r/w:t) = 'Vital Statistics:'">
         <xsl:variable name="s">
           <xsl:for-each select="w:r/w:t | w:r/w:tab">
             <xsl:if test="local-name() = 'tab'">:</xsl:if>
             <xsl:value-of select="text()"/>
           </xsl:for-each>
         </xsl:variable>
-        <xsl:value-of select="$s"/>
+        <xsl:variable name="shack"> <!-- hack for SRM in 33B -->
+	  <xsl:value-of select="str:replace($s,':often','often')"/>
+        </xsl:variable>
+        <xsl:value-of select="$shack"/>
         <xsl:text>:</xsl:text>
       </xsl:if>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="specs-recur"/>
@@ -331,6 +476,7 @@
 
 
   <xsl:template match="w:p" mode="strengths">
+    <xsl:param name="id"/>
     <xsl:param name="bingo"/>
     <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
       <xsl:choose>
@@ -367,6 +513,7 @@
 
 
   <xsl:template match="w:p" mode="tags">
+    <xsl:param name="id"/>
     <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
       <xsl:if test="substring(w:r/w:t,1,4) = 'Tags'">
         <xsl:element name="tags">
@@ -537,6 +684,24 @@
 
   <xsl:template match="text()">
     <xsl:value-of select="normalize-space(.)"/>
+  </xsl:template>
+
+
+
+  <xsl:template match="*" mode="copy">
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates select="@*" mode="copy"/>
+      <xsl:apply-templates mode="copy"/>
+    </xsl:element>
+  </xsl:template>
+
+
+
+  <xsl:template match="@* | text()" mode="copy">
+    <xsl:copy>
+      <xsl:apply-templates select="@*" mode="copy"/>
+      <xsl:apply-templates mode="copy"/>
+    </xsl:copy>
   </xsl:template>
 
 

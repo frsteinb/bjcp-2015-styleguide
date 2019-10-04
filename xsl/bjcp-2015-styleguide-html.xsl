@@ -98,6 +98,9 @@ styleguide commercial-examples:before {
 styleguide tags:before {
   content: "Tags: ";
 }
+styleguide strength-classifications:before {
+  content: "Strength Classifications: ";
+}
 
 styleguide overall-impression,
 styleguide aroma,
@@ -111,7 +114,8 @@ styleguide style-comparison,
 styleguide specs,
 styleguide entry-instructions,
 styleguide commercial-examples,
-styleguide tags {
+styleguide tags,
+styleguide strength-classifications {
   position: relative;
   margin-left: 1em;
   display: block;
@@ -129,7 +133,8 @@ styleguide style-comparison:before,
 styleguide specs:before,
 styleguide entry-instructions:before,
 styleguide commercial-examples:before,
-styleguide tags:before {
+styleguide tags:before,
+styleguide strength-classifications:before {
   font-weight: bold;
 }
 
@@ -170,38 +175,66 @@ styleguide specs div * {
 
   <xsl:template match="specs" mode="copy">
     <xsl:element name="specs">
-      <xsl:element name="div">
-        <xsl:element name="div">
-  	<xsl:attribute name="class">ibu</xsl:attribute>
-  	<xsl:value-of select="ibu/@min"/>
-  	<xsl:text> - </xsl:text>
-  	<xsl:value-of select="ibu/@max"/>
-        </xsl:element>
-        <xsl:element name="div">
-  	<xsl:attribute name="class">srm</xsl:attribute>
-  	<xsl:value-of select="srm/@min"/>
-  	<xsl:text> - </xsl:text>
-  	<xsl:value-of select="srm/@max"/>
-        </xsl:element>
-        <xsl:element name="div">
-  	<xsl:attribute name="class">og</xsl:attribute>
-  	<xsl:value-of select="og/@min"/>
-  	<xsl:text> - </xsl:text>
-  	<xsl:value-of select="og/@max"/>
-        </xsl:element>
-        <xsl:element name="div">
-  	<xsl:attribute name="class">fg</xsl:attribute>
-  	<xsl:value-of select="fg/@min"/>
-  	<xsl:text> - </xsl:text>
-  	<xsl:value-of select="fg/@max"/>
-        </xsl:element>
-        <xsl:element name="div">
-  	<xsl:attribute name="class">abv</xsl:attribute>
-  	<xsl:value-of select="abv/@min"/>
-  	<xsl:text> - </xsl:text>
-  	<xsl:value-of select="abv/@max"/>
-        </xsl:element>
-      </xsl:element>
+      <xsl:value-of select="./text()"/>
+      <xsl:if test="ibu or srm or og or fg or abv">
+	<xsl:element name="div">
+	  <xsl:if test="ibu">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">ibu</xsl:attribute>
+	      <xsl:if test="ibu/@min">
+		<xsl:value-of select="ibu/@min"/>
+		<xsl:text> - </xsl:text>
+		<xsl:value-of select="ibu/@max"/>
+	      </xsl:if>
+	      <xsl:value-of select="normalize-space(ibu/text())"/>
+	    </xsl:element>
+	  </xsl:if>
+	  <xsl:if test="srm">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">srm</xsl:attribute>
+	      <xsl:if test="srm/@min">
+		<xsl:value-of select="srm/@min"/>
+		<xsl:text> - </xsl:text>
+		<xsl:value-of select="srm/@max"/>
+	      </xsl:if>
+	      <xsl:value-of select="normalize-space(srm/text())"/>
+	    </xsl:element>
+	  </xsl:if>
+	  <xsl:if test="og">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">og</xsl:attribute>
+	      <xsl:if test="og/@min">
+		<xsl:value-of select="og/@min"/>
+		<xsl:text> - </xsl:text>
+		<xsl:value-of select="og/@max"/>
+	      </xsl:if>
+	      <xsl:value-of select="normalize-space(og/text())"/>
+	    </xsl:element>
+	  </xsl:if>
+	  <xsl:if test="fg">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">fg</xsl:attribute>
+	      <xsl:if test="fg/@min">
+		<xsl:value-of select="fg/@min"/>
+		<xsl:text> - </xsl:text>
+		<xsl:value-of select="fg/@max"/>
+	      </xsl:if>
+	      <xsl:value-of select="normalize-space(fg/text())"/>
+	    </xsl:element>
+	  </xsl:if>
+	  <xsl:if test="abv">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">abv</xsl:attribute>
+	      <xsl:if test="abv/@min">
+		<xsl:value-of select="abv/@min"/>
+		<xsl:text> - </xsl:text>
+		<xsl:value-of select="abv/@max"/>
+	      </xsl:if>
+	      <xsl:value-of select="normalize-space(abv/text())"/>
+	    </xsl:element>
+	  </xsl:if>
+	</xsl:element>
+      </xsl:if>
     </xsl:element>
   </xsl:template>
 
@@ -212,6 +245,21 @@ styleguide specs div * {
       <xsl:apply-templates select="@*" mode="copy"/>
       <xsl:apply-templates mode="copy"/>
     </xsl:element>
+  </xsl:template>
+
+
+
+  <xsl:template match="@id" mode="copy">
+    <xsl:attribute name="id">
+      <xsl:choose>
+	<xsl:when test="contains(.,'-')">
+	  <xsl:value-of select="substring-before(.,'-')"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="."/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
   </xsl:template>
 
 
