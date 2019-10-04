@@ -50,7 +50,3 @@ Contact:
 - Add clear words to honor the original BJCP work.
 - Care about copyright questions. Add LICENSE file.
 - Add Acknowledgements to all contributors.
-- Minor: Pay special attention to:
-  - specs variants: 25B Saison (standard, pale, dark)
-    --> fix/* !!!
-
