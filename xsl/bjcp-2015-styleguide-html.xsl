@@ -22,7 +22,15 @@ styleguide {
   font-family: Helvetica, Arial, Geneva, sans-serif;
 }
 
-styleguide chapter, styleguide category, styleguide subcategory {
+styleguide chapter {
+  font-size: 8pt;
+}
+
+styleguide p.list-item {
+  list-style-type: decimal;
+}
+
+styleguide category, styleguide subcategory {
   font-size: 9pt;
   margin-top:1em;
   margin-bottom:1em;
@@ -41,6 +49,10 @@ styleguide span.bold {
 
 styleguide span.italic {
   font-style: italic;
+}
+
+styleguide span.underline {
+  text-decoration: underline;
 }
 
 styleguide category:before, styleguide subcategory:before {

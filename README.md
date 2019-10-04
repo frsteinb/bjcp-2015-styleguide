@@ -67,3 +67,5 @@ Contact:
 - Implement links.
 - Move to real public repo server und update text above.
 - "make status" to display potentially missing translation snippets.
+- Intro chapters: color table, tags table
+- Appendices

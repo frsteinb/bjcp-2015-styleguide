@@ -17,10 +17,28 @@
 
 
   <xsl:template match="/styleguide">
-    <!--<xsl:apply-templates select="chapter"/>-->
+    <xsl:apply-templates select="chapter"/>
     <xsl:apply-templates select="category"/>
     <xsl:apply-templates select="category/subcategory"/>
     <xsl:apply-templates select="category/subcategory/subcategory"/>
+  </xsl:template>
+
+
+
+  <xsl:template match="/styleguide/chapter">
+    <xsl:variable name="filename">
+      <xsl:text>orig/</xsl:text>
+      <xsl:value-of select="@id"/>
+      <xsl:text>.xml</xsl:text>
+    </xsl:variable>
+    <exsl:document href="{$filename}" method="xml" version="1.0" encoding="UTF-8" indent="yes">
+      <xsl:element name="styleguide">
+        <xsl:element name="chapter">
+          <xsl:apply-templates select="@*"/>
+          <xsl:apply-templates select="*"/>
+        </xsl:element>
+      </xsl:element>
+    </exsl:document>
   </xsl:template>
 
 
