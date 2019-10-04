@@ -423,23 +423,26 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:choose>
-      <xsl:when test="w:rPr/w:b[not(@w:val='0')]">
-        <xsl:element name="span">
-          <xsl:attribute name="class">bold</xsl:attribute>
+    <xsl:if test="string-length($t) > 0">
+      <xsl:choose>
+        <xsl:when test="w:rPr/w:b[not(@w:val='0')]">
+          <xsl:element name="span">
+            <xsl:attribute name="class">bold</xsl:attribute>
+            <xsl:value-of select="$t"/>
+          </xsl:element>
+        </xsl:when>
+	<!-- WTF, some ° chars are italic in the original document -->
+        <xsl:when test="(w:rPr/w:i) and ($t != '°')">
+          <xsl:element name="span">
+            <xsl:attribute name="class">italic</xsl:attribute>
+            <xsl:value-of select="$t"/>
+          </xsl:element>
+        </xsl:when>
+        <xsl:otherwise>
           <xsl:value-of select="$t"/>
-        </xsl:element>
-      </xsl:when>
-      <xsl:when test="w:rPr/w:i">
-        <xsl:element name="span">
-          <xsl:attribute name="class">italic</xsl:attribute>
-          <xsl:value-of select="$t"/>
-        </xsl:element>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$t"/>
-      </xsl:otherwise>
-    </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:if>
   </xsl:template>
 
 
