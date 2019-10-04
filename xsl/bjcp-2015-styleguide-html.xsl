@@ -183,7 +183,7 @@ styleguide specs div * {
 	      <xsl:attribute name="class">ibu</xsl:attribute>
 	      <xsl:if test="ibu/@min">
 		<xsl:value-of select="ibu/@min"/>
-		<xsl:text> - </xsl:text>
+		<xsl:text> – </xsl:text>
 		<xsl:value-of select="ibu/@max"/>
 	      </xsl:if>
 	      <xsl:value-of select="normalize-space(ibu/text())"/>
@@ -194,7 +194,7 @@ styleguide specs div * {
 	      <xsl:attribute name="class">srm</xsl:attribute>
 	      <xsl:if test="srm/@min">
 		<xsl:value-of select="srm/@min"/>
-		<xsl:text> - </xsl:text>
+		<xsl:text> – </xsl:text>
 		<xsl:value-of select="srm/@max"/>
 	      </xsl:if>
 	      <xsl:value-of select="normalize-space(srm/text())"/>
@@ -205,7 +205,7 @@ styleguide specs div * {
 	      <xsl:attribute name="class">og</xsl:attribute>
 	      <xsl:if test="og/@min">
 		<xsl:value-of select="og/@min"/>
-		<xsl:text> - </xsl:text>
+		<xsl:text> – </xsl:text>
 		<xsl:value-of select="og/@max"/>
 	      </xsl:if>
 	      <xsl:value-of select="normalize-space(og/text())"/>
@@ -216,7 +216,7 @@ styleguide specs div * {
 	      <xsl:attribute name="class">fg</xsl:attribute>
 	      <xsl:if test="fg/@min">
 		<xsl:value-of select="fg/@min"/>
-		<xsl:text> - </xsl:text>
+		<xsl:text> – </xsl:text>
 		<xsl:value-of select="fg/@max"/>
 	      </xsl:if>
 	      <xsl:value-of select="normalize-space(fg/text())"/>
@@ -227,7 +227,7 @@ styleguide specs div * {
 	      <xsl:attribute name="class">abv</xsl:attribute>
 	      <xsl:if test="abv/@min">
 		<xsl:value-of select="abv/@min"/>
-		<xsl:text> - </xsl:text>
+		<xsl:text> – </xsl:text>
 		<xsl:value-of select="abv/@max"/>
 	      </xsl:if>
 	      <xsl:value-of select="normalize-space(abv/text())"/>

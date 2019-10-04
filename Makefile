@@ -8,7 +8,7 @@ cache/2015_Guidelines_Beer.docx:
 cache/bjcp-2015-styleguide-word.xml: cache/2015_Guidelines_Beer.docx
 	unzip -p cache/2015_Guidelines_Beer.docx word/document.xml | xmllint --format - > cache/bjcp-2015-styleguide-word.xml
 
-bjcp-2015-styleguide-orig.xml: cache/bjcp-2015-styleguide-word.xml xsl/bjcp-2015-styleguide-doc-to-xml.xsl
+bjcp-2015-styleguide-orig.xml: fix cache/bjcp-2015-styleguide-word.xml xsl/bjcp-2015-styleguide-doc-to-xml.xsl
 	xsltproc xsl/bjcp-2015-styleguide-doc-to-xml.xsl cache/bjcp-2015-styleguide-word.xml > bjcp-2015-styleguide-orig.xml
 
 orig: bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-split.xsl
