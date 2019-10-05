@@ -34,11 +34,14 @@ Besides all the contributors to the original BJCP document we would like to than
   apt install make curl libxml2-utils xsltproc
   ```
   (Sorry, I have no clue what to do on Windows systems.)
-- Download and unarchive this project:
+- Clone the GitHub repository to your local system:
   ```
-  git clone https://gitlab.ibr.cs.tu-bs.de/steinb/bjcp-2015-styleguide.git
+  git clone https://github.com/frsteinb/bjcp-2015-styleguide.git
   ```
-  [TBD: move to a real public repo server.]
+  or
+  ```
+  git clone git@github.com:frsteinb/bjcp-2015-styleguide.git
+  ```
 - ```
   cd bjcp-2015-styleguide
   ```
@@ -76,7 +79,12 @@ Besides all the contributors to the original BJCP document we would like to than
   ```
 - Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
 - Take care for a consistent wording of all subject matter specific terms throughout the whole styleguide.
-- To supply your work back upstream to the repository, ...[TBD]
+- To supply your work back upstream to the repository you need write access, please talk to the project maintainers. Then, use Git as usual (we cannot supply a Git here, but in general do something like...):
+  ```
+  git add de/*.xml
+  git commit -a
+  git push
+  ```
 
 ## Contact
 
