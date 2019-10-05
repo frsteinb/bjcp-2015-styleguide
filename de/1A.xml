@@ -1,10 +1,18 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <styleguide>
   <category id="1">
     <subcategory id="1A">
-      <name>Amerikanisches Light Lager</name>
-      <overall-impression>Stark karbonisiertes, sehr leichtes, ...</overall-impression>
-      <!-- ... hier in der Übersetzung nicht erscheinende Elemente werden aus dem Original übernommen. -->
+      <name>American Light Lager</name>
+      <overall-impression>Stark karbonisiert, sehr leichter Körper, nahezu Geschmacksneutrales Lager designed um es sehr kalt zu genießen.  Sehr erfrischend und durstlöschend.</overall-impression>
+      <aroma>wenig bis kein Malzaroma, auch wenn es, falls vorhanden,  als getreidig, süß oder maisartig wahrgenommen werden kann. Wenig bis kein Hopfenarmoma, mit, falls vorhanden, würzigen oder floralem Hopfencharakter. Obwohl ein sauberer Gärverlauf wünschenswert ist, ist ein leichter Hefe-Charakter (im speziellen eine leichte apfeliger fruchtigkeit) kein Fehler. Etwas DMS ist kein Fehler. </aroma>
+      <appearance>Eine sehr helles Strohgelb bis hellegelbe Farbe. Weiße, schäumende Schaumkrone die selten bestehen bleibt. Sehr klar.</appearance>
+      <flavor>Relativ neutral am Gaumen mit einem knackigem und trockenem Abgang und wenig bis sehr wenig gertreidigem oder mailähnlichen Geschmack der aufgrund der niedrigen Bitterung als süss aufgefasst werden kann. Der Hopfengeschmack bewegt sich von nicht vorhanden bis niedrig und kann florale, würzige oder kräuterige qualitäten aufweisen (auch wenn diese selten start genug sind um detektiert werden zu können). Wenig bis sehr wenig Hoppfenbittere. Die Balance kann von leicht malzbetont bis leicht bitter reichen, ist aber relativ nah am ausgeglichenen Zentrum. Eine hohe Karbonisierung kann den knackigen und trockenden Abgang betonen. Sauberer Gärungsverlauf.</flavor>
+      <mouthfeel>Ein sehr leichter (manchmal wässriger) Körper. Sehr hoch karbonisiert mit einem leichten „Kohlensäure-Biss“ auf der Zunge.</mouthfeel>
+      <comments>Designed um einem möglichst breiten Puplikum zu gefallen. Starke "Flavors" sind ein Fehler.</comments>
+      <history>Coors hat kurzzeitig in den frühen 1940er Jahren ein Light Lager hergestellt. Moderene Versionen wurden erst 1967 von Rheingold für den Ernährungsbewussten Trinker produziert, es wurde jedoch erst ab 1973 populär, als Miller Brewing das Rezept erwarb und es mit der Marketingkampanie „tastes great, less filling“ als Marke für Sport-Fans etablierte.</history>
+      <characteristic-ingredients>Zwei -oder sechs-reihiges Gerstenmalz mit bis zu 40% Reis oder Mais als Zugaben. Zusätzliche Enzyme können den Körber noch leichter machen sowie Kohlenhydrate reduzieren.</characteristic-ingredients>
+      <style-comparison>Eine in Körper, Alkohol und Kalorien leichtere Version des American Lager. Weniger Hopfencharakter und Bitterkeit als ein Leichtbier.</style-comparison>
+      <commercial-examples>Bud Light, Coors Light, Keystone Light, Michelob Light, Miller Lite, Old Milwaukee Light</commercial-examples>
     </subcategory>
   </category>
 </styleguide>

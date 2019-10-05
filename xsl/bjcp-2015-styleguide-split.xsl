@@ -106,6 +106,12 @@
 
 
 
+  <!-- suppress these tags in translations -->
+  <xsl:template match="tags|specs">
+  </xsl:template>
+
+
+
   <xsl:template match="*">
     <xsl:element name="{local-name(.)}">
       <xsl:apply-templates select="@*"/>

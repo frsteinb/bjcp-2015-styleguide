@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide>
+  <category id="10">
+    <name>German Wheat Beer</name>
+    <description>
+      <p>This category contains vollbier- and starkbier-strength German wheat beers without sourness, in light and dark colors.</p>
+    </description>
+  </category>
+</styleguide>

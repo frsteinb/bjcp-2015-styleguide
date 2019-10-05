@@ -25,6 +25,9 @@ bjcp-2015-styleguide-orig.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styl
 bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
 	xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.html
 
+format:
+	for f in de/*.xml ; do xmllint --format $$f | sed -e 's/ standalone="yes"//' > cache/tmp.xml ; cmp -s cache/tmp.xml $$f || cat cache/tmp.xml > $$f ; rm cache/tmp.xml ; done
+
 test: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	xmllint --noout bjcp-2015-styleguide-orig.xml
 	xmllint --noout bjcp-2015-styleguide-de.xml
