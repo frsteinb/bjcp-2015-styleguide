@@ -25,7 +25,7 @@ Besides all the contributors to the original BJCP document we would like to than
 - Brausportgruppe e.V. Rhein-Main
 - ...
 
-## Translation Procedure
+## Getting Started
 
 - If you are just curious about the current state of this project's results, you may take a look at the so called "[artifacts](https://gitlab.ibr.cs.tu-bs.de/steinb/bjcp-2015-styleguide/-/jobs/artifacts/master/download?job=build)" of the GitLab repository which get automatically rebuilt after each commit and push to the repository server.
 
@@ -55,9 +55,9 @@ Besides all the contributors to the original BJCP document we would like to than
   - A (partially) translated XML styleguide: `bjcp-2015-styleguide-de.xml`
   - An HTML form of the original styleguide: `bjcp-2015-styleguide-orig.html`
   - An HTML form of the translated styleguide: `bjcp-2015-styleguide-de.html`
-- Now, you can gradually add and update translated content, see translation guidelines below.
+- Now, you can gradually add and update translated content:
 
-## Translation guidelines
+## Translation Guidelines
 
 - Only add and edit files in the target language directory `de`. Never touch any other files (except by running `make`).
 - To start a new translated category or subcategory, copy it from `orig` to `de` and translate its content. (Be sure not to overwrite already present translated files in `de`.)
@@ -77,9 +77,9 @@ Besides all the contributors to the original BJCP document we would like to than
   ```
   make status
   ```
-- Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
+- Note: We aim for a real translation. Even if you are convinced that adding new details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
 - Take care for a consistent wording of all subject matter specific terms throughout the whole styleguide.
-- To supply your work back upstream to the repository you need write access, please talk to the project maintainers. Then, use Git as usual (we cannot supply a Git here, but in general do something like...):
+- To supply your work back upstream to the repository server you need write access, please talk to the project maintainers. Then, use Git as usual (we cannot supply a Git tutorial here, but in general do something like):
   ```
   git add de/*.xml
   git commit -a
@@ -102,7 +102,7 @@ See the LICENSE file. Note that this license relates only to the content of this
 
 - Add Acknowledgements to futher contributors?
 - Implement links.
-- Move to real public repo server und update text above.
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Appendices
 - XML Schema Definition
+- Artifacts on GitHub?
