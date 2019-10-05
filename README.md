@@ -27,9 +27,7 @@ Besides all the contributors to the original BJCP document we would like to than
 
 ## Getting Started
 
-- If you are just curious about the current state of this project's results, you may take a look at the so called "[artifacts](https://gitlab.ibr.cs.tu-bs.de/steinb/bjcp-2015-styleguide/-/jobs/artifacts/master/download?job=build)" of the GitLab repository which get automatically rebuilt after each commit and push to the repository server.
-
-- MacOS systems should have the required tools once the XCode App is installed. On Linux you should install some packages, e.g. on Ubuntu:
+- MacOS systems should have all required tools once the XCode App is installed. On Linux you should install some packages, e.g. on Ubuntu:
   ```
   apt install make curl libxml2-utils xsltproc
   ```
@@ -101,8 +99,7 @@ See the LICENSE file. Note that this license relates only to the content of this
 ## TODO
 
 - Add Acknowledgements to futher contributors?
-- Implement links.
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Appendices
-- XML Schema Definition
+- XML Schema Definition & make check
 - Artifacts on GitHub?

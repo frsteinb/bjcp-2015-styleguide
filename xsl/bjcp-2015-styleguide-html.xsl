@@ -178,7 +178,6 @@ styleguide specs div * {
 	</xsl:element>
       </xsl:element>
       <xsl:element name="body">
-	<!--<xsl:apply-templates select="chapter"/>-->
 	<xsl:apply-templates select="." mode="copy"/>
       </xsl:element>
     </xsl:element>
