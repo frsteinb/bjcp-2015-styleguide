@@ -70,9 +70,12 @@ Contact:
 - Nils Vogel <nils.vogel@gmx.net> (primary HBCon contact)
 - Frank Steinberg <frank@familie-steinberg.org> (coding this XML magic)
 
+## License
+
+See the LICENSE file. Note that this license relates only to the content of this project. The original BJCP styleguide document loaded from the BJCP web site is NOT part of this project.
+
 ## TODO
 
-- Add clear words to honor the original BJCP work.
 - Care about copyright questions. Add LICENSE file.
 - Add Acknowledgements to all contributors.
 - Implement links.
