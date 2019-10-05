@@ -12,7 +12,7 @@ In this project we want to achieve the following goals:
 
 To derive a consistent XML representation, we rely on the XML format of Word DOCX documents. However, since the original document is handcrafted by humans, we have to use some hacks in situations where the original document is less consistent. This means that our XSL code will not work for future releases of the styleguide.
 
-In some rare cases, it may seem reasonable to apply slight adjustments to the original data. E.g., there is just one style (25B Saison), where the "Vital Statistics" section contains a form of further "subcategorization". We decided to explain this by words in the "Entry Instructions" and keep simple min-max ranges in all specs sections. Note that this "fixing" mechanisms should remain a rare exception.
+In some rare cases, it may seem reasonable to apply slight adjustments to the original data. E.g., there is just one style (25B Saison), where the "Vital Statistics" section contains a form of further "subcategorization". We decided to explain this by words in the "Entry Instructions" and keep simple min-max ranges in all specs sections. Note that this "fixing" mechanism should remain a rarely used exception.
 
 For a gradual translation process we use a split representation where each category and subcategory is stored in a single file, this allows to edit them in small pieces and independently by multiple authors.
 
