@@ -20,9 +20,10 @@
 
 styleguide { 
   font-family: Helvetica, Arial, Geneva, sans-serif;
+  font-size: 8pt;
 }
 
-styleguide chapter {
+styleguide chapter table {
   font-size: 8pt;
 }
 

@@ -688,64 +688,42 @@
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="style-intro-recur"/>
     </xsl:if>
   </xsl:template>
+
  
 
-<!--
-  <xsl:template match="w:p" mode="in-chapter">
-    <xsl:param name="in-list"></xsl:param>
+  <xsl:template match="w:p | w:tbl" mode="in-chapter">
     <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1')">
       <xsl:choose>
-	<xsl:when test="not($in-list)">
-	  <xsl:if test="w:pPr/w:pStyle/@w:val='ProseIntro'">
-	    <xsl:element name="p">
-	      <xsl:attribute name="class">intro</xsl:attribute>
-	      <xsl:apply-templates select="w:r"/>
-	    </xsl:element>
-	  </xsl:if>
-	  <xsl:if test="w:pPr/w:pStyle/@w:val='ProseBody'">
-	    <xsl:element name="p">
-	      <xsl:attribute name="class">body</xsl:attribute>
-	      <xsl:apply-templates select="w:r"/>
-	    </xsl:element>
-	  </xsl:if>
-	  <xsl:if test="w:pPr/w:pStyle/@w:val='Heading2first' or w:pPr/w:pStyle/@w:val='Heading2'">
-	    <xsl:element name="h3">
-	      <xsl:apply-templates select="w:r"/>
-	    </xsl:element>
-	  </xsl:if>
-	  <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
+	<xsl:when test="local-name(.) = 'tbl'">
+	  <xsl:element name="table">
+	    <xsl:for-each select="w:tr">
+	      <xsl:element name="tr">
+		<xsl:for-each select="w:tc">
+		  <xsl:element name="td">
+		    <xsl:value-of select="w:p/w:r/w:t"/>
+		  </xsl:element>
+		</xsl:for-each>
+	      </xsl:element>
+	    </xsl:for-each>
+	  </xsl:element>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:if test="not(w:pPr/w:pStyle/@w:val='ProseListNumbered)'">
-	    <xsl:apply-templates select="." mode="in-chapter"/>
-	  </xsl:if>
-	</xsl:otherwise>
-      </xsl:choose>
-      <xsl:if test="w:pPr/w:pStyle/@w:val='ProseListNumbered'">
-	<xsl:choose>
-	  <xsl:when test="not($in-list)">
-	    <xsl:element name="ol">
-	      <xsl:apply-templates select="." mode="in-chapter">
-		<xsl:with-param name="in-list">yes</xsl:with-param>
-	      </xsl:apply-templates>
-	    </xsl:element>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:element name="li">
-	      <xsl:apply-templates select="w:r"/>
-	    </xsl:element>
-	    <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter">
-	      <xsl:with-param name="in-list">yes</xsl:with-param>
-	    </xsl:apply-templates>
-	  </xsl:otherwise>
-	</xsl:choose>
-      </xsl:if>
-    </xsl:if>
-  </xsl:template>
--->
-  <xsl:template match="w:p" mode="in-chapter">
-    <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1')">
-      <xsl:choose>
+	<!-- Hack to match Color Reference table -->
+	<xsl:when test="w:r[1]/w:t='Straw'">
+	  <xsl:element name="table">
+	    <xsl:for-each select="w:r[not(w:tab)]">
+	      <xsl:element name="tr">
+		<xsl:element name="td">
+		  <xsl:value-of select="w:t"/>
+		</xsl:element>
+		<xsl:element name="td">
+		  <xsl:value-of select="following-sibling::w:r[1]/w:t"/>
+		</xsl:element>
+	      </xsl:element>
+	    </xsl:for-each>
+	  </xsl:element>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
+	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseListNumbered'">
 	  <xsl:element name="ol">
 	    <xsl:element name="li">
@@ -753,7 +731,7 @@
 	    </xsl:element>
 	    <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter-list"/>
 	  </xsl:element>
-	  <xsl:apply-templates select="following-sibling::w:p[not(w:pPr/w:pStyle/@w:val='ProseListNumbered')][1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[not(w:pPr/w:pStyle/@w:val='ProseListNumbered')][1]" mode="in-chapter"/>
 	</xsl:when>	  
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseList'">
 	  <xsl:element name="ul">
@@ -762,36 +740,36 @@
 	    </xsl:element>
 	    <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter-list"/>
 	  </xsl:element>
-	  <xsl:apply-templates select="following-sibling::w:p[not(w:pPr/w:pStyle/@w:val='ProseList')][1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[not(w:pPr/w:pStyle/@w:val='ProseList')][1]" mode="in-chapter"/>
 	</xsl:when>	  
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseIntro'">
 	  <xsl:element name="p">
 	    <xsl:attribute name="class">intro</xsl:attribute>
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:element>
-	  <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseBody'">
 	  <xsl:element name="p">
 	    <xsl:attribute name="class">body</xsl:attribute>
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:element>
-	  <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='Heading2first' or w:pPr/w:pStyle/@w:val='Heading2'">
 	  <xsl:element name="h3">
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:element>
-	  <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='Heading3first' or w:pPr/w:pStyle/@w:val='Heading3'">
 	  <xsl:element name="h4">
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:element>
-	  <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:if>
