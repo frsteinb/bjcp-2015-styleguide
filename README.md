@@ -54,12 +54,12 @@ Finally, XSL stylesheets get applied to create resulting XML and XHTML documents
 - If you want to translate only some elements within a file, please remove the non-translated elements comletely (the whole XML element, not just the text bewteen the opening and closing tags). Missing elements will be copied from the english original. This helps to keep track of non-translated elements.
 - In this sense, you probably do not want to translate `<commercial-examples>` sections.
 - You may also add newly translated elements to already partially translated files or rephrase details, but be sure to always retain the XML structure of the `orig` file.
-- Never translate XML element names, just edit the pure texts within the XML elements.
+- Never translate XML element names, just edit the pure texts within the XML elements between the opening and closing XML tags.
 - The only valid text decoration elements are `<b>bold</b>`, `<i>italic</i>` and `<u>underline</u>`. Do not nest these elements. Use them just guided by the `orig` data.
-- All elements within category and subcategory files contain just one text paragraph, do not try to any formatting elements you may know from HTML.
+- All elements within category and subcategory files contain just one text block as a single paragraph. Do not try to add any formatting elements you may know from HTML.
 - To see the results of your translation work, you can re-run `make` at any time.
-- Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections, please don't do that! (Maybe, we should establish a way to take such notes. Let's discuss this, if you feel a real need for this.)
-- Take care for a consistent wording.
+- Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
+- Take care for a consistent wording of all subject matter specific terms throughout the whole styleguide.
 - To supply your work back upstream to the repository, ...[TBD]
 
 ## Contact
