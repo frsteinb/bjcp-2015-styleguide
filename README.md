@@ -66,7 +66,14 @@ Besides all the contributors to the original BJCP document we would like to than
 - One further exception: You may add references (links) to other categories or subcategories as `<a idref="1">name</a>` or simply `<a idref="1A"/>`. In the first case you specify the visible link text (here "name"). In the second case the link text will be the `<name>` of the referenced category or subcategory.
 - All elements within category and subcategory files contain just one text block as a single paragraph. Do not try to add any formatting elements you may know from HTML.
 - To see the results of your translation work, you can re-run `make` at any time.
-- You may call `make format` to reformat the `de` files to consistent XML indentation. This will not change the formatting of resulting human-readable documents.
+- If some files in `de` are formatted inconsistently (we prefer two-blank-indents and just few line breaks and white space), you may call the following command. It just reformats the `de` files to consistent XML indentation. It will not change the formatting of resulting human-readable documents:
+  ```
+  make format
+  ```
+- If you want to see the status of already translated elements, you may run:
+  ```
+  make status
+  ```
 - Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
 - Take care for a consistent wording of all subject matter specific terms throughout the whole styleguide.
 - To supply your work back upstream to the repository, ...[TBD]
@@ -88,7 +95,6 @@ See the LICENSE file. Note that this license relates only to the content of this
 - Add Acknowledgements to futher contributors?
 - Implement links.
 - Move to real public repo server und update text above.
-- "make status" to display potentially missing translation snippets.
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Appendices
 - XML Schema Definition
