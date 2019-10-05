@@ -43,15 +43,15 @@ styleguide p {
   margin-top:1em;
 }
 
-styleguide span.bold {
+styleguide b {
   font-weight: bold;
 }
 
-styleguide span.italic {
+styleguide i {
   font-style: italic;
 }
 
-styleguide span.underline {
+styleguide u {
   text-decoration: underline;
 }
 

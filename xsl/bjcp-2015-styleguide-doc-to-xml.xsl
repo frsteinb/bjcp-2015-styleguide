@@ -579,21 +579,18 @@
     <xsl:if test="string-length($t) > 0">
       <xsl:choose>
         <xsl:when test="w:rPr/w:b[not(@w:val='0')]">
-          <xsl:element name="span">
-            <xsl:attribute name="class">bold</xsl:attribute>
+          <xsl:element name="b">
             <xsl:value-of select="$t"/>
           </xsl:element>
         </xsl:when>
         <xsl:when test="w:rPr/w:u[not(@w:val='0')]">
-          <xsl:element name="span">
-            <xsl:attribute name="class">underline</xsl:attribute>
+          <xsl:element name="u">
             <xsl:value-of select="$t"/>
           </xsl:element>
         </xsl:when>
 	<!-- WTF, some ° chars are italic in the original document -->
         <xsl:when test="(w:rPr/w:i) and ($t != '°')">
-          <xsl:element name="span">
-            <xsl:attribute name="class">italic</xsl:attribute>
+          <xsl:element name="i">
             <xsl:value-of select="$t"/>
           </xsl:element>
         </xsl:when>
