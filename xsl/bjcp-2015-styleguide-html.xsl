@@ -253,6 +253,28 @@ styleguide specs div * {
 
 
 
+  <xsl:template match="a" mode="copy">
+    <xsl:variable name="idref">
+      <xsl:value-of select="@idref"/>
+    </xsl:variable>
+    <xsl:element name="{local-name(.)}">
+      <xsl:attribute name="href">
+	<xsl:text>#</xsl:text>
+	<xsl:value-of select="$idref"/>
+      </xsl:attribute>
+      <xsl:choose>
+	<xsl:when test="string-length(./text()) > 0">
+	  <xsl:value-of select="./text()"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:value-of select="//styleguide//*[@id=$idref]/name"/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
+
+
+
   <xsl:template match="*" mode="copy">
     <xsl:element name="{local-name(.)}">
       <xsl:apply-templates select="@*" mode="copy"/>
