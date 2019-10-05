@@ -2,21 +2,21 @@
 
 ## Another BJCP styleguide translation project
 
-The BJCP has put a great deal of hard voluntery work from many contributors into the 2015 beer style guidelines. Besides other derived formats, the primary resulting document is availabe as a PDF and as a Microsoft Word docx file from the "[BJCP web pages](https://www.bjcp.org/stylecenter.php)".
+The BJCP has put a great deal of hard voluntery work from many contributors into the 2015 beer style guidelines. Besides other derived formats, the primary resulting document is availabe as a PDF and as a Microsoft Word docx file from the [BJCP web pages](https://www.bjcp.org/stylecenter.php).
 
 In this project we want to achieve the following goals:
 
-- establish a XML form of the styleguide derived from the original BJCP Word document,
+- establish an XML form of the styleguide derived from the original BJCP Word document,
 - tranlate the styleguide to the German language (in a way that easily allows to add further languages),
 - transform the XML data to various target formats (HTML, PDF) using XSL and FO techniques.
 
 To derive a consistent XML representation, we rely on the XML format of Word DOCX documents. However, since the original document is handcrafted by humans, we have to use some hacks in situations where the original document is less consistent. This means that our XSL code will not work for future releases of the styleguide.
 
-In some rare cases, it may seem reasonable to apply slight adjustments to the original data. E.g., there is just one style, where the "Vital Statistics" section contains a form of further "subcategorization". We decided to explain this by words in the "Entry Instructions" and keep simple min-max ranges in all specs sections. Note that this "fixing" mechanisms should remain a rare exception.
+In some rare cases, it may seem reasonable to apply slight adjustments to the original data. E.g., there is just one style (25B Saison), where the "Vital Statistics" section contains a form of further "subcategorization". We decided to explain this by words in the "Entry Instructions" and keep simple min-max ranges in all specs sections. Note that this "fixing" mechanisms should remain a rare exception.
 
 For a gradual translation process we use a split representation where each category and subcategory is stored in a single file, this allows to edit them in small pieces and independently by multiple authors.
 
-Finally, XSL stylesheets get applied to create resulting XML and XHTML documents with content in the original english language or translated into German. Other formats (and maybe other target languages) may follow in the future.
+Finally, XSL stylesheets get applied to create resulting XML and XHTML documents with content in the original english language and others translated into German. Other formats (and maybe other target languages) may follow in the future.
 
 ## Translation Procedure
 
@@ -52,10 +52,10 @@ Finally, XSL stylesheets get applied to create resulting XML and XHTML documents
 - Only add and edit files in the target language directory `de`. Never touch any other files (except by running `make`).
 - To start a new translated category or subcategory, copy it from `orig` to `de` and translate its content. (Be sure not to overwrite already present translated files in `de`.)
 - If you want to translate only some elements within a file, please remove the non-translated elements comletely (the whole XML element, not just the text bewteen the opening and closing tags). Missing elements will be copied from the english original. This helps to keep track of non-translated elements.
-- In this sense, you probably do not want to translate <commercial-examples> sections.
+- In this sense, you probably do not want to translate `<commercial-examples>` sections.
 - You may also add newly translated elements to already partially translated files or rephrase details, but be sure to always retain the XML structure of the `orig` file.
 - Never translate XML element names, just edit the pure texts within the XML elements.
-- The only valid text decoration elements are <b>bold</b>, <i>italic</i> and <u>underline</u>. Do not nest these elements. Use them just guided by the `orig` data.
+- The only valid text decoration elements are `<b>bold</b>`, `<i>italic</i>` and `<u>underline</u>`. Do not nest these elements. Use them just guided by the `orig` data.
 - All elements within category and subcategory files contain just one text paragraph, do not try to any formatting elements you may know from HTML.
 - To see the results of your translation work, you can re-run `make` at any time.
 - Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections, please don't do that! (Maybe, we should establish a way to take such notes. Let's discuss this, if you feel a real need for this.)
