@@ -18,6 +18,13 @@ For a gradual translation process we use a split representation where each categ
 
 Finally, XSL stylesheets get applied to create resulting XML and XHTML documents with content in the original english language and others translated into German. Other formats (and maybe other target languages) may follow in the future.
 
+## Acknowledgements
+
+Besides all the contributors to the original BJCP document we would like to thank the authors of translated content that found its way to this project:
+
+- Brausportgruppe e.V. Rhein-Main
+- ...
+
 ## Translation Procedure
 
 - If you are just curious about the current state of this project's results, you may take a look at the so called "[artifacts](https://gitlab.ibr.cs.tu-bs.de/steinb/bjcp-2015-styleguide/-/jobs/artifacts/master/download?job=build)" of the GitLab repository which get automatically rebuilt after each commit and push to the repository server.
@@ -56,6 +63,7 @@ Finally, XSL stylesheets get applied to create resulting XML and XHTML documents
 - You may also add newly translated elements to already partially translated files or rephrase details, but be sure to always retain the XML structure of the `orig` file.
 - Never translate XML element names, just edit the pure texts within the XML elements between the opening and closing XML tags.
 - The only valid text decoration elements are `<b>bold</b>`, `<i>italic</i>` and `<u>underline</u>`. Do not nest these elements. Use them just guided by the `orig` data.
+- One further exception: You may add references (links) to other categories or subcategories as `<a idref="1">name</a>` or simply `<a idref="1A"/>`. In the first case you specify the visible link text (here "name"). In the second case the link text will be the `<name>` of the referenced category or subcategory.
 - All elements within category and subcategory files contain just one text block as a single paragraph. Do not try to add any formatting elements you may know from HTML.
 - To see the results of your translation work, you can re-run `make` at any time.
 - Note: We aim for a real translation. Even if you are convinced that adding details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
@@ -76,8 +84,7 @@ See the LICENSE file. Note that this license relates only to the content of this
 
 ## TODO
 
-- Care about copyright questions. Add LICENSE file.
-- Add Acknowledgements to all contributors.
+- Add Acknowledgements to futher contributors?
 - Implement links.
 - Move to real public repo server und update text above.
 - "make status" to display potentially missing translation snippets.
