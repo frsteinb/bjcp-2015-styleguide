@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" 
+    xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015"
+    xmlns:bjcp="http://heimbrauconvention.de/bjcp-styleguide/2015"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common"
     xmlns:dyn="http://exslt.org/dynamic"
@@ -15,14 +17,14 @@
 
 
 
-  <xsl:template match="*">
+  <xsl:template match="bjcp:*">
     <xsl:apply-templates select="@*"/>
     <xsl:apply-templates/>
   </xsl:template>
 
 
 
-  <xsl:template match="chapter">
+  <xsl:template match="bjcp:chapter">
     <xsl:variable name="d">
       <xsl:text>../</xsl:text>
       <xsl:value-of select="$lang"/>
@@ -33,7 +35,7 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/chapter</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:chapter</xsl:text>
     </xsl:variable>
     <xsl:apply-templates select="." mode="chapter">
       <xsl:with-param name="t" select="$p"/>
@@ -44,7 +46,7 @@
 
 
 
-  <xsl:template match="category">
+  <xsl:template match="bjcp:category">
     <xsl:value-of select="@id"/>
     <xsl:text>:</xsl:text>
     <xsl:variable name="d">
@@ -57,24 +59,24 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/category[@id='</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:category[@id='</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>']</xsl:text>
     </xsl:variable>
     <xsl:apply-templates select="@*"/>
-    <xsl:apply-templates select="*[not(local-name(.)='subcategory')]">
+    <xsl:apply-templates select="bjcp:*[not(local-name(.)='subcategory')]">
       <xsl:with-param name="t" select="$p"/>
     </xsl:apply-templates>
     <xsl:text>
 </xsl:text>
-    <xsl:apply-templates select="*[local-name(.)='subcategory']">
+    <xsl:apply-templates select="bjcp:*[local-name(.)='subcategory']">
       <xsl:with-param name="t" select="$p"/>
     </xsl:apply-templates>
   </xsl:template>
 
 
 
-  <xsl:template match="category/subcategory">
+  <xsl:template match="bjcp:category/bjcp:subcategory">
     <xsl:value-of select="@id"/>
     <xsl:text>:</xsl:text>
     <xsl:variable name="d">
@@ -87,24 +89,24 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/category/subcategory[@id='</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:category/bjcp:subcategory[@id='</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>']</xsl:text>
     </xsl:variable>
     <xsl:apply-templates select="@*"/>
-    <xsl:apply-templates select="*[not(local-name(.)='subcategory')]">
+    <xsl:apply-templates select="bjcp:*[not(local-name(.)='subcategory')]">
       <xsl:with-param name="t" select="$p"/>
     </xsl:apply-templates>
     <xsl:text>
 </xsl:text>
-    <xsl:apply-templates select="*[local-name(.)='subcategory']">
+    <xsl:apply-templates select="bjcp:*[local-name(.)='subcategory']">
       <xsl:with-param name="t" select="$p"/>
     </xsl:apply-templates>
   </xsl:template>
 
 
 
-  <xsl:template match="category/subcategory/subcategory">
+  <xsl:template match="bjcp:category/bjcp:subcategory/bjcp:subcategory">
     <xsl:value-of select="@id"/>
     <xsl:text>:</xsl:text>
     <xsl:variable name="d">
@@ -117,7 +119,7 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/category/subcategory/subcategory[@id='</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory[@id='</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>']</xsl:text>
     </xsl:variable>
@@ -131,7 +133,7 @@
 
 
 
-  <xsl:template match="chapter" mode="chapter">
+  <xsl:template match="bjcp:chapter" mode="chapter">
     <xsl:param name="t"/>
     <xsl:value-of select="@id"/>
     <xsl:text>:</xsl:text>
@@ -151,11 +153,11 @@
 
 
 
-  <xsl:template match="name|description|overall-impression|aroma|appearance|flavor|mouthfeel|comments|history|characteristic-ingredients|style-comparison|entry-instructions|commercial-examples">
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples">
     <xsl:param name="t"/>
     <xsl:variable name="p">
       <xsl:value-of select="$t"/>
-      <xsl:text>/</xsl:text>
+      <xsl:text>/bjcp:</xsl:text>
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
     <xsl:apply-templates select="@*"/>
@@ -174,7 +176,7 @@
 
 
   <!-- suppress these tags in translations -->
-  <xsl:template match="tags|specs">
+  <xsl:template match="bjcp:tags|bjcp:specs">
   </xsl:template>
 
 
