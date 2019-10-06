@@ -254,20 +254,19 @@ styleguide specs div * {
 
 
   <xsl:template match="bjcp:a" mode="copy">
-    <xsl:variable name="idref">
-      <xsl:value-of select="@idref"/>
+    <xsl:variable name="href">
+      <xsl:value-of select="@href"/>
     </xsl:variable>
     <xsl:element name="{local-name(.)}">
       <xsl:attribute name="href">
-	<xsl:text>#</xsl:text>
-	<xsl:value-of select="$idref"/>
+	<xsl:value-of select="$href"/>
       </xsl:attribute>
       <xsl:choose>
 	<xsl:when test="string-length(./text()) > 0">
 	  <xsl:value-of select="./text()"/>
 	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:value-of select="//bjcp:styleguide//*[@id=$idref]/bjcp:name"/>
+	  <xsl:value-of select="//bjcp:styleguide//*[@id=$href]/bjcp:name"/>
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:element>

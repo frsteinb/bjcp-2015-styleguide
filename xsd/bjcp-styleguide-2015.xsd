@@ -296,7 +296,7 @@
     <xsd:complexType mixed="true">
       <xsd:complexContent>
         <xsd:extension base="Text">
-          <xsd:attribute name="idref"/>
+          <xsd:attribute name="href"/>
         </xsd:extension>
       </xsd:complexContent>
     </xsd:complexType>

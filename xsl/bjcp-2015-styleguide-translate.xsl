@@ -37,7 +37,7 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/chapter</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:chapter</xsl:text>
     </xsl:variable>
     <xsl:apply-templates select="." mode="chapter">
       <xsl:with-param name="t" select="$p"/>
@@ -57,7 +57,7 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/category[@id='</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:category[@id='</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>']</xsl:text>
     </xsl:variable>
@@ -82,7 +82,7 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/category/subcategory[@id='</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:category/bjcp:subcategory[@id='</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>']</xsl:text>
     </xsl:variable>
@@ -107,7 +107,7 @@
     <xsl:variable name="p">
       <xsl:text>document('</xsl:text>
       <xsl:value-of select="$d"/>
-      <xsl:text>')/styleguide/category/subcategory/subcategory[@id='</xsl:text>
+      <xsl:text>')/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory[@id='</xsl:text>
       <xsl:value-of select="@id"/>
       <xsl:text>']</xsl:text>
     </xsl:variable>
@@ -130,7 +130,7 @@
       <xsl:apply-templates select="@*"/>
       <xsl:choose>
 	<xsl:when test="dyn:evaluate($p)">
-	  <xsl:apply-templates select="dyn:evaluate($p)/* | dyn:evaluate($p)/text()"/>
+	  <xsl:apply-templates select="dyn:evaluate($p)/bjcp:* | dyn:evaluate($p)/text()"/>
 	</xsl:when>
 	<xsl:otherwise>
 	  <xsl:apply-templates/>
@@ -152,7 +152,7 @@
       <xsl:apply-templates select="@*"/>
       <xsl:choose>
 	<xsl:when test="dyn:evaluate($p)">
-	  <xsl:apply-templates select="dyn:evaluate($p)/* | dyn:evaluate($p)/text()"/>
+	  <xsl:apply-templates select="dyn:evaluate($p)/bjcp:* | dyn:evaluate($p)/text()"/>
 	</xsl:when>
 	<xsl:otherwise>
 	  <xsl:apply-templates/>
