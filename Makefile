@@ -39,15 +39,20 @@ status: bjcp-2015-styleguide-orig.xml
 	@-xsltproc --stringparam lang de xsl/bjcp-2015-styleguide-status.xsl bjcp-2015-styleguide-orig.xml 2>&1 | grep -v "failed to load external entity"
 
 
-test: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
-	@xmllint --noout bjcp-2015-styleguide-orig.xml
-	@xmllint --noout bjcp-2015-styleguide-de.xml
+check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
+	@for f in de/*.xml ; do xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd $$f ; done
+	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-orig.xml
+	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
 clean:
-	@rm -rf cache orig
+	@rm -rf orig
 	@rm -f bjcp-2015-styleguide-orig.xml
 	@rm -f bjcp-2015-styleguide-de.xml
 	@rm -f bjcp-2015-styleguide-orig.html
 	@rm -f bjcp-2015-styleguide-de.html
 	@echo "cleanup done"
+
+distclean: clean
+	@rm -rf cache
+	@echo "complete cleanup done"
 

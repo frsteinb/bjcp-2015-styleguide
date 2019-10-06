@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet 
     version="1.0" 
+    xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015"
     xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common"
@@ -205,6 +206,12 @@
         <xsl:with-param name="attribute">Style Comparison</xsl:with-param>
         <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
+
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
+        <xsl:with-param name="attribute">Commercial Examples</xsl:with-param>
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
+      </xsl:apply-templates>
+
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Entry Instructions</xsl:with-param>
         <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
@@ -218,20 +225,15 @@
       -->
       <!-- TODO: Currently Defined Types sollte implizit klar sein. -->
 
+      <xsl:apply-templates select="following-sibling::w:p[1]" mode="tags">
+        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
+      </xsl:apply-templates>
+
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="specs">
         <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
 
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="strengths">
-        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
-      </xsl:apply-templates>
-
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
-        <xsl:with-param name="attribute">Commercial Examples</xsl:with-param>
-        <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
-      </xsl:apply-templates>
-
-      <xsl:apply-templates select="following-sibling::w:p[1]" mode="tags">
         <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
 
@@ -541,7 +543,8 @@
     <xsl:choose>
       <xsl:when test="contains($tags, ' ')">
         <xsl:element name="tag">
-          <xsl:value-of select="substring-before($tags, ' ')"/>
+	  <!-- we have to adjust some tag names -->
+          <xsl:value-of select="str:replace(str:replace(str:replace(str:replace(str:replace(str:replace(substring-before($tags, ' '),'fermenting','fermented'),'fermentation','fermented'),'any-fermented','any-fermentation'),'session-beer','session-strength'),'sour-ale-family','sour'),'specialty-family','specialty-beer')"/>
         </xsl:element>
         <xsl:call-template name="tag">
           <xsl:with-param name="tags">

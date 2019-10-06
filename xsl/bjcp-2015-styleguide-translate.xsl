@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" 
+    xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015"
+    xmlns:bjcp="http://heimbrauconvention.de/bjcp-styleguide/2015"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common"
     xmlns:dyn="http://exslt.org/dynamic"
@@ -15,7 +17,7 @@
 
 
 
-  <xsl:template match="*">
+  <xsl:template match="bjcp:*">
     <xsl:element name="{local-name(.)}">
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
@@ -24,7 +26,7 @@
 
 
 
-  <xsl:template match="chapter">
+  <xsl:template match="bjcp:chapter">
     <xsl:variable name="d">
       <xsl:text>../</xsl:text>
       <xsl:value-of select="$lang"/>
@@ -44,7 +46,7 @@
 
 
 
-  <xsl:template match="category">
+  <xsl:template match="bjcp:category">
     <xsl:variable name="d">
       <xsl:text>../</xsl:text>
       <xsl:value-of select="$lang"/>
@@ -69,7 +71,7 @@
 
 
 
-  <xsl:template match="category/subcategory">
+  <xsl:template match="bjcp:category/bjcp:subcategory">
     <xsl:variable name="d">
       <xsl:text>../</xsl:text>
       <xsl:value-of select="$lang"/>
@@ -94,7 +96,7 @@
 
 
 
-  <xsl:template match="category/subcategory/subcategory">
+  <xsl:template match="bjcp:category/bjcp:subcategory/bjcp:subcategory">
     <xsl:variable name="d">
       <xsl:text>../</xsl:text>
       <xsl:value-of select="$lang"/>
@@ -119,7 +121,7 @@
 
 
 
-  <xsl:template match="chapter" mode="chapter">
+  <xsl:template match="bjcp:chapter" mode="chapter">
     <xsl:param name="t"/>
     <xsl:variable name="p">
       <xsl:value-of select="$t"/>
@@ -139,11 +141,11 @@
 
 
 
-  <xsl:template match="name|description|overall-impression|aroma|appearance|flavor|mouthfeel|comments|history|characteristic-ingredients|style-comparison|entry-instructions|commercial-examples">
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples">
     <xsl:param name="t"/>
     <xsl:variable name="p">
       <xsl:value-of select="$t"/>
-      <xsl:text>/</xsl:text>
+      <xsl:text>/bjcp:</xsl:text>
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
     <xsl:element name="{local-name(.)}">
@@ -162,7 +164,7 @@
 
 
   <!-- suppress these tags in translations -->
-  <xsl:template match="tags|specs">
+  <xsl:template match="bjcp:tags|bjcp:specs">
   </xsl:template>
 
 

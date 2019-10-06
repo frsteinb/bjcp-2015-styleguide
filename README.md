@@ -75,6 +75,10 @@ Besides all the contributors to the original BJCP document we would like to than
   ```
   make status
   ```
+- You may check the XML validity of all XML files:
+  ```
+  make check
+  ```
 - Note: We aim for a real translation. Even if you are convinced that adding new details or rephrasing sections would make sense, please don't do that! (Maybe, we should establish a way to take notes in such cases. Let's discuss this, if you feel a real need.)
 - Take care for a consistent wording of all subject matter specific terms throughout the whole styleguide.
 - To supply your work back upstream to the repository server you need write access, please talk to the project maintainers. Then, use Git as usual (we cannot supply a Git tutorial here, but in general do something like):

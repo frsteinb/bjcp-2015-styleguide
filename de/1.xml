@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<styleguide>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="1">
     <name>Standard American Beer</name>
     <description>

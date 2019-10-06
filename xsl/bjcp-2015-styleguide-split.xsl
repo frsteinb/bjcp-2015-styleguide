@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <xsl:stylesheet 
     version="1.0" 
+    xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015"
+    xmlns:bjcp="http://heimbrauconvention.de/bjcp-styleguide/2015"
     xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -16,16 +18,16 @@
 
 
 
-  <xsl:template match="/styleguide">
-    <xsl:apply-templates select="chapter"/>
-    <xsl:apply-templates select="category"/>
-    <xsl:apply-templates select="category/subcategory"/>
-    <xsl:apply-templates select="category/subcategory/subcategory"/>
+  <xsl:template match="/bjcp:styleguide">
+    <xsl:apply-templates select="bjcp:chapter"/>
+    <xsl:apply-templates select="bjcp:category"/>
+    <xsl:apply-templates select="bjcp:category/bjcp:subcategory"/>
+    <xsl:apply-templates select="bjcp:category/bjcp:subcategory/bjcp:subcategory"/>
   </xsl:template>
 
 
 
-  <xsl:template match="/styleguide/chapter">
+  <xsl:template match="/bjcp:styleguide/bjcp:chapter">
     <xsl:variable name="filename">
       <xsl:text>orig/</xsl:text>
       <xsl:value-of select="@id"/>
@@ -43,7 +45,7 @@
 
 
 
-  <xsl:template match="/styleguide/category">
+  <xsl:template match="/bjcp:styleguide/bjcp:category">
     <xsl:variable name="filename">
       <xsl:text>orig/</xsl:text>
       <xsl:value-of select="@id"/>
@@ -61,7 +63,7 @@
 
 
 
-  <xsl:template match="/styleguide/category/subcategory">
+  <xsl:template match="/bjcp:styleguide/bjcp:category/bjcp:subcategory">
     <xsl:variable name="filename">
       <xsl:text>orig/</xsl:text>
       <xsl:value-of select="@id"/>
@@ -82,7 +84,7 @@
 
 
 
-  <xsl:template match="/styleguide/category/subcategory/subcategory">
+  <xsl:template match="/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory">
     <xsl:variable name="filename">
       <xsl:text>orig/</xsl:text>
       <xsl:value-of select="@id"/>

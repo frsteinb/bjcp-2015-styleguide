@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<styleguide>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="10">
     <subcategory id="10C">
       <name>Weizenbock</name>
@@ -14,8 +14,8 @@ optional Karamell). Die Hefe trägt einen typischen Weizen-Charakter von Banane 
 [Die Marke Aventinus, das erste obergärige Weizen-Doppelbock-Typ Bier wurde zum ersten Mal 1907 im Weissen Brauhaus in München hergestellt. Die angewandte Methode könnte „Methode Champenoise“, wegen der angewandten Flaschengärung genannt werden. Der Eigentümer Schneider wollte damit eine kreative Antwort auf die damals recht populäre untergärige Sorte Doppelbock geben. (Anmerkung: Hier wird diese Sorte als Weizenstarkbier bezeichnet, um eher die Herkunft als stärker gebrautes obergäriges Weizenbier zu betonen. Die Bezeichnung Weizen-Bock ist u.U. korrekt als Hinweis für die Inspiration dieser Sorte, aber ist ansonsten verwirrend, da es nahe legt, es wäre eine „Mischung“ aus untergärigem Bock und obergärigem Weizen. Ein Hauch korrekter wäre dann Bock-Weizen, was zumindest ansatzweise erkennen lässt, dass es sich hier um ein Weizenbier in Bockstärke handelt).]</history>
       <characteristic-ingredients>Typischerweise wird ca. 50% Weizenanteil verwendet in einigen Fällen auch bis zu 70%, der Restanteil ist Münchner und/oder Wiener Malz in dunkleren Versionen und mehr Pilsner Malz in Helleren. Etwas Farbmalz kann beim läutern verwendet werden. Eine traditionelle Dekoktionsmaische ist für den korrekten Körper zuständig ohne eine appetitverderbende Süße entstehen zu lassen. Weizenhefestämme produzieren eine typisch würzige und fruchtige Note, obwohl zu warme oder zu kalte Vergärungstemperaturen die Ausgewogenheit der Phenole und Ester beeinträchtigen könnten und Fehlgeschmäcker hervorrufen können. Deutsche Varianten sind meist traditionell. [Für die korrekte Bittere wird nur eine kleine Menge an Edelhopfen eingesetzt.]</characteristic-ingredients>
       <style-comparison>Stärker und üppiger als ein Weissbier oder Dunkles Weissbier, aber mit dem gleichen Hefe-Charakter. Beser direkt vergleichbar mit dem Doppelbock-Stil, mit den hellen und dunklen Varianten. Kann in der Stärke weit variiren, aber meist im Bereich des Bock oder Doppelbock.</style-comparison>
-      <entry-instructions>Der Teilnehmer spezifiziert ob es sich bei seinem Bier um eine<b>helle</b> oder eine <b>dunkle</b> Variante handelt.</entry-instructions>
       <commercial-examples><b>Dunkel</b> – Eisenbahn Weizenbock, Plank Bavarian Dunkler Weizenbock, Penn Weizenbock, Schneider Unser Aventinus; <b>Pale</b> – Plank Bavarian Heller Weizenbock, Weihenstephaner Vitus</commercial-examples>
+      <entry-instructions>Der Teilnehmer spezifiziert ob es sich bei seinem Bier um eine<b>helle</b> oder eine <b>dunkle</b> Variante handelt.</entry-instructions>
     </subcategory>
   </category>
 </styleguide>

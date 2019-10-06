@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<xsd:schema targetNamespace="http://heimbrauconvention.de/bjcp-styleguide/2015"
+  xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xml:lang="en"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+  
+  <xsd:annotation>
+    <xsd:documentation>
+      ...
+    </xsd:documentation>
+  </xsd:annotation>
+  
+  <xsd:element name="styleguide">
+    <xsd:complexType>
+      <xsd:sequence>
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+	  <xsd:element ref="chapter"/>
+	  <xsd:element ref="category"/>
+	</xsd:choice>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="chapter">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="Chapter">
+	  <xsd:attribute name="id" use="required">
+	    <xsd:simpleType>
+	      <xsd:restriction base="xsd:string">
+		<xsd:pattern value="[a-zA-Z0-9\-]*"/>
+	      </xsd:restriction>
+	    </xsd:simpleType>
+	  </xsd:attribute>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="category">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="description" type="Description" minOccurs="0"/>
+        <xsd:element name="entry-instructions" type="Text" minOccurs="0"/>
+        <xsd:element ref="subcategory" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="id" use="required">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-zA-Z0-9\-]*"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="subcategory">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="description" type="Description" minOccurs="0"/>
+        <xsd:element name="overall-impression" type="Text" minOccurs="0"/>
+        <xsd:element name="aroma" type="Text" minOccurs="0"/>
+        <xsd:element name="appearance" type="Text" minOccurs="0"/>
+        <xsd:element name="flavor" type="Text" minOccurs="0"/>
+        <xsd:element name="mouthfeel" type="Text" minOccurs="0"/>
+        <xsd:element name="comments" type="Text" minOccurs="0"/>
+        <xsd:element name="history" type="Text" minOccurs="0"/>
+        <xsd:element name="characteristic-ingredients" type="Text" minOccurs="0"/>
+        <xsd:element name="style-comparison" type="Text" minOccurs="0"/>
+        <xsd:element name="commercial-examples" type="Text" minOccurs="0"/>
+        <xsd:element name="entry-instructions" type="Text" minOccurs="0"/>
+        <xsd:element ref="tags" minOccurs="0"/>
+        <xsd:element ref="specs" minOccurs="0"/>
+        <xsd:element ref="strength-classifications" minOccurs="0"/>
+        <xsd:element ref="subcategory" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="id" use="required">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-zA-Z0-9\-]*"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="Chapter">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="h1" type="xsd:string"/>
+      <xsd:element name="h2" type="xsd:string"/>
+      <xsd:element name="h3" type="xsd:string"/>
+      <xsd:element name="h4" type="xsd:string"/>
+      <xsd:element ref="table"/>
+      <xsd:element ref="ul"/>
+      <xsd:element ref="ol"/>
+      <xsd:element ref="p"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="Description">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="p"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="tags">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" ref="tag"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="tag">
+    <xsd:simpleType>
+      <xsd:restriction base="xsd:NMTOKEN">
+        <xsd:enumeration value="session-strength"/>
+        <xsd:enumeration value="standard-strength"/>
+        <xsd:enumeration value="high-strength"/>
+        <xsd:enumeration value="very-high-strength"/>
+        <xsd:enumeration value="pale-color"/>
+        <xsd:enumeration value="amber-color"/>
+        <xsd:enumeration value="dark-color"/>
+        <xsd:enumeration value="top-fermented"/>
+        <xsd:enumeration value="bottom-fermented"/>
+        <xsd:enumeration value="any-fermentation"/>
+        <xsd:enumeration value="wild-fermented"/>
+        <xsd:enumeration value="lagered"/>
+        <xsd:enumeration value="aged"/>
+        <xsd:enumeration value="british-isles"/>
+        <xsd:enumeration value="western-europe"/>
+        <xsd:enumeration value="central-europe"/>
+        <xsd:enumeration value="eastern-europe"/>
+        <xsd:enumeration value="north-america"/>
+        <xsd:enumeration value="pacific"/>
+        <xsd:enumeration value="ipa-family"/>
+        <xsd:enumeration value="brown-ale-family"/>
+        <xsd:enumeration value="pale-ale-family"/>
+        <xsd:enumeration value="pale-lager-family"/>
+        <xsd:enumeration value="pilsner-family"/>
+        <xsd:enumeration value="amber-ale-family"/>
+        <xsd:enumeration value="amber-lager-family"/>
+        <xsd:enumeration value="dark-lager-family"/>
+        <xsd:enumeration value="porter-family"/>
+        <xsd:enumeration value="stout-family"/>
+        <xsd:enumeration value="bock-family"/>
+        <xsd:enumeration value="strong-ale-family"/>
+        <xsd:enumeration value="wheat-beer-family"/>
+        <xsd:enumeration value="specialty-beer"/>
+        <xsd:enumeration value="craft-style"/>
+        <xsd:enumeration value="traditional-style"/>
+        <xsd:enumeration value="historical-style"/>
+        <xsd:enumeration value="malty"/>
+        <xsd:enumeration value="bitter"/>
+        <xsd:enumeration value="balanced"/>
+        <xsd:enumeration value="hoppy"/>
+        <xsd:enumeration value="roasty"/>
+        <xsd:enumeration value="sweet"/>
+        <xsd:enumeration value="smoke"/>
+        <xsd:enumeration value="sour"/>
+        <xsd:enumeration value="wood"/>
+        <xsd:enumeration value="fruit"/>
+        <xsd:enumeration value="spice"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+  </xsd:element>
+
+  <xsd:element name="specs">
+    <xsd:complexType mixed="true">
+      <xsd:sequence>
+        <xsd:element ref="ibu" minOccurs="0"/>
+        <xsd:element ref="srm" minOccurs="0"/>
+        <xsd:element ref="og" minOccurs="0"/>
+        <xsd:element ref="fg" minOccurs="0"/>
+        <xsd:element ref="abv" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="ibu">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="min"/>
+          <xsd:attribute name="max"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="srm">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="min"/>
+          <xsd:attribute name="max"/>
+          <xsd:attribute name="ebc-min"/>
+          <xsd:attribute name="ebc-max"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="og">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="min"/>
+          <xsd:attribute name="max"/>
+          <xsd:attribute name="plato-min"/>
+          <xsd:attribute name="plato-max"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="fg">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="min"/>
+          <xsd:attribute name="max"/>
+          <xsd:attribute name="plato-min"/>
+          <xsd:attribute name="plato-max"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="abv">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="min"/>
+          <xsd:attribute name="max"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="strength-classifications">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="strength" maxOccurs="unbounded" type="Text"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="table">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" ref="tr"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="tr">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="td" minOccurs="0" maxOccurs="unbounded" type="Text"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="ul">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="li" minOccurs="0" maxOccurs="unbounded" type="Text"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="ol">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="li" minOccurs="0" maxOccurs="unbounded" type="Text"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="p">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="class"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="a">
+    <xsd:complexType mixed="true">
+      <xsd:complexContent>
+        <xsd:extension base="Text">
+          <xsd:attribute name="idref"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="Text" mixed="true">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="b" type="xsd:string"/>
+      <xsd:element name="i" type="xsd:string"/>
+      <xsd:element name="u" type="xsd:string"/>
+      <xsd:element ref="a"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+
+</xsd:schema>

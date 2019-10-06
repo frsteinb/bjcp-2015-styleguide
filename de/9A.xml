@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<styleguide>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="9">
     <subcategory id="9A">
       <name>Doppelbock</name>
@@ -13,10 +13,8 @@ Es wird auf jeden Fall einen Eindruck der alkoholischen Stärke geben, allerding
       <history>Eine bayrische Spezialitäten zuerst von Münchner Mönchen des St. Francis von Paula gebraut. Frühere Typen waren nicht so weit vergoren, wie die heutigen Typen und somit erheblich süßer und niedrigerem Alkoholgehalt (somit wurde es als „flüssiges Brot“ empfunden). Der Ausdruck Doppel-Bock entstand mit der Zeit durch den Konsumenten. Viele Doppel-Bock sind an der Endung „-ator“ zu erkennen, was sicherlich in Anlehnung an das Original Salvator üblich geworden ist. Traditionell dunkelbraune Farbe, hellere Beispiele sind eher in jüngster Zeit entwickelt.</history>
       <characteristic-ingredients>Pilsner- und/oder Wiener Malz für die helleren Versionen (mit etwas Einsatz von Münchner Malz), Münchner und Wiener Malz für die dunkleren Typen und hin und wieder dunklere Malze (z.B. Carafa). Edelhopfen (Saazer-Typen). Wasserhärte variiert von weich bis moderat kalkhaltig. Saubere untergärige Hefe. Dekoktionsmaische ist traditionell.</characteristic-ingredients>
       <style-comparison>eine stärkere, üppigere, vollmundige Version entweder aus einem Dunklen Bock oder Hellen Bock. Helle Versionen zeigen eine höhere Vergärung und weniger dunkel fruchtigen Charakter als die dunkleren Versionen.</style-comparison>
-      <entry-instructions>Der Teilnehmer spezifiziert ob es sich bei seinem Bier um eine<b>helle</b>
-                oder ein <b>dunkle</b>
-                Variante handelt.</entry-instructions>
       <commercial-examples><b>Dunkle Sorten</b> – Andechser Doppelbock Dunkel, Ayinger Celebrator, Paulaner Salvator, Spaten Optimator, Tröegs Troegenator, Weihenstephaner Korbinian; <b>Helle Sorten</b> – Eggenberg Urbock 23º, EKU 28, Plank Bavarian Heller Doppelbock</commercial-examples>
+      <entry-instructions>Der Teilnehmer spezifiziert ob es sich bei seinem Bier um eine<b>helle</b> oder ein <b>dunkle</b> Variante handelt.</entry-instructions>
     </subcategory>
   </category>
 </styleguide>
