@@ -163,12 +163,6 @@
 
 
 
-  <!-- suppress these tags in translations -->
-  <xsl:template match="bjcp:tags|bjcp:specs">
-  </xsl:template>
-
-
-
   <xsl:template match="@*">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>

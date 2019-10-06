@@ -2,6 +2,7 @@
 <xsl:stylesheet 
     version="1.0" 
     xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:bjcp="http://heimbrauconvention.de/bjcp-styleguide/2015"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
@@ -10,7 +11,7 @@
 
 
 
-  <xsl:template match="/styleguide">
+  <xsl:template match="/bjcp:styleguide">
     <xsl:element name="html">
       <xsl:element name="head">
 	<xsl:element name="title">
@@ -185,64 +186,64 @@ styleguide specs div * {
 
 
 
-  <xsl:template match="specs" mode="copy">
+  <xsl:template match="bjcp:specs" mode="copy">
     <xsl:element name="specs">
       <xsl:value-of select="./text()"/>
-      <xsl:if test="ibu or srm or og or fg or abv">
+      <xsl:if test="bjcp:ibu or bjcp:srm or bjcp:og or bjcp:fg or bjcp:abv">
 	<xsl:element name="div">
-	  <xsl:if test="ibu">
+	  <xsl:if test="bjcp:ibu">
 	    <xsl:element name="div">
 	      <xsl:attribute name="class">ibu</xsl:attribute>
-	      <xsl:if test="ibu/@min">
-		<xsl:value-of select="ibu/@min"/>
+	      <xsl:if test="bjcp:ibu/@min">
+		<xsl:value-of select="bjcp:ibu/@min"/>
 		<xsl:text> – </xsl:text>
-		<xsl:value-of select="ibu/@max"/>
+		<xsl:value-of select="bjcp:ibu/@max"/>
 	      </xsl:if>
-	      <xsl:value-of select="normalize-space(ibu/text())"/>
+	      <xsl:value-of select="normalize-space(bjcp:ibu/text())"/>
 	    </xsl:element>
 	  </xsl:if>
-	  <xsl:if test="srm">
+	  <xsl:if test="bjcp:srm">
 	    <xsl:element name="div">
 	      <xsl:attribute name="class">srm</xsl:attribute>
-	      <xsl:if test="srm/@min">
-		<xsl:value-of select="srm/@min"/>
+	      <xsl:if test="bjcp:srm/@min">
+		<xsl:value-of select="bjcp:srm/@min"/>
 		<xsl:text> – </xsl:text>
-		<xsl:value-of select="srm/@max"/>
+		<xsl:value-of select="bjcp:srm/@max"/>
 	      </xsl:if>
-	      <xsl:value-of select="normalize-space(srm/text())"/>
+	      <xsl:value-of select="normalize-space(bjcp:srm/text())"/>
 	    </xsl:element>
 	  </xsl:if>
-	  <xsl:if test="og">
+	  <xsl:if test="bjcp:og">
 	    <xsl:element name="div">
 	      <xsl:attribute name="class">og</xsl:attribute>
-	      <xsl:if test="og/@min">
-		<xsl:value-of select="og/@min"/>
+	      <xsl:if test="bjcp:og/@min">
+		<xsl:value-of select="bjcp:og/@min"/>
 		<xsl:text> – </xsl:text>
-		<xsl:value-of select="og/@max"/>
+		<xsl:value-of select="bjcp:og/@max"/>
 	      </xsl:if>
-	      <xsl:value-of select="normalize-space(og/text())"/>
+	      <xsl:value-of select="normalize-space(bjcp:og/text())"/>
 	    </xsl:element>
 	  </xsl:if>
-	  <xsl:if test="fg">
+	  <xsl:if test="bjcp:fg">
 	    <xsl:element name="div">
 	      <xsl:attribute name="class">fg</xsl:attribute>
-	      <xsl:if test="fg/@min">
-		<xsl:value-of select="fg/@min"/>
+	      <xsl:if test="bjcp:fg/@min">
+		<xsl:value-of select="bjcp:fg/@min"/>
 		<xsl:text> – </xsl:text>
-		<xsl:value-of select="fg/@max"/>
+		<xsl:value-of select="bjcp:fg/@max"/>
 	      </xsl:if>
-	      <xsl:value-of select="normalize-space(fg/text())"/>
+	      <xsl:value-of select="normalize-space(bjcp:fg/text())"/>
 	    </xsl:element>
 	  </xsl:if>
-	  <xsl:if test="abv">
+	  <xsl:if test="bjcp:abv">
 	    <xsl:element name="div">
 	      <xsl:attribute name="class">abv</xsl:attribute>
-	      <xsl:if test="abv/@min">
-		<xsl:value-of select="abv/@min"/>
+	      <xsl:if test="bjcp:abv/@min">
+		<xsl:value-of select="bjcp:abv/@min"/>
 		<xsl:text> – </xsl:text>
-		<xsl:value-of select="abv/@max"/>
+		<xsl:value-of select="bjcp:abv/@max"/>
 	      </xsl:if>
-	      <xsl:value-of select="normalize-space(abv/text())"/>
+	      <xsl:value-of select="normalize-space(bjcp:abv/text())"/>
 	    </xsl:element>
 	  </xsl:if>
 	</xsl:element>
@@ -252,7 +253,7 @@ styleguide specs div * {
 
 
 
-  <xsl:template match="a" mode="copy">
+  <xsl:template match="bjcp:a" mode="copy">
     <xsl:variable name="idref">
       <xsl:value-of select="@idref"/>
     </xsl:variable>
@@ -266,7 +267,7 @@ styleguide specs div * {
 	  <xsl:value-of select="./text()"/>
 	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:value-of select="//styleguide//*[@id=$idref]/name"/>
+	  <xsl:value-of select="//bjcp:styleguide//*[@id=$idref]/bjcp:name"/>
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:element>
@@ -274,7 +275,7 @@ styleguide specs div * {
 
 
 
-  <xsl:template match="*" mode="copy">
+  <xsl:template match="bjcp:*" mode="copy">
     <xsl:element name="{local-name(.)}">
       <xsl:apply-templates select="@*" mode="copy"/>
       <xsl:apply-templates mode="copy"/>

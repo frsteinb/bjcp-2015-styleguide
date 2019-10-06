@@ -105,5 +105,4 @@ See the LICENSE file. Note that this license relates only to the content of this
 - Add Acknowledgements to futher contributors?
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Appendices
-- XML Schema Definition & make check
 - Artifacts on GitHub?
