@@ -1,0 +1,158 @@
+
+styleguide { 
+  font-family: Helvetica, Arial, Geneva, sans-serif;
+  font-size: 8pt;
+}
+
+styleguide chapter table {
+  font-size: 8pt;
+}
+
+styleguide p.list-item {
+  list-style-type: decimal;
+}
+
+styleguide category, styleguide subcategory {
+  font-size: 9pt;
+  margin-top:1em;
+  margin-bottom:1em;
+  margin-left:0em;
+  display: list-item;
+  list-style-position: inside;
+}
+
+styleguide p {
+  margin-top:1em;
+}
+
+styleguide b {
+  font-weight: bold;
+}
+
+styleguide i {
+  font-style: italic;
+}
+
+styleguide u {
+  text-decoration: underline;
+}
+
+styleguide category:before, styleguide subcategory:before {
+  content: attr(id);
+}
+styleguide name {
+  display: inline-block;
+  margin-bottom:1em;
+}
+styleguide description {
+  font-size: 8pt;
+  margin-left:1em;
+  display: block;
+}
+styleguide description p {
+  margin-top: 0;
+}
+
+styleguide overall-impression:before {
+  content: "Overall Impression: ";
+}
+styleguide aroma:before {
+  content: "Aroma: ";
+}
+styleguide appearance:before {
+  content: "Appearance: ";
+}
+styleguide flavor:before {
+  content: "Flavor: ";
+}
+styleguide mouthfeel:before {
+  content: "Mouthfeel: ";
+}
+styleguide comments:before {
+  content: "Comments: ";
+}
+styleguide history:before {
+  content: "History: ";
+}
+styleguide characteristic-ingredients:before {
+  content: "Characteristic Ingredients: ";
+}
+styleguide style-comparison:before {
+  content: "Style Comparison: ";
+}
+styleguide entry-instructions:before {
+  content: "Entry Instructions: ";
+}
+styleguide specs:before {
+  content: "Vital Statistics: ";
+}
+styleguide commercial-examples:before {
+  content: "Commercial Examples: ";
+}
+styleguide tags:before {
+  content: "Tags: ";
+}
+styleguide strength-classifications:before {
+  content: "Strength Classifications: ";
+}
+
+styleguide overall-impression,
+styleguide aroma,
+styleguide appearance,
+styleguide flavor,
+styleguide mouthfeel,
+styleguide comments,
+styleguide history,
+styleguide characteristic-ingredients,
+styleguide style-comparison,
+styleguide specs,
+styleguide entry-instructions,
+styleguide commercial-examples,
+styleguide tags,
+styleguide strength-classifications {
+  position: relative;
+  margin-left: 1em;
+  display: block;
+  font-size: 8pt;
+}
+styleguide overall-impression:before,
+styleguide aroma:before,
+styleguide appearance:before,
+styleguide flavor:before,
+styleguide mouthfeel:before,
+styleguide comments:before,
+styleguide history:before,
+styleguide characteristic-ingredients:before,
+styleguide style-comparison:before,
+styleguide specs:before,
+styleguide entry-instructions:before,
+styleguide commercial-examples:before,
+styleguide tags:before,
+styleguide strength-classifications:before {
+  font-weight: bold;
+}
+
+styleguide specs div.ibu:before {
+  content: "IBU: ";
+}
+styleguide specs div.srm:before {
+  content: "SRM: ";
+}
+styleguide specs div.og:before {
+  content: "OG: ";
+}
+styleguide specs div.fg:before {
+  content: "FG: ";
+}
+styleguide specs div.abv:before {
+  content: "ABV: ";
+}
+styleguide specs div {
+  display: inline-block;
+}
+styleguide specs div * {
+  border: 1px solid;
+  display: inline-block;
+  width: 9em;
+}
+

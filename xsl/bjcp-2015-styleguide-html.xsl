@@ -7,6 +7,10 @@
 
 
 
+  <xsl:param name="edit">no</xsl:param>
+
+
+
   <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 
@@ -17,169 +21,45 @@
 	<xsl:element name="title">
 	  <xsl:text>BJCP 2015 Styleguide</xsl:text>
 	</xsl:element>
-	<xsl:element name="style">
-
-styleguide { 
-  font-family: Helvetica, Arial, Geneva, sans-serif;
-  font-size: 8pt;
-}
-
-styleguide chapter table {
-  font-size: 8pt;
-}
-
-styleguide p.list-item {
-  list-style-type: decimal;
-}
-
-styleguide category, styleguide subcategory {
-  font-size: 9pt;
-  margin-top:1em;
-  margin-bottom:1em;
-  margin-left:0em;
-  display: list-item;
-  list-style-position: inside;
-}
-
-styleguide p {
-  margin-top:1em;
-}
-
-styleguide b {
-  font-weight: bold;
-}
-
-styleguide i {
-  font-style: italic;
-}
-
-styleguide u {
-  text-decoration: underline;
-}
-
-styleguide category:before, styleguide subcategory:before {
-  content: attr(id);
-}
-styleguide name {
-  display: inline-block;
-  margin-bottom:1em;
-}
-styleguide description {
-  font-size: 8pt;
-  margin-left:1em;
-  display: block;
-}
-styleguide description p {
-  margin-top: 0;
-}
-
-styleguide overall-impression:before {
-  content: "Overall Impression: ";
-}
-styleguide aroma:before {
-  content: "Aroma: ";
-}
-styleguide appearance:before {
-  content: "Appearance: ";
-}
-styleguide flavor:before {
-  content: "Flavor: ";
-}
-styleguide mouthfeel:before {
-  content: "Mouthfeel: ";
-}
-styleguide comments:before {
-  content: "Comments: ";
-}
-styleguide history:before {
-  content: "History: ";
-}
-styleguide characteristic-ingredients:before {
-  content: "Characteristic Ingredients: ";
-}
-styleguide style-comparison:before {
-  content: "Style Comparison: ";
-}
-styleguide entry-instructions:before {
-  content: "Entry Instructions: ";
-}
-styleguide specs:before {
-  content: "Vital Statistics: ";
-}
-styleguide commercial-examples:before {
-  content: "Commercial Examples: ";
-}
-styleguide tags:before {
-  content: "Tags: ";
-}
-styleguide strength-classifications:before {
-  content: "Strength Classifications: ";
-}
-
-styleguide overall-impression,
-styleguide aroma,
-styleguide appearance,
-styleguide flavor,
-styleguide mouthfeel,
-styleguide comments,
-styleguide history,
-styleguide characteristic-ingredients,
-styleguide style-comparison,
-styleguide specs,
-styleguide entry-instructions,
-styleguide commercial-examples,
-styleguide tags,
-styleguide strength-classifications {
-  position: relative;
-  margin-left: 1em;
-  display: block;
-  font-size: 8pt;
-}
-styleguide overall-impression:before,
-styleguide aroma:before,
-styleguide appearance:before,
-styleguide flavor:before,
-styleguide mouthfeel:before,
-styleguide comments:before,
-styleguide history:before,
-styleguide characteristic-ingredients:before,
-styleguide style-comparison:before,
-styleguide specs:before,
-styleguide entry-instructions:before,
-styleguide commercial-examples:before,
-styleguide tags:before,
-styleguide strength-classifications:before {
-  font-weight: bold;
-}
-
-styleguide specs div.ibu:before {
-  content: "IBU: ";
-}
-styleguide specs div.srm:before {
-  content: "SRM: ";
-}
-styleguide specs div.og:before {
-  content: "OG: ";
-}
-styleguide specs div.fg:before {
-  content: "FG: ";
-}
-styleguide specs div.abv:before {
-  content: "ABV: ";
-}
-styleguide specs div {
-  display: inline-block;
-}
-styleguide specs div * {
-  border: 1px solid;
-  display: inline-block;
-  width: 9em;
-}
-
+	<xsl:element name="link">
+	  <xsl:attribute name="rel">stylesheet</xsl:attribute>
+	  <xsl:attribute name="type">text/css</xsl:attribute>
+	  <xsl:attribute name="href">bjcp-styleguide.css</xsl:attribute>
 	</xsl:element>
+	<xsl:element name="link">
+	  <xsl:attribute name="rel">stylesheet</xsl:attribute>
+	  <xsl:attribute name="type">text/css</xsl:attribute>
+	  <xsl:attribute name="href">pell.css</xsl:attribute>
+	</xsl:element>
+	<xsl:if test="not($edit = 'no')">
+	  <xsl:element name="link">
+	    <xsl:attribute name="rel">stylesheet</xsl:attribute>
+	    <xsl:attribute name="type">text/css</xsl:attribute>
+	    <xsl:attribute name="href">edit.css</xsl:attribute>
+	  </xsl:element>
+	</xsl:if>
       </xsl:element>
       <xsl:element name="body">
 	<xsl:apply-templates select="." mode="copy"/>
+	<xsl:if test="not($edit = 'no')">
+	  <div id="editor">
+	    <div id="editor-inner">
+	      Your Author ID: <input type="text" name="author" id="author" />
+	      <div id="pelleditor"></div>
+	    </div>
+	    <div>Markup:<div id="markup"></div></div>
+	    <div>Preview:<div id="render"></div></div>
+	  </div>
+	  <div/>
+	  <xsl:element name="script">
+	    <xsl:attribute name="src">pell.js</xsl:attribute>
+	    <xsl:text> </xsl:text>
+	  </xsl:element>
+	  <xsl:element name="script">
+	    <xsl:attribute name="src">edit.js</xsl:attribute>
+	    <xsl:text> </xsl:text>
+	  </xsl:element>
+	</xsl:if>
       </xsl:element>
     </xsl:element>
   </xsl:template>
@@ -257,6 +137,9 @@ styleguide specs div * {
     <xsl:variable name="href">
       <xsl:value-of select="@href"/>
     </xsl:variable>
+    <xsl:variable name="idref">
+      <xsl:value-of select="translate(@href,'#','')"/>
+    </xsl:variable>
     <xsl:element name="{local-name(.)}">
       <xsl:attribute name="href">
 	<xsl:value-of select="$href"/>
@@ -266,7 +149,7 @@ styleguide specs div * {
 	  <xsl:value-of select="./text()"/>
 	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:value-of select="//bjcp:styleguide//*[@id=$href]/bjcp:name"/>
+	  <xsl:value-of select="//bjcp:styleguide//bjcp:*[@id=$idref]/bjcp:name"/>
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:element>
@@ -277,6 +160,20 @@ styleguide specs div * {
   <xsl:template match="bjcp:*" mode="copy">
     <xsl:element name="{local-name(.)}">
       <xsl:apply-templates select="@*" mode="copy"/>
+      <xsl:apply-templates mode="copy"/>
+    </xsl:element>
+  </xsl:template>
+
+
+
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples" mode="copy">
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates select="@*" mode="copy"/>
+      <xsl:if test="not($edit = 'no')">
+	<xsl:attribute name="onclick">
+	  <xsl:text>doedit(this);</xsl:text>
+	</xsl:attribute>
+      </xsl:if>
       <xsl:apply-templates mode="copy"/>
     </xsl:element>
   </xsl:template>

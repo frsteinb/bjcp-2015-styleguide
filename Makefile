@@ -2,7 +2,7 @@
 DEFILES		= $(shell ls de/*.xml)
 FIXFILES	= $(shell ls fix/*.xml)
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html bjcp-2015-styleguide-de-edit.html
 
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
@@ -32,6 +32,10 @@ bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleg
 	@xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.html
 	@echo "built $@"
 
+bjcp-2015-styleguide-de-edit.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
+	@xsltproc --stringparam edit yes xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de-edit.html
+	@echo "built $@"
+
 format:
 	@for f in de/*.xml ; do xmllint --format $$f | sed -e 's/ standalone="yes"//' > cache/tmp.xml ; cmp -s cache/tmp.xml $$f ; if [ $$? -ne 0 ] ; then cat cache/tmp.xml > $$f ; echo "reformatted $$f" ; fi ; rm cache/tmp.xml ; done
 
@@ -50,6 +54,7 @@ clean:
 	@rm -f bjcp-2015-styleguide-de.xml
 	@rm -f bjcp-2015-styleguide-orig.html
 	@rm -f bjcp-2015-styleguide-de.html
+	@rm -f bjcp-2015-styleguide-de-edit.html
 	@echo "cleanup done"
 
 distclean: clean
