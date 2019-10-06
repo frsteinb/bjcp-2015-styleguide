@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="15">
+    <name>Irish Beer</name>
+    <description>
+      <p>Die traditionellen Biere aus Irland, die in dieser Kategorie enthalten sind, sind bernsteinfarben bis dunkel, obergärige Biere von mäßigen bis leicht starker Kraft und werden oft sehr missverstanden aufgrund der Unterschiede in den Exportversionen oder dem übermäßigen Fokus auf die spezifischen Eigenschaften von mengenproduziertem Bier durch namhafte Brauereien. Jede der Arten in dieser Gruppierung hat ein breiteres Spektrum als allgemein angenommen wird.</p>
+    </description>
+  </category>
+</styleguide>

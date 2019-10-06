@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="16">
+    <name>Dark British Beer</name>
+    <description>
+      <p>Diese Kategorie enthält durchschnittliche bis starke, bitter bis süße, moderne britische und irische Stout die in England entstanden, auch wenn einige inzwischen allgemein mit Irland verbunden werden. In diesem Fall "British" sind es die weiteren britischen Inseln …  nicht Großbritannien.</p>
+    </description>
+  </category>
+</styleguide>

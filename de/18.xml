@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="18">
+    <name>Pale American Ale</name>
+    <description>
+      <p>Diese Kategorie beinhaltet moderne Amerikanische Ales mit mittlerer Stärke und heller Farbe die sowohl moderat Malzig wie auch moderat bitter sind.</p>
+    </description>
+  </category>
+</styleguide>

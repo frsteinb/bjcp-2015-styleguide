@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="20">
+    <name>American Porter and Stout</name>
+    <description>
+      <p>Diese Biere entwickelten sich alle von ihren englischen Namensvettern, um dann vollständig durch amerikanische Craft-Brauer verwandelt zu werden. Im Allgemeinen sind diese Stile vollmundiger, stärker, haben mehr Rösterwartung und mehr hopfenfixiert als ihre englischen Cousins. Diese Stile sind gemeinsam gruppiert aufgrund einer ähnlichen gemeinsamen Geschichte sowie dem ähnlichen Geschmacksprofil.</p>
+    </description>
+  </category>
+</styleguide>

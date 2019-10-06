@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="27">
+    <subcategory id="27-piwo-grodziskie">
+      <name>Historical Beer: Piwo Grodziskie</name>
+      <overall-impression>Ein Bier mit geringer STW, hoher Karbonisierung, leichtem Körper, Eichenrauch und sauberer Hopfenbittere. Saisonbier.</overall-impression>
+      <aroma>Geringer bis mittlerer Eichenrauch ist die hauptsächliche Geruchskomponente, kann aber auch subtil und schwer erkennbar sein. Ein geringes würziges, kräuteriges oder blumiges Hopfenaro- ma ist typischerweise wahrnehmbar, sollte weniger oder gleich intensiv wie der Rauch sein. Spuren von Weizen können in den besten Beispielen wahrgenommen werden. Ansonsten ist der Geruch eher neutral, wenngleich reife oder rote Apfelnoten willkommen sind. Nicht sauer. Leichte vom Wasser stammende Schwefelnoten können vorhanden sein.</aroma>
+      <appearance>Hellgelb bis leicht goldene Farbe und Glanzfein. Eine hohe, wellige, weiße, feinporige und langlebige Schaumkrone ist charakteristisch. Eine schlammige Trübung ist ein Fehler.</appearance>
+      <flavor>Der mittelleichte bis mittlere Eichenrauch steht zu Beginn und führt sich bis zum Abgang fort. Der Rauch kann im Geschmack deutlicher als im Geruch sein. Er sollte sanft, und nicht beißend sein. Dabei kann der Eindruck von Süße erweckt werden. Eine mittlere bis starke Bittere ist spürbar und zieht sich bis zum Abgang durch. Der Geschmack lehnt sich hin zur Bittere. Leichtes aber spürba- res würziges, kräuteriges oder blumiges Hopfenaroma. Im Hintergrund leichte Weizennoten. Leichte rote Apfel- oder Birnenester können vorhanden sein. Trocken und spritzig im Angang. Nicht sauer.</flavor>
+      <mouthfeel>Leichter Körper mit einem trockenen und spritzigen Abgang. Recht hoch karbonisiert kann es durchaus prickelnd sein. Kein Alkohol wahrnehmbar.</mouthfeel>
+      <comments>Traditionell mit mehrstufigen Maischprogrammen und mit einem langen (ca. 120min) Kochvorgang und verschiedenen Hefestämmen gebraut. Es ist nie gefiltert aber wurde mit Hausen- blase geklärt.</comments>
+      <history>Grätzer wurde vor Jahrhunderten als einzigartiger Stil in Grätz (Polen) entwickelt. Seine Bekannt- und Beliebtheit stieg schnell auch in anderen Teilen der Welt im späten 19. Jhdt. und frühen 20. Jhdt. Die kommerzielle Produktion sank nach dem zweiten Weltkrieg rapide und wurde Mitte der 1990er Jahre ganz eingestellt. Die Stilbeschreibung bezieht sich auf die traditionelle Version auf der Höhe seiner Popularität.</history>
+      <characteristic-ingredients>Die Schüttung besteht normal ausschließlich aus Weizenrauchmalz. Dieses Malz ist deutlich weniger intensiv als das typische Gerstenrauchmalz. Schinkengeschmack ist unpassend. Saazer und ähnliche Hopfen werden eingesetzt. Das Wasser ist mittelhart und schweflig. Benutzt wird eine relativ neutrale kontinentale untergärige Hefe bei mittleren obergärigen Temperatu- ren. Stark phenolische oder estrige deutsche Weizenhefen sind unpassend.</characteristic-ingredients>
+      <style-comparison>Ähnliche Stärke einer Berliner Weiße, aber nie sauer. Ist rauchig aber weniger intensiv als ein Rauchbier.</style-comparison>
+    </subcategory>
+  </category>
+</styleguide>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="27">
+    <subcategory id="27-gose">
+      <name>Historical Beer: Gose</name>
+      <overall-impression>Ein stark karbonisiertes, saures und fruchtiges obergäriges Weizenbier mit zurück- haltendem Koriander- und Salzaroma und geringer Bittere. Sehr erfrischend und mit hohem Endvergä- rungsgrad.</overall-impression>
+      <aroma> Leichte bis mittlere fruchtige Aromen von Apfel. Leichte, schwach stechende Säure mit wahrnehmbaren Koriander-, möglicherweise dezenten Zitrusaromen. Diese werden ergänzt durch einen moderaten brotigen, teigig-hefigen Charakter, ähnlich einem Sauerteig. Die Säure und der Kori- ander hinterlassen einen frischen und lebhaften Eindruck. Das Salz kann als leichte Seebrise oder Frische wahrgenommen werden, falls es überhaupt wahrnehmbar ist.</aroma>
+      <appearance>Ungefiltert mit mittlerer bis starker Trübung. Mittlere bis hohe, weiße, feinporige stabile Schaumkrone. Spitzig. Mittlere gelbe Farbe.</appearance>
+      <flavor>Mittlere bis verhaltene Säure, ähnlich einem Spritzer Zitrone in Ice Tea. Mäßig bro- tig/teigiger Geschmack. Leichte bis mittlere fruchtige Aromen von Apfel, Steinfrüchte oder Zitrone. Leichter bis mittlerer bis zur Wahrnehmbarkeitsschwelle salziger Charakter. Das Salz sollte wahr- nehmbar, aber nicht übermäßig schmeckbar sein. Leichte Bitterkeit, kein Hopfengeschmack. Trocken im Abgang mit Säure aber ohne Hopfen. Die Säure kann im Abgang deutlicher sein und die Frische des Biers betonen. Die Säure sollte dennoch ausgeglichen sein (wenngleich historische Versionen sehr sauer sein können).</flavor>
+      <mouthfeel> Hohe bis sehr hohe Karbonisierung, spritzig. Mittelleichter bis mittelvoller Körper. Das Salz kann, wenn überhaupt wahrgenommen, ein prickelndes Mundgefühl erzeugen. Die Hefe und das Weizenmalz können einen leichten Körper zur Folge haben, sollten aber nicht zu sehr im Vordergrund stehen.</mouthfeel>
+      <comments>
+	            Wird traditionell in zylindrischen Gläsern serviert. Historische Versionen waren durch Spontanvergärung sauerer als moderne Versionen und wurden eventuell mit Sirups wie auch die Berliner Weisse verschnitten oder <i>Kümmel</i>, ein Likör aromatisiert mit Kümmel, Kreuzkümmel und Fenchel. Moderne Beispiele sind mit Lactobazillus geimpft und sind generell besser ausbalanciert, sie benötigen keine Aufsüßung.
+            </comments>
+      <history> Der Stil stammt aus dem Mittelalter in welchem er sich in der Stadt Goslar im Harz am namensgebenden Fluss Gose entwickelte. In Leipzig kam die Gose wohl um 1740 an, es sind 80 Go- se-Häuser um 1900 dokumentiert. Nach dem 2. Weltkrieg sank die Produktion, bis sie 1966 ganz ein- gestellt wurde. 1980 wurde der Stil wiederentdeckt. Die Gose ist heutzutage allerdings selten erhält- lich.</history>
+      <characteristic-ingredients>Pilsner- und Weizenmalz, verhaltene Salz-, Koriander- und Milchsäure- bakteriengaben sind typisch. Der Koriander sollte frische Zitrusnoten (Zitrone oder Orange) einbrin- gen, nicht aber nach Gemüse oder Schinken schmecken. Das Salz sollte eine Meeresfrische haben, nicht aber metallisch oder nach Jod schmecken.</characteristic-ingredients>
+      <style-comparison>Die wahrgenommene Säure sollte nicht so stark wie die einer Berliner Weiße oder einer Geuze sein. Das Korianderaroma kann dem eines Witbiers ähnlich sein. Die Trübung kann ähn- lich der eines Weißbieres sein.</style-comparison>
+      <commercial-examples>Anderson Valley Gose, Bayerisch Bahnhof Leipziger Gose, Döllnitzer Ritterguts Gose</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

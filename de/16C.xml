@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="16">
+    <subcategory id="16C">
+      <name>Tropical Stout</name>
+      <overall-impression>Ein sehr dunkles, süßes, fruchtiges, mäßig starkes Ale mit glatten, röstigen Aromen ohne brennende Härte. </overall-impression>
+      <aroma>Süße offensichtliche, mäßige bis hohe Intensität. Geröstete Getreidearomen mäßig bis hoch, die Kaffee- oder Schokoladen-Noten haben können. Fruchtigkeit mittel bis hoch. Kann eine Melasse, Süßholz, getrocknete Früchte und / oder Aromastoffe haben. Stärkere Versionen können ein subtiles sauberes Aroma des Spiritus haben. Hopfenaroma niedrig zu nicht vorhanden. Diacetyl gering bis nicht vorhanden. </aroma>
+      <appearance>Sehr tiefbraun bis schwarz in der Farbe. Die Klarheit wird in der Regel durch tiefe Farbe verdeckt (wenn nicht undurchsichtig, sollte es klar sein). Große hellbrauner bis braune Schaumkrone, die lange hält.</appearance>
+      <flavor>Sehr süß mit einem glatten dunklen Getreidearoma und zurückhaltender Bitterkeit. Gerösteter Getreide- und Malz-Charakter kann mäßig bis hoch mit einem glatten Kaffee oder Schokolade Geschmack sein, obwohl der Röstcharakter in der Balance durch den süßen Abgang moderat wird. Mäßige bis hochfruchtige Ester. Kann eine süße, dunkle Rum-ähnliche Qualität haben. Wenig bis kein Hopfengeschmack. Mittel-niedrig bis kein Diacetyl. </flavor>
+      <mouthfeel>Mittlerer bis voller Körper, oft mit einem glatten, cremigen Charakter. Kann einen wärmenden (aber niemals heißen) Eindruck von Alkoholpräsenz geben. Mäßige bis mäßig hohe Kohlensäurebildung. Anmerkungen: Die Süße kan erheblich variieren. Erstaunlich erfrischend in einem heißen Klima.</mouthfeel>
+      <comments>Das Level der Süße kann stark variieren. Überraschend erfrischend in heißem Klima.</comments>
+      <history>Ursprünglich hochprozentige Stouts für tropische Märkte gebraut. Sie wurden populär und nachgeahmt von lokalen Brauer, oft mit lokalen Zuckern und Zutaten.</history>
+      <characteristic-ingredients>Ähnlich einem süßen Stout, aber mit mehr Stammwürze. Blasse und dunkel geröstete Malze und Getreide. Hopfen vor allem für Bitterkeit. Kann Zusatzstoffe und Zucker verwenden, um die Stammwürze zu erhöhen. Typischerweise mit warm-fermentierender Lager-Hefe. </characteristic-ingredients>
+      <style-comparison>Tastes like a scaled-up sweet stout with higher fruitiness. Similar to some Imperial Stouts without the high bitterness, strong/burnt roastiness, and late hops, and with lower alcohol. Much more sweet and less hoppy than American Stouts. Much sweeter and less bitter than the similar-gravity Export Stouts.</style-comparison>
+      <commercial-examples>ABC Extra Stout, Dragon Stout, Jamaica Stout, Lion Stout, Royal Extra Stout</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

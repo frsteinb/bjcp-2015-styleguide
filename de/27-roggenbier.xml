@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="27">
+    <subcategory id="27-roggenbier">
+      <name>Historical Beer: Roggenbier</name>
+      <overall-impression>Ein dunkles Weizen allerdings mit Roggen statt Weizen, mehr Körper und leichtem Hopfen im Abgang.</overall-impression>
+      <aroma>Leichtes bis mittleres würziges Roggenaroma, gepaart mit leichten bis mittleren Weizen- hefearomen (würzige Nelken- und fruchtige Bananen- oder Zitrusaromen). Leichte würzige, blumige oder kräuterige Hopfenaromen sind akzeptabel.</aroma>
+      <appearance>Leichte kupfer-orange bis sehr dunkelbraune oder kupferbraune Farbe. Große cremig weiße bis gefärbte, langanhaltende und dichte Schaumkrone. Trüb.</appearance>
+      <flavor>Getreidig, mittlere-leichte bis mittel-starke würzige Roggenaromen, oft ein Geschmack, der an Roggenbrot oder Pumpernickel erinnert. Die mittlere bis mittel-leichte Hopfenbittere erlaubt es der Malzsüße (manchmal etwas karamellig) noch zu durchdringen, bevor die Hefe- und Roggenaro- men übernehmen. Leichte bis mittlere Weizenhefearomen (Banane, Nelke), wenngleich die Intensität variieren kann. Mittel-trocken, getreidig im Abgang mit einer leichten Bittere im Nachgeschmack vom Roggen. Leichte bis mittlere würzige, kräuterige oder blumige Hopfenaromen sind akzeptabel und können bis in den Nachgeschmack hineinreichen.</flavor>
+      <mouthfeel>Mittlerer bis mittel-voller Körper. Hohe Karbonisierung. Mittelcremig.</mouthfeel>
+      <comments>Roggen ist ein spelzenloses Getreide, was durch eine gummiartige und klebrige Mai- sche Läuterprobleme verursachen kann. Roggen wird geschmacklich als das durchdringendste Ge- treide beschrieben. Es ist unpassend dem Bier Kümmel hinzuzufügen (geschieht in der amerikani- schen Heimbrauszene), das Roggenaroma stammt allein vom Getreide.</comments>
+      <history>Ein spezielles deutsches Roggenbier aus Regensburg in Bayern. Als nie wirklich populä- rer Stil verschwand es bis heute nahezu gänzlich.</history>
+      <characteristic-ingredients>Die Schüttung besteht typischerweise aus 50% oder mehr (bis zu 65%) Roggenmalz. Zusätzlich sind Pale Ale Malz, Münchner Malz, Weizenmalz, Caramalze und/oder klei- nere Mengen entbitterte, dunkle Malze für die Farbe enthalten. Weizenhefen sorgen für die unver- wechselbaren Bananenester und Nelkenphenole. Konservativer Gebrauch von Saazer für Bitterung und Aroma. Geringere Gärtemperaturen betonen die Nelke, da weniger Ester gebildet werden. Ähnlich wie bei Weißbieren wird im Dekoktionsverfahren gebraut.</characteristic-ingredients>
+      <style-comparison>Eine besondere Variante eines dunklen Weizenbieres, mit Roggen statt Weizen. Ame- rikanische Weizenbiere haben weniger Hefearomen und wahrscheinlich mehr Hopfen.</style-comparison>
+      <commercial-examples>Thurn und Taxis Roggen</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

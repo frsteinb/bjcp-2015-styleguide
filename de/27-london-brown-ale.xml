@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="27">
+    <subcategory id="27-london-brown-ale">
+      <name>Historical Beer: London Brown Ale</name>
+      <overall-impression>Ein sattes, süßes, malzbetontes dunkles Brown Ale, mit malzigem Karamell- und Toffee-Aroma und süß im Abgang.</overall-impression>
+      <aroma>Mittlerer malzig-süßer Geruch, oft mit intensivem karamell- oder toffee-ähnlichem Charakter. Leichte bis mittlere Fruchtester, oft dunkle Früchte wie Pflaumen. Sehr geringes bis kein Hopfenaroma mit erdigen oder blumigen Aromen.</aroma>
+      <appearance>Mittel- bis sehr dunkelbraun oder gar fast schwarz. Beinahe blickdicht, sollte dennoch relativ klar sein. Niedrige bis mittlere weiße bis leicht gefärbte Schaumkrone.</appearance>
+      <flavor>Starker karamelliger oder toffee-ähnlicher süßer Malzgeschmack am Gaumen welcher bis in den Abgang spürbar ist. Spuren von Biskuit und Kaffee sind üblich. Fruchtester können wahr- nehmbar sein (typischerweise dunkle Früchte), für ein englisches Bier wenig Gärnebenprodukte. Ge- ringe Hopfenbittere. Hopfengeschmack ist gering bis nichtexistent, möglicherweise mit erdigem oder blumigem Charakter. Mittelleichter bis nicht wahrnehmbarer Röstmalzgeschmack. Moderat süß im Abgang mit einem sanften malzigen Nachgeschmack. Kann einen zuckersüßen Geschmack haben.</flavor>
+      <mouthfeel>Mittlerer Körper, aber die Restsüße hinterlässt einen stärkeren Eindruck. Mittelleichte bis mittlere Karbonisierung. Ziemlich cremig und geschmeidige Textur, besonders für diese STW.</mouthfeel>
+      <comments>Immer seltener erhältlich. Wird stets aus Flaschen ausgeschenkt. Oft als Mix mit Mild oder Bitter Ales serviert. Kommerzielle Versionen können pasteurisiert und nachgesüßt sein, was einen zuckersüßen Geschmack zur Folge hat.</comments>
+      <history>1902 von „Mann’s“ als Flaschenbier entwickelt, hatte es den Ruf des süßesten Biers Londons. Vor dem zweiten Weltkrieg hatte es 5%volAlk. In der zweiten Hälfte des 20. Jhdts. sank die Beliebtheit bis es heute nahezu ausgestorben ist.</history>
+      <characteristic-ingredients>Pale Ale Malz als Basis mit einem großzügigen Anteil dunkler Karamell- malze und oft Röstmalzen und Weizenmalz (das ist „Mann’s“ traditionelle Schüttung – andere nutzen dunkle Zucker für die Farbe und den Geschmack) Mittlere bis hohe Anteile Kalzium im Wasser. Engli- sche Hopfen sind authentisch, aufgrund der geringen Bittere und Hopfengeschmacks, kann so gut wie jeder Hopfen genutzt werden. Nach abgeschlossener Hauptgärung mit Milchzucker oder Süßstoff nachgesüßt.</characteristic-ingredients>
+      <style-comparison>Kann wie eine weniger röstige Version eines Sweet Stouts wirken (geringere STW) oder eine süßere Version eines Dark Mild Ales.</style-comparison>
+      <commercial-examples>Harveys Bloomsbury Brown Ale, Mann's Brown Ale</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

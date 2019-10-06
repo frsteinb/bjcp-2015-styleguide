@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="8">
+    <name>Dark European Lager</name>
+    <description>
+      <p>Diese Kategorie enthält deutsche untergärige Vollbiere, dunkler als bernsteinbraun.</p>
+    </description>
+  </category>
+</styleguide>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="18">
+    <subcategory id="18A">
+      <name>Blonde Ale</name>
+      <overall-impression>Süffiges Einsteigerbier, malzbetontes amerikanisches Craft Beer, häufig mit interessanten Frucht-, Hopfen- oder charakteristischen Malznoten. Gut balanciert und klar, erfrischendes Bier ohne aggressive Geschmacksnoten. </overall-impression>
+      <aroma>Gering bis moderat süßes Malzaroma, eventuell mit etwas brotartiger oder karamelliger Note. Geringe bis moderate Fruchtigkeit ist optional, aber willkommen. Kann ein niedriges bis mittelstark ausgeprägtes Hopfenaroma haben und jede Hopfenqualität wiederspiegeln, wobei zitrusartige, florale, fruchtige und würzige Noten üblich sind. </aroma>
+      <appearance>Hellgelbe bis tief goldene Farbe. Klar bis brillant. Geringe bis mittlere weiße Schaumkrone mit ausreichender bis guter Schaumbeständigkeit. </appearance>
+      <flavor>Zu Beginn sanfte malzige Süße, jedoch können wahlweise in geringem Maße charaktervollere Malznoten (z.B. brot-, toast-, biskuit- oder weizenartig) vorhanden sein. Karamellnoten sind typischerweise nicht wahrnehmbar; sofern doch sind es normalerweise  Karamellnoten, die nur gering die Farbe beeinflussen. Geringe bis moderate Fruchtester je nach Geschmack, jedoch erwünscht. Leichter bis moderater Hopfengeschmack (jeder Art), sollte jedoch nicht zu aggressiv sein. Geringe bis mittlere Bitterkeit, die Balance liegt jedoch eher beim Malz oder zwischen Malz und Hopfen. Im Abgang halbtrocken bis geringfügig malzig-süß; die Wahrnehmung von Süße ist häufig ein Ausdruck der geringen Bittere, weniger der tatsächlichen Restsüße.  </flavor>
+      <mouthfeel>Mittel-leichter bis mittel-voller Körper. Mäßiger bis hoher Kohlensäuregehalt. Geschmeidig ohne schwer zu sein. </mouthfeel>
+      <comments>Brewpub Alternative zu standardmäßigem American Lager, oft als Einsteiger Craft Beer angeboten. </comments>
+      <history>Ein amerikanischer Craft Beer Stil, der von vielen Mikrobrauereien und Brewpubs gebraut wird, insbesondere solchen, die keine untergärigen Biere herstellen können. Regionale Varianten existieren (so stellen viele Gasthausbrauereien der Westküste etwas charakterbetontere Variationen her, eher in Richtung Pale Ale tendierend). In den meisten Gebieten stellt dieses Bier das am wenigsten herausforderndste der Bierkarte dar. </history>
+      <characteristic-ingredients>Grundsätzlich alle Malze, kann jedoch bis zu 25% Weizenmalz oder einige Zuckerersatzstoffe enthalten. Jede Hopfensorte kann verwendet werden. Sauber gärende amerikanische, leicht fruchtige englische oder Kölsch Hefe. Kann auch mit Lager Hefe gebraut werden oder kalt konditioniert werden. Einige Varianten können Honig, Gewürze oder Frucht enthalten, falls jedoch eine dieser Zutaten stärker hervorsticht, sollte das Bier in der entsprechenden Spezialkategorie eingereicht werden. </characteristic-ingredients>
+      <style-comparison>Hat üblicherweise mehr Geschmack als American Lager und Cream Ales. Weniger bitter als ein American Pale Ale. </style-comparison>
+      <commercial-examples>Kona Big Wave Golden Ale, Pelican Kiwanda Cream Ale, Russian River Aud Blonde, Victory Summer Love, Widmer Citra Summer Blonde Brew</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

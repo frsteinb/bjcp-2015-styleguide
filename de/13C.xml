@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="13">
+    <subcategory id="13C">
+      <name>English Porter</name>
+      <description>
+        <p>Einfach "Porter" in Großbritannien genannt, wird der Name "Englisch Porter" gebraucht, um es von anderen Porter in diesen beschriebenen Richtlinien zu unterscheiden.</p>
+      </description>
+      <overall-impression>Ein moderat-starkes braunes Bier mit zurückhaltendem röstigen Charakter und Bitterkeit. Es hat eine Reihe von Röstaromen, in der Regel ohne verbrannt zu wirken. Oft hat es ein Schokoladen-Karamell-malzig-Profil.</overall-impression>
+      <aroma>Moderat bis mäßig niedrige brotigkeit, biscuity und toast-Malzaroma mit milder Röstigkeit. Eine Schokoladen Note kann vorkommen. Kann auch einige nicht-Röstmalze zur Unterstützung haben (karamellig, nussig, Toffee-like und / oder süß). Hopfen kann bis zu einem moderaten Niveau von blumigen oder erdigen Aromen vorkommen. Fruchtester mäßig bis keine. Diacetyl gering bis nicht vorhanden.</aroma>
+      <appearance>Hellbraun bis dunkelbraun in der Farbe, oft Rubin hervorhebt, wenn es ins Licht gehalten wird. Gute Klarheit, obwohl es nahezu undurchsichtig sein kann. Moderater beiger bis hellbrauner Schaum mit guter Haltbarkeit.</appearance>
+      <flavor>Moderat bready, biscuity, und toast-Malzaroma mit milder Röstigkeit (häufig mit einem bis Schokoladen-Charakter) und oft einem bedeutenden Karamell-, nussartigen, und/oder Toffee- Charakter. Kann auch andere Sekundäraromen haben wie Kaffee, Lakritz, Kekse oder Toast zur Unterstützung. Sollte keine verbrannte oder rauhe Röstnote haben, obwohl einige Anklänge zur Komplexität einer Bitterschokolade beitragen können. Erdigiger oder Blumenhopfengeschmack mäßiger bis nicht vorhanden. Mittel niedrig bis mittle Hopfenbitterkeit verschiebt die Balance von leicht malzig zu leicht bitteren Variationen. Normalerweise sehr gut vergoren, kann es doch etwas süß sein. Diacetyl mäßig gering bis nicht vorhanden. Moderate bis niedrige Fruchtester.</flavor>
+      <mouthfeel>Mittel-leichter bis mittlerer Körper. Mäßig geringe bis mäßig hohe Carbonisierung. Leichte bis moderat cremige Textur.</mouthfeel>
+      <comments>Diese Stil-Beschreibung beschreibt die moderne Version des englischen Porter, nicht jede mögliche Variation, die über die Zeit in jeder Region existierte. Historische Nachbildungen sollten in der Kategorie des historischen Stils eingegeben werden, mit einer entsprechenden
+Profilbeschreibung  des Bieres. Moderne Craftbeer-Beispiele in Großbritannien sind schwerer und hopfiger.</comments>
+      <history>Entstanden in London vor rund 300 Jahren, entwickelte sich das Porter aus dem früheren süßen, beliebten Brown Beer der Zeit. Die technologische Entwicklung sowie die Inhalststoffe wurden viele Male weiterentwickelt wobei die Konsumenten diese Entwicklung mittrugen. Es war dann ein sehr beliebter, weit exportierter Stil in der 1800er Jahren vor dem Ersten Weltkrieg, danach rückläufig und in den 1950er Jahren verschwunden. Es wurde Mitte der 1970er Jahre mit dem Beginn der Craftbeer-Ära wieder eingeführt. Der Name soll abgeleitet sein aus seiner Popularität bei den Arbeitern in London während der verschiedenen lasttragenden Aufgaben des Tages (Lastträger = Porter). Das Porter brachte verschiedene regionale Interpretationen im Laufe der Zeit hervor, und war ein Vorläufer für alle Stout (die ursprünglich "Stout Porter" genannt wurden). Es gibt keine historische Verbindung oder Beziehung zwischen Mild und Porter.</history>
+      <characteristic-ingredients>Malze variieren, aber Malze, die etwas dunkle Farbe produzieren, sind immer beteiligt. Schokolade oder andere dunkle Röstmalze, Karamellmalz, brauner Zucker und dergleichen sind üblich. London-Typ Porter verwenden oft Brown Malz für den charakteristischen Geschmack.</characteristic-ingredients>
+      <style-comparison>Unterscheidet sich von einem amerikanischen Porter, da es in der Regel weichere, süßere und karamelligere Aromen, niedrige Stärke, und in der Regel weniger Alkohol hat; das amerikanische Porter hat in der Regel eher einen Hopfencharakter. Mehr Substanz und Röstigkeit als bei einem britischen Brown Ale. Höhere Stammwürze als ein Dark Mild.</style-comparison>
+      <commercial-examples>Burton Bridge Burton Porter, Fuller's London Porter, Nethergate Old Growler Porter, RCH Old Slug Porter, Samuel Smith Taddy Porter</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

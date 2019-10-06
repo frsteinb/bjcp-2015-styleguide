@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="27">
+    <name>Historical Beer</name>
+    <description>
+      <p>Die Kategorie Historischebiere beinhaltet Stile die heute beinahe ausgestorben sind, oder die in der Vergangenheit sehr viel populärer waren und nur noch durch Neuschöpfungen bekannt sind. Diese Kategorie kann auch für über Jahrhunderte kulturell bedeutende traditionelle oder einheimische Biere verwendet werden. Es impliziert nicht, dass Biere in dieser Kategorie aktuell nicht mehr produziert werden, es bedeutet lediglich, dass es sich um einen sehr kleinen Stil handelt oder sich der Stil in einem Wiederentdeckungsprozess durch Craft-Brauer befindet.
+      </p>
+    </description>
+    <entry-instructions>Der Teilnehmer muss entweder einen der durch die BJCP beschriebenen Stile aus der unten aufgeführten Liste, oder einen an andere Stelle außerhalb der BJCP beschriebenen historischen Bierstil spezifizieren. Sollte es sich um einen Stil handeln, der sich im laufe der Jahunderte substantiell verändert hat (so wie Porter oder Stout), dann muss der Teilnehmer neben dem Stil auch die Ära angeben (z.B. 1820 English Porter).
+Wenn der Teilnehmer ein Bier außerhalb der in der BJCP beschriebenen Stile einreichen, so muss er den Juroren eine ausreichend detaillierte Stilbeschreibung zur Verfügung stellen, damit der Stil bewertet werden kann. Wenn ein Bier lediglich mit dem Stilnamen aber ohne weitere Beschreibung eingereicht wird, dann ist es sehr unwarscheinlich, dass die Juroren verstehen wie dieses Bier bewertet werden soll. Aktuell definierte Beispiele sind:	    <i>Gose, Piwo Grodziskie, Lichtenhainer, Roggenbier, Sahti, Kentucky Common, Pre-Prohibition Lager, Pre-Prohibition Porter, London Brown Ale</i>.</entry-instructions>
+  </category>
+</styleguide>

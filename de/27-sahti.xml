@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="27">
+    <subcategory id="27-sahti">
+      <name>Historical Beer: Sahti</name>
+      <overall-impression>Ein süßes, schweres, starkes und traditionelles finnisches Bier mit Roggen, Wacholder und Wacholderbeergeschmack und starken Bananen-Nelken-Aromen.</overall-impression>
+      <aroma>Starke Bananenester mit mittleren Nelkenphenolen. Nicht sauer. Kann leichte bis mittlere Wacholdercharakteristiken haben. Getreidiges Malz, Karamell und Roggen im Hintergrund. Leicht alkoholisch. Süße Malzigkeit.</aroma>
+      <appearance>Hellgelb bis dunkelbraun, meist aber mittel bis dunkel bernsteinfarben. Meist ziemlich trüb, geringe Schaumkrone wegen der geringen Karbonisierung.</appearance>
+      <flavor>Stark bananig und mittlere bis hohe Nelkenaromen. Mittlere Roggenaromen. Geringe Bittere. Ziemlich süß im Abgang. Der Wacholder kann kiefer-ähnliche Noten mitbringen. Die Wachol- derbeeren bringen Gin-ähnliche Aromen mit. Die Aromen sollten sich ergänzen aber nicht dominieren. Hopfen ist nicht schmeckbar. Mittlere Karamellaromen aber nicht röstig. Vielschichtig und komplex mit leichtem Würzegeschmack, der in anderen Stilen nicht zu finden ist. Nicht sauer.</flavor>
+      <mouthfeel>Dick, viskos und mit deutlichem Eiweiß (wird nicht gekocht). Ungespundet. Der Alkohol wärmt deutlich, wird aber oft von der Süße überdeckt.</mouthfeel>
+      <comments>Durch den Roggenanteil soll das Bier jedoch keine Kümmelaromen bekommen. Die Wacholderbeeren erwecken den Eindruck eines Gin-Geschmacks. Der Wacholder wirkt als Gegen- gewicht zur Süße und ersetzt hier den Hopfen, um das Bier auszubalancieren.</comments>
+      <history>Dieser traditionelle finnische Stil mit einer mindestens 500-jährigen Tradition wurde meist zu festlichen Anlässen wie Hochzeiten gebraut und innerhalb von 1-2 Wochen nach dem Braugang getrunken.</history>
+      <characteristic-ingredients>Gerstenmalz zusammen mit anderem vermälzten und unvermälzten Ge- treide, oft mit Roggen. Wenig Hopfen. Wacholderzweige wurden zum Läutern benutzt. Oft wurde Bä- ckerhefe zur schnellen und warmen Gärung verwendet. Deutsche Weizenhefe ist ein guter Ersatz. Nicht gekocht, langes Maischen und zugesetzter Hopfentee sind typisch.</characteristic-ingredients>
+      <style-comparison>Starke Ähnlichkeiten mit Weizenböcken aber süß, dick und mit Roggen- und Wachol- deraromen.</style-comparison>
+      <commercial-examples>Now made year-round by several breweries in Finland.</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

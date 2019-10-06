@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="19">
+    <subcategory id="19B">
+      <name>California Common</name>
+      <overall-impression>Ein leicht fruchtiges Bier mit einer soliden Malzbasis, interessanten toastartigen und karamelligen Geschmacksnoten sowie rustikalen, traditionellen amerikanischen Hopfensorten. </overall-impression>
+      <aroma>Vorzeigebiersorte für urige, althergebrachte amerikanische Hopfensorten (häufig mit einer holzigen, rustikalen oder minzigen Note) in moderater bis hoher Ausprägung. Eine leichte Fruchtigkeit ist erwünscht. Niedrige bis moderate Karamell- oder toastartige Malzaromen unterstützen den Hopfen.</aroma>
+      <appearance>Mittel-bernsteinfarben bis leichtes Kupfer. Üblicherweise klar. Moderat beige Schaumkrone mit guter Haltbarkeit.</appearance>
+      <flavor>Moderat malzig mit einer betonten Hopfenbittere. Der Malzcharakter ist normalerweise toastartig (nicht geröstet) und karamellastig. Niedriger bis moderat hoher Hopfengeschmack, wobei der Charakter uriger, althergebrachter amerikanischer Hopfensorten (holzig, rustikal, minzig) im Vordergrund steht. Der Abgang ist eher trocken und mit etwas Biss mit einer andauernden Hopfenbittere und einem auffälligen getreideartigen Malzgeschmack. Leichte Fruchtester sind akzeptabel, ansonsten eher sauberes Gärungssprofil. </flavor>
+      <mouthfeel>Mittlerer Körper. Mittel bis mittel-hoher Kohlensäuregehalt.</mouthfeel>
+      <comments>Dieser Stil wird eng definiert anhand des Prototyps von Anchor Steam, wobei auch andere Zutaten der Region erlaubt sind. Die Verwendung von Northern Brewer Hopfen ist keine zwingende Vorgabe für diesen Bierstil; allerdings sind moderne amerikanische und andere Hopfensorten der Neuen Welt (insbesondere solche mit zitrusartigen Eigenschaften) nicht unangemessen für diesen Bierstil. </comments>
+      <history>Ein Original der amerikanischen Westküste, ursprünglich als Steam Beer in der Goldrauschzeit gebraut. Große, flache offene Gärbecken (sog. Kühlschiffe) wurden traditionell eingesetzt. Mangels künstlicher Kühlung war die frische Witterung um die Bucht von San Francisco recht gut geeignet für die Herstellung dieser Biere. Normalerweise mit einer untergärigen Hefe gebraut, die auch bei wärmeren Temperaturen ein relativ sauberes Fermentationsprofil hat. Moderne Beispiele basieren auf der Wiederbelebung dieses Bierstiles durch Anchor Brewing in den 1970er Jahren. </history>
+      <characteristic-ingredients>Pale Ale Malz, Hopfen ohne Zitrusaroma (häufig Northern Brewer), kleine Mengen an geröstetem Malz und/oder Karamellmalz. Untergärige Hefe; einige Stämme (meistens solche mit „California“ im Namen) vergären besser als andere bei den üblicherweise etwas höheren Fermentations-Temperaturen (zwischen 13°C und 16°C). Einige deutsche Hefestämme produzieren einen unpassenden schwefeligen Charakter. </characteristic-ingredients>
+      <style-comparison>Oberflächlich betrachtet ähnlich einem amerikanischen Amber Ale, jedoch mit einer speziellen Auswahl an Malzen und Hopfen – das Aroma und der Geschmack des Hopfens stammt von traditionellen amerikanischen Sorten (keinen modernen), der Malzgeschmack ist etwas röstaromatischer, die Hopfung ist immer sehr bestimmend und eine bei höheren Temperaturen vergärende Lagerhefe kommt zum Einsatz. Weniger endvergoren, weniger Kohlensäuregehalt und weniger fruchtig als ein australisches Sparkling Ale. </style-comparison>
+      <commercial-examples>Anchor Steam, Flying Dog Old Scratch Amber Lager, Schlafly Pi Common, Steamworks Steam Engine Lager</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>

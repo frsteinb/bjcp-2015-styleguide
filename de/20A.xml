@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="20">
+    <subcategory id="20A">
+      <name>American Porter</name>
+      <overall-impression>Ein substanzielles, malziges dunkles Bier mit einem komplexen und würzigen dunklen Malzcharakter. </overall-impression>
+      <aroma>Mittel- bis mittelstarkes dunkles Malzaroma, oft mit leicht verbranntem Charakter. Optional kann auch etwas zusätzlichen Malzcharakter zur Unterstützung haben (getreidig, brotig, Toffee-artig, Karamell, Schokolade, Kaffee, und / oder süß). Hopfen-Aroma niedrig bis hoch, oft mit einem harzigen, erdigen oder floralen Charakter. Kann nachgestopft sein. Fruchtige Ester sind mäßig bis nicht vorhanden. </aroma>
+      <appearance>Mittelbraun bis sehr dunkelbraun, oft mit rubin- oder granatartigen Lichtern. Kann schwarz nahe kommen. Eine Klarheit kann schwierig sein, in solch einem dunklen Bier zu erkennen, aber wenn es nicht undurchsichtig ist es klar (besonders wenn es gegen Licht gehalten wird). Voller, bräunlicher Schaum mit mäßig guter Haltbarkeit. </appearance>
+      <flavor>Mäßig starker Malzgeschmack kennzeichnet gewöhnlich einen leicht gebrannten Malzcharakter (und manchmal auch Schokolade und / oder Kaffeearomen) mit etwas getreidiger, dunkler Malztrockenheit im Abgang. Der gesamte Geschmack kann von trocken bis mittel-süß enden.
+Ein scharfer Charakter von dunklem geröstetem Getreide kann vorkommen, sollte aber nicht übermäßig scharf, verbrannt oder hart sein. Mittlere bis hohe Bitterkeit, die durch das dunkle Malz betont werden kann. Hopfen-Geschmack kann von niedrig bis hoch mit einem harzigen, erdigen oder floralen Charakter variieren und balanciert die dunklen Malz-Aromen aus. Das dunkle Malz und der Hopfen sollten sich nicht widersprechen. Hopfengestopfte Versionen können einen harzigen Geschmack haben. Fruchtige Ester mäßig bis nicht vorhanden. </flavor>
+      <mouthfeel>Mittlerer bis mittel-voller Körper. Mäßig niedrige bis mäßig hohe Karbonisierung. Stärkere Versionen können eine leichte Alkoholwärme haben. Eine leichte Adstringenz von dunklen Malz kann vorkommen, obwohl dieser Charakter nicht stark sein sollte. </mouthfeel>
+      <comments>Es ist ein ziemlich breiter Stil, offen für die Interpretation der Brauer. Dunkle Malzintensität und Geschmack können erheblich variieren. Kann oder kann keinen starken Hopfencharakter haben und können oder können nicht signifikanteGärnebenprodukte aufweisen; So scheint es einen "amerikanischen" oder "britischen" Charakter zu haben. </comments>
+      <history>Eine stärkere, aggressivere Version von Vor-Prohibition Porter und / oder englischen Porter, entwickelt in der modernen Craftbeer -Ära. Historische Versionen gab es vor allem an der US-Ostküste, von denen einige noch produziert werden. Dieser Stil beschreibt die moderne Craftbeer-Version. </history>
+      <characteristic-ingredients>Kann mehrere Malzarten enthalten, in jedem Fall markante dunkle Malze, die oft Schwarz-Malz enthalten (Schokolade Malz wird auch oft verwendet). Amerikanischer Hopfen, der normalerweise für das Bittere verwendet wird, aber US oder englische Hopfen können zum Ende verwendet werden; eine kollidierende Zitrusqualität ist im Allgemeinen unerwünscht. Die Ale Hefe kann entweder eine saubere US-Version oder eine charaktervolle englische Sorte sein. </characteristic-ingredients>
+      <style-comparison>Bitterer und oft stärker mit mehr dunklen Malz Qualitäten und Trockenheit als englische Porter oder Vor-Prohibition Porter. Weniger stark und durchsetzungsfähig als amerikanische Stouts.</style-comparison>
+      <commercial-examples>Anchor Porter, Boulevard Bully! Porter, Deschutes Black Butte Porter, Founders Porter, Great Lakes Edmund Fitzgerald Porter, Smuttynose Robust Porter, Sierra Nevada Porter</commercial-examples>
+    </subcategory>
+  </category>
+</styleguide>
