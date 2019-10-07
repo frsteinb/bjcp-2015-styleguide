@@ -49,7 +49,7 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
 install: bjcp-2015-styleguide-de-edit.html
-	scp bjcp-2015-styleguide-de-edit.html web/bjcp-styleguide.css web/edit-bjcp.js web/edit.css web/edit.js web/pell.css web/pell.js z:/var/www/bjcp-styleguide/
+	scp bjcp-2015-styleguide-de-edit.html web/bjcp-styleguide.css web/edit.css web/edit.js web/pell.css web/pell.js web/save.cgi z:/var/www/bjcp-styleguide/
 
 clean:
 	@rm -rf orig
@@ -63,7 +63,4 @@ clean:
 distclean: clean
 	@rm -rf cache
 	@echo "complete cleanup done"
-
-x.xml: de bjcp-2015-styleguide-orig.xml $(DEFILES) xsl/bjcp-2015-styleguide-translate.xsl
-	bash -c 'xsltproc --stringparam lang de --output x.xml xsl/bjcp-2015-styleguide-translate.xsl bjcp-2015-styleguide-orig.xml 2> >(grep -v "failed to load external entityx")'
 
