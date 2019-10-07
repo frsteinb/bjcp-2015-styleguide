@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="23">
+    <name>European Sour Ale</name>
+    <description>
+      <p>Diese Kategorie enthält die europäischen Sauerbierstile welche nach wie vor produzier werden und von denen viele (aber nicht alle) einen Weizenanteil haben. Die meisten haben eine niedrige Bittere und eine Säure die das zur Balance beiträgt was sonst der Hopfen beitragen würde. Manche davon werden gesüßt sei es in der Brauerei oder beim Verzehr. </p>
+    </description>
+  </category>
+</styleguide>
