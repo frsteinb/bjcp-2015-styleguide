@@ -1,11 +1,15 @@
 
 styleguide { 
   font-family: Helvetica, Arial, Geneva, sans-serif;
+/*
   font-size: 8pt;
+*/
 }
 
 styleguide chapter table {
+/*
   font-size: 8pt;
+*/
 }
 
 styleguide p.list-item {
@@ -13,7 +17,9 @@ styleguide p.list-item {
 }
 
 styleguide category, styleguide subcategory {
+/*
   font-size: 9pt;
+*/
   margin-top:1em;
   margin-bottom:1em;
   margin-left:0em;
@@ -45,7 +51,9 @@ styleguide name {
   margin-bottom:1em;
 }
 styleguide description {
+/*
   font-size: 8pt;
+*/
   margin-left:1em;
   display: block;
 }
@@ -113,7 +121,9 @@ styleguide strength-classifications {
   position: relative;
   margin-left: 1em;
   display: block;
+/*
   font-size: 8pt;
+*/
 }
 styleguide overall-impression:before,
 styleguide aroma:before,
@@ -151,6 +161,7 @@ styleguide specs div {
   display: inline-block;
 }
 styleguide specs div * {
+  padding: 1px 4px;
   border: 1px solid;
   display: inline-block;
   width: 9em;

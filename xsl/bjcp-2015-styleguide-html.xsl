@@ -8,6 +8,7 @@
 
 
   <xsl:param name="edit">no</xsl:param>
+  <xsl:param name="orig"></xsl:param>
 
 
 
@@ -44,11 +45,16 @@
 	<xsl:if test="not($edit = 'no')">
 	  <div id="editor">
 	    <div id="editor-inner">
+	      <div>You are editing the translation of the following original text:
+	        <div id="original"></div>
+	      </div>
 	      Your Author ID: <input type="text" name="author" id="author" />
 	      <div id="pelleditor"></div>
 	    </div>
 	    <div>Markup:<div id="markup"></div></div>
+	    <!--
 	    <div>Preview:<div id="render"></div></div>
+	    -->
 	  </div>
 	  <div/>
 	  <xsl:element name="script">
@@ -167,7 +173,13 @@
 
 
   <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples" mode="copy">
-    <xsl:element name="{local-name(.)}">
+    <xsl:variable name="name">
+      <xsl:value-of select="local-name(.)"/>
+    </xsl:variable>
+    <xsl:variable name="idref">
+      <xsl:value-of select="../@id"/>
+    </xsl:variable>
+    <xsl:element name="{$name}">
       <xsl:apply-templates select="@*" mode="copy"/>
       <xsl:if test="not($edit = 'no')">
 	<xsl:attribute name="onclick">
@@ -176,6 +188,14 @@
       </xsl:if>
       <xsl:apply-templates mode="copy"/>
     </xsl:element>
+    <xsl:if test="$orig">
+      <xsl:variable name="orignode" select="document(concat('../',$orig))/bjcp:styleguide//bjcp:*[@id=$idref]/bjcp:*[local-name(.) = $name]"/>
+      <xsl:element name="{$name}">
+	<xsl:apply-templates select="$orignode/@*" mode="copy"/>
+	<xsl:attribute name="orig">true</xsl:attribute>
+	<xsl:apply-templates select="$orignode/* | $orignode/text()" mode="copy"/>
+      </xsl:element>
+    </xsl:if>
   </xsl:template>
 
 

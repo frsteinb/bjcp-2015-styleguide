@@ -173,10 +173,14 @@ var init = function init(settings) {
   content.oninput = function (_ref) {
     var firstChild = _ref.target.firstChild;
 
-    if (firstChild && firstChild.nodeType === 3) exec(formatBlock, '<' + defaultParagraphSeparator + '>');else if (content.innerHTML === '<br>') content.innerHTML = '';
+    //if (firstChild && firstChild.nodeType === 3) exec(formatBlock, '<' + defaultParagraphSeparator + '>');else if (content.innerHTML === '<br>') content.innerHTML = '';
+    if (content.innerHTML === '<br>') content.innerHTML = '';
     settings.onChange(content.innerHTML);
   };
   content.onkeydown = function (event) {
+    if (event.key === "Escape") {
+	docancel();
+    }
     if (event.key === 'Enter' && queryCommandValue(formatBlock) === 'blockquote') {
       setTimeout(function () {
         return exec(formatBlock, '<' + defaultParagraphSeparator + '>');

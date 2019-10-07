@@ -5,11 +5,13 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:exsl="http://exslt.org/common"
     xmlns:dyn="http://exslt.org/dynamic"
-    extension-element-prefixes="exsl dyn">
+    xmlns:str="http://exslt.org/strings"
+    extension-element-prefixes="exsl dyn str">
 
 
 
   <xsl:param name="lang">de</xsl:param>
+  <xsl:param name="details">yes</xsl:param>
 
 
 
@@ -20,6 +22,41 @@
   <xsl:template match="bjcp:*">
     <xsl:apply-templates select="@*"/>
     <xsl:apply-templates/>
+  </xsl:template>
+
+
+
+  <xsl:template match="bjcp:styleguide">
+    <xsl:if test="$details = 'yes'">
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:if>
+
+    <xsl:variable name="list">
+      <xsl:apply-templates/>
+    </xsl:variable>
+    <xsl:variable name="total">
+      <xsl:value-of select="translate($list,'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:- &#xA;','')"/>
+    </xsl:variable>
+    <xsl:variable name="done">
+      <xsl:value-of select="translate($total,'_','')"/>
+    </xsl:variable>
+    <xsl:variable name="files">
+      <xsl:value-of select="translate($list,'&#xA;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789:- #_','*')"/>
+    </xsl:variable>
+    <xsl:text>
+Translated </xsl:text>
+    <xsl:value-of select="string-length($done)"/>
+    <xsl:text> of </xsl:text>
+    <xsl:value-of select="string-length($total)"/>
+    <xsl:text> elements (</xsl:text>
+    <xsl:value-of select="round(string-length($done) div string-length($total) * 100)"/>
+    <xsl:text>%) in </xsl:text>
+    <xsl:value-of select="string-length($files)"/>
+    <xsl:text> files.
+</xsl:text>
+    <xsl:value-of select="$filesdone"/>
+
   </xsl:template>
 
 
@@ -163,11 +200,11 @@
     <xsl:apply-templates select="@*"/>
     <xsl:choose>
       <xsl:when test="dyn:evaluate($p)">
-	<xsl:text>+</xsl:text>
+	<xsl:text>#</xsl:text>
 	<xsl:apply-templates select="dyn:evaluate($p)/* | dyn:evaluate($p)/text()"/>
       </xsl:when>
       <xsl:otherwise>
-	<xsl:text>-</xsl:text>
+	<xsl:text>_</xsl:text>
 	<xsl:apply-templates/>
       </xsl:otherwise>
     </xsl:choose>
