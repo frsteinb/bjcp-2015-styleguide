@@ -103,7 +103,7 @@ function docancel() {
 
 function dosave() {
 
-    x = editelem.innerHTML;
+    x = pelleditor.content.innerHTML;
     x = x.replace(/&nbsp;/g, " ");
     if (tagname != "description") {
 	x = x.replace(/<p>/g, " ");
@@ -119,7 +119,7 @@ function dosave() {
 
     xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4) {
-	    // alert(xhr.response);
+	    editor.style.display = "none";
 	}
     }
 

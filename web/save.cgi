@@ -111,16 +111,15 @@ origfilename = "%s/orig/%s.xml" % (REPODIR, id)
 translatedfilename = "%s/%s/%s.xml" % (REPODIR, LANG, id)
 
 if os.path.isfile(translatedfilename):
-    inputfilename = translatedfilename
+    log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
+    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, REPODIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
+    os.system(cmd)
 if os.path.isfile(origfilename):
-    inputfilename = origfilename
+    log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
+    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, REPODIR, origfilename, translatedfilename)
+    os.system(cmd)
 else:
     log("neither orig file %s nor translated file %s for id %s exists" % (origfilename, translatedfilename, id))
-    inputfilename = None
 
-if inputfilename:
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, REPODIR, inputfilename, translatedfilename)
-    log(cmd)
-    os.system(cmd)
 
 # TODO: parse, create response, show error response on client, write xml on server, git commit, 
