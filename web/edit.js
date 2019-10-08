@@ -6,6 +6,7 @@ const original = document.getElementById("original");
 const markup = document.getElementById("markup");
 const render = document.getElementById("render");
 const author = document.getElementById("author");
+const editstyleid = document.getElementById("editstyleid");
 const editstylename = document.getElementById("editstylename");
 const editelemname = document.getElementById("editelemname");
 const lastdate = document.getElementById("lastdate");
@@ -75,6 +76,7 @@ pell.init({
 
 function doedit(elem) {
     editid = elem.parentNode.getAttribute("id");
+    editname = elem.parentNode.getElementsByName("name")[0];
     editelem = elem;
     tagname = elem.tagName.toLowerCase();
     editlastdate = elem.getAttribute("date");
@@ -94,7 +96,8 @@ function doedit(elem) {
     } else {
 	text = ""
     }
-    editstylename.innerText = editid ? editid : "-";
+    editstyleid.innerText = editid ? editid : "-";
+    editstylename.innerText = editname ? editname : "-";
     editelemname.innerText = tagname ? tagname : "-";
     lastdate.innerText = editlastdate ? editlastdate : "original";
     lastauthor.innerText = editlastauthor ? editlastauthor : "original";
