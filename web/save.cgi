@@ -113,18 +113,16 @@ if os.path.isfile(translatedfilename):
     log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
     os.system(cmd)
-    log("updating all files (may take a minute)")
-    cmd = "make -C %s" % DIR
+    log("updating files in the background...")
+    cmd = "make -C %s background" % DIR
     os.system(cmd)
-    log("done")
 elif os.path.isfile(origfilename):
     log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
     os.system(cmd)
-    log("updating all files (may take a minute)")
-    cmd = "nohup make -C %s &" % DIR
+    log("updating files in the background...")
+    cmd = "make -C %s background" % DIR
     os.system(cmd)
-    log("done")
 else:
     log("neither orig file %s nor translated file %s for id %s exists" % (origfilename, translatedfilename, id))
 
