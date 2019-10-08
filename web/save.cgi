@@ -9,10 +9,9 @@ import codecs
 import time
 import datetime
 
-DIR = "/var/www/bjcp-styleguide"
-LOGFILE = "%s/logfile" % DIR
-SNIPPETDIR = "%s/snippets" % DIR
-REPODIR = "%s/bjcp-2015-styleguide" % DIR
+DIR = "/var/www/bjcp-2015-styleguide"
+LOGFILE = "%s/web/logfile" % DIR
+SNIPPETDIR = "%s/web/snippets" % DIR
 LANG = "de"
 
 
@@ -107,23 +106,23 @@ else:
 f.write('</styleguide>\n')
 f.close()
 
-origfilename = "%s/orig/%s.xml" % (REPODIR, id)
-translatedfilename = "%s/%s/%s.xml" % (REPODIR, LANG, id)
+origfilename = "%s/orig/%s.xml" % (DIR, id)
+translatedfilename = "%s/%s/%s.xml" % (DIR, LANG, id)
 
 if os.path.isfile(translatedfilename):
     log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, REPODIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
+    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
     os.system(cmd)
     log("updating all files (may take a minute)")
-    cmd = "make -C %s" % REPODIR
+    cmd = "make -C %s" % DIR
     os.system(cmd)
     log("done")
 elif os.path.isfile(origfilename):
     log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, REPODIR, origfilename, translatedfilename)
+    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
     os.system(cmd)
     log("updating all files (may take a minute)")
-    cmd = "make -C %s" % REPODIR
+    cmd = "make -C %s" % DIR
     os.system(cmd)
     log("done")
 else:
