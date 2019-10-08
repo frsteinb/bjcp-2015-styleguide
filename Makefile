@@ -33,7 +33,9 @@ bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleg
 	@echo "built $@"
 
 web/edit.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
-	@xsltproc --stringparam edit yes --stringparam orig bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > web/edit.html
+	@echo "Document update in progress. Please wait a moment and reload..." > web/edit.html
+	@xsltproc --stringparam edit yes --stringparam orig bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > web/edit.html.tmp
+	@mv web/edit.html.tmp web/edit.html
 	@echo "built $@"
 
 format:
