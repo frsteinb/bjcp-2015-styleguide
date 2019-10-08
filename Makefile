@@ -50,7 +50,7 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 
 background:
 	@echo "updating in the background..."
-	@if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/edit.html ; make web/edit.html ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/edit.html ; make background ; fi ; else touch .background-again ; fi &
+	@nohup sh -c 'if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/edit.html ; make web/edit.html ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/edit.html ; make background ; fi ; else touch .background-again ; fi' >/dev/null 2>&1 &
 
 install:
 	ssh z "cd /var/www ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; git pull ; else git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; mkdir web/snippets ; sudo chgrp -R www-data . ; sudo chmod g+ws . web web/snippets ; make ; fi"
