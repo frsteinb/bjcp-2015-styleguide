@@ -48,7 +48,7 @@
 	      <p>Editing <span id="editstylename">-</span>, element: <span id="editelemname">-</span>, last change: <span id="lastdate">-</span> by <span id="lastauthor">-</span></p>
 	      <div id="original">-</div>
 	      <p>Your Author ID: <input type="text" name="author" id="author" /></p>
-	      <div id="pelleditor">-</div>
+	      <div id="pelleditor"></div>
 	      <div>Markup:<div id="markup">-</div></div>
 	      <!--
 		  <div>Preview:<div id="render">-</div></div>
