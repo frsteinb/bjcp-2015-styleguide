@@ -49,10 +49,12 @@
 	      <div id="original">-</div>
 	      <p>Your Author ID: <input type="text" name="author" id="author" /></p>
 	      <div id="pelleditor"></div>
-	      <div>Markup:<div id="markup">-</div></div>
+	      <p>Markup:</p>
+	      <div id="markup">-</div>
 	      <!--
-		  <div>Preview:<div id="render">-</div></div>
-		  -->
+	      <p>Preview:</p>
+	      <div id="render">-</div>
+	      -->
 	    </div>
 	  </div>
 	  <div/>
