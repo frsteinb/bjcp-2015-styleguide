@@ -45,18 +45,15 @@
 	<xsl:if test="not($edit = 'no')">
 	  <div id="editor">
 	    <div id="editor-inner">
-	      <p>You are editing the translation of the following original text:</p>
+	      <p>Editing <span id="editstylename">-</span>, element: <span id="editelemname">-</span>, last change: <span id="lastdate">-</span> by <span id="lastauthor">-</span></p>
 	      <div id="original">-</div>
-	      <p>Your Author ID:
-	      <input type="text" name="author" id="author" />
-	      <span id="lasttext"> </span>
-	      </p>
-	      <div id="pelleditor"></div>
+	      <p>Your Author ID: <input type="text" name="author" id="author" /></p>
+	      <div id="pelleditor">-</div>
+	      <div>Markup:<div id="markup">-</div></div>
+	      <!--
+		  <div>Preview:<div id="render">-</div></div>
+		  -->
 	    </div>
-	    <div>Markup:<div id="markup"></div></div>
-	    <!--
-		<div>Preview:<div id="render"></div></div>
-	    -->
 	  </div>
 	  <div/>
 	  <xsl:element name="script">

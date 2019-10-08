@@ -6,7 +6,10 @@ const original = document.getElementById("original");
 const markup = document.getElementById("markup");
 const render = document.getElementById("render");
 const author = document.getElementById("author");
-const lasttext = document.getElementById("lasttext");
+const editstylename = document.getElementById("editstylename");
+const editelemname = document.getElementById("editelemname");
+const lastdate = document.getElementById("lastdate");
+const lastauthor = document.getElementById("lastauthor");
 
 var editelem;
 var tagname;
@@ -74,8 +77,8 @@ function doedit(elem) {
     editid = elem.parentNode.getAttribute("id");
     editelem = elem;
     tagname = elem.tagName.toLowerCase();
-    lastdate = elem.getAttribute("date");
-    lastauthor = elem.getAttribute("author");
+    editlastdate = elem.getAttribute("date");
+    editlastauthor = elem.getAttribute("author");
     t = elem.innerHTML;
     t = t.replace(/^ */,"");
     t = t.replace(/ *$/,"");
@@ -91,7 +94,10 @@ function doedit(elem) {
     } else {
 	text = ""
     }
-    lasttext.innerText = text;
+    editstylename.innerText = editid ? editid : "-";
+    editelemname.innerText = tagname ? tagname : "-";
+    lastdate.innerText = editlastdate ? editlastdate : "original";
+    lastauthor.innerText = editlastauthor ? editlastauthor : "original";
     if (origelem) {
 	original.innerHTML = origelem.innerHTML;
     }
@@ -136,6 +142,7 @@ function dosave() {
     user = author.value;
     xhr.open('POST', "save.cgi?id=" + editid + "&elem=" + tagname + "&user=" + user, true);
     xhr.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
+    xhr.responseType = "text";
     xhr.send(x);
 
 }

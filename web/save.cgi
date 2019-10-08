@@ -24,8 +24,8 @@ def log(msg):
 
 
 
-print("Content-Type: text/plain")
-print()
+print("Content-Type: text/plain; charset=UTF-8")
+print("")
 
 if "QUERY_STRING" in os.environ:
     form = urllib.parse.parse_qs(os.environ["QUERY_STRING"], keep_blank_values=False, strict_parsing=False, encoding='utf-8', errors='replace', max_num_fields=50)
@@ -126,5 +126,3 @@ elif os.path.isfile(origfilename):
 else:
     log("neither orig file %s nor translated file %s for id %s exists" % (origfilename, translatedfilename, id))
 
-
-# TODO: parse, create response, show error response on client, write xml on server, git commit, 
