@@ -51,7 +51,7 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 install: bjcp-2015-styleguide-de-edit.html
 	ssh z "if [ ! -d /var/www/bjcp-styleguide ] ; then sudo mkdir /var/www/bjcp-styleguide ; sudo chown frank.www-data /var/www/bjcp-styleguide ; sudo chmod u+rwx,g+rwxs /var/www/bjcp-styleguide ; touch /var/www/bjcp-styleguide/logfile ; mkdir /var/www/bjcp-styleguide/snippets; fi"
 	scp bjcp-2015-styleguide-de-edit.html web/bjcp-styleguide.css web/edit.css web/edit.js web/pell.css web/pell.js web/save.cgi z:/var/www/bjcp-styleguide/
-	ssh z "cd /var/www/bjcp-styleguide ; rm -rf bjcp-2015-styleguide ; git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; make"
+	ssh z "cd /var/www/bjcp-styleguide ; rm -rf bjcp-2015-styleguide ; git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; make bjcp-2015-styleguide-orig.xml"
 
 clean:
 	@rm -rf orig

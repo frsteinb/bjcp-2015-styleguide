@@ -120,6 +120,7 @@ function dosave() {
     xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4) {
 	    editor.style.display = "none";
+	    editelem.innerHTML = x;
 	}
     }
 

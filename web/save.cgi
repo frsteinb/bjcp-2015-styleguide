@@ -11,8 +11,8 @@ import datetime
 
 DIR = "/var/www/bjcp-styleguide"
 LOGFILE = "%s/logfile" % DIR
-SNIPPETDIR = "/var/www/bjcp-styleguide/snippets"
-REPODIR = "/var/www/bjcp-styleguide/bjcp-2015-styleguide"
+SNIPPETDIR = "%s/snippets" % DIR
+REPODIR = "%s/bjcp-2015-styleguide" % DIR
 LANG = "de"
 
 
@@ -111,12 +111,16 @@ origfilename = "%s/orig/%s.xml" % (REPODIR, id)
 translatedfilename = "%s/%s/%s.xml" % (REPODIR, LANG, id)
 
 if os.path.isfile(translatedfilename):
-    log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
+    log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, REPODIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
     os.system(cmd)
-if os.path.isfile(origfilename):
-    log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
+    cmd = "make -C %s && cp %s/bjcp-2015-styleguide-de-edit.html %s/bjcp-2015-styleguide-de-edit.html" % (REPODIR, REPODIR, DIR)
+    os.system(cmd)
+elif os.path.isfile(origfilename):
+    log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, REPODIR, origfilename, translatedfilename)
+    os.system(cmd)
+    cmd = "make -C %s && cp %s/bjcp-2015-styleguide-de-edit.html %s/bjcp-2015-styleguide-de-edit.html" % (REPODIR, REPODIR, DIR)
     os.system(cmd)
 else:
     log("neither orig file %s nor translated file %s for id %s exists" % (origfilename, translatedfilename, id))

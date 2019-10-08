@@ -109,7 +109,7 @@
 
 
   <!-- suppress these tags in translations -->
-  <xsl:template match="tags|specs">
+  <xsl:template match="bjcp:tags|bjcp:specs">
   </xsl:template>
 
 
