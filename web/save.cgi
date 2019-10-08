@@ -122,7 +122,7 @@ elif os.path.isfile(origfilename):
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
     os.system(cmd)
     log("updating all files (may take a minute)")
-    cmd = "make -C %s" % DIR
+    cmd = "nohup make -C %s &" % DIR
     os.system(cmd)
     log("done")
 else:

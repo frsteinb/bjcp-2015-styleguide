@@ -129,6 +129,4 @@ function dosave() {
     xhr.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
     xhr.send(x);
 
-    editor.style.display = "none";
-
 }
