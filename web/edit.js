@@ -6,6 +6,7 @@ const original = document.getElementById("original");
 const markup = document.getElementById("markup");
 const render = document.getElementById("render");
 const author = document.getElementById("author");
+const lasttext = document.getElementById("lasttext");
 
 var editelem;
 var tagname;
@@ -73,6 +74,8 @@ function doedit(elem) {
     editid = elem.parentNode.getAttribute("id");
     editelem = elem;
     tagname = elem.tagName.toLowerCase();
+    lastdate = elem.getAttribute("date");
+    lastauthor = elem.getAttribute("author");
     t = elem.innerHTML;
     t = t.replace(/^ */,"");
     t = t.replace(/ *$/,"");
@@ -83,6 +86,12 @@ function doedit(elem) {
     }
     pelleditor.content.innerHTML = t;
     origelem = elem.nextSibling;
+    if (lastdate && lastauthor) {
+	text = "last updated by " + lastauthor + " on " + lastdate;
+    } else {
+	text = ""
+    }
+    lasttext.innerText = text;
     if (origelem) {
 	original.innerHTML = origelem.innerHTML;
     }

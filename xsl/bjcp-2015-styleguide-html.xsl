@@ -48,7 +48,7 @@
 	      <div>You are editing the translation of the following original text:
 	        <div id="original"></div>
 	      </div>
-	      Your Author ID: <input type="text" name="author" id="author" />
+	      Your Author ID: <input type="text" name="author" id="author" /> | <span id="lasttext"></span>
 	      <div id="pelleditor"></div>
 	    </div>
 	    <div>Markup:<div id="markup"></div></div>
