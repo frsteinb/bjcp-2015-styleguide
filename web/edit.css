@@ -16,9 +16,6 @@ div#editor {
   right: 0;
   text-align: center;
   font-family: Helvetica, Arial, Geneva, sans-serif;
-/*
-  font-size: 8pt;
-*/
 }
 div#editor-inner {
   text-align: left;
@@ -34,14 +31,6 @@ div#editor-inner input {
 }
 div#markup {
   font-family: courier;
-/*
-  font-size: 7pt;
-*/
-}
-div#render {
-/*
-  font-size: 7pt;
-*/
 }
 div#original {
     margin:10px;
