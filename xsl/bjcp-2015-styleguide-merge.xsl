@@ -19,14 +19,14 @@
 
   <xsl:variable name="snippetid">
     <xsl:choose>
-      <xsl:when test="document(concat('../',$snippet))/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory">
-	<xsl:value-of select="document(concat('../',$snippet))/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory[@id]/@id"/>
+      <xsl:when test="document($snippet)/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory">
+	<xsl:value-of select="document($snippet)/bjcp:styleguide/bjcp:category/bjcp:subcategory/bjcp:subcategory[@id]/@id"/>
       </xsl:when>
-      <xsl:when test="document(concat('../',$snippet))/bjcp:styleguide/bjcp:category/bjcp:subcategory">
-	<xsl:value-of select="document(concat('../',$snippet))/bjcp:styleguide/bjcp:category/bjcp:subcategory[@id]/@id"/>
+      <xsl:when test="document($snippet)/bjcp:styleguide/bjcp:category/bjcp:subcategory">
+	<xsl:value-of select="document($snippet)/bjcp:styleguide/bjcp:category/bjcp:subcategory[@id]/@id"/>
       </xsl:when>
-      <xsl:when test="document(concat('../',$snippet))/bjcp:styleguide/bjcp:category">
-	<xsl:value-of select="document(concat('../',$snippet))/bjcp:styleguide/bjcp:category[@id]/@id"/>
+      <xsl:when test="document($snippet)/bjcp:styleguide/bjcp:category">
+	<xsl:value-of select="document($snippet)/bjcp:styleguide/bjcp:category[@id]/@id"/>
       </xsl:when>
       <xsl:otherwise>
 	<xsl:text>unknown</xsl:text>
@@ -35,7 +35,7 @@
   </xsl:variable>
 
 
-  <xsl:variable name="snippetnode" select="document(concat('../',$snippet))/bjcp:styleguide//bjcp:*[@id = $snippetid]"/>
+  <xsl:variable name="snippetnode" select="document($snippet)/bjcp:styleguide//bjcp:*[@id = $snippetid]"/>
 
 
   <!-- suppress these tags in translations -->
