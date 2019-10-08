@@ -42,7 +42,7 @@
   <xsd:element name="category">
     <xsd:complexType>
       <xsd:sequence>
-        <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="name" type="Text" minOccurs="0"/>
         <xsd:element name="description" type="Description" minOccurs="0"/>
         <xsd:element name="entry-instructions" type="Text" minOccurs="0"/>
         <xsd:element ref="subcategory" minOccurs="0" maxOccurs="unbounded"/>
@@ -60,7 +60,7 @@
   <xsd:element name="subcategory">
     <xsd:complexType>
       <xsd:sequence>
-        <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="name" type="Text" minOccurs="0"/>
         <xsd:element name="description" type="Description" minOccurs="0"/>
         <xsd:element name="overall-impression" type="Text" minOccurs="0"/>
         <xsd:element name="aroma" type="Text" minOccurs="0"/>
@@ -105,6 +105,9 @@
     <xsd:choice minOccurs="0" maxOccurs="unbounded">
       <xsd:element ref="p"/>
     </xsd:choice>
+    <xsd:attribute name="date" type="xsd:string"/>
+    <xsd:attribute name="author" type="xsd:string"/>
+    <xsd:attribute name="source" type="xsd:string"/>
   </xsd:complexType>
 
   <xsd:element name="tags">
@@ -309,6 +312,9 @@
       <xsd:element name="u" type="xsd:string"/>
       <xsd:element ref="a"/>
     </xsd:choice>
+    <xsd:attribute name="date" type="xsd:string"/>
+    <xsd:attribute name="author" type="xsd:string"/>
+    <xsd:attribute name="source" type="xsd:string"/>
   </xsd:complexType>
 
 

@@ -149,9 +149,9 @@
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
     <xsl:element name="{local-name(.)}">
-      <xsl:apply-templates select="@*"/>
       <xsl:choose>
 	<xsl:when test="dyn:evaluate($p)">
+	  <xsl:apply-templates select="dyn:evaluate($p)/@*"/>
 	  <xsl:apply-templates select="dyn:evaluate($p)/bjcp:* | dyn:evaluate($p)/text()"/>
 	</xsl:when>
 	<xsl:otherwise>

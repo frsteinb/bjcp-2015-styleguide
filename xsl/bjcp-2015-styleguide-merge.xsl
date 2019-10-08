@@ -58,9 +58,9 @@
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
     <xsl:element name="{$name}">
-      <xsl:apply-templates select="@*"/>
       <xsl:choose>
 	<xsl:when test="(../@id = $snippetid) and ($snippetnode/bjcp:*[local-name(.)=$name])">
+	  <xsl:apply-templates select="$snippetnode/bjcp:*[local-name(.)=$name]/@*"/>
 	  <xsl:apply-templates select="$snippetnode/bjcp:*[local-name(.)=$name]/bjcp:* | $snippetnode/bjcp:*[local-name(.)=$name]/text()"/>
 	</xsl:when>
 	<xsl:otherwise>
