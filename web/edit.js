@@ -76,7 +76,7 @@ pell.init({
 
 function doedit(elem) {
     editid = elem.parentNode.getAttribute("id");
-    editname = elem.parentNode.getElementsByName("name")[0];
+    editname = elem.parentNode.getElementsByTagName("name")[0];
     editelem = elem;
     tagname = elem.tagName.toLowerCase();
     editlastdate = elem.getAttribute("date");
