@@ -2,7 +2,7 @@
 DEFILES		= $(shell ls de/*.xml)
 FIXFILES	= $(shell ls fix/*.xml)
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html bjcp-2015-styleguide-de-edit.html
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/edit.html
 
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
@@ -32,8 +32,8 @@ bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleg
 	@xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.html
 	@echo "built $@"
 
-bjcp-2015-styleguide-de-edit.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
-	@xsltproc --stringparam edit yes --stringparam orig bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de-edit.html
+web/edit.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
+	@xsltproc --stringparam edit yes --stringparam orig bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > web/edit.html
 	@echo "built $@"
 
 format:
@@ -48,10 +48,10 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-orig.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
-install: bjcp-2015-styleguide-de-edit.html
-	ssh z "if [ ! -d /var/www/bjcp-styleguide ] ; then sudo mkdir /var/www/bjcp-styleguide ; sudo chown frank.www-data /var/www/bjcp-styleguide ; sudo chmod u+rwx,g+rwxs /var/www/bjcp-styleguide ; touch /var/www/bjcp-styleguide/logfile ; mkdir /var/www/bjcp-styleguide/snippets; fi"
-	scp bjcp-2015-styleguide-de-edit.html web/bjcp-styleguide.css web/edit.css web/edit.js web/pell.css web/pell.js web/save.cgi z:/var/www/bjcp-styleguide/
-	ssh z "cd /var/www/bjcp-styleguide ; rm -rf bjcp-2015-styleguide ; git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; make bjcp-2015-styleguide-orig.xml"
+install:
+	ssh z "if [ ! -d /var/www/bjcp-styleguide ] ; then sudo mkdir /var/www/bjcp-styleguide ; sudo chown frank.www-data /var/www/bjcp-styleguide ; sudo chmod u+rwx,g+rwxs /var/www/bjcp-styleguide ; touch /var/www/bjcp-styleguide/web/logfile ; mkdir /var/www/bjcp-styleguide/web/snippets; fi"
+	#scp bjcp-2015-styleguide-de-edit.html web/bjcp-styleguide.css web/edit.css web/edit.js web/pell.css web/pell.js web/save.cgi z:/var/www/bjcp-styleguide/
+	ssh z "cd /var/www/bjcp-styleguide ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; git pull ; else git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; make ; fi"
 
 clean:
 	@rm -rf orig

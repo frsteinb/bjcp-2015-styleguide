@@ -115,7 +115,7 @@ if os.path.isfile(translatedfilename):
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, REPODIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
     os.system(cmd)
     log("updating all files (may take a minute)")
-    cmd = "make -C %s && cp %s/bjcp-2015-styleguide-de-edit.html %s/bjcp-2015-styleguide-de-edit.html" % (REPODIR, REPODIR, DIR)
+    cmd = "make -C %s" % REPODIR
     os.system(cmd)
     log("done")
 elif os.path.isfile(origfilename):
@@ -123,7 +123,7 @@ elif os.path.isfile(origfilename):
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, REPODIR, origfilename, translatedfilename)
     os.system(cmd)
     log("updating all files (may take a minute)")
-    cmd = "make -C %s && cp %s/bjcp-2015-styleguide-de-edit.html %s/bjcp-2015-styleguide-de-edit.html" % (REPODIR, REPODIR, DIR)
+    cmd = "make -C %s" % REPODIR
     os.system(cmd)
     log("done")
 else:
