@@ -1,4 +1,5 @@
 
+const body = document.getElementsByTagName("body")[0];
 const editor = document.getElementById("editor");
 const pell = window.pell;
 const pelleditor = document.getElementById("pelleditor");
@@ -6,6 +7,7 @@ const original = document.getElementById("original");
 const markup = document.getElementById("markup");
 const render = document.getElementById("render");
 const author = document.getElementById("author");
+const editstyleid = document.getElementById("editstyleid");
 const editstylename = document.getElementById("editstylename");
 const editelemname = document.getElementById("editelemname");
 const lastdate = document.getElementById("lastdate");
@@ -75,6 +77,7 @@ pell.init({
 
 function doedit(elem) {
     editid = elem.parentNode.getAttribute("id");
+    editname = elem.parentNode.getElementsByTagName("name")[1].innerText;
     editelem = elem;
     tagname = elem.tagName.toLowerCase();
     editlastdate = elem.getAttribute("date");
@@ -94,7 +97,8 @@ function doedit(elem) {
     } else {
 	text = ""
     }
-    editstylename.innerText = editid ? editid : "-";
+    editstyleid.innerText = editid ? editid : "-";
+    editstylename.innerText = editname ? editname : "-";
     editelemname.innerText = tagname ? tagname : "-";
     lastdate.innerText = editlastdate ? editlastdate : "original";
     lastauthor.innerText = editlastauthor ? editlastauthor : "original";
@@ -108,12 +112,14 @@ function doedit(elem) {
 	render.innerHTML = elem.innerHTML;
     }
     editor.style.display = "block";
+    body.classList.add("fade");
     pelleditor.content.focus();
     
 }
 
 function docancel() {
     editor.style.display = "none";
+    body.classList.remove("fade");
 }
 
 function dosave() {
@@ -135,6 +141,7 @@ function dosave() {
     xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4) {
 	    editor.style.display = "none";
+	    body.classList.remove("fade");
 	    editelem.innerHTML = x;
 	}
     }
@@ -146,3 +153,34 @@ function dosave() {
     xhr.send(x);
 
 }
+
+
+
+
+var l = document.querySelectorAll("chapter, category, subcategory");
+for (var i = 0; i < l.length; i++) {
+
+    nav = document.createElement("nav");
+    l[i].insertBefore(nav, l[i].childNodes[0]);
+    
+    nav.addEventListener("dblclick", function() {
+	if (this.parentNode.classList.contains("collapsed")) {
+	    var l = document.querySelectorAll("category, subcategory");
+	    for (var i = 0; i < l.length; i++) {
+		l[i].classList.remove("collapsed");
+	    }
+	} else {
+	    var l = document.querySelectorAll("category, subcategory");
+	    for (var i = 0; i < l.length; i++) {
+		l[i].classList.add("collapsed");
+	    }
+	}
+    });
+
+    l[i].classList.add("collapsed");
+    
+    nav.addEventListener("click", function() {
+	this.parentNode.classList.toggle("collapsed");
+    });
+}
+
