@@ -2,7 +2,7 @@
 DEFILES		= $(shell ls de/*.xml)
 FIXFILES	= $(shell ls fix/*.xml)
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/edit.html
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/edit.html web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html
 
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
@@ -31,6 +31,12 @@ bjcp-2015-styleguide-orig.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styl
 bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
 	@xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.html
 	@echo "built $@"
+
+web/bjcp-2015-styleguide-orig.html: bjcp-2015-styleguide-orig.html
+	cp bjcp-2015-styleguide-orig.html web/
+
+web/bjcp-2015-styleguide-de.html: bjcp-2015-styleguide-de.html
+	cp bjcp-2015-styleguide-de.html web/
 
 web/edit.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
 	@echo "Document update in progress. Please wait a moment and reload..." > web/edit.html
