@@ -1,4 +1,5 @@
 
+const body = document.getElementsByTagName("body")[0];
 const editor = document.getElementById("editor");
 const pell = window.pell;
 const pelleditor = document.getElementById("pelleditor");
@@ -111,12 +112,14 @@ function doedit(elem) {
 	render.innerHTML = elem.innerHTML;
     }
     editor.style.display = "block";
+    body.classList.add("fade");
     pelleditor.content.focus();
     
 }
 
 function docancel() {
     editor.style.display = "none";
+    body.classList.remove("fade");
 }
 
 function dosave() {
@@ -138,6 +141,7 @@ function dosave() {
     xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4) {
 	    editor.style.display = "none";
+	    body.classList.remove("fade");
 	    editelem.innerHTML = x;
 	}
     }
@@ -149,3 +153,34 @@ function dosave() {
     xhr.send(x);
 
 }
+
+
+
+
+var l = document.querySelectorAll("chapter, category, subcategory");
+for (var i = 0; i < l.length; i++) {
+
+    nav = document.createElement("nav");
+    l[i].insertBefore(nav, l[i].childNodes[0]);
+    
+    nav.addEventListener("dblclick", function() {
+	if (this.parentNode.classList.contains("collapsed")) {
+	    var l = document.querySelectorAll("category, subcategory");
+	    for (var i = 0; i < l.length; i++) {
+		l[i].classList.remove("collapsed");
+	    }
+	} else {
+	    var l = document.querySelectorAll("category, subcategory");
+	    for (var i = 0; i < l.length; i++) {
+		l[i].classList.add("collapsed");
+	    }
+	}
+    });
+
+    l[i].classList.add("collapsed");
+    
+    nav.addEventListener("click", function() {
+	this.parentNode.classList.toggle("collapsed");
+    });
+}
+

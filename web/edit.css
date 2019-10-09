@@ -18,6 +18,8 @@ div#editor {
   font-family: Helvetica, Arial, Geneva, sans-serif;
 }
 div#editor-inner {
+    background-color: white;
+    pointer-events: all;
   text-align: left;
   margin: 50 auto;
   padding: 5px;
@@ -43,3 +45,9 @@ div#original {
 *[orig='true'] {
   display:none;
 }
+
+.fade {
+    background-color: rgba(0.5,0.5,0.5,0.6);
+    pointer-events: none;
+}
+
