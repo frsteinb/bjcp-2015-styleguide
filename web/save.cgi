@@ -84,19 +84,19 @@ f.write('<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">\
 f.write('<!-- snippet supplied by %s from %s at %s -->\n' % (user, addr, time))
 if level == 1:
     f.write('  <category id="%s">\n' % id)
-    f.write('    <%s date="%s" author="%s" source="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
+    f.write('    <%s date="%s" author="%s" addr="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
     f.write('  </category>\n')
 elif level == 2:
     f.write('  <category id="%s">\n' % id1)
     f.write('    <subcategory id="%s">\n' % id)
-    f.write('      <%s date="%s" author="%s" source="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
+    f.write('      <%s date="%s" author="%s" addr="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
     f.write('    </subcategory>\n')
     f.write('  </category>\n')
 elif level == 3:
     f.write('  <category id="%s">\n' % id1)
     f.write('    <subcategory id="%s">\n' % id2)
     f.write('      <subcategory id="%s">\n' % id)
-    f.write('        <%s date="%s" author="%s" source="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
+    f.write('        <%s date="%s" author="%s" addr="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
     f.write('      </subcategory>\n')
     f.write('    </subcategory>\n')
     f.write('  </category>\n')

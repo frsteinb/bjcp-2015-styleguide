@@ -178,7 +178,10 @@ for (var i = 0; i < l.length; i++) {
     });
 
     l[i].classList.add("collapsed");
-    
+
+    var o = l[i].querySelectorAll('*[source="original"]');
+    nav.setAttribute("todo",o.length);
+
     nav.addEventListener("click", function() {
 	this.parentNode.classList.toggle("collapsed");
     });

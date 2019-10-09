@@ -92,6 +92,49 @@ styleguide strength-classifications:before {
   content: "Strength Classifications: ";
 }
 
+styleguide[lang="de"] overall-impression:before {
+  content: "Gesamteindruck: ";
+}
+styleguide aroma:before {
+  content: "Geruch: ";
+}
+styleguide appearance:before {
+  content: "Erscheinungsbild: ";
+}
+styleguide flavor:before {
+  content: "Geschmack: ";
+}
+styleguide mouthfeel:before {
+  content: "Mundgefühl: ";
+}
+styleguide comments:before {
+  content: "Kommentierung: ";
+}
+styleguide history:before {
+  content: "Geschichte: ";
+}
+styleguide characteristic-ingredients:before {
+  content: "Charakteristische Zutaten: ";
+}
+styleguide style-comparison:before {
+  content: "Stilvergleich: ";
+}
+styleguide entry-instructions:before {
+  content: "Einreichungshinweise: ";
+}
+styleguide specs:before {
+  content: "Technische Daten: ";
+}
+styleguide commercial-examples:before {
+  content: "Kommerzielle Beispiele: ";
+}
+styleguide tags:before {
+  content: "Tags: ";
+}
+styleguide strength-classifications:before {
+  content: "Stärkeklassifikation: ";
+}
+
 styleguide overall-impression,
 styleguide aroma,
 styleguide appearance,
@@ -212,4 +255,14 @@ styleguide nav {
 
 styleguide chapter.collapsed nav, styleguide category.collapsed nav, styleguide subcategory.collapsed nav {
     transform: rotate(-90deg);
+}
+
+styleguide *[source="original"] {
+    background-color: #ffd0d0;
+}
+styleguide *[source="lang-file"] {
+    background-color: white;
+}
+styleguide nav:not([todo="0"]) {
+    background-color: #ffb0b0;
 }
