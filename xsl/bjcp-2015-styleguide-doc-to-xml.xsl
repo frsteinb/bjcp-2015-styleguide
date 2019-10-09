@@ -752,7 +752,7 @@
 	  </xsl:element>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
-	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseBody'">
+	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseBody' and w:r">
 	  <xsl:element name="p">
 	    <xsl:attribute name="class">body</xsl:attribute>
 	    <xsl:apply-templates select="w:r"/>
