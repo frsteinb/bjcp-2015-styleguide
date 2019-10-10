@@ -137,6 +137,14 @@ xhr2.responseType = "document";
 xhr2.send();
 
 
+function recalcTodo() {
+    var parts = styleguide_node.querySelectorAll("chapter, category, subcategory");
+    for (var i = 0; i < parts.length; i++) {
+	var nav = parts[i].getElementsByTagName("nav")[0];
+	var originals = parts[i].querySelectorAll('*[source="original"]');
+	nav.setAttribute("todo", originals.length);
+    }
+}
 
 function renderStyleguide(styleguide) {
 
@@ -212,12 +220,10 @@ function renderStyleguide(styleguide) {
 	    this.parentNode.classList.toggle("collapsed");
 	});
 
-	var originals = parts[i].querySelectorAll('*[source="original"]');
-	nav.setAttribute("todo", originals.length);
-
 	parts[i].classList.add("collapsed");
 
     }
 
+    recalcTodo();
 }
 
