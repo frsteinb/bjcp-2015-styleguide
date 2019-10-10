@@ -38,11 +38,11 @@ div#original {
     margin:10px;
 }
 
-*[onclick] {
+nav, *[onclick] {
   cursor: pointer;
 }
 
-*[orig='true'] {
+styleguide[orig="true"] * {
   display:none;
 }
 
