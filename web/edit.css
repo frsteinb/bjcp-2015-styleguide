@@ -122,7 +122,7 @@ styleguide *[source="lang-file"] {
     background-color: #dfffdf;
 }
 styleguide *[source="this-session"] {
-    background-color: #bfffbf;
+    background-color: #b0ffb0;
 }
 styleguide nav:not([todo="0"]) {
     background-color: #ffb0b0;
