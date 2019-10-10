@@ -120,7 +120,10 @@ elif os.path.isfile(origfilename):
     log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
     cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
     os.system(cmd)
-    log("updating files in the background...")
+    log("committing to web server local repository")
+    cmd = 'cd %s ; git commit %s/%s.xml -m "%s %s by %s from %s"' & (DIR, LANG, id, id, elem, user, addr)
+    os.system(cmd)
+    log("updating files in the background... otherwise done.")
     cmd = "make -C %s background" % DIR
     os.system(cmd)
 else:
