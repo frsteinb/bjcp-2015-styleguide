@@ -97,7 +97,7 @@ git remote add web ssh://frank@zbox.ibr.cs.tu-bs.de/var/www/bjcp-2015-styleguide
 and then pull its updates whenever you want:
 ```
 git pull web master
-
+```
 
 ## Contact
 
