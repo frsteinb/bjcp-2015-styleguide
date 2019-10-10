@@ -2,7 +2,7 @@
 DEFILES		= $(shell ls de/*.xml)
 FIXFILES	= $(shell ls fix/*.xml)
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/edit.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html
 
 
 
@@ -48,10 +48,10 @@ web/bjcp-2015-styleguide-orig.html: bjcp-2015-styleguide-orig.html
 web/bjcp-2015-styleguide-de.html: bjcp-2015-styleguide-de.html
 	cp bjcp-2015-styleguide-de.html web/
 
-web/edit.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
-	@echo "Document update in progress. Please wait a moment and reload..." > web/edit.html
+web/edit-old.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
+	@echo "Document update in progress. Please wait a moment and reload..." > web/edit-old.html
 	@xsltproc --stringparam edit yes --stringparam orig bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > web/edit.html.tmp
-	@mv web/edit.html.tmp web/edit.html
+	@mv web/edit.html.tmp web/edit-old.html
 	@echo "built $@"
 
 format:
@@ -67,7 +67,7 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
 background:
-	@nohup sh -c 'if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/edit.html ; make ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/edit.html ; make background ; fi ; else touch .background-again ; fi' >/dev/null 2>&1 &
+	@nohup sh -c 'if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make background ; fi ; else touch .background-again ; fi' >/dev/null 2>&1 &
 
 install:
 	ssh z "cd /var/www ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; sudo -u www-data git pull ; sudo -u www-data make ; else sudo -u www-data git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; sudo -u www-data mkdir web/snippets ; sudo -u www-data make ; fi"
