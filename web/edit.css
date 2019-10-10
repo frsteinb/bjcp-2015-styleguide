@@ -119,7 +119,10 @@ styleguide *[source="original"] {
     background-color: #ffd0d0;
 }
 styleguide *[source="lang-file"] {
-    background-color: white;
+    background-color: #dfffdf;
+}
+styleguide *[source="this-session"] {
+    background-color: #bfffbf;
 }
 styleguide nav:not([todo="0"]) {
     background-color: #ffb0b0;

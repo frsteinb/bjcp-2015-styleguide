@@ -112,14 +112,12 @@ function doedit(elem) {
 	render.innerHTML = elem.innerHTML;
     }
     editor.style.display = "block";
-    body.classList.add("fade");
     pelleditor.content.focus();
     
 }
 
 function docancel() {
     editor.style.display = "none";
-    body.classList.remove("fade");
 }
 
 function dosave() {
@@ -141,8 +139,11 @@ function dosave() {
     xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4) {
 	    editor.style.display = "none";
-	    body.classList.remove("fade");
 	    editelem.innerHTML = x;
+	    editelem.setAttribute("date", "today");
+	    editelem.setAttribute("author", "you");
+	    editelem.setAttribute("addr", "local");
+	    editelem.setAttribute("source", "this-session");
 	}
     }
 
