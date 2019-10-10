@@ -109,6 +109,8 @@ pell.init({
 
 var styleguide;
 var styleuide_orig;
+var styleguide_node;
+
 
 
 // load styleguide and trigger rendering
@@ -148,7 +150,7 @@ function recalcTodo() {
 
 function renderStyleguide(styleguide) {
 
-    var styleguide_node = document.importNode(styleguide, true);
+    styleguide_node = document.importNode(styleguide, true);
     var editor = document.querySelector("div[id='editor']");
     editor.parentNode.insertBefore(styleguide_node, editor);
 
