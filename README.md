@@ -94,9 +94,11 @@ For an ongoing distributed translation process, it is possible to install this p
 ```
 git remote add web ssh://frank@zbox.ibr.cs.tu-bs.de/var/www/bjcp-2015-styleguide
 ```
-and then pull its updates whenever you want:
+and then fetch its updates whenever you want, compare it, merge it, ... (again, this text cannot replace a Git tutorial):
 ```
-git pull web master
+git fetch web
+git diff master web/master 
+git merge web/master
 ```
 
 ## Contact
