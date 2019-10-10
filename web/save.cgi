@@ -109,17 +109,15 @@ f.close()
 origfilename = "%s/orig/%s.xml" % (DIR, id)
 translatedfilename = "%s/%s/%s.xml" % (DIR, LANG, id)
 
-if os.path.isfile(translatedfilename):
-    log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
-    os.system(cmd)
-    log("updating files in the background...")
-    cmd = "make -C %s background" % DIR
-    os.system(cmd)
-elif os.path.isfile(origfilename):
-    log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
-    os.system(cmd)
+if os.path.isfile(translatedfilename) or os.path.isfile(origfilename):
+    if os.path.isfile(translatedfilename):
+        log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
+        cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
+        os.system(cmd)
+    else:
+        log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
+        cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
+        os.system(cmd)
     log("committing to web server local repository")
     cmd = 'cd %s ; git commit %s/%s.xml -m "%s %s by %s from %s"' & (DIR, LANG, id, id, elem, user, addr)
     os.system(cmd)
