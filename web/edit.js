@@ -11,6 +11,8 @@ const editstylename = document.getElementById("editstylename");
 const editelemname = document.getElementById("editelemname");
 const lastdate = document.getElementById("lastdate");
 const lastauthor = document.getElementById("lastauthor");
+const translated = document.getElementById("translated");
+const total = document.getElementById("total");
 
 var edit_id;
 var edit_element;
@@ -140,11 +142,22 @@ xhr2.send();
 
 
 function recalcTodo() {
-    var parts = styleguide_node.querySelectorAll("chapter, category, subcategory");
+    var parts = styleguide_node.querySelectorAll("category");
+    var sum = 0;
+    var trans = 0;
     for (var i = 0; i < parts.length; i++) {
 	var nav = parts[i].getElementsByTagName("nav")[0];
 	var originals = parts[i].querySelectorAll('*[source="original"]');
 	nav.setAttribute("todo", originals.length);
+	sum += parts[i].querySelectorAll('*[source]').length;
+	trans += parts[i].querySelectorAll('*[source="original"]').length;
+    }
+    trans = sum - trans;
+    if (total) {
+	total.childNodes[0].nodeValue = sum;
+    }
+    if (translated) {
+	translated.childNodes[0].nodeValue = trans;
     }
 }
 

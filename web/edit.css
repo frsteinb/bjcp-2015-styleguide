@@ -38,7 +38,7 @@ div#original {
     margin:10px;
 }
 
-nav, *[onclick] {
+styleguide nav, styleguide *[source] {
   cursor: pointer;
 }
 
