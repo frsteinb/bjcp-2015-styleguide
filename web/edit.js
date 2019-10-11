@@ -68,6 +68,9 @@ pell.init({
 			edit_element.setAttribute("author", "you");
 			edit_element.setAttribute("addr", "local");
 			edit_element.setAttribute("source", "this-session");
+			
+			recalcTodo();
+
 		    }
 		}
 		
