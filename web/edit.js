@@ -145,7 +145,7 @@ xhr2.send();
 
 
 function recalcTodo() {
-    var parts = styleguide_node.querySelectorAll("category", "subcategory");
+    var parts = styleguide_node.querySelectorAll("category, subcategory");
     for (var i = 0; i < parts.length; i++) {
 	var nav = parts[i].getElementsByTagName("nav")[0];
 	var originals = parts[i].querySelectorAll('*[source="original"]');
