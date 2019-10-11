@@ -81,22 +81,22 @@ log(msg)
 f = codecs.open(snippetfilename, "w", "utf-8")
 f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
 f.write('<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">\n')
-f.write('<!-- snippet supplied by %s from %s at %s -->\n' % (user, addr, time))
+#f.write('<!-- snippet supplied by %s from %s at %s -->\n' % (user, addr, time))
 if level == 1:
     f.write('  <category id="%s">\n' % id)
-    f.write('    <%s date="%s" author="%s" source="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
+    f.write('    <%s date="%s" author="%s" addr="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
     f.write('  </category>\n')
 elif level == 2:
     f.write('  <category id="%s">\n' % id1)
     f.write('    <subcategory id="%s">\n' % id)
-    f.write('      <%s date="%s" author="%s" source="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
+    f.write('      <%s date="%s" author="%s" addr="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
     f.write('    </subcategory>\n')
     f.write('  </category>\n')
 elif level == 3:
     f.write('  <category id="%s">\n' % id1)
     f.write('    <subcategory id="%s">\n' % id2)
     f.write('      <subcategory id="%s">\n' % id)
-    f.write('        <%s date="%s" author="%s" source="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
+    f.write('        <%s date="%s" author="%s" addr="%s">%s</%s>\n' % (elem, time, user, addr, data, elem))
     f.write('      </subcategory>\n')
     f.write('    </subcategory>\n')
     f.write('  </category>\n')
@@ -109,18 +109,21 @@ f.close()
 origfilename = "%s/orig/%s.xml" % (DIR, id)
 translatedfilename = "%s/%s/%s.xml" % (DIR, LANG, id)
 
-if os.path.isfile(translatedfilename):
-    log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
+if os.path.isfile(translatedfilename) or os.path.isfile(origfilename):
+    if os.path.isfile(translatedfilename):
+        log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
+        cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
+        os.system(cmd)
+    else:
+        #log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
+        #cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
+        log("copying snippet as initial translation file %s/%s.xml" % (LANG, id))
+        cmd = "cp %s %s" % (snippetfilename, translatedfilename)
+        os.system(cmd)
+    log("committing to web server local repository")
+    cmd = 'cd %s ; git commit -q -m "%s %s by %s from %s" %s/%s.xml' % (DIR, id, elem, user, addr, LANG, id)
     os.system(cmd)
-    log("updating files in the background...")
-    cmd = "make -C %s background" % DIR
-    os.system(cmd)
-elif os.path.isfile(origfilename):
-    log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
-    cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
-    os.system(cmd)
-    log("updating files in the background...")
+    log("updating files in the background... otherwise done.")
     cmd = "make -C %s background" % DIR
     os.system(cmd)
 else:

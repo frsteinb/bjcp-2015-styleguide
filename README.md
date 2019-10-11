@@ -88,6 +88,19 @@ Besides all the contributors to the original BJCP document we would like to than
   git push
   ```
 
+## Web Editor
+
+For an ongoing distributed translation process, it is possible to install this project to a web server and run it as an online web editor that allows many people to contribute translation snippets without the need for Git, make, XML tools, etc. However, the webmaster has to take steps to get things running. Take a look at the "install" target in the Makefile. Once, it is running, the web server will have its own repository getting updated upon user translation contributions by a CGI script. Then on another (non-web) system you may setup the web editor repository as a remote (e.g.):
+```
+git remote add web ssh://frank@zbox.ibr.cs.tu-bs.de/var/www/bjcp-2015-styleguide
+```
+and then fetch its updates whenever you want, compare it, merge it, ... (again, this text cannot replace a Git tutorial):
+```
+git fetch web
+git diff master web/master 
+git merge web/master
+```
+
 ## Contact
 
 This stuff has been initiated by the German homebrewing community at https://hobbybrauer.de and its [HBCon](https://heimbrauconvention.de) organization team.

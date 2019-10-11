@@ -26,6 +26,18 @@
 
 
 
+  <xsl:template match="bjcp:styleguide">
+    <xsl:element name="{local-name(.)}">
+      <xsl:attribute name="lang">
+	<xsl:value-of select="$lang"/>
+      </xsl:attribute>
+      <xsl:apply-templates select="@*[local-name(.) != 'lang']"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
+
+
   <xsl:template match="bjcp:chapter">
     <xsl:variable name="d">
       <xsl:text>../</xsl:text>
@@ -151,10 +163,12 @@
     <xsl:element name="{local-name(.)}">
       <xsl:choose>
 	<xsl:when test="dyn:evaluate($p)">
+	  <xsl:attribute name="source">lang-file</xsl:attribute>
 	  <xsl:apply-templates select="dyn:evaluate($p)/@*"/>
 	  <xsl:apply-templates select="dyn:evaluate($p)/bjcp:* | dyn:evaluate($p)/text()"/>
 	</xsl:when>
 	<xsl:otherwise>
+	  <xsl:attribute name="source">original</xsl:attribute>
 	  <xsl:apply-templates/>
 	</xsl:otherwise>
       </xsl:choose>

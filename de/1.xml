@@ -2,8 +2,6 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="1">
     <name>Standard American Beer</name>
-    <description>
-      <p>Diese Kathegorie beschreibt weit verbreitete Amerikanische "every day" Biere. Mit sowol Ales als auch Lager, sind Biere dieser Kathegorie typischer weise nicht komplex und haben weiche u. gefällige Aromen. Die Ales sind in der Regel Lager ähnlich, oder designed um den Massenmarkt-Lagerbier-Trinker als crossover Bier zu gefallen. Massen-Markt Biere mit internationalem Geschmack oder Herkunft sind in der Kathegorie International Lager beschrieben.</p>
-    </description>
+    <description date="2019-10-10 13:25:56" author="frank" addr="2001:638:602:1183:e100:2522:8949:6cb"><p>Diese Kategorie beschreibt weit verbreitete alltägliche amerikanische Biere. Sowohl obergärige als auch untergärige Biere umfassend sind die Biere dieser Kategorie typischerweise nicht komplex und haben einen weichen und gefälligen Geschmack. Die obergärigen Biere zeigen meist Eigenschaften untergäriger Biere oder sind so gestaltet, dass sie als "Crossover"-Biere auch bei Konsumenten des Massenmarktes untergäriger Biere Anklang finden. Massenmarktbiere mit internationalem Absatz bzw. internationaler Herkunft sind in der Kategorie <a href="#2">International Lager</a> beschrieben.</p></description>
   </category>
 </styleguide>

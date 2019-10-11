@@ -27,12 +27,12 @@
 	  <xsl:attribute name="type">text/css</xsl:attribute>
 	  <xsl:attribute name="href">bjcp-styleguide.css</xsl:attribute>
 	</xsl:element>
-	<xsl:element name="link">
-	  <xsl:attribute name="rel">stylesheet</xsl:attribute>
-	  <xsl:attribute name="type">text/css</xsl:attribute>
-	  <xsl:attribute name="href">pell.css</xsl:attribute>
-	</xsl:element>
 	<xsl:if test="not($edit = 'no')">
+	  <xsl:element name="link">
+	    <xsl:attribute name="rel">stylesheet</xsl:attribute>
+	    <xsl:attribute name="type">text/css</xsl:attribute>
+	    <xsl:attribute name="href">pell.css</xsl:attribute>
+	  </xsl:element>
 	  <xsl:element name="link">
 	    <xsl:attribute name="rel">stylesheet</xsl:attribute>
 	    <xsl:attribute name="type">text/css</xsl:attribute>

@@ -20,6 +20,7 @@
 	  <xsd:element ref="category"/>
 	</xsd:choice>
       </xsd:sequence>
+      <xsd:attribute name="lang" type="xsd:string"/>
     </xsd:complexType>
   </xsd:element>
 
@@ -105,9 +106,10 @@
     <xsd:choice minOccurs="0" maxOccurs="unbounded">
       <xsd:element ref="p"/>
     </xsd:choice>
+    <xsd:attribute name="source" type="xsd:string"/>
     <xsd:attribute name="date" type="xsd:string"/>
     <xsd:attribute name="author" type="xsd:string"/>
-    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="addr" type="xsd:string"/>
   </xsd:complexType>
 
   <xsd:element name="tags">
@@ -312,9 +314,10 @@
       <xsd:element name="u" type="xsd:string"/>
       <xsd:element ref="a"/>
     </xsd:choice>
+    <xsd:attribute name="source" type="xsd:string"/>
     <xsd:attribute name="date" type="xsd:string"/>
     <xsd:attribute name="author" type="xsd:string"/>
-    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="addr" type="xsd:string"/>
   </xsd:complexType>
 
 
