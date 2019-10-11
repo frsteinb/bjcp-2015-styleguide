@@ -1,37 +1,36 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
-	<category id="23">
-		<subcategory id="23A">
-			<name>Berliner Weisse</name>
-			<overall-impression>
+  <category id="23">
+    <subcategory id="23A">
+      <name>Berliner Weisse</name>
+      <overall-impression>
 				Ein helles, erfrischendes Deutsches Weizenbier mit wenig Alkohol einer reinen Milchsäure und sehr starker Karbonisierung. Ein leichter Brotteig flavor unterstützt die Säure welche nicht künstlich wirken sollte. Jeglicher 
 			<i>Brettanomyces</i> funk ist hinderlich.</overall-impression>
-			<aroma>Ein scharf saurer Charakter ist vorherrschend (mäßig bis mäßig hoch). Kann bis zu einem mäßig fruchtigen Charakter haben (oft zitronig oder saurer Apfel). Die Fruchtigkeit kann mit dem Alter zunehmen und es kann sich ein leichter blumiger Charakter entwickeln. Kein Hopfenaroma. Der Weizen kann in frischeren Versionen als ungekochter Brotteig vorliegen; In Kombination mit der Säure kann dies auf Sauerteigbrot hindeuten. Kann optional einen zurückhaltenden funky <i> Brettanomyces </i> -Charakter haben.</aroma>
-			<appearance>Sehr helle Stroh gleiche Farbe. Die Klarheit reicht von klar bis etwas trüb. Große, feste, weißer Schaumkrone mit schlechter Haltbarkeit. Immer schäumend.</appearance>
-			<flavor>Saubere Milchsäure dominiert und kann sehr stark sein. Ein komplementärer teigiger, brotiger oder körniger Weizengeschmack ist im Allgemeinen spürbar. Hopfenbitterkeit ist nicht nachweisbar; Die Säure sorgt für die Balance und nicht der Hopfen. Niemals Essigähnlich. Eine verhaltene zitronig-lemonige oder säuer Apfel ähnliche Fruchtigkeit kann festgestellt werden. Sehr trockenes Finish. Ausgewogenheit wird duch die Säure dominiert, aber etwas Malzgeschmack sollte vorhanden sein. Kein Hopfen-Flavor. Kann optional einen zurückhaltenden funky <i> Brettanomyces </i> -Charakter haben.</flavor>
-			<mouthfeel>Leichter Körper. Sehr hoch Karbonisiert. Kein warnehmbarer Alcohol. Knackige saftige säure.</mouthfeel>
-			<comments>In Deutschland wird es als ein <i> Schankbier </i> klassifiziert, welches ein lechtes Bier mit einer Stammwürze im Bereich von 7 bis 8 ° P bezeichnet. Oft mit einem Schuss Zuckersirup <i> (mit Schuss) </i> mit Himbeer <i> (himbeer </i> <i>) </i>, Waldmeister <i> serviert / i> <i>) </i> oder Kümmel </i>, um der starken Säure entgegenzuwirken. Wurde von einigen als das reinste erfrischende Bier der Welt beschrieben.</comments>
-			<history>A regional specialty of Berlin; referred to by Napoleon's troops in 1809 as “the Champagne of the North” due to its lively and elegant character. At one point, it was smoked and there used to be Märzen-strength (14 °P) version. Increasingly rare in German, but some American craft breweries now regularly produce the style.</history>
-			<history> Eine regionale Spezialität Berlins; 1809 von Napoleons Truppen wegen seines lebendigen und eleganten Charakters als „Champagne des Nordens“ bezeichnet. Zu einem Zeitpunkt wurde es mit Rauchmalz in Märzen-Stärke (14 ° P) gebraut. In Deutschland immer seltener, aber einige amerikanische Handwerksbrauereien stellen den Stil inzwischen regelmäßig her.</history>
-			<characteristic-ingredients>Der Gehalt an Weizenmalz beträgt in der Regel 50% der Schüttung (wie es bei allen deutschen Weizenbieren Tradition ist), der Rest ist in der Regel Pilsner-Malz. Eine Mischgärung mit obergäriger Hefe und Lactobacillus (verschiedene Stämme) liefert die scharfe Säure, die durch blenden von Bieren unterschiedlichen Alters während der Gärung und durch verlängertes Kaltreifung verstärkt werden kann. Hopfenbitterkeit gibt es nicht. Eine Dekoktion mit Maischehopfung stellt das traditonelle Verfahren dar. Deutsche Brauwissenschaftler glauben, dass <i> Brettanomyces </i> für das richtige Geschmacksprofil unerlässlich ist, aber dieser Charakter ist niemals stark.</characteristic-ingredients>
-			<style-comparison>Im Vergleich zu einem Lambic ist es im Allgemeinen nicht so sauer und hat eine saubere Milchsäure mit einem bis unter der sensorischen Schwelle liegendem Funk. Auch niedriger im Alkoholgehalt.</style-comparison>	
-			<commercial-examples>Bayerischer Bahnhof Berliner Style Weisse, Berliner Kindl Weisse, Nodding Head Berliner Weisse, The Bruery Hottenroth</commercial-examples>
-			<tags>
-				<tag>session-strength</tag>
-				<tag>pale-color</tag>
-				<tag>top-fermented</tag>
-				<tag>central-europe</tag>
-				<tag>traditional-style</tag>
-				<tag>wheat-beer-family</tag>
-				<tag>sour</tag>
-			</tags>
-			<specs>
-				<ibu min="3" max="8"/>
-				<srm min="2" max="3" ebc-min="4" ebc-max="6"/>
-				<og min="1.028" max="1.032" plato-min="7.1" plato-max="8"/>
-				<fg min="1.003" max="1.006" plato-min="0.8" plato-max="1.5"/>
-				<abv min="2.8" max="3.8"/>
-			</specs>
-		</subcategory>
-	</category>
+      <aroma>Ein scharf saurer Charakter ist vorherrschend (mäßig bis mäßig hoch). Kann bis zu einem mäßig fruchtigen Charakter haben (oft zitronig oder saurer Apfel). Die Fruchtigkeit kann mit dem Alter zunehmen und es kann sich ein leichter blumiger Charakter entwickeln. Kein Hopfenaroma. Der Weizen kann in frischeren Versionen als ungekochter Brotteig vorliegen; In Kombination mit der Säure kann dies auf Sauerteigbrot hindeuten. Kann optional einen zurückhaltenden funky <i> Brettanomyces </i> -Charakter haben.</aroma>
+      <appearance>Sehr helle Stroh gleiche Farbe. Die Klarheit reicht von klar bis etwas trüb. Große, feste, weißer Schaumkrone mit schlechter Haltbarkeit. Immer schäumend.</appearance>
+      <flavor>Saubere Milchsäure dominiert und kann sehr stark sein. Ein komplementärer teigiger, brotiger oder körniger Weizengeschmack ist im Allgemeinen spürbar. Hopfenbitterkeit ist nicht nachweisbar; Die Säure sorgt für die Balance und nicht der Hopfen. Niemals Essigähnlich. Eine verhaltene zitronig-lemonige oder säuer Apfel ähnliche Fruchtigkeit kann festgestellt werden. Sehr trockenes Finish. Ausgewogenheit wird duch die Säure dominiert, aber etwas Malzgeschmack sollte vorhanden sein. Kein Hopfen-Flavor. Kann optional einen zurückhaltenden funky <i> Brettanomyces </i> -Charakter haben.</flavor>
+      <mouthfeel>Leichter Körper. Sehr hoch Karbonisiert. Kein warnehmbarer Alcohol. Knackige saftige säure.</mouthfeel>
+      <comments>In Deutschland wird es als ein <i> Schankbier </i> klassifiziert, welches ein lechtes Bier mit einer Stammwürze im Bereich von 7 bis 8 ° P bezeichnet. Oft mit einem Schuss Zuckersirup <i> (mit Schuss) </i> mit Himbeer <i> (himbeer </i> <i>) </i>, Waldmeister <i> serviert </i> <i>) </i> oder Kümmel , um der starken Säure entgegenzuwirken. Wurde von einigen als das reinste erfrischende Bier der Welt beschrieben.</comments>
+      <history> Eine regionale Spezialität Berlins; 1809 von Napoleons Truppen wegen seines lebendigen und eleganten Charakters als „Champagne des Nordens“ bezeichnet. Zu einem Zeitpunkt wurde es mit Rauchmalz in Märzen-Stärke (14 ° P) gebraut. In Deutschland immer seltener, aber einige amerikanische Handwerksbrauereien stellen den Stil inzwischen regelmäßig her.</history>
+      <characteristic-ingredients>Der Gehalt an Weizenmalz beträgt in der Regel 50% der Schüttung (wie es bei allen deutschen Weizenbieren Tradition ist), der Rest ist in der Regel Pilsner-Malz. Eine Mischgärung mit obergäriger Hefe und Lactobacillus (verschiedene Stämme) liefert die scharfe Säure, die durch blenden von Bieren unterschiedlichen Alters während der Gärung und durch verlängertes Kaltreifung verstärkt werden kann. Hopfenbitterkeit gibt es nicht. Eine Dekoktion mit Maischehopfung stellt das traditonelle Verfahren dar. Deutsche Brauwissenschaftler glauben, dass <i> Brettanomyces </i> für das richtige Geschmacksprofil unerlässlich ist, aber dieser Charakter ist niemals stark.</characteristic-ingredients>
+      <style-comparison>Im Vergleich zu einem Lambic ist es im Allgemeinen nicht so sauer und hat eine saubere Milchsäure mit einem bis unter der sensorischen Schwelle liegendem Funk. Auch niedriger im Alkoholgehalt.</style-comparison>
+      <commercial-examples>Bayerischer Bahnhof Berliner Style Weisse, Berliner Kindl Weisse, Nodding Head Berliner Weisse, The Bruery Hottenroth</commercial-examples>
+      <tags>
+        <tag>session-strength</tag>
+        <tag>pale-color</tag>
+        <tag>top-fermented</tag>
+        <tag>central-europe</tag>
+        <tag>traditional-style</tag>
+        <tag>wheat-beer-family</tag>
+        <tag>sour</tag>
+      </tags>
+      <specs>
+        <ibu min="3" max="8"/>
+        <srm min="2" max="3" ebc-min="4" ebc-max="6"/>
+        <og min="1.028" max="1.032" plato-min="7.1" plato-max="8"/>
+        <fg min="1.003" max="1.006" plato-min="0.8" plato-max="1.5"/>
+        <abv min="2.8" max="3.8"/>
+      </specs>
+    </subcategory>
+  </category>
 </styleguide>

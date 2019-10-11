@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
-	<category id="23">
-		<subcategory id="23B">
-			<name>Flanders Red Ale</name>
-			<overall-impression>Ein saures, fruchtiges, rotweinartiges Ale nach belgischer Art mit interessanten unterstützenden Malzaromen und Fruchtkomplexität. Der trockene Abgang und das Tannin runden das geistige Bild eines guten Rotweins ab.</overall-impression>
-			<aroma>Komplexes fruchtig-saures Profil mit unterstützendem Malz, das oft einen weinartigen Eindruck hinterlässt. Die Fruchtigkeit ist hoch und erinnert an schwarze Kirschen, Orangen, Pflaumen oder rote Johannisbeeren. Es gibt oft niedrige bis mittlere Vanille- und / oder Schokoladennoten. Würzige Phenole können wegen ihrer Komplexität in geringen Mengen vorhanden sein. Das saure Aroma reicht von ausgewogen bis intensiv. Prominenter Essigsäure-Charakter ist unangemessen. Kein Hopfenaroma. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen.</aroma>    
-			<appearance>Deep red, burgundy to reddish-brown in color. Good clarity. White to very pale tan head. Average to good head retention.</appearance>
-			<appearance>Tiefrot, burgunder bis rotbraun gefärbt. Gute Klarheit. Weiße bis sehr hellbraune Schaumkrone. Durchschnittliche bis gute Schaumstabilität.</appearance>
-			<flavor> Spicy phenols can be present in low amounts for complexity. Sour flavor ranges from complementary to intense, and can have an acidic bite. Malty flavors range from complementary to prominent, and often have a soft toasty-rich quality. Generally as the sour character increases, the malt character blends to more of a background flavor (and vice versa). No hop flavor. Restrained hop bitterness. An acidic, tannic bitterness is often present in low to moderate amounts, and adds an aged red wine-like character and finish. Prominent vinegary acetic character is inappropriate. Diacetyl is perceived only in very minor quantities, if at all, as a complementary flavor. Balanced to the malt side, but dominated by the fruity, sour, wine-like impression.</flavor>
-			<flavor>Intensive Fruchtigkeit beinhaltet üblicherweise Aromen von Pflaumen, Orangen, schwarzen Kirschen oder roten Johannisbeeren. Ein milder Vanille- und / oder Schokoladencharakter ist häufig vorhanden. Würzige Phenole können in geringen Mengen vorhanden sein um die Komplexität zu erhöhen. Der saure Geschmack reicht von komplementär bis intensiv und kann einen sauren Biss haben. Malzaromen reichen von komplementär bis prominent und haben oft eine weiche, ?toastreiche Qualität?. Wenn der saure Charakter zunimmt, tritt der Malzcharakter im Allgemeinen mehr in den Hintergrund (und umgekehrt). Kein Hopfengeschmack. Zurückhaltende Hopfenbitterkeit. Eine saure, tanninhaltige Bitterkeit ist häufig in geringen bis mäßigen Mengen vorhanden und verleiht einen gealterten, rotweinartigen Charakter und Abgang. Prominenter Essigsäure-Charakter ist unangemessen. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen. Die Balance liegt auf der Malzseite, aber dominiert vom fruchtigen, säuerlichen, weinartigen Eindruck</flavor> 
-			<mouthfeel>Mittlerer Körper. Geringe bis mittlere Kohlensäure. Geringe bis mittlere Adstringenz, wie ein gereifter Rotwein, oft mit einer stacheligen Säure. Täuschend leicht und knackig am Gaumen, obwohl ein etwas süßer Abgang keine Seltenheit ist.</mouthfeel>
-			<comments>Eine lange Reifung sowie das Verschneiden von jungen und gut gereiften Bieren kommt häufig vor, was die Sanftheit u. Komplexität des Biers erhöt, wodurch das gereifte Produkt manchamal als Genießerbier angepriesen wird. Bekannt als der Burgunder von Belgien, ist er weinartiger als jeder andere Bierstil. Die rötliche Farbe ist ein Produkt des Malzes, obwohl ein längere, weniger intensive Kochphase auch dazu beitragen kann, einen attraktiven Burgunder-Farbton zu erzeugen. Durch die Alterung wird das Bier auch dunkler. Das Flanders Red ist säurehaltig (aber nie essigartig) und die fruchtigen Aromen erinnern eher an einen Rotwein als an einen Oud Bruin. Kann einen scheinbaren Endvergärgrad von bis zu 98% haben.</comments>
-			<history>Ein einheimisches Bier aus Westflandern, das sich durch die Produkte der Rodenbach-Brauerei auszeichnet. Es wurde 1820 in Westflandern gegründet und spiegelt frühere Biertraditionen wider. Das Bier reift bis zu zwei Jahre lang, oft in riesigen Eichenfässern, die die ansässigen Bakterien enthalten, die zum Absäuern des Bieres notwendig sind. Früher war es in Belgien und England üblich, altes Bier mit jungem zu mischen, um die Säure und den Säuregehalt von gereiftem Bier auszugleichen. Während das Blenden von Chargen auf Konsistenz heutzutage in größeren Brauereien üblich ist, ist diese Art des blendens eine verblassende Kunst.</history> 
-			<characteristic-ingredients>: Eine Basis von Wiener und / oder Münchner Malzen, leichten bis mittleren Karamalzen und eine kleine Menge Special B werden mit bis zu 20% Mais verwendet. Kontinentalhopfen mit niedrigem Alphasäuregehalt wird häufig verwendet (vermeiden Sie Hopfen mit hohem Alphasäuregehalt oder unverwechselbaren amerikanischen Hopfen). Saccharomyces, Lactobacillus und Brettanomyces (und Acetobacter) tragen zur Fermentation und zum späteren Geschmack bei.</characteristic-ingredients>
-			<style-comparison>Weniger malzig als ein Oud Bruin, oft mit einem eher fruchtig-säuerlichen Profil.</style-comparison>
-			<commercial-examples>Cuvée des Jacobins Rouge, Duchesse de Bourgogne, Rodenbach Grand Cru, Rodenbach Klassiek, Vichtenaar Flemish Ale</commercial-examples>
-			<tags>
-				<tag>standard-strength</tag>
-				<tag>amber-color</tag>
-				<tag>top-fermented</tag>
-				<tag>western-europe</tag>
-				<tag>traditional-style</tag>
-				<tag>sour</tag>
-				<tag>balanced</tag>
-				<tag>sour</tag>
-				<tag>wood</tag>
-			</tags>
-			<specs>
-				<ibu min="10" max="25"/>
-				<srm min="10" max="16" ebc-min="20" ebc-max="31"/>
-				<og min="1.048" max="1.057" plato-min="11.9" plato-max="14"/>
-				<fg min="1.002" max="1.012" plato-min="0.5" plato-max="3.1"/>
-				<abv min="4.6" max="6.5"/>
-			</specs>
-		</subcategory>
-	</category>
+  <category id="23">
+    <subcategory id="23B">
+      <name>Flanders Red Ale</name>
+      <overall-impression>Ein saures, fruchtiges, rotweinartiges Ale nach belgischer Art mit interessanten unterstützenden Malzaromen und Fruchtkomplexität. Der trockene Abgang und das Tannin runden das geistige Bild eines guten Rotweins ab.</overall-impression>
+      <aroma>Komplexes fruchtig-saures Profil mit unterstützendem Malz, das oft einen weinartigen Eindruck hinterlässt. Die Fruchtigkeit ist hoch und erinnert an schwarze Kirschen, Orangen, Pflaumen oder rote Johannisbeeren. Es gibt oft niedrige bis mittlere Vanille- und / oder Schokoladennoten. Würzige Phenole können wegen ihrer Komplexität in geringen Mengen vorhanden sein. Das saure Aroma reicht von ausgewogen bis intensiv. Prominenter Essigsäure-Charakter ist unangemessen. Kein Hopfenaroma. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen.</aroma>
+      <appearance>Tiefrot, burgunder bis rotbraun gefärbt. Gute Klarheit. Weiße bis sehr hellbraune Schaumkrone. Durchschnittliche bis gute Schaumstabilität.</appearance>
+      <flavor>Intensive Fruchtigkeit beinhaltet üblicherweise Aromen von Pflaumen, Orangen, schwarzen Kirschen oder roten Johannisbeeren. Ein milder Vanille- und / oder Schokoladencharakter ist häufig vorhanden. Würzige Phenole können in geringen Mengen vorhanden sein um die Komplexität zu erhöhen. Der saure Geschmack reicht von komplementär bis intensiv und kann einen sauren Biss haben. Malzaromen reichen von komplementär bis prominent und haben oft eine weiche, ?toastreiche Qualität?. Wenn der saure Charakter zunimmt, tritt der Malzcharakter im Allgemeinen mehr in den Hintergrund (und umgekehrt). Kein Hopfengeschmack. Zurückhaltende Hopfenbitterkeit. Eine saure, tanninhaltige Bitterkeit ist häufig in geringen bis mäßigen Mengen vorhanden und verleiht einen gealterten, rotweinartigen Charakter und Abgang. Prominenter Essigsäure-Charakter ist unangemessen. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen. Die Balance liegt auf der Malzseite, aber dominiert vom fruchtigen, säuerlichen, weinartigen Eindruck</flavor>
+      <mouthfeel>Mittlerer Körper. Geringe bis mittlere Kohlensäure. Geringe bis mittlere Adstringenz, wie ein gereifter Rotwein, oft mit einer stacheligen Säure. Täuschend leicht und knackig am Gaumen, obwohl ein etwas süßer Abgang keine Seltenheit ist.</mouthfeel>
+      <comments>Eine lange Reifung sowie das Verschneiden von jungen und gut gereiften Bieren kommt häufig vor, was die Sanftheit u. Komplexität des Biers erhöt, wodurch das gereifte Produkt manchamal als Genießerbier angepriesen wird. Bekannt als der Burgunder von Belgien, ist er weinartiger als jeder andere Bierstil. Die rötliche Farbe ist ein Produkt des Malzes, obwohl ein längere, weniger intensive Kochphase auch dazu beitragen kann, einen attraktiven Burgunder-Farbton zu erzeugen. Durch die Alterung wird das Bier auch dunkler. Das Flanders Red ist säurehaltig (aber nie essigartig) und die fruchtigen Aromen erinnern eher an einen Rotwein als an einen Oud Bruin. Kann einen scheinbaren Endvergärgrad von bis zu 98% haben.</comments>
+      <history>Ein einheimisches Bier aus Westflandern, das sich durch die Produkte der Rodenbach-Brauerei auszeichnet. Es wurde 1820 in Westflandern gegründet und spiegelt frühere Biertraditionen wider. Das Bier reift bis zu zwei Jahre lang, oft in riesigen Eichenfässern, die die ansässigen Bakterien enthalten, die zum Absäuern des Bieres notwendig sind. Früher war es in Belgien und England üblich, altes Bier mit jungem zu mischen, um die Säure und den Säuregehalt von gereiftem Bier auszugleichen. Während das Blenden von Chargen auf Konsistenz heutzutage in größeren Brauereien üblich ist, ist diese Art des blendens eine verblassende Kunst.</history>
+      <characteristic-ingredients>: Eine Basis von Wiener und / oder Münchner Malzen, leichten bis mittleren Karamalzen und eine kleine Menge Special B werden mit bis zu 20% Mais verwendet. Kontinentalhopfen mit niedrigem Alphasäuregehalt wird häufig verwendet (vermeiden Sie Hopfen mit hohem Alphasäuregehalt oder unverwechselbaren amerikanischen Hopfen). Saccharomyces, Lactobacillus und Brettanomyces (und Acetobacter) tragen zur Fermentation und zum späteren Geschmack bei.</characteristic-ingredients>
+      <style-comparison>Weniger malzig als ein Oud Bruin, oft mit einem eher fruchtig-säuerlichen Profil.</style-comparison>
+      <commercial-examples>Cuvée des Jacobins Rouge, Duchesse de Bourgogne, Rodenbach Grand Cru, Rodenbach Klassiek, Vichtenaar Flemish Ale</commercial-examples>
+      <tags>
+        <tag>standard-strength</tag>
+        <tag>amber-color</tag>
+        <tag>top-fermented</tag>
+        <tag>western-europe</tag>
+        <tag>traditional-style</tag>
+        <tag>sour</tag>
+        <tag>balanced</tag>
+        <tag>sour</tag>
+        <tag>wood</tag>
+      </tags>
+      <specs>
+        <ibu min="10" max="25"/>
+        <srm min="10" max="16" ebc-min="20" ebc-max="31"/>
+        <og min="1.048" max="1.057" plato-min="11.9" plato-max="14"/>
+        <fg min="1.002" max="1.012" plato-min="0.5" plato-max="3.1"/>
+        <abv min="4.6" max="6.5"/>
+      </specs>
+    </subcategory>
+  </category>
 </styleguide>

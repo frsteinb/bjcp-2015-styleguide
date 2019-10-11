@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
-	<category id="23">
-		<subcategory id="23C">
-			<name>Oud Bruin</name>
-			<overall-impression>Ein malziges, fruchtiges, gereiftes, etwas säuerliches, braunes Ale nach belgischer Art.</overall-impression>
-			<aroma> Komplexe Kombination aus fruchtigen Estern und reichem Malzcharakter. Mittel bis mittelhohe Ester, die gewöhnlich an Rosinen, Pflaumen, Feigen, Datteln, Schwarzkirschen oder Pflaumen erinnern. Mittlerer bis mittelhoher Malzcharakter von Karamell, Toffee, Orange, Melassesirup oder Schokolade. Würzige Phenole können, um die Komplexität zu erhöhen, in geringen Mengen vorhanden sein. Ein Sherry-ähnlicher Charakter kann vorhanden sein und bezeichnet allgemein ein gealtertes Exemplar. Ein niedriges saures Aroma kann vorhanden sein und mit zunehmendem Alter leicht ansteigen, sollte jedoch nicht zu einem merklichen Essigcharakter anwachsen. Hopfenaroma fehlt. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen
+  <category id="23">
+    <subcategory id="23C">
+      <name>Oud Bruin</name>
+      <overall-impression>Ein malziges, fruchtiges, gereiftes, etwas säuerliches, braunes Ale nach belgischer Art.</overall-impression>
+      <aroma> Komplexe Kombination aus fruchtigen Estern und reichem Malzcharakter. Mittel bis mittelhohe Ester, die gewöhnlich an Rosinen, Pflaumen, Feigen, Datteln, Schwarzkirschen oder Pflaumen erinnern. Mittlerer bis mittelhoher Malzcharakter von Karamell, Toffee, Orange, Melassesirup oder Schokolade. Würzige Phenole können, um die Komplexität zu erhöhen, in geringen Mengen vorhanden sein. Ein Sherry-ähnlicher Charakter kann vorhanden sein und bezeichnet allgemein ein gealtertes Exemplar. Ein niedriges saures Aroma kann vorhanden sein und mit zunehmendem Alter leicht ansteigen, sollte jedoch nicht zu einem merklichen Essigcharakter anwachsen. Hopfenaroma fehlt. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen
 			</aroma>
-			<appearance>Dunkelrotbraune bis braune Farbe. Gute Klarheit. Durchschnittliche bis gute Schaumstabilität. Elfenbein bis hellbraune Schaumfarbe.</appearance>
-			<flavor>Malzig mit fruchtiger Komplexität und typischer Weise etwas Karamellcharakter. Mittel bis mittelhohe Fruchtigkeit umfasst üblicherweise dunkle oder getrocknete Früchte wie Rosinen, Pflaumen, Feigen, Datteln, schwarze Kirschen oder Pflaumen. Mittlerer bis mittelhoher Malzcharakter von Karamell, Toffee, Orange, Melassesirup oder Schokolade. Würzige Phenole können der Komplexität wegen in geringen Mengen vorhanden sein. Eine leichte Säure wird häufig in gut gealterten Beispielen ausgeprägter, zusammen mit etwas Sherry-ähnlichem Charakter, was ein "süß-sauer" -Profil ergibt. Die Säure sollte nicht zu einem bemerkenswerten Essigcharakter anwachsen. Hopfengeschmack fehlt. Zurückhaltende Hopfenbitterkeit. Eine geringe Oxidation der Komplexität wegen angebracht. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen. Balance ist malzig, aber mit einer vorhandenen Fruchtigkeit und Säure. Süßer und säuerlicher Abgang
+      <appearance>Dunkelrotbraune bis braune Farbe. Gute Klarheit. Durchschnittliche bis gute Schaumstabilität. Elfenbein bis hellbraune Schaumfarbe.</appearance>
+      <flavor>Malzig mit fruchtiger Komplexität und typischer Weise etwas Karamellcharakter. Mittel bis mittelhohe Fruchtigkeit umfasst üblicherweise dunkle oder getrocknete Früchte wie Rosinen, Pflaumen, Feigen, Datteln, schwarze Kirschen oder Pflaumen. Mittlerer bis mittelhoher Malzcharakter von Karamell, Toffee, Orange, Melassesirup oder Schokolade. Würzige Phenole können der Komplexität wegen in geringen Mengen vorhanden sein. Eine leichte Säure wird häufig in gut gealterten Beispielen ausgeprägter, zusammen mit etwas Sherry-ähnlichem Charakter, was ein "süß-sauer" -Profil ergibt. Die Säure sollte nicht zu einem bemerkenswerten Essigcharakter anwachsen. Hopfengeschmack fehlt. Zurückhaltende Hopfenbitterkeit. Eine geringe Oxidation der Komplexität wegen angebracht. Diacetyl wird, wenn überhaupt, nur in sehr geringen Mengen als komplementäres Aroma wahrgenommen. Balance ist malzig, aber mit einer vorhandenen Fruchtigkeit und Säure. Süßer und säuerlicher Abgang
 			</flavor>
-			<mouthfeel>Mittlerer bis mittlerer Körper. Geringe bis mäßige Kohlensäure. Keine Adstringenz.</mouthfeel>
-			<comments>Ein langes Altern und Mischen von jungem und gealtertem Bier kann dazu führen, dass das Bier geschmeidiger und komplexer wird und der raue, saure Charakter ausgeglichen wird. Dieser Stil wurde so entworfen, dass Beispiele mit mäßigem Alter den jüngeren Vorbildern überlegen sind. Wie in Fruit Lambics kann Oud Bruin als Grundlage für Biere mit Fruchtgeschmack wie <i> Kriek </i> (Kirschen) oder <i> Frambozen </i> (Himbeeren) verwendet werden der <i> C </i> <i> lassic - </i> <i> S </i> <i> -Stil </i> <i> F </i> <i>rucht </i> Kategorie <i> B </i> <i> ier </i>.
+      <mouthfeel>Mittlerer bis mittlerer Körper. Geringe bis mäßige Kohlensäure. Keine Adstringenz.</mouthfeel>
+      <comments>Ein langes Altern und Mischen von jungem und gealtertem Bier kann dazu führen, dass das Bier geschmeidiger und komplexer wird und der raue, saure Charakter ausgeglichen wird. Dieser Stil wurde so entworfen, dass Beispiele mit mäßigem Alter den jüngeren Vorbildern überlegen sind. Wie in Fruit Lambics kann Oud Bruin als Grundlage für Biere mit Fruchtgeschmack wie <i> Kriek </i> (Kirschen) oder <i> Frambozen </i> (Himbeeren) verwendet werden der <i> C </i> <i> lassic - </i> <i> S </i> <i> -Stil </i> <i> F </i> <i>rucht </i> Kategorie <i> B </i> <i> ier </i>.
 			</comments>
-			<history>Eine in Ostflandern beheimatete „alte Ale“ -Tradition, die durch die Produkte der Brauerei Liefman (heute im Besitz von Riva) gekennzeichnet ist, deren Wurzeln bis in das 16. Jahrhundert zurückreichen. Historisch als „Vorratsbier“ gebraut, das im Alter etwas sauer wird. Diese Biere waren in der Regel saurer als aktuelle Handelsbeispiele. Während in Flandern rote Biere in Eiche ausgebaut werden, werden die braunen Biere in Edelstahl warm ausgebaut.
+      <history>Eine in Ostflandern beheimatete „alte Ale“ -Tradition, die durch die Produkte der Brauerei Liefman (heute im Besitz von Riva) gekennzeichnet ist, deren Wurzeln bis in das 16. Jahrhundert zurückreichen. Historisch als „Vorratsbier“ gebraut, das im Alter etwas sauer wird. Diese Biere waren in der Regel saurer als aktuelle Handelsbeispiele. Während in Flandern rote Biere in Eiche ausgebaut werden, werden die braunen Biere in Edelstahl warm ausgebaut.
 			</history>
-			<characteristic-ingredients>Eine Basis aus Pilsenermalz mit vernünftigen Mengen dunkler Caramalze und einem winzigen Stück schwarzem oder geröstetem Malz. Enthält oft Mais. Kontinentale Hopfen mit niedrigem Alphasäuregehalt sind typisch (vermeiden Sie Hopfen mit hohem Alphasäuregehalt oder charakteristischen amerikanischen Hopfen). Saccharomyces und Lactobacillus (und Acetobacter) tragen zur Fermentation und letztendlich zum Geschmack bei. Lactobacillus reagiert schlecht auf erhöhte Alkoholspiegel. Wasser mit hohem Karbonatgehalt ist typisch für seine Heimatregion und puffert den Säuregehalt dunkler Malze und die Milchsäure. Magnesium im Wasser betont die Säure.
+      <characteristic-ingredients>Eine Basis aus Pilsenermalz mit vernünftigen Mengen dunkler Caramalze und einem winzigen Stück schwarzem oder geröstetem Malz. Enthält oft Mais. Kontinentale Hopfen mit niedrigem Alphasäuregehalt sind typisch (vermeiden Sie Hopfen mit hohem Alphasäuregehalt oder charakteristischen amerikanischen Hopfen). Saccharomyces und Lactobacillus (und Acetobacter) tragen zur Fermentation und letztendlich zum Geschmack bei. Lactobacillus reagiert schlecht auf erhöhte Alkoholspiegel. Wasser mit hohem Karbonatgehalt ist typisch für seine Heimatregion und puffert den Säuregehalt dunkler Malze und die Milchsäure. Magnesium im Wasser betont die Säure.
 			</characteristic-ingredients>
-			<style-comparison>Ein tieferer Malzcharakter unterscheidet diese Biere von flämischen Rotbieren. Der Oud Bruin ist weniger sauer und malziger als ein Flanders Red, und die fruchtigen Aromen sind mehr auf Malz ausgerichtet.</style-comparison>
-			<commercial-examples>Ichtegem Oud Bruin, Liefmans Goudenband, Liefmans Liefmans Oud Bruin, Petrus Oud Bruin, Riva Vondel, Vanderghinste Bellegems Bruin</commercial-examples>
-			<tags>
-				<tag>standard-strength</tag>
-				<tag>dark-color</tag>
-				<tag>top-fermented</tag>
-				<tag>western-europe</tag>
-				<tag>traditional-style</tag>
-				<tag>sour</tag>
-				<tag>malty</tag>
-				<tag>sour</tag>
-			</tags>
-			<specs>
-				<ibu min="20" max="25"/>
-				<srm min="15" max="22" ebc-min="30" ebc-max="43"/>
-				<og min="1.040" max="1.074" plato-min="10" plato-max="18"/>
-				<fg min="1.008" max="1.012" plato-min="2.1" plato-max="3.1"/>
-				<abv min="4.0" max="8.0"/>
-			</specs>
-		</subcategory>
-	</category>
+      <style-comparison>Ein tieferer Malzcharakter unterscheidet diese Biere von flämischen Rotbieren. Der Oud Bruin ist weniger sauer und malziger als ein Flanders Red, und die fruchtigen Aromen sind mehr auf Malz ausgerichtet.</style-comparison>
+      <commercial-examples>Ichtegem Oud Bruin, Liefmans Goudenband, Liefmans Liefmans Oud Bruin, Petrus Oud Bruin, Riva Vondel, Vanderghinste Bellegems Bruin</commercial-examples>
+      <tags>
+        <tag>standard-strength</tag>
+        <tag>dark-color</tag>
+        <tag>top-fermented</tag>
+        <tag>western-europe</tag>
+        <tag>traditional-style</tag>
+        <tag>sour</tag>
+        <tag>malty</tag>
+        <tag>sour</tag>
+      </tags>
+      <specs>
+        <ibu min="20" max="25"/>
+        <srm min="15" max="22" ebc-min="30" ebc-max="43"/>
+        <og min="1.040" max="1.074" plato-min="10" plato-max="18"/>
+        <fg min="1.008" max="1.012" plato-min="2.1" plato-max="3.1"/>
+        <abv min="4.0" max="8.0"/>
+      </specs>
+    </subcategory>
+  </category>
 </styleguide>
