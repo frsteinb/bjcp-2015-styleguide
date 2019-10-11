@@ -145,13 +145,17 @@ xhr2.send();
 
 
 function recalcTodo() {
-    var parts = styleguide_node.querySelectorAll("category");
-    var sum = 0;
-    var trans = 0;
+    var parts = styleguide_node.querySelectorAll("category", "subcategory");
     for (var i = 0; i < parts.length; i++) {
 	var nav = parts[i].getElementsByTagName("nav")[0];
 	var originals = parts[i].querySelectorAll('*[source="original"]');
 	nav.setAttribute("todo", originals.length);
+    }
+
+    var parts = styleguide_node.querySelectorAll("category");
+    var sum = 0;
+    var trans = 0;
+    for (var i = 0; i < parts.length; i++) {
 	sum += parts[i].querySelectorAll('*[source]').length;
 	trans += parts[i].querySelectorAll('*[source="original"]').length;
     }
