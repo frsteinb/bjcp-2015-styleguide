@@ -135,6 +135,10 @@ if os.path.isfile(translatedfilename) or os.path.isfile(origfilename):
     cmd = "xsltproc xsl/bjcp-2015-styleguide-apply.xsl %s" % (snippetfilename)
     docmd(cmd)
 
+    log("reformatting %s/%s.xml" % (LANG, id))
+    cmd = 'xmllint --format %s/%s.xml | sed -e \'s/ standalone="yes"//\' > cache/tmp.xml ; cmp -s cache/tmp.xml %s/%s.xml ; if [ $? -ne 0 ] ; then cat cache/tmp.xml > %s/%s.xml ; fi ; rm cache/tmp.xml' % (LANG, id, LANG, id, LANG, id)
+    docmd(cmd)
+
     if doadd:
         log("adding new file %s/%s.xml to local repository" % (LANG, id))
         cmd = 'git add %s/%s.xml' % (LANG, id)

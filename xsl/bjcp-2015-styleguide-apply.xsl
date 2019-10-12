@@ -36,17 +36,11 @@
 
   <xsl:variable name="snippetnode" select="/bjcp:styleguide//bjcp:*[@id = $snippetid]"/>
 
-<!--
-  <xsl:variable name="origroot" select="document('../bjcp-2015-styleguide-orig.xml')/bjcp:styleguide"/>
--->
   <xsl:variable name="origroot" select="document(concat('../orig/',$snippetid,'.xml'))/bjcp:styleguide"/>
 
   <xsl:variable name="orignode" select="$origroot//bjcp:*[@id = $snippetid]"/>
 
   <xsl:variable name="targetfilename">
-    <!--
-    <xsl:text>../</xsl:text>
-    -->
     <xsl:value-of select="$lang"/>
     <xsl:text>/</xsl:text>
     <xsl:value-of select="$snippetid"/>
@@ -116,12 +110,6 @@
 
 
   <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples" mode="merge">
-<!--
-    <xsl:text>MERGING </xsl:text>
-    <xsl:value-of select="local-name(.)"/>
-    <xsl:text> MERGING
- </xsl:text>
--->
     <xsl:variable name="name">
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
