@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="10">
     <name>German Wheat Beer</name>
+    <description date="2019-10-12 14:24:04" author="T3K" addr="2001:16b8:24f5:d900:c506:ebdc:7340:1d77">
+      <p>Diese Kategorie enthält Deutsche Weizenbiere mit vollbier- und starkbierstarke stärke ohne Säure in hellen und dunklen Farben.</p>
+    </description>
   </category>
 </styleguide>

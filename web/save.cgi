@@ -8,6 +8,9 @@ import urllib.parse
 import codecs
 import time
 import datetime
+import subprocess
+
+
 
 DIR = "/var/www/bjcp-2015-styleguide"
 LOGFILE = "%s/web/logfile" % DIR
@@ -23,6 +26,22 @@ def log(msg):
     f.close()
 
 
+
+def docmd(cmd):
+    log("executing: %s" % cmd)
+    try:
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
+        stdout, stderr = p.communicate()
+        for line in stdout.decode("utf-8").split("\n"):
+            log("--- %s" % (line))
+        if p.returncode != 0:
+            log("command failed (return code %d)" % (p.returncode))
+    except Exception as error:
+        log("ERROR: %s" % (error))
+
+
+
+os.chdir(DIR)
 
 print("Content-Type: text/plain; charset=UTF-8")
 print("")
@@ -108,24 +127,27 @@ f.close()
 
 origfilename = "%s/orig/%s.xml" % (DIR, id)
 translatedfilename = "%s/%s/%s.xml" % (DIR, LANG, id)
+doadd = not os.path.isfile(translatedfilename)
 
 if os.path.isfile(translatedfilename) or os.path.isfile(origfilename):
-    if os.path.isfile(translatedfilename):
-        log("updating translation file %s/%s.xml based on snippet" % (LANG, id))
-        cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s.tmp ; mv %s.tmp %s" % (snippetfilename, DIR, translatedfilename, translatedfilename, translatedfilename, translatedfilename)
-        os.system(cmd)
-    else:
-        #log("creating new translation file %s/%s.xml from orig/%s.xml and snippet" % (LANG, id, id))
-        #cmd = "xsltproc --stringparam snippet %s %s/xsl/bjcp-2015-styleguide-merge.xsl %s > %s" % (snippetfilename, DIR, origfilename, translatedfilename)
-        log("copying snippet as initial translation file %s/%s.xml" % (LANG, id))
-        cmd = "cp %s %s" % (snippetfilename, translatedfilename)
-        os.system(cmd)
-    log("committing to web server local repository")
-    cmd = 'cd %s ; git commit -q -m "%s %s by %s from %s" %s/%s.xml' % (DIR, id, elem, user, addr, LANG, id)
-    os.system(cmd)
+
+    log("applying snippet to %s directory" % LANG)
+    cmd = "xsltproc xsl/bjcp-2015-styleguide-apply.xsl %s" % (snippetfilename)
+    docmd(cmd)
+
+    if doadd:
+        log("adding new file %s/%s.xml to local repository" % (LANG, id))
+        cmd = 'git add %s/%s.xml' % (LANG, id)
+        docmd(cmd)
+
+    log("committing to local repository")
+    cmd = 'git commit -q -m "%s %s by %s from %s" %s/%s.xml' % (id, elem, user, addr, LANG, id)
+    docmd(cmd)
+
     log("updating files in the background... otherwise done.")
-    cmd = "make -C %s background" % DIR
-    os.system(cmd)
+    cmd = "make background"
+    docmd(cmd)
+
 else:
     log("neither orig file %s nor translated file %s for id %s exists" % (origfilename, translatedfilename, id))
 

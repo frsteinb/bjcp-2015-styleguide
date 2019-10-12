@@ -72,6 +72,9 @@ background:
 install:
 	ssh z "cd /var/www ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; sudo -u www-data git pull ; sudo -u www-data make ; else sudo -u www-data git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; sudo -u www-data mkdir web/snippets ; sudo -u www-data make ; fi"
 
+apply:
+	if [ -d web/snippets ] ; then for f in web/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; fi
+
 clean:
 	@rm -rf orig
 	@rm -f bjcp-2015-styleguide-orig.xml

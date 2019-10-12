@@ -53,6 +53,13 @@
 
 
 
+  <!-- somehow some strange elements may find its way into snippets -->
+  <xsl:template match="bjcp:div | bjcp:span">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+
+
   <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples">
     <xsl:variable name="name">
       <xsl:value-of select="local-name(.)"/>
