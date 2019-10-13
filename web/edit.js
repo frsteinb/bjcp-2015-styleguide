@@ -4,6 +4,7 @@ const pell = window.pell;
 const pelleditor = document.getElementById("pelleditor");
 const original = document.getElementById("original");
 const auto = document.getElementById("auto");
+const undo = document.getElementById("undo");
 const markup = document.getElementById("markup");
 const render = document.getElementById("render");
 const author = document.getElementById("author");
@@ -43,7 +44,7 @@ pell.init({
 	},
 	{
 	    name: 'save',
-	    icon: '<div style="background-color:pink;">save</div>',
+	    icon: 'save',
 	    title: 'save',
 	    result: () => {
 
@@ -84,7 +85,7 @@ pell.init({
 	},
 	{
 	    name: 'cancel',
-	    icon: '<div style="background-color:pink;">cancel</div>',
+	    icon: 'cancel',
 	    title: 'cancel',
 	    result: () => {
 		editor.style.display = "none";
@@ -220,11 +221,14 @@ function renderStyleguide(styleguide) {
 	    editelemname.innerText = element_name ? element_name : "-";
 	    lastdate.innerText = editlastdate ? editlastdate : "original";
 	    lastauthor.innerText = editlastauthor ? editlastauthor : "original";
-	    if (orig_element) {
+	    if (orig_element && original) {
 		original.innerHTML = orig_element.innerHTML;
 	    }
-	    if (auto_element) {
+	    if (auto_element && auto) {
 		auto.innerHTML = auto_element.innerHTML;
+	    }
+	    if (undo) {
+		undo.innerHTML = edit_element.innerHTML;
 	    }
 	    if (markup) {
 		markup.innerText = edit_element.innerHTML;
@@ -266,5 +270,10 @@ function renderStyleguide(styleguide) {
     }
 
     recalcTodo();
+}
+
+
+function copy_to_edit(id) {
+    pelleditor.content.innerHTML = document.getElementById(id).innerHTML;
 }
 
