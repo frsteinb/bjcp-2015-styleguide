@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="21">
     <name>IPAs</name>
+    <description date="2019-10-13 14:03:01" author="T3K" addr="2001:16b8:24af:b700:992d:dd12:7ef8:47a8">
+      <p>Die IPA-Kategorie gilt für moderne amerikanische IPAs und deren Derivate. Dies bedeutet nicht, dass englische IPAs nicht die richtigen IPAs sind oder dass keine Beziehung zwischen ihnen besteht. Dies ist einfach eine Methode zum Gruppieren ähnlicher Stile für Wettbewerbszwecke. Englische IPAs werden mit anderen aus England stammenden Bieren gruppiert, und das stärkere Double IPA wird mit stärkeren amerikanischen Bieren gruppiert. Der Begriff "IPA" wird absichtlich nicht als "India Pale Ale" geschrieben, da keines dieser Biere historisch nach Indien ging und viele nicht hell sind. Der Begriff IPA hat sich jedoch zu einem ausgewogenen Stil im modernen Craft Beer entwickelt.</p>
+    </description>
   </category>
 </styleguide>
