@@ -37,6 +37,15 @@ div#markup {
 div#original {
     margin:10px;
 }
+div#auto {
+    margin:10px;
+}
+div#original:before {
+    content: "Original: "
+}
+div#auto {
+    content: "Google-Translate: "
+}
 
 styleguide nav, styleguide *[source] {
   cursor: pointer;
