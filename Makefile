@@ -10,10 +10,6 @@ GLOSSARYID	= bjcp-en-de-glossary
 
 default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-de-auto.xml
 
-
-
-
-
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
 	@curl -s https://www.bjcp.org/docs/2015_Guidelines_Beer.docx -o cache/2015_Guidelines_Beer.docx
@@ -57,32 +53,16 @@ web/bjcp-2015-styleguide-orig.html: bjcp-2015-styleguide-orig.html
 web/bjcp-2015-styleguide-de.html: bjcp-2015-styleguide-de.html
 	cp bjcp-2015-styleguide-de.html web/
 
-web/edit-old.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
-	@echo "Document update in progress. Please wait a moment and reload..." > web/edit-old.html
-	@xsltproc --stringparam edit yes --stringparam orig bjcp-2015-styleguide-orig.xml xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > web/edit.html.tmp
-	@mv web/edit.html.tmp web/edit-old.html
-	@echo "built $@"
-
 format:
 	@for f in de/*.xml ; do xmllint --format $$f | sed -e 's/ standalone="yes"//' > cache/tmp.xml ; cmp -s cache/tmp.xml $$f ; if [ $$? -ne 0 ] ; then cat cache/tmp.xml > $$f ; echo "reformatted $$f" ; fi ; rm cache/tmp.xml ; done
 
 status: bjcp-2015-styleguide-orig.xml
 	@-xsltproc --stringparam lang de xsl/bjcp-2015-styleguide-status.xsl bjcp-2015-styleguide-orig.xml 2>&1 | grep -v "failed to load external entity"
 
-
 check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@for f in de/*.xml ; do xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd $$f ; done
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-orig.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
-
-background:
-	@nohup sh -c 'if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make background ; fi ; else touch .background-again ; fi' >/dev/null 2>&1 &
-
-install:
-	ssh z "cd /var/www ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; sudo -u www-data git pull ; sudo -u www-data make ; else sudo -u www-data git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; sudo -u www-data mkdir web/snippets ; sudo -u www-data make ; fi"
-
-apply:
-	if [ -d web/snippets ] ; then for f in web/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; fi
 
 clean:
 	@rm -rf orig
@@ -96,6 +76,19 @@ clean:
 distclean: clean
 	@rm -rf cache
 	@echo "complete cleanup done"
+
+## Web Editor stuff -- this works only with additional manual adjustments
+
+background:
+	@nohup sh -c 'if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make background ; fi ; else touch .background-again ; fi' >/dev/null 2>&1 &
+
+install:
+	ssh z "cd /var/www ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; sudo -u www-data git pull ; sudo -u www-data make ; else sudo -u www-data git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; sudo -u www-data mkdir web/snippets ; sudo -u www-data make ; fi"
+
+apply:
+	if [ -d web/snippets ] ; then for f in web/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; fi
+
+## Google Translate stuff -- this works only for users with a properly configured Google Cloud setup
 
 delete-glossary:
 	curl -X DELETE -H "Authorization: Bearer "`gcloud auth application-default print-access-token` https://translation.googleapis.com/v3beta1/projects/$(PROJECTID)/locations/$(LOCATION)/glossaries/$(GLOSSARYID)
