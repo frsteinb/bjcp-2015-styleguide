@@ -2,7 +2,7 @@
 DEFILES		= $(shell ls de/*.xml)
 FIXFILES	= $(shell ls fix/*.xml)
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-de-auto.xml
 
 
 
@@ -41,6 +41,9 @@ web/bjcp-2015-styleguide-orig.xml: bjcp-2015-styleguide-orig.xml
 
 web/bjcp-2015-styleguide-de.xml: bjcp-2015-styleguide-de.xml
 	cp bjcp-2015-styleguide-de.xml web/
+
+web/bjcp-2015-styleguide-de-auto.xml:
+	cp bjcp-2015-styleguide-de-auto.xml web/bjcp-2015-styleguide-de-auto.xml
 
 web/bjcp-2015-styleguide-orig.html: bjcp-2015-styleguide-orig.html
 	cp bjcp-2015-styleguide-orig.html web/

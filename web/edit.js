@@ -3,6 +3,7 @@ const editor = document.getElementById("editor");
 const pell = window.pell;
 const pelleditor = document.getElementById("pelleditor");
 const original = document.getElementById("original");
+const auto = document.getElementById("auto");
 const markup = document.getElementById("markup");
 const render = document.getElementById("render");
 const author = document.getElementById("author");
@@ -114,6 +115,7 @@ pell.init({
 
 var styleguide;
 var styleuide_orig;
+var styleuide_auto;
 var styleguide_node;
 
 
@@ -142,6 +144,18 @@ xhr2.open('GET', document.querySelector('link[rel="styleguide-orig"]').href, tru
 xhr2.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
 xhr2.responseType = "document";
 xhr2.send();
+
+// load styleguide_auto
+var xhr3 = new XMLHttpRequest();
+xhr3.onreadystatechange = function() {
+    if (xhr3.readyState === 4) {
+	styleguide_auto = xhr3.responseXML.querySelector("styleguide");
+    }
+}
+xhr3.open('GET', document.querySelector('link[rel="styleguide-auto"]').href, true);
+xhr3.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
+xhr3.responseType = "document";
+xhr3.send();
 
 
 function recalcTodo() {
@@ -183,6 +197,8 @@ function renderStyleguide(styleguide) {
 	    orig_record = styleguide_orig.querySelector("*[id='" + edit_id + "']");
 	    orig_element = orig_record.querySelector(element_name);
 	    orig_record_name = orig_record.querySelector("name").childNodes[0].nodeValue;
+	    auto_record = styleguide_auto.querySelector("*[id='" + edit_id + "']");
+	    auto_element = auto_record.querySelector(element_name);
 	    editlastdate = edit_element.getAttribute("date");
 	    editlastauthor = edit_element.getAttribute("author");
 	    text = edit_element.innerHTML;
@@ -206,6 +222,9 @@ function renderStyleguide(styleguide) {
 	    lastauthor.innerText = editlastauthor ? editlastauthor : "original";
 	    if (orig_element) {
 		original.innerHTML = orig_element.innerHTML;
+	    }
+	    if (auto_element) {
+		auto.innerHTML = auto_element.innerHTML;
 	    }
 	    if (markup) {
 		markup.innerText = edit_element.innerHTML;
