@@ -43,7 +43,7 @@ div#auto {
 div#original:before {
     content: "Original: "
 }
-div#auto {
+div#auto:before {
     content: "Google-Translate: "
 }
 
