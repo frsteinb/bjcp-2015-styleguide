@@ -44,8 +44,8 @@ web/bjcp-2015-styleguide-orig.xml: bjcp-2015-styleguide-orig.xml
 web/bjcp-2015-styleguide-de.xml: bjcp-2015-styleguide-de.xml
 	cp bjcp-2015-styleguide-de.xml web/
 
-web/bjcp-2015-styleguide-de-auto.xml: bjcp-2015-styleguide-de-auto.xml
-	cp bjcp-2015-styleguide-de-auto.xml web/bjcp-2015-styleguide-de-auto.xml
+web/bjcp-2015-styleguide-de-auto.xml: cache/bjcp-2015-styleguide-de-auto.xml
+	cp cache/bjcp-2015-styleguide-de-auto.xml web/bjcp-2015-styleguide-de-auto.xml
 
 web/bjcp-2015-styleguide-orig.html: bjcp-2015-styleguide-orig.html
 	cp bjcp-2015-styleguide-orig.html web/
@@ -70,7 +70,11 @@ clean:
 	@rm -f bjcp-2015-styleguide-de.xml
 	@rm -f bjcp-2015-styleguide-orig.html
 	@rm -f bjcp-2015-styleguide-de.html
-	@rm -f bjcp-2015-styleguide-de-edit.html
+	@rm -f web/bjcp-2015-styleguide-orig.xml
+	@rm -f web/bjcp-2015-styleguide-de.xml
+	@rm -f web/bjcp-2015-styleguide-de-auto.xml
+	@rm -f web/bjcp-2015-styleguide-orig.html
+	@rm -f web/bjcp-2015-styleguide-de.html
 	@echo "cleanup done"
 
 distclean: clean
@@ -90,9 +94,11 @@ apply:
 
 ## Google Translate stuff -- this works only for users with a properly configured Google Cloud setup
 
+translate: cache/bjcp-2015-styleguide-de-auto.xml
+
+cache/bjcp-2015-styleguide-de-auto.xml:
+	cat bjcp-2015-styleguide-orig.xml | ./translate | xmllint --format - > cache/bjcp-2015-styleguide-de-auto.xml
+
 delete-glossary:
 	curl -X DELETE -H "Authorization: Bearer "`gcloud auth application-default print-access-token` https://translation.googleapis.com/v3beta1/projects/$(PROJECTID)/locations/$(LOCATION)/glossaries/$(GLOSSARYID)
-
-bjcp-2015-styleguide-de-auto.xml: bjcp-2015-styleguide-orig.xml
-	cat bjcp-2015-styleguide-orig.xml | ./translate | xmllint --format - > bjcp-2015-styleguide-de-auto.xml
 
