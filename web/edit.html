@@ -84,8 +84,12 @@
     <div id="editor">
       <div id="editor-inner">
         <p>Editing <span id="editstyleid">-</span> "<span id="editstylename">-</span>", element: <span id="editelemname">-</span>, last change: <span id="lastdate">-</span> by <span id="lastauthor">-</span></p>
+	<div>Original text:</div>
         <div id="original">-</div>
+	<div>Auto translated text <button id="copy-auto" name="copy-auto" title="copy" onclick="copy_to_edit('auto')">copy</button> :</div>
         <div id="auto">-</div>
+	<div>Undo buffer <button id="copy-undo" name="copy-undo" title="copy" onclick="copy_to_edit('undo')">copy</button> :</div>
+        <div id="undo">-</div>
         <p>Your short name (e.g. from hobbybrauer): <input type="text" name="author" id="author"/></p>
         <div id="pelleditor"> </div>
       </div>

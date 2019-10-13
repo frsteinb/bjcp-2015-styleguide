@@ -3,9 +3,14 @@
   border-bottom: 1px solid black;
 }
 
+div#editor button[title="copy"],
 div#editor button[title="save"],
 div#editor button[title="cancel"] {
   width: 70px;
+  background-color: white;
+  padding: 0px 3px;
+  margin: 0px 3px;
+  cursor: pointer;
 }
 div#editor {
   display: none;
@@ -34,17 +39,24 @@ div#editor-inner input {
 div#markup {
   font-family: courier;
 }
+div#original p, div#auto p, div#undo p {
+    margin:3px 8px;
+}
 div#original {
-    margin:10px;
+    margin:2px 3px;
+    max-height: 100px;
+    overflow-y: auto;
+    font-size: 100%;
 }
 div#auto {
-    margin:10px;
+    margin:2px 3px;
+    max-height: 100px;
+    overflow-y: auto;
 }
-div#original:before {
-    content: "Original: "
-}
-div#auto {
-    content: "Google-Translate: "
+div#undo {
+    margin:2px 3px;
+    max-height: 100px;
+    overflow-y: auto;
 }
 
 styleguide nav, styleguide *[source] {
