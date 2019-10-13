@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+#
+# NOTE: This works only for the author and his personal Google account.
+# Other users would have to apply their own adjustments.
+#
+
+import re
+import sys
+import getopt
+
+from google.cloud import translate_v3beta1 as translate
+from google.cloud import storage
+
+
+
+project_id = "bjcp-styleguide-1570890297003"
+glossary_id = 'bjcp-en-de-glossary'
+location = 'us-central1'
+target_language = 'de'
+language_codes = ['en', target_language]
+glossary_uri = 'gs://bjcp-styleguide/glossary-en-%s.csv' % target_language
+bucket_name = 'bjcp-styleguide'
+
+client = None
+storage_client = None
+
+
+
+
+
+def createGlossary():
+    glossary_name = client.glossary_path(project_id, location, glossary_id)
+    language_codes_set = translate.types.Glossary.LanguageCodesSet(language_codes = language_codes)
+    gcs_source = translate.types.GcsSource(input_uri = glossary_uri)
+    input_config = translate.types.GlossaryInputConfig(gcs_source = gcs_source)
+    glossary = translate.types.Glossary(name=glossary_name, language_codes_set = language_codes_set, input_config = input_config)
+    location_path = client.location_path(project_id, location)
+    operation = client.create_glossary(parent = location_path, glossary = glossary)
+    result = operation.result(timeout = 90)
+
+    print('createGlossary() result: {}'.format(result.name))
+    #print('Input Uri: {}'.format(result.input_config.gcs_source.input_uri))
+
+
+
+def showGlossaries():
+    location_path = client.location_path(project_id, location)
+    for glossary in client.list_glossaries(location_path):
+        print('Name: {}'.format(glossary.name))
+        print('Entry count: {}'.format(glossary.entry_count))
+        print('Input uri: {}'.format(glossary.input_config.gcs_source.input_uri))
+        for language_code in glossary.language_codes_set.language_codes:
+            print('Language code: {}'.format(language_code))
+
+
+
+def deleteGlossary():
+    return False
+
+
+
+def checkGlossary():
+    return False
+
+
+
+def getGlossaryConfig():
+    glossary = client.glossary_path(project_id, location, glossary_id)
+    glossary_config = translate.types.TranslateTextGlossaryConfig(glossary = glossary)
+    return glossary_config
+
+
+
+def getTranslation(text, glossary_config=None):
+    location_path = client.location_path(project_id, location)
+    result = client.translate_text(parent = location_path,
+                                   contents = [text],
+                                   mime_type = 'text/html',
+                                   source_language_code = 'en',
+                                   target_language_code = target_language,
+                                   glossary_config = glossary_config)
+
+    if (glossary_config):
+        return result.glossary_translations[0].translated_text
+    else:
+        return result.translations[0].translated_text
+
+
+
+client = translate.TranslationServiceClient()
+storage_client = storage.Client()
+
+
+
+
+def main(argv):
+    try:
+        opts, args = getopt.getopt(argv,"h",["cg","ug"])
+    except getopt.GetoptError:
+        print('translate [ --cg | --ug] [file]')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            sys.exit()
+        elif opt in ("--cg"):
+            createGlossary()
+            exit(0)
+        elif opt in ("--ug"):
+            updateGlossary()
+            exit(0)
+
+    if len(args) >= 1:
+        with open (args[0], "r") as file:
+            lines = file.readlines()
+    else:
+        lines = sys.stdin.readlines()
+
+    g = getGlossaryConfig()
+
+    for line in lines:
+        if (re.match(r" *<(bjcp:|)(p|p class.*|h1|h2|h3|h4|h5|td|li|name|description|overall-impression|aroma|appearance|flavor|mouthfeel|comments|history|characteristic-ingredients|style-comparison|entry-instructions|commercial-examples)>.", line)):
+            r = getTranslation(line, g)
+            print(r)
+            sys.stderr.write(".")
+            sys.stderr.flush()
+            #r = "TRANSLATE: %s" % line
+        else:
+            print(line)
+            #print("ORIG: %s" % line)
+
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
