@@ -2,6 +2,12 @@
 DEFILES		= $(shell ls de/*.xml)
 FIXFILES	= $(shell ls fix/*.xml)
 
+LANG		= de
+
+PROJECTID	= bjcp-styleguide-1570890297003
+LOCATION	= us-central1
+GLOSSARYID	= bjcp-en-de-glossary
+
 default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-de-auto.xml
 
 
@@ -90,4 +96,8 @@ clean:
 distclean: clean
 	@rm -rf cache
 	@echo "complete cleanup done"
+
+
+delete-glossary:
+	curl -X DELETE -H "Authorization: Bearer "`gcloud auth application-default print-access-token` https://translation.googleapis.com/v3beta1/projects/$(PROJECTID)/locations/$(LOCATION)/glossaries/$(GLOSSARYID)
 
