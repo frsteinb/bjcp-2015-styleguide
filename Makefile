@@ -86,8 +86,11 @@ distclean: clean
 background:
 	@nohup sh -c 'if [ ! -e .background ] ; then touch .background ; rm -f .background-again bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make ; rm .background ; if [ -e .background-again ] ; then rm bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de.xml ; make background ; fi ; else touch .background-again ; fi' >/dev/null 2>&1 &
 
-install:
+install-home:
 	ssh z "cd /var/www ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; sudo -u www-data git pull ; sudo -u www-data make ; else sudo -u www-data git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; sudo -u www-data mkdir web/snippets ; sudo -u www-data make ; fi"
+
+install-hbcon:
+	ssh hbcon "cd /var/data/docker/bjcp/webroot ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; git pull ; make ; else git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; mkdir web/snippets ; make ; fi ; chmod -R o+w ."
 
 apply:
 	if [ -d web/snippets ] ; then for f in web/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; fi
