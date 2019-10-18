@@ -12,7 +12,8 @@ import subprocess
 
 
 
-DIR = "/var/www/bjcp-2015-styleguide"
+#DIR = "/var/www/bjcp-2015-styleguide"
+DIR = "%s/.." % os.environ["CONTEXT_DOCUMENT_ROOT"]
 LOGFILE = "%s/web/logfile" % DIR
 SNIPPETDIR = "%s/web/snippets" % DIR
 LANG = "de"
