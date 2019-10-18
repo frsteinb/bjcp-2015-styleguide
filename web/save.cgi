@@ -149,8 +149,8 @@ if os.path.isfile(translatedfilename) or os.path.isfile(origfilename):
     cmd = 'git commit -q -m "%s %s by %s from %s" %s/%s.xml' % (id, elem, user, addr, LANG, id)
     docmd(cmd)
 
-    if os.path.isfile("%s/.ssh/id_rsa" % os.environ["HOME"]):
-        log("pushing to GitHubtory")
+    if os.path.isfile("/var/www/.ssh/id_rsa"):
+        log("pushing to GitHub repository")
         cmd = 'git push'
         docmd(cmd)
 
