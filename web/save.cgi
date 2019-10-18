@@ -151,7 +151,8 @@ if os.path.isfile(translatedfilename) or os.path.isfile(origfilename):
 
     if os.path.isfile("/var/www/.ssh/id_rsa"):
         log("pushing to GitHub repository")
-        cmd = 'git push'
+        #cmd = 'git push'
+        cmd = 'touch .git-push'
         docmd(cmd)
 
     log("updating files in the background... otherwise done.")
