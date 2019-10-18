@@ -93,7 +93,8 @@ install-hbcon:
 	ssh hbcon "cd /var/data/docker/bjcp/webroot ; if [ -d bjcp-2015-styleguide ] ; then cd bjcp-2015-styleguide ; git pull ; make ; else git clone https://github.com/frsteinb/bjcp-2015-styleguide.git ; cd bjcp-2015-styleguide ; mkdir web/snippets ; make ; fi ; chmod -R o+w ."
 
 apply:
-	if [ -d web/snippets ] ; then for f in web/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; fi
+	@if [ -d web/snippets ] ; then for f in web/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; else echo "nothing to apply from web/snippets" ; fi
+	@if [ -d $(HOME)/bjcp/snippets ] ; then for f in $(HOME)bjcp/snippets/*.xml ; do xsltproc xsl/bjcp-2015-styleguide-apply.xsl $$f ; echo "applied $$f" ; done ; else echo "nothing to apply from $(HOME)/bjcp/snippets" ; fi
 
 ## Google Translate stuff -- this works only for users with a properly configured Google Cloud setup
 
