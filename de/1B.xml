@@ -4,6 +4,7 @@
     <subcategory id="1B">
       <name date="2019-10-19 18:00:16" author="T3K" addr="172.18.0.11">American Lager</name>
       <overall-impression date="2019-10-19 18:05:00" author="T3K" addr="172.18.0.11">Ein sehr helles , kohlensäurehaltiges, schlankes, hoch vergorenes Lager mit einem sehr neutralen Geschmacksprofil und geringer Bitterkeit. Sehr kalt serviert, kann es ein sehr erfrischendes und durstlöschendes Getränk sein.</overall-impression>
+      <aroma date="2019-10-19 18:09:11" author="T3K" addr="172.18.0.11">Geringes bis kein Malzaroma, obwohl es als getreidig , süß oder maisartig wahrgenommen werden kann, wenn es vorhanden ist. Das Hopfenaroma kann von keiner bis zu einer leichten, würzigen oder blumigen Hopfenpräsenz reichen. Während ein sauberer Fermentationscharakter wünschenswert ist, ist eine geringe Menge an Hefecharakter (insbesondere ein heller Apfelcharakter) kein Fehler. Etwas DMS ist auch kein Fehler.</aroma>
     </subcategory>
   </category>
 </styleguide>
