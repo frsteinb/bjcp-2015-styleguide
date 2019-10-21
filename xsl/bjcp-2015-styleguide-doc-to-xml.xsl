@@ -82,6 +82,11 @@
 	<xsl:value-of select="translate($title,'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
       </xsl:attribute>
       <xsl:element name="h2">
+	<!--
+	<xsl:attribute name="id">
+	  <xsl:value-of select="translate($title,'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
+	</xsl:attribute>
+	-->
 	<xsl:value-of select="$title"/>
       </xsl:element>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
@@ -760,15 +765,37 @@
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='Heading2first' or w:pPr/w:pStyle/@w:val='Heading2'">
-	  <xsl:element name="h3">
+	  <xsl:variable name="label0">
 	    <xsl:apply-templates select="w:r"/>
-	  </xsl:element>
+	  </xsl:variable>
+	  <xsl:variable name="label">
+	    <xsl:value-of select="translate(normalize-space($label0),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
+	  </xsl:variable>
+	  <xsl:if test="string-length($label) > 0">
+	    <xsl:element name="h3">
+	      <xsl:attribute name="id">
+		<xsl:value-of select="$label"/>
+	      </xsl:attribute>
+	      <xsl:apply-templates select="w:r"/>
+	    </xsl:element>
+	  </xsl:if>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='Heading3first' or w:pPr/w:pStyle/@w:val='Heading3'">
-	  <xsl:element name="h4">
+	  <xsl:variable name="label0">
 	    <xsl:apply-templates select="w:r"/>
-	  </xsl:element>
+	  </xsl:variable>
+	  <xsl:variable name="label">
+	    <xsl:value-of select="translate(normalize-space($label0),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
+	  </xsl:variable>
+	  <xsl:if test="string-length($label) > 0">
+	    <xsl:element name="h4">
+	      <xsl:attribute name="id">
+		<xsl:value-of select="$label"/>
+	      </xsl:attribute>
+	      <xsl:apply-templates select="w:r"/>
+	    </xsl:element>
+	  </xsl:if>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:otherwise>

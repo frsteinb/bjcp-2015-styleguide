@@ -66,6 +66,10 @@ styleguide ul {
     padding-inline-start: 40px;
 }
 
+styleguide a {
+    cursor: pointer;
+}
+
 styleguide li {
     display: list-item;
     text-align: -webkit-match-parent;

@@ -203,6 +203,8 @@
 
   <xsl:template match="@id" mode="copy">
     <xsl:attribute name="id">
+      <xsl:value-of select="."/>
+      <!--
       <xsl:choose>
 	<xsl:when test="contains(.,'-')">
 	  <xsl:value-of select="substring-before(.,'-')"/>
@@ -211,6 +213,7 @@
 	  <xsl:value-of select="."/>
 	</xsl:otherwise>
       </xsl:choose>
+      -->
     </xsl:attribute>
   </xsl:template>
 
