@@ -222,7 +222,7 @@ styleguide mouthfeel:before {
   content: "Mundgefühl: ";
 }
 styleguide comments:before {
-  content: "Kommentierung: ";
+  content: "Kommentare: ";
 }
 styleguide history:before {
   content: "Geschichte: ";
@@ -234,10 +234,10 @@ styleguide style-comparison:before {
   content: "Stilvergleich: ";
 }
 styleguide entry-instructions:before {
-  content: "Einreichungshinweise: ";
+  content: "Einreichungsbestimmungen: ";
 }
 styleguide specs:before {
-  content: "Technische Daten: ";
+  content: "Eckdaten: ";
 }
 styleguide commercial-examples:before {
   content: "Kommerzielle Beispiele: ";
