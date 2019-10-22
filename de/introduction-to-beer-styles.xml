@@ -1,99 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <chapter id="introduction-to-beer-styles">
-    <h2> Einführung in die Bierstile </h2>
-    <p class="intro"> Um die Größe von Stilbeschreibungen zu reduzieren, verwenden wir eine einfache Kurzform oder einen Jargon, um komplexere Gedanken darzustellen, und lassen einige Elemente aus, die nur in Ausnahmefällen beachtet werden sollten. Einige Begriffe können in bestimmten Teilen der Welt unterschiedliche Bedeutungen haben, daher definieren wir unsere Verwendung, um Verwirrung zu vermeiden. Wir identifizieren auch bestimmte Merkmale, von denen angenommen wird, dass sie nicht in allen Bierstilen vorhanden sind, damit wir diese Einschränkungen nicht in jedem Stil wiederholen müssen. </p>
-    <h3/>
-    <h3> Grundlegende Kategorisierung </h3>
-    <p class="body"> Die allgemeinste Kategorisierung der Biersorten nach Hefetypen ist ein modernes handwerkliches Brauereiphänomen. Amerikanische Brauer und die meisten andere Craft Brewers nennen Biere <i>Biere</i> , wenn sie obergärige (ale) Hefe und <i>Pils</i> verwenden , wenn sie untergärigen (lager) Hefe verwenden. Die meisten Kategorisierungssysteme ermöglichen eine dritte Klassifizierung, die aufgrund der Methode oft als spontan fermentiert bezeichnet wird. <i>Wild</i> ist jedoch möglicherweise ein verbreiteter moderner Craft Beer-Begriff für diese mit Bakterien oder Nicht-Saccharomyces-Hefen fermentierten Biere. Der Begriff <i>wild bedeutet</i> in diesem Zusammenhang keine spontane Gärung; Die meisten werden direkt mit den gewünschten Fermentationsstämmen beimpft. </p>
-    <p class="body"> In Deutschland und anderen Brauzentren der Alten Welt wird die Bezeichnung Bier, die am häufigsten zur Unterscheidung verwendet wird, als <i>Obergärung</i> oder <i>Untergärung bezeichnet</i> . Die Deutschen halten Ale für eine Art englisches Bier und Lagerbier für eine Methode zur Konditionierung von Bier. Die Deutschen sprechen von Kölsch also typischerweise als einem obergärigen Lagerbier, nicht als einem Ale. </p>
-    <p class="body"> Englische Brauer könnten, insbesondere im historischen Kontext, Ales von Portern und Stouts als Biersorten trennen (obwohl im nächsten Atemzug kein Unterschied zwischen Portern und Stouts besteht). Wenn sie sich in noch historischeren Zusammenhängen befassen, beschreiben sie Bier möglicherweise noch weiter als anders als Bier, da Bier gehopft (oder höher gehopft ) wurde als Ale. Diese historischen Notizen sind wichtig, um alte Rezepte und Schriften zu verstehen, haben aber heute wenig Bedeutung für die gängige Verwendung von Begriffen, die Bier beschreiben. </p>
-    <p class="body"> Diese Richtlinien versuchen, die modernen Craft-Beer-Definitionen von <i>Ale</i> , <i>Lagerbier</i> und <i>Wild</i> als die Hauptgruppierung von Bierstilen zu verwenden, erwähnen jedoch, wie sie nach Möglichkeit in lokalen oder regionalen Kontexten beschrieben werden könnten. </p>
-    <h3> Gemeinsame Attribute aller Biersorten </h3>
-    <p class="body"> Sofern nicht anders angegeben, wird davon ausgegangen, dass die in diesem Abschnitt beschriebenen Attribute in jeder Bierstilbeschreibung vorhanden sind. Es ist nicht erforderlich, alle diese Merkmale für jede Stilbeschreibung zu wiederholen. <i>Nehmen Sie nicht an, dass ein Merkmal (wie Diacetyl) in einer Stilbeschreibung nicht erwähnt wird und dass es irgendwie zulässig ist.</i> </p>
-    <p class="body"><u>Sofern nicht ausdrücklich in einer individuellen Stilbeschreibung angegeben</u> , wird davon ausgegangen, dass alle Biersorten sauber fermentiert und frei von technischen Fehlern sind, einschließlich Acetaldehyd, Adstringenz, Chlorphenolen, Diacetyl, DMS, Fuselalkohol und Phenolen. Es wird davon ausgegangen, dass alle Biersorten frei von Verpackungs- und Handhabungsfehlern sind, einschließlich Oxidations-, Licht-, Sauer- und Muffeigenschaften. </p>
-    <p class="body"> Beim Mundgefühl wird davon ausgegangen, dass alle Biere frei von Adstringenz sind und keine cremigen oder sonstigen Geschmacksempfindungen aufweisen, sofern nicht anders angegeben. Es wird angenommen, dass Biere mit einem Alkoholgehalt von 6% oder weniger nicht den Geschmack oder den wärmenden Charakter von Alkohol haben, sofern nicht anders angegeben. Biere mit höherem Alkoholgehalt, die einen spürbaren Alkoholgehalt aufweisen, sollten nicht scharf, heiß, löslich oder brennend sein. Der Alkoholcharakter sollte sauber sein und keine Fuselalkohole enthalten. </p>
-    <p class="body"> Lagers sind in der Regel geschmeidig , sauber und frei von Estern, können jedoch leichte, häufig flüchtige Schwefelnoten aufweisen. Styles, die mit einer großen Menge Pilsner-Malz hergestellt wurden, können niedrige DMS-Noten aufweisen. Dies ist kein Fehler, aber es ist auch nicht erforderlich, sofern nicht anders angegeben. In beiden Fällen sollten die geringen Mengen an Schwefel und / oder DMS nicht so verstanden werden, dass auffällige Mengen irgendwie wünschenswert sind - sie sind es nicht. Beachten Sie jedoch, dass die Verwendung einiger traditioneller Inhaltsstoffe oft kleine sensorische Hinweise auf deren Vorhandensein hinterlässt, die in anderen Zusammenhängen als Fehler angesehen werden können. das ist durchaus akzeptabel, aber nicht erforderlich. </p>
-    <p class="body"> Sofern nicht anders angegeben, wird davon ausgegangen, dass alle Lager keine Fruchtigkeit (Ester) aufweisen. Ales sind in der Regel weniger geschmeidig als Lagerstoffe. Sofern nicht anders angegeben, wird davon ausgegangen, dass alle Ales einige Ester enthalten (nicht erforderlich, aber kein Fehler). </p>
-    <h3> Glossar </h3>
-    <p class="intro"> Einige in den Stilrichtlinien verwendete Begriffe sind einigen Lesern möglicherweise nicht vertraut. Anstatt ein vollständiges Wörterbuch beizufügen, haben wir einige Begriffe hervorgehoben, die möglicherweise nicht gut verstanden werden oder die bestimmte Bedeutungen innerhalb der Richtlinien implizieren. Manchmal werden Zutatenbezeichnungen als Abkürzung für den Charakter verwendet, den sie dem Bier verleihen. Wenn Juroren diese Begriffe verwenden, implizieren sie nicht unbedingt, dass diese spezifischen Inhaltsstoffe verwendet wurden, sondern nur, dass die wahrgenommenen Eigenschaften mit denen übereinstimmen, die die genannten Inhaltsstoffe üblicherweise liefern. </p>
-    <h4> Hop Terms </h4>
-    <p class="body"><b>Amerikanischer Hopfen</b> - moderner amerikanischer Brauhopfen aus der Craft Beer-Ära, der typischerweise zitrische, harzige, immergrüne oder ähnliche Eigenschaften aufweist. Modernerer Hopfen kann noch ungewöhnlichere und experimentellere Eigenschaften wie Steinobst, Beeren und Melonen hinzufügen. </p>
-    <p class="body"><b>Hopfen der Alten Welt</b> - traditioneller europäischer Brauhopfen, einschließlich Saazer-Hopfen, britischer Brauhopfen und anderer Sorten aus Kontinentaleuropa. Typischerweise als blumig, würzig, kräuterig oder erdig beschrieben. Im Allgemeinen weniger intensiv als viele Hopfen aus der Neuen Welt. </p>
-    <p class="body"><b>Hopfen aus der Neuen Welt</b> - Amerikanischer Hopfen, zusammen mit Hopfen aus Australien und Neuseeland und anderen Ländern außerhalb der Alten Welt. Kann alle Attribute des klassischen amerikanischen Hopfens sowie tropische Früchte, Steinobst, weiße Trauben und andere interessante Aromen . </p>
-    <p class="body"><b>Saazer-Hopfen</b> - oft als Edelhopfen bezeichnet - gehört traditionell zu den besten kontinentaleuropäischen Brauhopfen. Häufig mit leicht blumigem, würzigem oder kräuterartigem Charakter; selten dreist und aggressiv, typischerweise subtiler und eleganter. </p>
-    <h4> Malz- oder Maischebedingungen </h4>
-    <p class="body"><b>Münchner Malz</b> - kann bereits eine reichhaltige Malzqualität liefern, die das Malzgerüst eines Bieres verbessert, ohne dass eine Restsüße hinzugefügt wird, obwohl einige Malz mit Süße verwechseln können. Dunkle Münchner Malze können eine tief geröstete Malzqualität hinzufügen, die gerösteten Brotkrusten ähnelt. </p>
-    <p class="body"><b>Wiener Malz</b> - kann eine bereits geröstete Malzpräsenz bieten, aber erwarten Sie nicht, dass die gerösteten Noten extrem sind - sie ähneln eher ungerösteten Brotkrusten als geröstetem Brot. </p>
-    <p class="body"><b>Pilsner- oder Pilsmalz</b> - kontinentales Pilsner-Malz ist ziemlich charakteristisch und hat einen leicht süßen, leicht getreidig Charakter mit einer weichen, leicht gerösteten, honigartigen Qualität. Der Gehalt an DMS-Vorprodukten ist höher als bei anderen Malzen. Manchmal kann seine Verwendung zu einem niedrigen DMS-Kornaroma führen. </p>
-    <p class="body"><b>Maillard-Produkte</b> - eine Klasse von Verbindungen, die aus komplexen Wechselwirkungen zwischen Zuckern und Aminosäuren bei hohen Temperaturen hergestellt werden und zu braunen Farben und reichhaltigen, malzigen, manchmal sogar etwas fleischigen Verbindungen führen. In früheren Versionen der Richtlinien wurden Melanoidine genannt, eine Untergruppe von Maillard-Produkten, die für rotbraune Farben verantwortlich sind (und laut Kunze „aromaintensiv“ sind). In einigen Brauschriften werden Melanoidin und Maillard-Produkte synonym verwendet. Die chemische und geschmackliche Charakterisierung ist nicht gut verstanden, daher sollten Brauer und Richter übermäßig pedantische Diskussionen um diese Punkte vermeiden. Das Mitnehmen ist, dass wir die reichhaltigen Malzaromen meinen und eine bequeme Abkürzung brauchen, um sie zu besprechen. Maillard wird grob als "my-YARD" ausgesprochen. </p>
-    <p class="body"><b>Keks</b> - trockenes, geröstetes Getreide-, Mehl- oder <b>Teigaroma</b> , das an englische Verdauungskekse erinnert; beim Brauen ein Geschmack, der üblicherweise mit Keksmalz und einigen traditionellen englischen Malzen assoziiert wird. </p>
-    <h4> Hefe- oder Fermentationsbedingungen </h4>
-    <p class="body"><b>Sauberes Fermentationsprofil</b> - die Qualität, dass das fertige Bier nur sehr geringe bis gar keine von Hefe abgeleiteten Fermentationsnebenprodukte enthält, was normalerweise impliziert, dass keine Ester, Diacetyl, Acetaldehyd oder ähnliche Komponenten vorhanden sind, außer wenn dies ausdrücklich erwähnt wird. Eine Abkürzung dafür, dass die lange Liste möglicher Nebenprodukte der Fermentation nicht in nennenswerten oder nennenswerten Mengen vorliegt (kaum wahrgenommene Spurenmengen an der Wahrnehmungsschwelle sind jedoch in der Regel akzeptabel). </p>
-    <p class="body"><b>Kernobst</b> - Apfel, Birne, Quitte. Die botanische Klassifikation enthält andere Früchte, aber diese sind die häufigsten, die wir meinen. </p>
-    <p class="body"><b>Steinobst</b> - fleischige Frucht mit einer einzigen Grube (oder Stein), wie Kirsche, Pflaume, Pfirsich, Aprikose, Mango, usw. </p>
-    <p class="body"><b>Brett</b> - Abkürzung für <i>Brettanomyces</i> , eine abschwächende Hefegattung, die häufig zur Erzeugung von fruchtigen oder funky komplexen Aromen (Leder, Schweiß, Funk usw.) in fermentierten Getränken verwendet wird. Bedeutet wörtlich "britischer Pilz" und wird oft mit Qualitäten in Verbindung gebracht, die während der Fassalterung erzeugt werden. Übliche Arten, die beim Brauen verwendet werden, umfassen <i>B. bruxellensis</i> und <i>B. anomalous</i> , obwohl sie manchmal unter anderen Namen bekannt sind; Es gibt mehrere Stämme mit sehr unterschiedlichen Profilen (wie bei <i>S. cerevisiae</i> ). Kann als primärer oder sekundärer Fermentationsstamm verwendet werden. </p>
-    <h4> Qualitäts- oder Off-Flavour-Bedingungen </h4>
-    <p class="body"><b>Zusatzqualität</b> - ein Merkmal von Bieraroma, -geschmack und -mundgefühl, das die Verwendung höherer Anteile von Nicht-Malz-Gärstoffen widerspiegelt. Kann als kitschiger Charakter, als leichterer Körper als ein reines Malzprodukt oder als im Allgemeinen dünner schmeckendes Bier präsentiert werden. Bedeutet nicht unbedingt die Verwendung eines bestimmten Zusatzes. </p>
-    <p class="body"><b>DMS</b> - Dimethylsulfid, das eine breite Palette von Wahrnehmungseigenschaften annehmen kann. Die meisten sind für jede Biersorte ungeeignet. Bei Bieren mit hohem Pilsner-Malz-Gehalt kann jedoch eine leichte Qualität des gekochten Mais erkennbar sein. Wenn in den Richtlinien angegeben ist, dass ein DMS-Gehalt angemessen ist, handelt es sich um dieses leicht gekochte Maisaroma, nicht um andere Eigenschaften von gekochtem Gemüse oder andere DMS-Aromen. </p>
-    <p class="body"><b>Rustikal</b> - grober, herzhafter, robuster Charakter, der an ältere, traditionelle Zutaten erinnert; vielleicht weniger verfeinert als eine allgemeine Sinneserfahrung. </p>
-    <p class="body"><b>Elegant</b> - geschmeidig , geschmackvoller, raffinierter und angenehmer Charakter, der an hochwertige Zutaten erinnert, die mit Sorgfalt behandelt werden; es fehlen raue Kanten, scharfe Aromen und Gaumen angriffsempfindungen. </p>
-    <p class="body"><b>Funky</b> - Ein positiver oder negativer Begriff, je nach Kontext. Wenn erwartet oder erwünscht, kann es sich oft um einen Scheunenhof, feuchtes Heu, etwas erdiges Heu, eine Pferdedecke oder einen Hofcharakter handeln. Wenn zu intensiv, unerwartet oder unerwünscht, kann dies die Form von Silage, Kot, Babywindel oder Pferdestallqualitäten annehmen. </p>
-    <h4> Aussehen Bedingungen </h4>
-    <p class="body"><b>Belgische Spitze (Schnürung)</b> - ein charakteristisches und dauerhaftes Gittermuster aus Schaumstoff, das beim Bierkonsum auf der Innenseite des Glases <b>verbleibt</b> . Der Look erinnert an feine Spitzen aus Brüssel oder Belgien und ist ein wünschenswerter Indikator für die Bierqualität in Belgien. </p>
-    <p class="body"><b>Beine</b> - ein Muster, das ein Getränk auf der Innenseite eines Glases hinterlässt, nachdem eine Portion verzehrt wurde. Der Begriff bezieht sich auf die Tröpfchen, die langsam in Strömen von Getränkeresten auf der Seite des Glases fallen. Kein Qualitätsmerkmal, kann jedoch auf einen höheren Alkohol-, Zucker- oder Glyceringehalt hinweisen. </p>
-    <h3> Farbreferenz </h3>
-    <p class="intro"> Beachten Sie, dass SRM ein Maß für die Bierfarbdichte ist, das über dem Farbton liegt. Denken Sie daran, wenn Sie versuchen, bei der Beschreibung von Bieren nur SRM-Nummern zu verwenden. Innerhalb dieser Richtlinien folgen Bierfarbdeskriptoren im Allgemeinen dieser Zuordnung zu SRM-Werten: </p>
+    <h2>Einführung in die Bierstile</h2>
+    <p class="intro">Um den Umfang von Stilbeschreibungen zu reduzieren, verwenden wir einige Kurzformen bzw. einen bestimmten Wortschatz, um komplexere Sachverhalte darzustellen. Wir lassen einige Elemente aus, die nur in Ausnahmefällen von Bedeutung wären. Einige Begriffe können in bestimmten Teilen der Welt unterschiedliche Bedeutungen haben, daher definieren wir unsere Verwendung, um Verwirrung zu vermeiden. Wir identifizieren auch bestimmte Merkmale, die nicht in allen Bierstilen vorhanden sind, damit wir diese Einschränkungen nicht in jedem Stil wiederholen müssen.</p>
+    <h3 id="basic-categorization">Grundlegende Kategorisierung</h3>
+    <p class="body">Die grundlegendste Kategorisierung der Biersorten nach Hefetypen entspricht moderner handwerklicher Brauereipraxis. Amerikanische Brauer und die meisten anderen Craft-Brauer nennen ein Bier <i>Ale</i>, wenn sie obergärige (Ale-)Hefe verwenden und <i>Lager</i>, wenn sie untergärige (Lager-)Hefe verwenden. Die meisten Kategorisierungssysteme sehen eine dritte Klassifizierung vor, die aufgrund der Methode oft als spontane Gärung bezeichnet wird. <i>Wild</i> ist jedoch ein verbreiteter moderner Craft-Beer-Begriff für diese mit Bakterien oder Nicht-Saccharomyces-Hefen fermentierten Biere. Der Begriff <i>wild</i> bedeutet in diesem Zusammenhang jedoch keine spontane Gärung, da in den meisten Fällen gezielt mit den gewünschten Fermentationsstämmen vergoren wird.</p>
+    <p class="body">In Deutschland und anderen Brauhochburgen der Alten Welt sind die gebräuchlichsten Begriffe zur Unterscheidung der Biere in dieser Hinsicht <i>obergärig</i> und <i>untergärig</i> ("top-fermenting" und "bottom-fermenting"). Die meisten Deutschen halten Ale für eine Art englisches Bier und Lagerbier für eine Methode zur Konditionierung bzw. Reifung von Bier. Sie sprechen also oft von Kölsch als ein obergäriges Lagerbier, nicht ein Ale.</p> <!-- TBD: Ich habe bewusst die strikte Aussage über "die Deutschen" etwas relativiert. Ist das okay? -->
+    <p class="body">Englische Brauer könnten, insbesondere im historischen Kontext, Ales getrennt von Portern und Stouts als Biersorten betrachten (und im nächsten Atemzug einen Unterschied zwischen Portern und Stouts verneinen). In einem noch genauer historisch betrachteten Kontext, würden sie womöglich Ale und Bier in der Weise differenzieren, dass Bier im Gegensatz zu Ale gehopft wurde (bzw. stärker gehopft wurde als Ale). Dieses historische Verständnis ist wichtig, um alte Rezepte und Schriften zu verstehen, hat jedoch heute wenig Bedeutung wenn es um gängige Begrifflichkeiten für die Beschreibung von Bier geht.</p>
+    <p class="body">Diese Richtlinien versuchen, die modernen Craft-Beer-Definitionen von <i>Ale</i>, <i>Lager</i> und <i>Wild</i> als die Hauptgruppierung von Bierstilen zu verwenden. Es wird jedoch nach Möglichkeit auch auf lokale oder regionale Zusammenhänge eingegangen.</p>
+    <h3 id="common-attributes-of-all-beer-styles">Gemeinsame Eigenschaften aller Biersorten</h3>
+    <p class="body">Sofern nicht anders angegeben, wird davon ausgegangen, dass die in diesem Abschnitt beschriebenen Eigenschaften in jeder Bierstilbeschreibung vorhanden sind. Es ist nicht erforderlich, alle diese Merkmale für jede Stilbeschreibung zu wiederholen. <i>Nehmen Sie nicht an, dass ein Merkmal (wie beispielsweise Diacetyl), das in einer Stilbeschreibung nicht erwähnt wird, in irgendeiner Weise zulässig wäre.</i></p>
+    <p class="body"><u>Sofern nicht ausdrücklich in einer gegebenen Stilbeschreibung angegeben</u>, wird davon ausgegangen, dass alle Biersorten sauber vergoren und frei von technischen Fehlern sind, einschließlich Acetaldehyd, Adstringenz, Chlorphenolen, Diacetyl, DMS, Fuselalkoholen und Phenolen. Es wird davon ausgegangen, dass alle Biersorten frei von Verpackungs- und Handhabungsfehlern sind, einschließlich Oxidations-, Licht-, Säure- und modrigen Eigenschaften.</p>
+    <p class="body">Beim Mundgefühl wird davon ausgegangen, dass alle Biere frei von Adstringenz sind und keine cremigen oder sonstigen Gaumenwahrnehmungen hervorrufen, sofern es nicht anders angegeben ist. Es wird angenommen, dass Biere mit einem Alkoholgehalt von 6 %vol oder weniger nicht den Geschmack oder den wärmenden Charakter von Alkohol haben, sofern es nicht anders angegeben ist. Biere mit höherem Alkoholgehalt, die einen wahrnehmbaren Alkoholgehalt aufweisen, sollten nicht schroff, scharf, lösungsmittelartig oder brennend sein. Ein wahrgenommener Alkoholcharakter sollte sauber sein und keine Fuselalkohole aufweisen.</p>
+    <p class="body">Lager sind in der Regel weich, sauber und frei von Estern, können jedoch leichte, durch die Hefe verursachte Schwefelnoten aufweisen, die in der Regel leicht flüchtig sind. Stile, die mit einer großen Menge Pilsner Malz hergestellt werden, können geringfügige DMS-Noten aufweisen. Dies ist kein Fehler, aber es ist auch nicht erforderlich, sofern nicht anders angegeben. In beiden Fällen sollten die zulässigen geringen Mengen an Schwefel und/oder DMS nicht so verstanden werden, dass besonders auffällige Mengen in irgendeiner Weise wünschenswert wären - das sind sie nicht! Beachten Sie, dass die Verwendung einiger traditioneller Inhaltsstoffe oft kleine sensorische Hinweise auf ihr Vorhandensein hinterlassen, die in anderen Zusammenhängen als Fehler angesehen werden können. Dies ist hier durchaus akzeptabel, wenn auch nicht erforderlich.</p>
+    <p class="body">Sofern nicht anders angegeben, wird davon ausgegangen, dass alle Lager keinerlei Fruchtigkeit (Ester) aufweisen. Ales sind in der Regel weniger weich als Lager. Gehen Sie insofern davon aus, dass alle Ales gewisse Esternoten aufweisen können, sofern es nicht anders angegeben ist (nicht erforderlich, aber kein Fehler).</p>
+    <h3 id="glossary">Glossar</h3>
+    <p class="intro">Einige in den Stilrichtlinien verwendete Begriffe sind einigen Lesern möglicherweise nicht vertraut. Anstatt ein vollständiges Wörterbuch beizufügen, haben wir einige Begriffe hervorgehoben, die möglicherweise nicht exakt verstanden werden oder die bestimmte Bedeutungen innerhalb der Richtlinien implizieren. In manchen Fällen werden Zutatenbezeichnungen verwendet um den Charakter eines Bieres zu beschreiben. Wenn Wettbewerbsrichter diese Begriffe verwenden, implizieren sie nicht unbedingt, dass diese spezifischen Inhaltsstoffe verwendet wurden, sondern nur, dass die wahrgenommenen Eigenschaften mit denen übereinstimmen, die die genannten Inhaltsstoffe üblicherweise liefern.</p>
+    <h4 id="hop-terms">Hopfenbegriffe</h4>
+    <p class="body"><b>Amerikanischer Hopfen</b> - moderne amerikanische Brauhopfen aus der Craft-Beer-Ära, die typischerweise zitrusartige, harzige, immergrüne oder ähnliche Eigenschaften aufweisen. Noch modernere Hopfensorten können noch ungewöhnlichere und experimentellere Eigenschaften wie Steinobst, Beeren und Melonen hinzufügen.</p>
+    <p class="body"><b>Hopfen der Alten Welt</b> - traditionelle europäische Brauhopfen, einschließlich Saazer-Hopfen, britische Brauhopfen und andere Sorten aus Kontinentaleuropa. Typischerweise als blumig, würzig, kräuterig oder erdig beschrieben. Im Allgemeinen weniger intensiv als viele Hopfen aus der Neuen Welt.</p>
+    <p class="body"><b>Hopfen aus der Neuen Welt</b> - amerikanische Hopfen, zusammen mit Hopfen aus Australien und Neuseeland und anderen Ländern außerhalb der Alten Welt. Kann alle Attribute der klassischen amerikanischen Hopfen sowie tropische Früchte, Steinobst, weiße Trauben und andere interessante Aromen aufweisen.</p>
+    <p class="body"><b>Saazer-Hopfen</b> - oft als Edelhopfen bezeichnet - gehört traditionell zu den besten kontinentaleuropäischen Brauhopfen. Häufig mit leicht blumigem, würzigem oder kräuterartigem Charakter. Selten aufdringlich und aggressiv, typischerweise subtiler und eleganter.</p>
+    <h4 id="malt-or-mashing-terms">Malz- und Maischbegriffe</h4>
+    <p class="body"><b>Münchner Malz</b> - kann eine brotige, reichlich malzige Note geben, die zum Malzkörper eines Bieres beiträgt, ohne eine Restsüße hinzuzufügen, wobei jedoch in manchen Fällen Malzigkeit und Süße verwechselt werden können. Dunkle Münchner Malze können eine stark geröstete Malznote hinzufügen, die gerösteten Brotkrusten ähnelt.</p>
+    <p class="body"><b>Wiener Malz</b> - kann eine brotig-röstige Malzpräsenz liefern, erwarten Sie jedoch keine starken Röstnoten - sie ähneln eher ungerösteten Brotkrusten als geröstetem Brot.</p>
+    <p class="body"><b>Pilsner Malz</b> - kontinentales Pilsner Malz ist ziemlich charakteristisch und hat einen leicht süßen, leicht getreidigen Charakter mit einer weichen, leicht gerösteten, honigartigen Note. Der Gehalt an DMS-Vorprodukten ist höher als bei anderen Malzen. Manchmal kann seine Verwendung zu einem geringen getreidigen DMS-Aroma führen.</p>
+    <p class="body"><b>Maillard-Produkte</b> - eine Klasse von Verbindungen, die aus komplexen Wechselwirkungen zwischen Zuckern und Aminosäuren bei hohen Temperaturen hervorgehen und zu braunen Farben und reichhaltigen, malzigen, manchmal sogar etwas fleischartigen Verbindungen führen. In früheren Versionen der Richtlinien wurden Melanoidine genannt, eine Untergruppe von Maillard-Produkten, die für rotbraune Farben verantwortlich sind (und laut Kunze "aromaintensiv" sind). In mancher Brauliteratur werden Melanoidin und Maillard-Produkte synonym verwendet. Die chemische und geschmackliche Charakterisierung ist noch nicht gut erforscht, daher sollten Brauer und Wettbewerbsrichter übermäßig pedantische Diskussionen um diese Punkte vermeiden. Entscheidend ist, dass wir die reichhaltigen Malzaromen meinen und prägnante Begriffe brauchen, um sie zu besprechen. Maillard wird etwa "Mai-Jahr" ausgesprochen.</p>
+    <p class="body"><b>Keks/Biskuit</b> - Aroma von trockenem, geröstetem Getreide, Mehl oder Teig, das an englisches Teegebäck (digestive biscuits) erinnert. Beim Brauen ein Geschmack, der üblicherweise mit Biscuit-Malz und einigen traditionellen englischen Malzen assoziiert wird.</p>
+    <h4 id="yeast-or-fermentation-terms">Hefe- und Gärungsbegriffe</h4>
+    <p class="body"><b>Saubere Vergärung</b> - beizeichet die Tatsache, dass das fertige Bier nur sehr geringe bis gar keine von der Hefe abgeleitete Gärungsnebenprodukte aufweist. Dies bedeutet normalerweise, dass keine Ester, Diacetyl, Acetaldehyd oder ähnliche Komponenten vorhanden sind, außer wenn dies ausdrücklich erwähnt wird. Der Ausdruck ist also eine Abkürzung dafür, dass die Stoffe der langen Liste von möglichen Nebenprodukte der Gärung nicht in nennenswerten Mengen vorliegen (kaum wahrgenommene Spuren im Bereich Wahrnehmungsschwelle sind jedoch in der Regel akzeptabel).</p>
+    <p class="body"><b>Kernobst</b> - Apfel, Birne, Quitte. Die botanische Klassifikation umfasst weitere Früchte, aber dies sind die häufigsten, die wir meinen.</p>
+    <p class="body"><b>Steinobst</b> - fleischige Frucht mit einer einzigen Stein (oder Kern), wie Kirsche, Pflaume, Pfirsich, Aprikose, Mango, usw.</p>
+    <p class="body"><b>Brett</b> - Abkürzung für <i>Brettanomyces</i>, eine vergärende Hefegattung, die häufig zur Erzeugung von fruchtigen oder komplexen "funky" Aromen (Leder, Schweiß, stinkend usw.) in vergorenen Getränken verwendet wird. Wörtlich bedeutet der Name "britischer Pilz". Brett wird oft mit Eigenschaften in Verbindung gebracht, die während der Fassalterung erzeugt werden. Übliche Arten, die beim Brauen verwendet werden, umfassen <i>Brettanomyces bruxellensis</i> und <i>Brettanomyces anomalus</i>, sie sind jedoch manchmal unter anderen Namen bekannt. Es gibt mehrere Stämme mit sehr unterschiedlichen Eigenschaften (wie auch bei <i>Saccharomyces cerevisiae</i>). Sie kann sowohl für die Hauptgärung als auch für eine sekundäre Gärung eingesetzt werden.</p>
+    <h4 id="quality-or-off-flavor-terms">Qualitäts- und Fehlaromenbegriffe</h4>
+    <p class="body"><b>Zutatenqualität</b> - wirkt sich aus auf Bieraroma, -geschmack und -mundgefühl, und ist beeinflusst durch die Verwendung höherer Anteile von Nicht-Malz-Gärstoffen. Kann zu einem maisartigen Charakter führen, als leichterer Körper als bei einem reinen Malzprodukt wahrgenommen werden oder im Allgemeinen zu einem dünner schmeckenden Bier führen. Steht nicht zwangsläufig in Verbindung mit der Verwendung einer bestimmten Zutat.</p>
+    <p class="body"><b>DMS</b> - Dimethylsulfid, das ein breites Spektrum von Wahrnehmungseigenschaften annehmen kann. Die meisten sind für jede Biersorte unpassend. Bei Bieren mit einem hohem Gehalt an Pilsner Malz kann jedoch eine leichte Note von gekochtem Mais erkennbar sein. Wenn in den Richtlinien angegeben ist, dass ein gewisser DMS-Gehalt angemessen ist, handelt es sich um dieses leichte Aroma von gekochtem Mais, jedoch nicht um andere Eigenschaften von gekochtem Gemüse oder andere DMS-Aromen.</p>
+    <p class="body"><b>Rustikal, zünftig</b> - rauer, herzhafter, robuster Charakter, der an ältere, traditionelle Zutaten erinnert. Vielleicht weniger raffiniert als andere Genusserfahrungen.</p>
+    <p class="body"><b>Elegant</b> - weicher, genussvoller, raffinierter und angenehmer Charakter, der an hochwertige Zutaten erinnert, die mit Sorgfalt verarbeitet wurden. Ohne raue Kanten, krasse Aromen und den Gaumen herausfordernde Eigenschaften.</p>
+    <p class="body"><b>Funky, modrig</b> - ein positiver oder negativer Begriff, je nach Kontext. Wenn erwartet oder erwünscht, kann es oft an einen Scheunenhof, feuchtes Heu, etwas Erdiges, eine Pferdedecke oder einen Bauernhofcharakter erinnern. Wenn es zu intensiv, unerwartet oder unerwünscht ist, kann es Gerüche von Silage, Fäkalien, Babywindel oder Pferdestall annehmen.</p>
+    <h4 id="appearance-terms">Begriffe für das Erscheinungsbild</h4>
+    <p class="body"><b>Belgische Spitze/Gardine</b> - ein charakteristisches stabiles Netzmuster aus Schaum, das beim Trinken des Bieres auf der Innenseite des Glases verbleibt. Der Anblick erinnert an feine Spitzen aus Brüssel oder Belgien und ist ein wünschenswerter Indikator für die Bierqualität in Belgien.</p>
+    <p class="body"><b>Legs</b> - ein Muster, das ein Getränk auf der Innenseite eines Glases hinterlässt, nachdem ein Teil getrunken wurde. Der Begriff bezieht sich auf die Tröpfchen, die langsam in kleinen Strömen von Getränkeresten auf der Innenseite des Glases herab laufen. Kein Qualitätsmerkmal, kann jedoch auf einen höheren Alkohol-, Zucker- oder Glyceringehalt hinweisen.</p>
+    <h3 id="color-reference">Farbreferenz</h3>
+    <p class="intro">Beachten Sie, dass SRM ein Maß für die Bierfarbdichte ist, nicht für den Farbton. Denken Sie daran, wenn Sie bei der Beschreibung von Bieren nur SRM-Werte verwenden. Innerhalb dieser Richtlinien werden Worte für Bierfarben im Allgemeinen gemäß der folgenden Zuordnung zu SRM-Werten verwendet:</p>
     <table>
       <tr>
-        <td> Stroh </td>
-        <td> 2-3 </td>
+        <td>Stroh, strohgelb</td>
+        <td>2-3</td>
       </tr>
       <tr>
-        <td> Gelb </td>
-        <td> 3-4 </td>
+        <td>gelb</td>
+        <td>3-4</td>
       </tr>
       <tr>
-        <td> Gold </td>
-        <td> 5-6 </td>
+        <td>Gold</td>
+        <td>5-6</td>
       </tr>
       <tr>
-        <td> Bernstein </td>
-        <td> 6-9 </td>
+        <td>Bernstein</td>
+        <td>6-9</td>
       </tr>
       <tr>
-        <td> Tiefes bernsteinfarbenes / helles Kupfer </td>
-        <td> 10-14 </td>
+        <td>dunkles Bernstein / helles Kupfer</td>
+        <td>10-14</td>
       </tr>
       <tr>
-        <td> Kupfer </td>
-        <td> 14-17 </td>
+        <td>Kupfer</td>
+        <td>14-17</td>
       </tr>
       <tr>
-        <td> Tiefes Kupfer / Hellbraun </td>
-        <td> 17-18 </td>
+        <td>dunkles Kupfer / hellbraun</td>
+        <td>17-18</td>
       </tr>
       <tr>
-        <td> Braun </td>
-        <td> 19-22 </td>
+        <td>braun</td>
+        <td>19-22</td>
       </tr>
       <tr>
-        <td> Dunkelbraun </td>
-        <td> 22-30 </td>
+        <td>dunkelbraun</td>
+        <td>22-30</td>
       </tr>
       <tr>
-        <td> Sehr dunkelbraun </td>
-        <td> 30-35 </td>
+        <td>sehr dunkelbraun</td>
+        <td>30-35</td>
       </tr>
       <tr>
-        <td> Schwarz </td>
-        <td> 30+ </td>
+        <td>schwarz</td>
+        <td>30+</td>
       </tr>
       <tr>
-        <td> Schwarz, opak </td>
-        <td> 40+ </td>
+        <td>opak schwarz</td>
+        <td>40+</td>
       </tr>
     </table>
+
+
+
+
     <h3> Style-Organisation </h3>
     <p class="body"> Die in den Richtlinien beschriebenen Biersorten wurden kategorisiert, um die Durchführung von Homebrew-Wettbewerben zu unterstützen. Kategorien (die Hauptgruppierungen von Stilen) sind künstliche Konstrukte, die eine Sammlung einzelner Unterkategorien (Bierstile) darstellen, die möglicherweise eine historische, geografische oder traditionelle Beziehung zueinander haben oder nicht. Schließen Sie nicht daraus, dass die Zugehörigkeit zu einer Stilkategorie in irgendeiner Weise einen Zusammenhang zwischen Bierstilen herstellt. Der einzige Grund, warum sie zusammengefasst werden, ist die Unterstützung bei der Verwaltung des Umfangs und der Komplexität von Wettbewerben. Die Namen der Gruppierungen dienen ausschließlich Wettbewerbszwecken und dürfen in der Bier- und Brauindustrie nicht in einem breiteren Kontext verwendet werden. </p>
     <p class="body"><b>Wettbewerbe müssen nicht jede Stilkategorie einzeln beurteilen</b> ; Sie können zu Wettbewerbszwecken zusammengefasst, aufgeteilt oder anderweitig umstrukturiert werden. Die Organisatoren von Wettbewerben können Stil-Unterkategorien zu eigenen Wettbewerbskategorien zusammenfassen. Solange jedes eingereichte Bier anhand der identifizierten Unterkategorie (Stil) beurteilt wird, ist jede logische Gruppierung zulässig. </p>

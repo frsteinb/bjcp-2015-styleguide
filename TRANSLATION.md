@@ -13,5 +13,9 @@
 - aroma -> ...
 - ...
 
+- Im Deutschen ist das Wort Aroma nicht klar auf Geruch und/oder Geschmack zu beziehen, während in den englischen Guidelines Aroma klar für Geruch und Flavor klar für Geschmack steht. Ich denke daher, wir sollten das Wort "Aroma"/"Aromen" im Deutschen weitgehend vermeiden.
+
+- Lager immer als Lager schreiben? Oder alternativ auch Lagerbier? untergäriges Bier?
+
 (...add your thoughts here...)
 
