@@ -40,330 +40,264 @@
     <p class="body"><b>Funky, modrig</b> - ein positiver oder negativer Begriff, je nach Kontext. Wenn erwartet oder erwünscht, kann es oft an einen Scheunenhof, feuchtes Heu, etwas Erdiges, eine Pferdedecke oder einen Bauernhofcharakter erinnern. Wenn es zu intensiv, unerwartet oder unerwünscht ist, kann es Gerüche von Silage, Fäkalien, Babywindel oder Pferdestall annehmen.</p>
     <h4 id="appearance-terms">Begriffe für das Erscheinungsbild</h4>
     <p class="body"><b>Belgische Spitze/Gardine</b> - ein charakteristisches stabiles Netzmuster aus Schaum, das beim Trinken des Bieres auf der Innenseite des Glases verbleibt. Der Anblick erinnert an feine Spitzen aus Brüssel oder Belgien und ist ein wünschenswerter Indikator für die Bierqualität in Belgien.</p>
-    <p class="body"><b>Legs</b> - ein Muster, das ein Getränk auf der Innenseite eines Glases hinterlässt, nachdem ein Teil getrunken wurde. Der Begriff bezieht sich auf die Tröpfchen, die langsam in kleinen Strömen von Getränkeresten auf der Innenseite des Glases herab laufen. Kein Qualitätsmerkmal, kann jedoch auf einen höheren Alkohol-, Zucker- oder Glyceringehalt hinweisen.</p>
+    <p class="body"><b>Schlierenbildung</b> - ein Muster, das ein Getränk auf der Innenseite eines Glases hinterlässt, nachdem ein Teil getrunken wurde. Der Begriff bezieht sich auf die Tröpfchen, die langsam in kleinen Strömen von Getränkeresten auf der Innenseite des Glases herab laufen. Kein Qualitätsmerkmal, kann jedoch auf einen höheren Alkohol-, Zucker- oder Glyceringehalt hinweisen.</p>
     <h3 id="color-reference">Farbreferenz</h3>
     <p class="intro">Beachten Sie, dass SRM ein Maß für die Bierfarbdichte ist, nicht für den Farbton. Denken Sie daran, wenn Sie bei der Beschreibung von Bieren nur SRM-Werte verwenden. Innerhalb dieser Richtlinien werden Worte für Bierfarben im Allgemeinen gemäß der folgenden Zuordnung zu SRM-Werten verwendet:</p>
-    <table>
-      <tr>
-        <td>Stroh, strohgelb</td>
-        <td>2-3</td>
-      </tr>
-      <tr>
-        <td>gelb</td>
-        <td>3-4</td>
-      </tr>
-      <tr>
-        <td>Gold</td>
-        <td>5-6</td>
-      </tr>
-      <tr>
-        <td>Bernstein</td>
-        <td>6-9</td>
-      </tr>
-      <tr>
-        <td>dunkles Bernstein / helles Kupfer</td>
-        <td>10-14</td>
-      </tr>
-      <tr>
-        <td>Kupfer</td>
-        <td>14-17</td>
-      </tr>
-      <tr>
-        <td>dunkles Kupfer / hellbraun</td>
-        <td>17-18</td>
-      </tr>
-      <tr>
-        <td>braun</td>
-        <td>19-22</td>
-      </tr>
-      <tr>
-        <td>dunkelbraun</td>
-        <td>22-30</td>
-      </tr>
-      <tr>
-        <td>sehr dunkelbraun</td>
-        <td>30-35</td>
-      </tr>
-      <tr>
-        <td>schwarz</td>
-        <td>30+</td>
-      </tr>
-      <tr>
-        <td>opak schwarz</td>
-        <td>40+</td>
-      </tr>
-    </table>
-
-
-
-
-    <h3> Style-Organisation </h3>
-    <p class="body"> Die in den Richtlinien beschriebenen Biersorten wurden kategorisiert, um die Durchführung von Homebrew-Wettbewerben zu unterstützen. Kategorien (die Hauptgruppierungen von Stilen) sind künstliche Konstrukte, die eine Sammlung einzelner Unterkategorien (Bierstile) darstellen, die möglicherweise eine historische, geografische oder traditionelle Beziehung zueinander haben oder nicht. Schließen Sie nicht daraus, dass die Zugehörigkeit zu einer Stilkategorie in irgendeiner Weise einen Zusammenhang zwischen Bierstilen herstellt. Der einzige Grund, warum sie zusammengefasst werden, ist die Unterstützung bei der Verwaltung des Umfangs und der Komplexität von Wettbewerben. Die Namen der Gruppierungen dienen ausschließlich Wettbewerbszwecken und dürfen in der Bier- und Brauindustrie nicht in einem breiteren Kontext verwendet werden. </p>
-    <p class="body"><b>Wettbewerbe müssen nicht jede Stilkategorie einzeln beurteilen</b> ; Sie können zu Wettbewerbszwecken zusammengefasst, aufgeteilt oder anderweitig umstrukturiert werden. Die Organisatoren von Wettbewerben können Stil-Unterkategorien zu eigenen Wettbewerbskategorien zusammenfassen. Solange jedes eingereichte Bier anhand der identifizierten Unterkategorie (Stil) beurteilt wird, ist jede logische Gruppierung zulässig. </p>
-    <h3> Style-Tag-Referenz </h3>
-    <p class="body"> Um das Umgruppieren von Stilen für andere Zwecke zu erleichtern, haben wir jedem Stil Informationstags hinzugefügt. Diese Tags kennzeichnen bestimmte Attribute des Biers, die zu Gruppierungszwecken verwendet werden können. In der Spalte "Bedeutung" wird die allgemeine Absicht des Tags erläutert, es handelt sich jedoch nicht um eine strenge, formale Definition. Die Tags ersetzen in keiner Weise die tatsächlichen Beschreibungen des Stils. </p>
-    <table>
-      <tr>
-        <td> Kategorie </td>
-        <td> Etikett </td>
-        <td> Bedeutung </td>
-      </tr>
-      <tr>
-        <td> Stärke </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Sitzungsstärke </td>
-        <td> &lt;4% ABV </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Standardstärke </td>
-        <td> 4-6% ABV </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> hohe Festigkeit </td>
-        <td> 6-9% ABV </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> sehr hochfest </td>
-        <td> &gt; 9% ABV </td>
-      </tr>
-      <tr>
-        <td> Farbe </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> hell Farbe </td>
-        <td> Stroh zu Gold </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Bernsteinfarbe </td>
-        <td> bernsteinfarben bis kupferbraun </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> dunkle Farbe </td>
-        <td> dunkelbraun bis schwarz </td>
-      </tr>
-      <tr>
-        <td> Gärung / Konditionierung </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> obergärig </td>
-        <td> Bierhefe </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> untergärig </td>
-        <td> Lagerhefe </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> jegliche Fermentation </td>
-        <td> Bierhefe oder Lagerhefe </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> wild fermentiert </td>
-        <td> Nicht-Saccharomyces-Hefe / Bakterien </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> lagerte </td>
-        <td> kalt konditioniert </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> alt </td>
-        <td> lange Konditionierung vor der Freigabe </td>
-      </tr>
-      <tr>
-        <td> Herkunftsregion </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> britische Inseln </td>
-        <td> England, Wales, Schottland, Irland </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Westeuropa </td>
-        <td> Belgien, Frankreich, Niederlande </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Zentraleuropa </td>
-        <td> Deutschland, Österreich, Tschechische Republik, Skandinavien </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Osteuropa </td>
-        <td> Polen, baltische Staaten, Russland </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Nordamerika </td>
-        <td> USA, Kanada, Mexiko </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Pazifik </td>
-        <td> Australien, Neuseeland </td>
-      </tr>
-      <tr>
-        <td> Stil Familie </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> IPA-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Brown-Ale-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> hell -familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> hell lager-familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Pilsner-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Amber-Ale-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Bernstein-Lager-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Dunkel-Lager-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Trägerfamilie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> kräftige Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Bock-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Starkbierfamilie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Weizen-Bier-Familie </td>
-        <td/>
-      </tr>
-      <tr>
-        <td/>
-        <td> Spezialität-Bier </td>
-        <td/>
-      </tr>
-      <tr>
-        <td> Epoche </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Handwerksstil </td>
-        <td> in der modernen Craft Beer-Ära entwickelt </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> im traditionellen Stil </td>
-        <td> entwickelt vor der modernen Craft Beer-Ära </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> im historischen Stil </td>
-        <td> nicht mehr hergestellt oder sehr begrenzte Produktion </td>
-      </tr>
-      <tr>
-        <td> Dominantes Aroma </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> malzig </td>
-        <td> Geschmack nach Malz </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> bitter </td>
-        <td> bitteres Aroma </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> ausgewogen </td>
-        <td> ähnliche Intensität von Malz und Bitterkeit </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> hopfenreich </td>
-        <td> Hopfengeschmack </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> geröstet </td>
-        <td> geröstetes Malz / Getreide </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Süss </td>
-        <td> spürbare Restsüße oder Zuckeraroma </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Rauch </td>
-        <td> Geschmack nach geräuchertem Malz oder Getreide </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> sauer </td>
-        <td> merkliche Säure oder absichtlich erhöhte Säure </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Holz </td>
-        <td> Holz- oder Fassaltercharakter </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> Obst </td>
-        <td> wahrnehmbarer Geschmack und / oder Aroma von Früchten </td>
-      </tr>
-      <tr>
-        <td/>
-        <td> würzen </td>
-        <td> wahrnehmbarer Geschmack und / oder Aroma von Gewürzen </td>
-      </tr>
-    </table>
+    <div class="table-2">
+      <div class="table-row">
+        <div class="table-cell">Stroh, strohgelb</div>
+        <div class="table-cell">2-3</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">gelb</div>
+        <div class="table-cell">3-4</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Gold</div>
+        <div class="table-cell">5-6</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Bernstein</div>
+        <div class="table-cell">6-9</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">dunkles Bernstein / helles Kupfer</div>
+        <div class="table-cell">10-14</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Kupfer</div>
+        <div class="table-cell">14-17</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">dunkles Kupfer / hellbraun</div>
+        <div class="table-cell">17-18</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">braun</div>
+        <div class="table-cell">19-22</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">dunkelbraun</div>
+        <div class="table-cell">22-30</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">sehr dunkelbraun</div>
+        <div class="table-cell">30-35</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">schwarz</div>
+        <div class="table-cell">30+</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">opak schwarz</div>
+        <div class="table-cell">40+</div>
+      </div>
+    </div>
+    <h3 id="style-organization">Style-Organisation</h3>
+    <p class="body">Die in den Richtlinien beschriebenen Biersorten wurden kategorisiert, um die Durchführung von Heimbrauwettbewerben zu unterstützen. Kategorien (die Hauptgruppierungen von Stilen) sind künstliche Konstrukte, die Sammlungen einzelner Unterkategorien (Bierstile) darstellen, die möglicherweise eine historische, geografische oder traditionelle Beziehung zueinander haben – oder auch nicht. Schließen Sie aus der gemeinsamen Zugehörigkeit zu einer Stilkategorie in keinster Weise einen Zusammenhang zwischen Bierstilen. Der einzige Grund, warum sie zusammengefasst wurden, ist die Unterstützung bei der Verwaltung des Umfangs und der Komplexität von Wettbewerben. Die Namen der Gruppierungen dienen ausschließlich Wettbewerbszwecken und sollen in der Bier- und Brauindustrie nicht in einem breiteren Kontext verwendet werden.</p>
+    <p class="body"><b>Wettbewerbe müssen nicht jede Stilkategorie unabhängig beurteilen.</b> Sie können zu Wettbewerbszwecken zusammengefasst, aufgeteilt oder anderweitig umstrukturiert werden. Die Organisatoren von Wettbewerben können Stilunterkategorien zu eigenen Wettbewerbskategorien zusammenfassen. Solange jedes eingereichte Bier anhand der identifizierten Unterkategorie (Stil) beurteilt wird, ist jede logische Gruppierung zulässig.</p>
+    <h3>Stil-Tag-Referenz</h3>
+    <p class="body">Um das Umgruppieren von Stilen für andere Zwecke zu erleichtern, haben wir jedem Stil "Tags" hinzugefügt. Diese Tags kennzeichnen bestimmte Attribute des Biers, die zu Gruppierungszwecken verwendet werden können. In der Spalte "Bedeutung" wird die allgemeine Absicht des Tags erläutert, es handelt sich jedoch nicht um eine strenge, formale Definition. Die Tags ersetzen in keiner Weise die tatsächlichen Beschreibungen des Stils.</p>
+    <div class="table-2">
+      <div class="table-row">
+        <div class="table-cell">Tag</div>
+        <div class="table-cell">Bedeutung</div>
+      </div>
+      <div class="table-head">Stärke</div>
+      <div class="table-row">
+        <div class="table-cell">session-strength</div>
+        <div class="table-cell">&lt; 4 %vol Alkohol</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">standard-strength</div>
+        <div class="table-cell">4-6 %vol Alkohol</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">high-strength</div>
+        <div class="table-cell">6-9 %vol Alkohol</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">very-high-strength</div>
+        <div class="table-cell">&gt; 9 %vol Alkohol</div>
+      </div>
+      <div class="table-head">Farbe</div>
+      <div class="table-row">
+        <div class="table-cell">pale-color</div>
+        <div class="table-cell">strohgelb bis gold</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">amber-color</div>
+        <div class="table-cell">bernsteinfarben bis kupferbraun</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">dark-color</div>
+        <div class="table-cell">dunkelbraun bis schwarz</div>
+      </div>
+      <div class="table-head">Gärung und Reifung</div>
+      <div class="table-row">
+        <div class="table-cell">top-fermented</div>
+        <div class="table-cell">obergärig (Ale-Hefe)</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">bottom-fermented</div>
+        <div class="table-cell">untergärig (Lagerhefe)</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">any-fermentation</div>
+        <div class="table-cell">obergärig oder untergärig</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">wild-fermented</div>
+        <div class="table-cell">Nicht-Saccharomyces-Hefe / Bakterien</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">lagered</div>
+        <div class="table-cell">kalt gereift</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">aged</div>
+        <div class="table-cell">lange Reifung vor der Freigabe</div>
+      </div>
+      <div class="table-head">Herkunftsregion</div>
+      <div class="table-row">
+        <div class="table-cell">british-isles</div>
+        <div class="table-cell">England, Wales, Schottland, Irland</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">western-europe</div>
+        <div class="table-cell">Belgien, Frankreich, Niederlande</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">central-europe</div>
+        <div class="table-cell">Deutschland, Österreich, Tschechische Republik, Skandinavien</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">eastern-europe</div>
+        <div class="table-cell">Polen, Baltische Staaten, Russland</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">north-america</div>
+        <div class="table-cell">USA, Kanada, Mexiko</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">pacific</div>
+        <div class="table-cell">Australien, Neuseeland</div>
+      </div>
+      <div class="table-head">Stilfamilie</div>
+      <div class="table-row">
+        <div class="table-cell">ipa-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">brown-ale-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">pale-ale-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">pale-lager-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">pilsner-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">amber-ale-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">amber-lager-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">dark-lager-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">porter-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">stout-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">bock-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">strong-ale-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">wheat-beer-family</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">specialty-beer</div>
+        <div class="table-cell"></div>
+      </div>
+      <div class="table-head">Epoche</div>
+      <div class="table-row">
+        <div class="table-cell">craft-style</div>
+        <div class="table-cell">in der modernen Craft-Beer-Ära entwickelt</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">traditional-style</div>
+        <div class="table-cell">entwickelt vor der modernen Craft-Beer-Ära</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">historical-style</div>
+        <div class="table-cell">nicht mehr hergestellt oder sehr begrenzte Produktion</div>
+      </div>
+      <div class="table-head">Dominantes Aroma</div>
+      <div class="table-row">
+        <div class="table-cell">malty</div>
+        <div class="table-cell">malziger Geschmack</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">bitter</div>
+        <div class="table-cell">bitteres Aroma</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">balanced</div>
+        <div class="table-cell">ähnliche Intensität von Malz und Bittere</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">hoppy</div>
+        <div class="table-cell">Hopfengeschmack</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">roasty</div>
+        <div class="table-cell">geröstetes Malz / Getreide</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">sweet</div>
+        <div class="table-cell">spürbare Restsüße oder Zuckeraroma</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">smoke</div>
+        <div class="table-cell">Geschmack nach geräuchertem Malz oder Getreide</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">sour</div>
+        <div class="table-cell">merkliche oder absichtlich erhöhte Säure</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">wood</div>
+        <div class="table-cell">Holz- oder Fassreifungscharakter</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">fruit</div>
+        <div class="table-cell">wahrnehmbarer Geschmack und/oder Aroma von Früchten</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">spice</div>
+        <div class="table-cell">wahrnehmbarer Geschmack und/oder Aroma von Gewürzen</div>
+      </div>
+    </div>
   </chapter>
 </styleguide>

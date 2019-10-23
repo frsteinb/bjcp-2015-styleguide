@@ -703,28 +703,61 @@
     <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1')">
       <xsl:choose>
 	<xsl:when test="local-name(.) = 'tbl'">
-	  <xsl:element name="table">
+	  <xsl:element name="div">
+	    <xsl:attribute name="class">
+	      <xsl:text>table-2</xsl:text>
+	    </xsl:attribute>
 	    <xsl:for-each select="w:tr">
-	      <xsl:element name="tr">
-		<xsl:for-each select="w:tc">
-		  <xsl:element name="td">
-		    <xsl:value-of select="w:p/w:r/w:t"/>
+	      <xsl:choose>
+		<xsl:when test="w:tc/w:tcPr/w:gridSpan">
+		  <xsl:element name="div">
+		    <xsl:attribute name="class">
+		      <xsl:text>table-head</xsl:text>
+		    </xsl:attribute>
+		    <xsl:value-of select="w:tc/w:p/w:r/w:t"/>
 		  </xsl:element>
-		</xsl:for-each>
-	      </xsl:element>
+		</xsl:when>
+		<xsl:otherwise>
+		  <xsl:element name="div">
+		    <xsl:attribute name="class">
+		      <xsl:text>table-row</xsl:text>
+		    </xsl:attribute>
+		    <xsl:for-each select="w:tc[position() != 1]">
+		      <xsl:element name="div">
+			<xsl:attribute name="class">
+			  <xsl:text>table-cell</xsl:text>
+			</xsl:attribute>
+			<xsl:value-of select="w:p/w:r/w:t"/>
+		      </xsl:element>
+		    </xsl:for-each>
+		  </xsl:element>
+		</xsl:otherwise>
+	      </xsl:choose>
 	    </xsl:for-each>
 	  </xsl:element>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<!-- Hack to match Color Reference table -->
 	<xsl:when test="w:r[1]/w:t='Straw'">
-	  <xsl:element name="table">
+	  <xsl:element name="div">
+	    <xsl:attribute name="class">
+	      <xsl:text>table-2</xsl:text>
+	    </xsl:attribute>
 	    <xsl:for-each select="w:r[not(w:tab)]">
-	      <xsl:element name="tr">
-		<xsl:element name="td">
+	      <xsl:element name="div">
+		<xsl:attribute name="class">
+		  <xsl:text>table-row</xsl:text>
+		</xsl:attribute>
+		<xsl:element name="div">
+		  <xsl:attribute name="class">
+		    <xsl:text>table-cell</xsl:text>
+		  </xsl:attribute>
 		  <xsl:value-of select="w:t"/>
 		</xsl:element>
-		<xsl:element name="td">
+		<xsl:element name="div">
+		  <xsl:attribute name="class">
+		    <xsl:text>table-cell</xsl:text>
+		  </xsl:attribute>
 		  <xsl:value-of select="following-sibling::w:r[1]/w:t"/>
 		</xsl:element>
 	      </xsl:element>

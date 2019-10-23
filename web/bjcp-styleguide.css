@@ -75,6 +75,8 @@ styleguide li {
     text-align: -webkit-match-parent;
 }
 
+/*
+
 styleguide table {
     white-space: normal;
     line-height: normal;
@@ -112,12 +114,100 @@ styleguide tr {
     border-left-color: inherit;
 }
 
-styleguide td {
+styleguide chapter table tr td {
+    display: none;
+    vertical-align: inherit;
+}
+
+styleguide chapter table tr td[colspan] {
+    background: green;
     display: table-cell;
     vertical-align: inherit;
 }
 
+styleguide chapter table tr td:nth-last-of-type(2) {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+styleguide chapter table tr td:nth-of-type(3) {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+*/
+
 /* end of copied css */
+
+
+styleguide div.table-2 {
+    table-layout: fixed;
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    display: table; 
+}
+
+styleguide div.table-head {
+    width: auto;
+    display: table-cell;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+styleguide div.table-row {
+    display: table-row;
+}
+
+styleguide div.table-cell {
+    display: table-cell; 
+    padding: 0px 10px;
+    margin: 0px 10px;
+}
+
+/*
+styleguide div.table-2 {
+    background: beige;
+    padding: 10px;
+    width: auto;
+    display: block; 
+    border-collapse: collapse;
+}
+
+styleguide div.table-head {
+    width: auto;
+    display: block;
+    padding: 10px;
+}
+
+styleguide div.table-row {
+    background:green;
+    margin: 0px;
+    width: auto;
+    display: block;
+}
+
+styleguide div.table-row div {
+    background:red;
+    display: inline-block; 
+    position: relative;
+    min-width: 20%;
+    max-width: 50%;
+    margin: 0px;
+}
+styleguide div.table-row div + div {
+    background:pink;
+    display: inline-block; 
+    position: relative;
+    position: relative;
+    width: auto;
+    max-width:100%;
+    margin: 0px;
+}
+*/
+
+
+
 
 
 styleguide p.list-item {
