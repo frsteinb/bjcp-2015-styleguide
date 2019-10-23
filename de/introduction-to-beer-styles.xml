@@ -39,11 +39,11 @@
     <p class="body"><b>Elegant</b> - weicher, genussvoller, raffinierter und angenehmer Charakter, der an hochwertige Zutaten erinnert, die mit Sorgfalt verarbeitet wurden. Ohne raue Kanten, krasse Aromen und den Gaumen herausfordernde Eigenschaften.</p>
     <p class="body"><b>Funky, modrig</b> - ein positiver oder negativer Begriff, je nach Kontext. Wenn erwartet oder erwünscht, kann es oft an einen Scheunenhof, feuchtes Heu, etwas Erdiges, eine Pferdedecke oder einen Bauernhofcharakter erinnern. Wenn es zu intensiv, unerwartet oder unerwünscht ist, kann es Gerüche von Silage, Fäkalien, Babywindel oder Pferdestall annehmen.</p>
     <h4 id="appearance-terms">Begriffe für das Erscheinungsbild</h4>
-    <p class="body"><b>Belgische Spitze/Gardine</b> - ein charakteristisches stabiles Netzmuster aus Schaum, das beim Trinken des Bieres auf der Innenseite des Glases verbleibt. Der Anblick erinnert an feine Spitzen aus Brüssel oder Belgien und ist ein wünschenswerter Indikator für die Bierqualität in Belgien.</p>
+    <p class="body"><b>Schaumhaftung</b> - ein charakteristisches stabiles Netzmuster aus Schaum, das beim Trinken des Bieres auf der Innenseite des Glases verbleibt. Der Anblick erinnert an feine Spitzen aus Brüssel oder Belgien und ist ein wünschenswerter Indikator für die Bierqualität in Belgien.</p>
     <p class="body"><b>Schlierenbildung</b> - ein Muster, das ein Getränk auf der Innenseite eines Glases hinterlässt, nachdem ein Teil getrunken wurde. Der Begriff bezieht sich auf die Tröpfchen, die langsam in kleinen Strömen von Getränkeresten auf der Innenseite des Glases herab laufen. Kein Qualitätsmerkmal, kann jedoch auf einen höheren Alkohol-, Zucker- oder Glyceringehalt hinweisen.</p>
     <h3 id="color-reference">Farbreferenz</h3>
     <p class="intro">Beachten Sie, dass SRM ein Maß für die Bierfarbdichte ist, nicht für den Farbton. Denken Sie daran, wenn Sie bei der Beschreibung von Bieren nur SRM-Werte verwenden. Innerhalb dieser Richtlinien werden Worte für Bierfarben im Allgemeinen gemäß der folgenden Zuordnung zu SRM-Werten verwendet:</p>
-    <div class="table-2">
+    <div class="table">
       <div class="table-row">
         <div class="table-cell">Stroh, strohgelb</div>
         <div class="table-cell">2-3</div>
@@ -98,7 +98,7 @@
     <p class="body"><b>Wettbewerbe müssen nicht jede Stilkategorie unabhängig beurteilen.</b> Sie können zu Wettbewerbszwecken zusammengefasst, aufgeteilt oder anderweitig umstrukturiert werden. Die Organisatoren von Wettbewerben können Stilunterkategorien zu eigenen Wettbewerbskategorien zusammenfassen. Solange jedes eingereichte Bier anhand der identifizierten Unterkategorie (Stil) beurteilt wird, ist jede logische Gruppierung zulässig.</p>
     <h3>Stil-Tag-Referenz</h3>
     <p class="body">Um das Umgruppieren von Stilen für andere Zwecke zu erleichtern, haben wir jedem Stil "Tags" hinzugefügt. Diese Tags kennzeichnen bestimmte Attribute des Biers, die zu Gruppierungszwecken verwendet werden können. In der Spalte "Bedeutung" wird die allgemeine Absicht des Tags erläutert, es handelt sich jedoch nicht um eine strenge, formale Definition. Die Tags ersetzen in keiner Weise die tatsächlichen Beschreibungen des Stils.</p>
-    <div class="table-2">
+    <div class="table">
       <div class="table-row">
         <div class="table-cell">Tag</div>
         <div class="table-cell">Bedeutung</div>

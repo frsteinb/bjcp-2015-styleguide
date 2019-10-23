@@ -3,7 +3,7 @@ styleguide {
   font-family: Helvetica, Arial, Geneva, sans-serif;
 }
 
-styleguide chapter p, styleguide chapter h1, styleguide chapter h2, styleguide chapter h3, styleguide chapter h4, styleguide chapter ol, styleguide chapter ul, styleguide chapter table {
+styleguide chapter p, styleguide chapter h1, styleguide chapter h2, styleguide chapter h3, styleguide chapter h4, styleguide chapter ol, styleguide chapter ul, styleguide chapter {
     margin-left: 1em;
 }
 
@@ -75,72 +75,9 @@ styleguide li {
     text-align: -webkit-match-parent;
 }
 
-/*
-
-styleguide table {
-    white-space: normal;
-    line-height: normal;
-    font-weight: normal;
-    font-size: medium;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-east-asian: normal;
-    font-variant-position: normal;
-    font-style: normal;
-    color: -webkit-text;
-    text-align: start;
-    display: table;
-    border-collapse: separate;
-    -webkit-border-horizontal-spacing: 2px;
-    -webkit-border-vertical-spacing: 2px;
-    border-top-color: gray;
-}
-
-styleguide tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-top-color: inherit;
-    border-right-color: inherit;
-    border-bottom-color: inherit;
-    border-left-color: inherit;
-}
-
-styleguide tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-top-color: inherit;
-    border-right-color: inherit;
-    border-bottom-color: inherit;
-    border-left-color: inherit;
-}
-
-styleguide chapter table tr td {
-    display: none;
-    vertical-align: inherit;
-}
-
-styleguide chapter table tr td[colspan] {
-    background: green;
-    display: table-cell;
-    vertical-align: inherit;
-}
-
-styleguide chapter table tr td:nth-last-of-type(2) {
-    display: table-cell;
-    vertical-align: inherit;
-}
-
-styleguide chapter table tr td:nth-of-type(3) {
-    display: table-cell;
-    vertical-align: inherit;
-}
-
-*/
-
 /* end of copied css */
 
-
-styleguide div.table-2 {
+styleguide div.table {
     table-layout: fixed;
     padding: 10px;
     margin: 10px;
@@ -164,51 +101,6 @@ styleguide div.table-cell {
     padding: 0px 10px;
     margin: 0px 10px;
 }
-
-/*
-styleguide div.table-2 {
-    background: beige;
-    padding: 10px;
-    width: auto;
-    display: block; 
-    border-collapse: collapse;
-}
-
-styleguide div.table-head {
-    width: auto;
-    display: block;
-    padding: 10px;
-}
-
-styleguide div.table-row {
-    background:green;
-    margin: 0px;
-    width: auto;
-    display: block;
-}
-
-styleguide div.table-row div {
-    background:red;
-    display: inline-block; 
-    position: relative;
-    min-width: 20%;
-    max-width: 50%;
-    margin: 0px;
-}
-styleguide div.table-row div + div {
-    background:pink;
-    display: inline-block; 
-    position: relative;
-    position: relative;
-    width: auto;
-    max-width:100%;
-    margin: 0px;
-}
-*/
-
-
-
-
 
 styleguide p.list-item {
   list-style-type: decimal;
