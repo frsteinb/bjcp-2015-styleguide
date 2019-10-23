@@ -17,5 +17,9 @@
 
 - Lager immer als Lager schreiben? Oder alternativ auch Lagerbier? untergäriges Bier?
 
+- Überdenken, ob und wie weit gehend, eingeführte deutsche Begriffe mit dem angehängten Original-Begriff versehen werden sollen (Beispiel: Schlierenbildung ("Legs")).
+
+- Fermentation konsequent als Gärung bezeichnen?!
+
 (...add your thoughts here...)
 

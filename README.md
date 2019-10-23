@@ -119,3 +119,12 @@ See the LICENSE file. Note that this license relates only to the content of this
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Appendices
 - Artifacts on GitHub?
+- Refactor most of the old initial files.
+- Title Page.
+- Enhance show.html
+- Improve I18n.
+- Revamp editor, probably no longer as an overlay.
+- Improved navigation and dynamic layout.
+- Fix ID display in front of style names. Make them searchable.
+- Maybe, some keyboard control?
+- Support editing "p" (not only in "description"), "li", "td".

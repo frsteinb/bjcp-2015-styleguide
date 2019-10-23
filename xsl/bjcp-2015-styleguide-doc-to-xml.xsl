@@ -40,6 +40,8 @@
 
   <xsl:template match="/w:document">
     <xsl:element name="styleguide">
+      <!-- TBD: title page -->
+      <!-- TBD: toc? -->
       <xsl:apply-templates select=".//w:p[w:pPr/w:pStyle/@w:val='Heading1' and w:r/w:t]" mode="chapter"/>
     </xsl:element>
   </xsl:template>
@@ -82,11 +84,6 @@
 	<xsl:value-of select="translate($title,'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
       </xsl:attribute>
       <xsl:element name="h2">
-	<!--
-	<xsl:attribute name="id">
-	  <xsl:value-of select="translate($title,'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
-	</xsl:attribute>
-	-->
 	<xsl:value-of select="$title"/>
       </xsl:element>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-chapter"/>
@@ -119,15 +116,6 @@
 
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-category"/>
 
-<!--
-      <xsl:if test="not($id)">
-        <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-subcategory">
-          <xsl:with-param name="id">
-            <xsl:value-of select="substring-before($title,'. ')"/>
-          </xsl:with-param>
-        </xsl:apply-templates>
-      </xsl:if>
--->
         <xsl:apply-templates select="following-sibling::w:p[1]" mode="in-subcategory">
           <xsl:with-param name="id">
             <xsl:value-of select="substring-before($title,'. ')"/>
@@ -567,9 +555,24 @@
 
 
 
+  <xsl:template name="normalized-w-r">
+    <xsl:variable name="t">
+      <xsl:apply-templates select="w:r">
+	<xsl:with-param name="br">yes</xsl:with-param>
+      </xsl:apply-templates>
+    </xsl:variable>
+    <xsl:value-of select="normalize-space($t)"/>
+  </xsl:template>
+
+
+
   <xsl:template match="w:r">
+    <xsl:param name="br"/>
     <xsl:variable name="t">
       <xsl:choose>
+        <xsl:when test="w:br and $br">
+	  <xsl:text> </xsl:text>
+        </xsl:when>
         <xsl:when test="(position() = 1) and (substring(w:t,1,1) = ' ') and (position() = last()) and (substring(w:t,string-length(w:t),1) = ' ')">
           <xsl:value-of select="substring(w:t,2,string-length(w:t)-2)"/>
         </xsl:when>
@@ -785,14 +788,14 @@
 	</xsl:when>	  
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseIntro'">
 	  <xsl:element name="p">
-	    <xsl:attribute name="class">intro</xsl:attribute>
+	    <!--<xsl:attribute name="class">intro</xsl:attribute>-->
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:element>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseBody' and w:r">
 	  <xsl:element name="p">
-	    <xsl:attribute name="class">body</xsl:attribute>
+	    <!--<xsl:attribute name="class">body</xsl:attribute>-->
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:element>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
@@ -802,14 +805,14 @@
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:variable>
 	  <xsl:variable name="label">
-	    <xsl:value-of select="translate(normalize-space($label0),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
+	    <xsl:value-of select="translate(normalize-space($label0),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :.()','abcdefghijklmnopqrstuvwxyz-')"/>
 	  </xsl:variable>
 	  <xsl:if test="string-length($label) > 0">
 	    <xsl:element name="h3">
 	      <xsl:attribute name="id">
 		<xsl:value-of select="$label"/>
 	      </xsl:attribute>
-	      <xsl:apply-templates select="w:r"/>
+	      <xsl:call-template name="normalized-w-r"/>
 	    </xsl:element>
 	  </xsl:if>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
@@ -819,7 +822,7 @@
 	    <xsl:apply-templates select="w:r"/>
 	  </xsl:variable>
 	  <xsl:variable name="label">
-	    <xsl:value-of select="translate(normalize-space($label0),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :','abcdefghijklmnopqrstuvwxyz-')"/>
+	    <xsl:value-of select="translate(normalize-space($label0),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :.()','abcdefghijklmnopqrstuvwxyz-')"/>
 	  </xsl:variable>
 	  <xsl:if test="string-length($label) > 0">
 	    <xsl:element name="h4">

@@ -28,13 +28,7 @@
     <xsd:complexType>
       <xsd:complexContent>
         <xsd:extension base="Chapter">
-	  <xsd:attribute name="id" use="required">
-	    <xsd:simpleType>
-	      <xsd:restriction base="xsd:string">
-		<xsd:pattern value="[a-zA-Z0-9\-]*"/>
-	      </xsd:restriction>
-	    </xsd:simpleType>
-	  </xsd:attribute>
+	  <xsd:attribute name="id" use="required" type="Id"/>
         </xsd:extension>
       </xsd:complexContent>
     </xsd:complexType>
@@ -48,13 +42,7 @@
         <xsd:element name="entry-instructions" type="Text" minOccurs="0"/>
         <xsd:element ref="subcategory" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
-      <xsd:attribute name="id" use="required">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:string">
-            <xsd:pattern value="[a-zA-Z0-9\-]*"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:attribute>
+      <xsd:attribute name="id" use="required" type="Id"/>
     </xsd:complexType>
   </xsd:element>
 
@@ -91,14 +79,15 @@
 
   <xsd:complexType name="Chapter">
     <xsd:choice minOccurs="0" maxOccurs="unbounded">
-      <xsd:element name="h1" type="xsd:string"/>
-      <xsd:element name="h2" type="xsd:string"/>
-      <xsd:element name="h3" type="xsd:string"/>
-      <xsd:element name="h4" type="xsd:string"/>
+      <xsd:element name="h1" type="Headline"/>
+      <xsd:element name="h2" type="Headline"/>
+      <xsd:element name="h3" type="Headline"/>
+      <xsd:element name="h4" type="Headline"/>
       <xsd:element ref="table"/>
       <xsd:element ref="ul"/>
       <xsd:element ref="ol"/>
       <xsd:element ref="p"/>
+      <xsd:element ref="div"/>
     </xsd:choice>
   </xsd:complexType>
 
@@ -297,6 +286,15 @@
     </xsd:complexType>
   </xsd:element>
 
+  <xsd:element name="div">
+    <xsd:complexType mixed="true">
+      <xsd:sequence>
+        <xsd:element ref="div" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="class"/>
+    </xsd:complexType>
+  </xsd:element>
+
   <xsd:element name="a">
     <xsd:complexType mixed="true">
       <xsd:complexContent>
@@ -320,5 +318,14 @@
     <xsd:attribute name="addr" type="xsd:string"/>
   </xsd:complexType>
 
+  <xsd:complexType name="Headline" mixed="true">
+    <xsd:attribute name="id" type="Id"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="Id">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-zA-Z0-9\-]*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
 </xsd:schema>
