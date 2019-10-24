@@ -8,6 +8,18 @@ xhr1.onreadystatechange = function() {
     if (xhr1.readyState === 4) {
 	styleguide = xhr1.responseXML.querySelector("styleguide");
 	renderStyleguide(styleguide);
+	if (window.location.href.indexOf("#") > -1) {
+	    idref = window.location.href.replace(/^.*#/g, '');
+	    var node = document.querySelector("*[id='" + idref + "']");
+	    node.classList.remove("collapsed");
+	    if ((node.parentNode.tagName == "subcategory") || (node.parentNode.tagName == "category")) {
+		node.parentNode.classList.remove("collapsed");
+		if (node.parentNode.parentNode.tagName == "category") {
+		    node.parentNode.parentNode.classList.remove("collapsed");
+		}
+	    }
+	    window.location.href = "#" + idref;
+	}
     }
 }
 xhr1.open('GET', document.querySelector('link[rel="styleguide"]').href, true);
