@@ -153,7 +153,7 @@
 
 
 
-  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples">
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples|bjcp:specs">
     <xsl:param name="t"/>
     <xsl:variable name="p">
       <xsl:value-of select="$t"/>
@@ -162,6 +162,9 @@
     </xsl:variable>
     <xsl:element name="{local-name(.)}">
       <xsl:choose>
+	<xsl:when test="bjcp:ibu/@min">
+	  <xsl:apply-templates/>
+	</xsl:when>
 	<xsl:when test="dyn:evaluate($p)">
 	  <xsl:attribute name="source">lang-file</xsl:attribute>
 	  <xsl:apply-templates select="dyn:evaluate($p)/@*"/>

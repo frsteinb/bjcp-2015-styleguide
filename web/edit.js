@@ -189,8 +189,11 @@ function renderStyleguide(styleguide) {
     var editor = document.querySelector("div[id='editor']");
     editor.parentNode.insertBefore(styleguide_node, editor);
 
-    var parts = styleguide_node.querySelectorAll("name, description, overall-impression, aroma, appearance, flavor, mouthfeel, comments, history, characteristic-ingredients, style-comparison, entry-instructions, commercial-examples");
+    var parts = styleguide_node.querySelectorAll("name, description, overall-impression, aroma, appearance, flavor, mouthfeel, comments, history, characteristic-ingredients, style-comparison, entry-instructions, commercial-examples, specs");
     for (var i = 0; i < parts.length; i++) {
+	if ((parts[i].tagName == "specs") && (parts[i].querySelectorAll("ibu, og, fg, srm, abv").length >= 1)) {
+	    continue;
+	}
 	parts[i].addEventListener("click", function() {
 	    edit_element = this;
 	    edit_id = edit_element.parentNode.getAttribute("id");

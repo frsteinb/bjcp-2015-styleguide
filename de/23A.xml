@@ -15,22 +15,6 @@
       <characteristic-ingredients>Der Gehalt an Weizenmalz beträgt in der Regel 50% der Schüttung (wie es bei allen deutschen Weizenbieren Tradition ist), der Rest ist in der Regel Pilsner-Malz. Eine Mischgärung mit obergäriger Hefe und Lactobacillus (verschiedene Stämme) liefert die scharfe Säure, die durch blenden von Bieren unterschiedlichen Alters während der Gärung und durch verlängertes Kaltreifung verstärkt werden kann. Hopfenbitterkeit gibt es nicht. Eine Dekoktion mit Maischehopfung stellt das traditonelle Verfahren dar. Deutsche Brauwissenschaftler glauben, dass <i> Brettanomyces </i> für das richtige Geschmacksprofil unerlässlich ist, aber dieser Charakter ist niemals stark.</characteristic-ingredients>
       <style-comparison>Im Vergleich zu einem Lambic ist es im Allgemeinen nicht so sauer und hat eine saubere Milchsäure mit einem bis unter der sensorischen Schwelle liegendem Funk. Auch niedriger im Alkoholgehalt.</style-comparison>
       <commercial-examples>Bayerischer Bahnhof Berliner Style Weisse, Berliner Kindl Weisse, Nodding Head Berliner Weisse, The Bruery Hottenroth</commercial-examples>
-      <tags>
-        <tag>session-strength</tag>
-        <tag>pale-color</tag>
-        <tag>top-fermented</tag>
-        <tag>central-europe</tag>
-        <tag>traditional-style</tag>
-        <tag>wheat-beer-family</tag>
-        <tag>sour</tag>
-      </tags>
-      <specs>
-        <ibu min="3" max="8"/>
-        <srm min="2" max="3" ebc-min="4" ebc-max="6"/>
-        <og min="1.028" max="1.032" plato-min="7.1" plato-max="8"/>
-        <fg min="1.003" max="1.006" plato-min="0.8" plato-max="1.5"/>
-        <abv min="2.8" max="3.8"/>
-      </specs>
     </subcategory>
   </category>
 </styleguide>

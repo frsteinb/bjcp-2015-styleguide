@@ -211,17 +211,23 @@ styleguide[lang="de"] tags:before {
   content: "Tags: ";
 }
 styleguide[lang="de"] strength-classifications:before {
-  content: "Stärkeklassifikation: ";
+  content: "Stärkeklassifikationen: ";
 }
 
 styleguide[lang="de"] category > name:after {
   content: " (Stilkategorie)";
+  font-weight: normal;
+  font-size: 0.6em;
 }
 styleguide[lang="de"] subcategory > name:after {
   content: " (Bierstil)";
+  font-weight: normal;
+  font-size: 0.6em;
 }
 styleguide[lang="de"] subcategory[id*="-"] > name:after {
   content: " (Bierstilalternative)";
+  font-weight: normal;
+  font-size: 0.6em;
 }
 
 styleguide overall-impression,
@@ -259,10 +265,6 @@ styleguide strength-classifications:before {
   font-weight: bold;
 }
 
-styleguide specs {
-    display: block;
-    padding: 1px;
-}
 styleguide specs * {
     font-size: 0.8em;
     width: 100px;
@@ -289,23 +291,10 @@ styleguide specs ibu, styleguide specs srm, styleguide specs og, styleguide spec
   padding: 1px;
   display: inline-block;
 }
-/*
-styleguide specs div {
-  display: inline-block;
-}
-styleguide specs div * {
-  padding: 1px 4px;
-  border: 1px solid;
-  display: inline-block;
-  width: 9em;
-}
-*/
-
 
 /* navigation */
 
-styleguide nav,
-styleguide *[source] {
+styleguide nav {
   cursor: pointer;
 }
 
@@ -350,14 +339,16 @@ styleguide *.collapsed name {
     display:block !important;
 }
 
-styleguide * *:nth-child(3) {
-    /* after "name" and "nav" */
+styleguide category > *:nth-child(3),
+styleguide subcategory > *:nth-child(3) {
+    /* spacing after "name" and "nav" */
     margin-block-start: 1em;
 }
 styleguide * *:last-child {
     margin-block-end: 1em;
 }
-styleguide subcategory[id="7C"] entry-instructions {
-    /* layout hack for this one occurance */
+styleguide subcategory[id="7C"] entry-instructions,
+styleguide subcategory[id="21B"] strength-classifications {
+    /* layout hack for these single occurances */
     margin-block-end: 1em;
 }

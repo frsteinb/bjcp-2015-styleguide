@@ -79,6 +79,10 @@ div#editor-inner {
     height: 95%;
 }
 
+styleguide *[source] {
+  cursor: pointer;
+}
+
 styleguide[orig="true"] * {
   display:none;
 }
@@ -98,4 +102,3 @@ styleguide nav:not([todo="0"]) {
 styleguide nav:not([todo]) {
     background-color: white;
 }
-

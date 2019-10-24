@@ -128,3 +128,5 @@ See the LICENSE file. Note that this license relates only to the content of this
 - Fix ID display in front of style names. Make them searchable.
 - Maybe, some keyboard control?
 - Support editing "p" (not only in "description"), "li", "td".
+- Better rendering of specs with text content, e.g. 33A.
+- navigate by tags?

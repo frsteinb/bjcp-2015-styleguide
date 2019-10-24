@@ -18,23 +18,6 @@
 			</characteristic-ingredients>
       <style-comparison>Ein tieferer Malzcharakter unterscheidet diese Biere von flämischen Rotbieren. Der Oud Bruin ist weniger sauer und malziger als ein Flanders Red, und die fruchtigen Aromen sind mehr auf Malz ausgerichtet.</style-comparison>
       <commercial-examples>Ichtegem Oud Bruin, Liefmans Goudenband, Liefmans Liefmans Oud Bruin, Petrus Oud Bruin, Riva Vondel, Vanderghinste Bellegems Bruin</commercial-examples>
-      <tags>
-        <tag>standard-strength</tag>
-        <tag>dark-color</tag>
-        <tag>top-fermented</tag>
-        <tag>western-europe</tag>
-        <tag>traditional-style</tag>
-        <tag>sour</tag>
-        <tag>malty</tag>
-        <tag>sour</tag>
-      </tags>
-      <specs>
-        <ibu min="20" max="25"/>
-        <srm min="15" max="22" ebc-min="30" ebc-max="43"/>
-        <og min="1.040" max="1.074" plato-min="10" plato-max="18"/>
-        <fg min="1.008" max="1.012" plato-min="2.1" plato-max="3.1"/>
-        <abv min="4.0" max="8.0"/>
-      </specs>
     </subcategory>
   </category>
 </styleguide>

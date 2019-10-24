@@ -13,24 +13,6 @@
       <characteristic-ingredients>: Eine Basis von Wiener und / oder Münchner Malzen, leichten bis mittleren Karamalzen und eine kleine Menge Special B werden mit bis zu 20% Mais verwendet. Kontinentalhopfen mit niedrigem Alphasäuregehalt wird häufig verwendet (vermeiden Sie Hopfen mit hohem Alphasäuregehalt oder unverwechselbaren amerikanischen Hopfen). Saccharomyces, Lactobacillus und Brettanomyces (und Acetobacter) tragen zur Fermentation und zum späteren Geschmack bei.</characteristic-ingredients>
       <style-comparison>Weniger malzig als ein Oud Bruin, oft mit einem eher fruchtig-säuerlichen Profil.</style-comparison>
       <commercial-examples>Cuvée des Jacobins Rouge, Duchesse de Bourgogne, Rodenbach Grand Cru, Rodenbach Klassiek, Vichtenaar Flemish Ale</commercial-examples>
-      <tags>
-        <tag>standard-strength</tag>
-        <tag>amber-color</tag>
-        <tag>top-fermented</tag>
-        <tag>western-europe</tag>
-        <tag>traditional-style</tag>
-        <tag>sour</tag>
-        <tag>balanced</tag>
-        <tag>sour</tag>
-        <tag>wood</tag>
-      </tags>
-      <specs>
-        <ibu min="10" max="25"/>
-        <srm min="10" max="16" ebc-min="20" ebc-max="31"/>
-        <og min="1.048" max="1.057" plato-min="11.9" plato-max="14"/>
-        <fg min="1.002" max="1.012" plato-min="0.5" plato-max="3.1"/>
-        <abv min="4.6" max="6.5"/>
-      </specs>
     </subcategory>
   </category>
 </styleguide>
