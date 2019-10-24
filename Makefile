@@ -8,7 +8,7 @@ PROJECTID	= bjcp-styleguide-1570890297003
 LOCATION	= us-central1
 GLOSSARYID	= bjcp-en-de-glossary
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml bjcp-2015-styleguide-orig.html bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.html web/bjcp-2015-styleguide-de.html web/bjcp-2015-styleguide-de-auto.xml
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de-auto.xml
 
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
@@ -30,14 +30,6 @@ bjcp-2015-styleguide-de.xml: de bjcp-2015-styleguide-orig.xml $(DEFILES) xsl/bjc
 	@bash -c 'xsltproc --stringparam lang de --output bjcp-2015-styleguide-de.xml xsl/bjcp-2015-styleguide-translate.xsl bjcp-2015-styleguide-orig.xml 2> >(grep -v "failed to load external entity")'
 	@echo "built $@"
 
-bjcp-2015-styleguide-orig.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-orig.xml
-	@xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-orig.xml > bjcp-2015-styleguide-orig.html
-	@echo "built $@"
-
-bjcp-2015-styleguide-de.html: xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml
-	@xsltproc xsl/bjcp-2015-styleguide-html.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.html
-	@echo "built $@"
-
 web/bjcp-2015-styleguide-orig.xml: bjcp-2015-styleguide-orig.xml
 	cp bjcp-2015-styleguide-orig.xml web/
 
@@ -46,12 +38,6 @@ web/bjcp-2015-styleguide-de.xml: bjcp-2015-styleguide-de.xml
 
 web/bjcp-2015-styleguide-de-auto.xml: cache/bjcp-2015-styleguide-de-auto.xml
 	cp cache/bjcp-2015-styleguide-de-auto.xml web/bjcp-2015-styleguide-de-auto.xml
-
-web/bjcp-2015-styleguide-orig.html: bjcp-2015-styleguide-orig.html
-	cp bjcp-2015-styleguide-orig.html web/
-
-web/bjcp-2015-styleguide-de.html: bjcp-2015-styleguide-de.html
-	cp bjcp-2015-styleguide-de.html web/
 
 format:
 	@for f in de/*.xml ; do xmllint --format $$f | sed -e 's/ standalone="yes"//' > cache/tmp.xml ; cmp -s cache/tmp.xml $$f ; if [ $$? -ne 0 ] ; then cat cache/tmp.xml > $$f ; echo "reformatted $$f" ; fi ; rm cache/tmp.xml ; done
@@ -68,13 +54,9 @@ clean:
 	@rm -rf orig
 	@rm -f bjcp-2015-styleguide-orig.xml
 	@rm -f bjcp-2015-styleguide-de.xml
-	@rm -f bjcp-2015-styleguide-orig.html
-	@rm -f bjcp-2015-styleguide-de.html
 	@rm -f web/bjcp-2015-styleguide-orig.xml
 	@rm -f web/bjcp-2015-styleguide-de.xml
 	@rm -f web/bjcp-2015-styleguide-de-auto.xml
-	@rm -f web/bjcp-2015-styleguide-orig.html
-	@rm -f web/bjcp-2015-styleguide-de.html
 	@echo "cleanup done"
 
 distclean: clean

@@ -1,4 +1,6 @@
 
+/* editor stuff */
+
 .pell-content{
   border-bottom: 1px solid black;
 }
@@ -77,19 +79,28 @@ div#editor-inner {
     height: 95%;
 }
 
-styleguide nav, styleguide *[source] {
-  cursor: pointer;
-}
-
 styleguide[orig="true"] * {
   display:none;
 }
 
+styleguide *[source="original"] {
+    background-color: #ffd0d0;
+}
+styleguide *[source="lang-file"] {
+    background-color: #dfffdf;
+}
+styleguide *[source="this-session"] {
+    background-color: #b0ffb0;
+}
+styleguide nav:not([todo="0"]) {
+    background-color: #ffb0b0;
+}
 
 
 
 
 
+/* other */
 
 styleguide category:before, styleguide subcategory:before {
     white-space: pre;
@@ -107,6 +118,23 @@ styleguide chapter, styleguide category, styleguide subcategory {
     margin-left:0em;
     display: block;
 }
+
+styleguide name {
+    margin-left:1em;
+}
+
+styleguide h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*
+styleguide h2 { font-size: large; }
+styleguide h3 { font-size: medium; }
+styleguide h4 { font-size: small; }
+*/
+
+/*
 styleguide category.collapsed, styleguide subcategory.collapsed {
     height: 1.3em;
     overflow: hidden;
@@ -119,19 +147,16 @@ styleguide chapter.collapsed {
 styleguide category.collapsed subcategory, styleguide subcategory.collapsed subcategory {
     display: none;
 }
+*/
 
-styleguide name {
-    margin-left:1em;
+
+
+
+
+/*
+styleguide nav, styleguide *[source] {
+  cursor: pointer;
 }
-
-styleguide h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-styleguide h2 { font-size: large; }
-styleguide h3 { font-size: medium; }
-styleguide h4 { font-size: small; }
 
 styleguide nav {
     display:inline-block;
@@ -153,16 +178,5 @@ styleguide nav {
 styleguide chapter.collapsed nav, styleguide category.collapsed nav, styleguide subcategory.collapsed nav {
     transform: rotate(-90deg);
 }
+*/
 
-styleguide *[source="original"] {
-    background-color: #ffd0d0;
-}
-styleguide *[source="lang-file"] {
-    background-color: #dfffdf;
-}
-styleguide *[source="this-session"] {
-    background-color: #b0ffb0;
-}
-styleguide nav:not([todo="0"]) {
-    background-color: #ffb0b0;
-}

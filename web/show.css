@@ -1,10 +1,10 @@
 
-styleguide { 
-  font-family: Helvetica, Arial, Geneva, sans-serif;
+styleguide {
+    font-family: Helvetica, Arial, Geneva, sans-serif;
 }
 
 styleguide chapter p, styleguide chapter h1, styleguide chapter h2, styleguide chapter h3, styleguide chapter h4, styleguide chapter ol, styleguide chapter ul, styleguide chapter {
-    margin-left: 1em;
+    margin-left: 0.7em;
 }
 
 /* the following rules are copied from standard html rules */
@@ -13,36 +13,22 @@ styleguide p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 
 styleguide h2 {
     display: block;
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 
 styleguide h3 {
     display: block;
     font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 
 styleguide h4 {
     display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 
@@ -51,8 +37,6 @@ styleguide ol {
     list-style-type: decimal;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
 
@@ -61,8 +45,6 @@ styleguide ul {
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
 
@@ -75,7 +57,7 @@ styleguide li {
     text-align: -webkit-match-parent;
 }
 
-/* end of copied css */
+/* table-style divs */
 
 styleguide div.table {
     table-layout: fixed;
@@ -102,21 +84,21 @@ styleguide div.table-cell {
     margin: 0px 10px;
 }
 
-styleguide p.list-item {
-  list-style-type: decimal;
-}
+
+/* categories */
 
 styleguide category, styleguide subcategory {
-  margin-top:1em;
-  margin-bottom:1em;
-  margin-left:0em;
-  display: list-item;
-  list-style-position: inside;
+    /*margin-top:1em;*/
+    /*margin-bottom:1em;*/
+    margin-left:1em;
+    display: block;
 }
 
+/*
 styleguide p {
     margin-top:1em;
 }
+*/
 
 styleguide b {
   font-weight: bold;
@@ -130,20 +112,21 @@ styleguide u {
   text-decoration: underline;
 }
 
-styleguide category:before, styleguide subcategory:before {
-  content: attr(id);
-}
 styleguide name {
-  display: inline-block;
-  margin-bottom:1em;
+    display: inline-block;
+    /*margin-bottom:0.5em;*/
+    font-size: 1.5em;
+    font-weight: bold;
 }
 styleguide description {
-  margin-left:1em;
-  display: block;
+    /*margin-left:1em;*/
+    display: block;
 }
+/*
 styleguide description p {
   margin-top: 0;
 }
+*/
 
 styleguide overall-impression:before {
   content: "Overall Impression: ";
@@ -191,44 +174,54 @@ styleguide strength-classifications:before {
 styleguide[lang="de"] overall-impression:before {
   content: "Gesamteindruck: ";
 }
-styleguide aroma:before {
+styleguide[lang="de"] aroma:before {
   content: "Geruch: ";
 }
-styleguide appearance:before {
+styleguide[lang="de"] appearance:before {
   content: "Erscheinungsbild: ";
 }
-styleguide flavor:before {
+styleguide[lang="de"] flavor:before {
   content: "Geschmack: ";
 }
-styleguide mouthfeel:before {
+styleguide[lang="de"] mouthfeel:before {
   content: "Mundgefühl: ";
 }
-styleguide comments:before {
+styleguide[lang="de"] comments:before {
   content: "Kommentare: ";
 }
-styleguide history:before {
+styleguide[lang="de"] history:before {
   content: "Geschichte: ";
 }
-styleguide characteristic-ingredients:before {
+styleguide[lang="de"] characteristic-ingredients:before {
   content: "Charakteristische Zutaten: ";
 }
-styleguide style-comparison:before {
+styleguide[lang="de"] style-comparison:before {
   content: "Stilvergleich: ";
 }
-styleguide entry-instructions:before {
+styleguide[lang="de"] entry-instructions:before {
   content: "Einreichungsbestimmungen: ";
 }
-styleguide specs:before {
+styleguide[lang="de"] specs:before {
   content: "Eckdaten: ";
 }
-styleguide commercial-examples:before {
+styleguide[lang="de"] commercial-examples:before {
   content: "Kommerzielle Beispiele: ";
 }
-styleguide tags:before {
+styleguide[lang="de"] tags:before {
   content: "Tags: ";
 }
-styleguide strength-classifications:before {
+styleguide[lang="de"] strength-classifications:before {
   content: "Stärkeklassifikation: ";
+}
+
+styleguide[lang="de"] category > name:after {
+  content: " (Stilkategorie)";
+}
+styleguide[lang="de"] subcategory > name:after {
+  content: " (Bierstil)";
+}
+styleguide[lang="de"] subcategory[id*="-"] > name:after {
+  content: " (Bierstilalternative)";
 }
 
 styleguide overall-impression,
@@ -309,6 +302,62 @@ styleguide specs div * {
 */
 
 
+/* navigation */
 
+styleguide nav,
+styleguide *[source] {
+  cursor: pointer;
+}
 
+styleguide nav,
+styleguide nav,
+styleguide nav {
+    display:inline-block;
+    position: absolute;
+    left:5px;
+    overflow: hidden;
+    margin-left:0px;
+    margin-top:3px;
+    width:20px;
+    height:20px;
+    transform: rotate(0deg);
+    transition: -webkit-transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    background-position: center;
+    background-size: 0.75rem auto;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 320 512%27%3E%3Cpath fill=%27%23003f57%27 d=%27M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z%27/%3E%3C/svg%3E");
+}
 
+styleguide chapter.collapsed > nav,
+styleguide category.collapsed > nav,
+styleguide subcategory.collapsed > nav {
+    transform: rotate(-90deg);
+}
+
+styleguide chapter.collapsed,
+styleguide category.collapsed,
+styleguide subcategory.collapsed {
+    overflow: hidden;
+}
+
+styleguide *.collapsed * {
+    display:none !important;
+}
+styleguide *.collapsed nav,
+styleguide *.collapsed h2,
+styleguide *.collapsed name {
+    display:block !important;
+}
+
+styleguide * *:nth-child(3) {
+    /* after "name" and "nav" */
+    margin-block-start: 1em;
+}
+styleguide * *:last-child {
+    margin-block-end: 1em;
+}
+styleguide subcategory[id="7C"] entry-instructions {
+    /* layout hack for this one occurance */
+    margin-block-end: 1em;
+}

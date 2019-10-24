@@ -24,6 +24,17 @@ function renderStyleguide(styleguide) {
     var parts = styleguide_node.querySelectorAll("chapter, category, subcategory");
     for (var i = 0; i < parts.length; i++) {
 
+	// add category id to the name element, so that it becomes searchable in browsers
+	if ((parts[i].tagName == "category") || (parts[i].tagName == "subcategory")) {
+	    var id0 = parts[i].getAttribute("id");
+	    var name0 = parts[i].querySelector("name");
+	    if (id0 && name0) {
+		id0 = id0.replace(/\-.*$/,"");
+		name0.textContent = id0 + ": " + name0.textContent;
+	    }
+	}
+
+	// add navigation element
 	var nav = document.createElement("nav");
 	parts[i].insertBefore(nav, parts[i].childNodes[0]);
     
