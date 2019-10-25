@@ -70,8 +70,13 @@ function renderStyleguide(styleguide) {
 	});
 
 	nav.addEventListener("click", function() {
-	    this.parentNode.classList.toggle("closed");
-	    this.parentNode.classList.toggle("open");
+	    if (this.parentNode.classList.contains("closed")) {
+		this.parentNode.classList.remove("closed");
+		this.parentNode.classList.add("open");
+	    } else {
+		this.parentNode.classList.add("closed");
+		this.parentNode.classList.remove("open");
+	    }
 	});
 
 	parts[i].classList.add("closed");

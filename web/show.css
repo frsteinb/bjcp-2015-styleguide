@@ -92,7 +92,7 @@ styleguide subcategory {
     transition-duration: .3s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     overflow-y: hidden;
-    max-height: 10000px;
+    max-height: 6000px;
 }
 
 styleguide b {
