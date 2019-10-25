@@ -11,14 +11,14 @@ xhr1.onreadystatechange = function() {
 	if (window.location.href.indexOf("#") > -1) {
 	    idref = window.location.href.replace(/^.*#/g, '');
 	    var node = document.querySelector("*[id='" + idref + "']");
-	    node.classList.remove("collapsed");
-	    node.classList.add("uncollapsed");
+	    node.classList.remove("closed");
+	    node.classList.add("open");
 	    if ((node.parentNode.tagName == "subcategory") || (node.parentNode.tagName == "category")) {
-		node.parentNode.classList.remove("collapsed");
-		node.parentNode.classList.add("uncollapsed");
+		node.parentNode.classList.remove("closed");
+		node.parentNode.classList.add("open");
 		if (node.parentNode.parentNode.tagName == "category") {
-		    node.parentNode.parentNode.classList.remove("collapsed");
-		    node.parentNode.parentNode.classList.add("uncollapsed");
+		    node.parentNode.parentNode.classList.remove("closed");
+		    node.parentNode.parentNode.classList.add("open");
 		}
 	    }
 	    window.location.href = "#" + idref;
@@ -54,28 +54,28 @@ function renderStyleguide(styleguide) {
 	parts[i].insertBefore(nav, parts[i].childNodes[0]);
     
 	nav.addEventListener("dblclick", function() {
-	    if (this.parentNode.classList.contains("collapsed")) {
+	    if (this.parentNode.classList.contains("closed")) {
 		var parts = document.querySelectorAll("category, subcategory");
 		for (var i = 0; i < parts.length; i++) {
-		    parts[i].classList.remove("collapsed");
-		    parts[i].classList.add("uncollapsed");
+		    parts[i].classList.remove("closed");
+		    parts[i].classList.add("open");
 		}
 	    } else {
 		var parts = document.querySelectorAll("category, subcategory");
 		for (var i = 0; i < parts.length; i++) {
-		    parts[i].classList.add("collapsed");
-		    parts[i].classList.remove("uncollapsed");
+		    parts[i].classList.add("closed");
+		    parts[i].classList.remove("open");
 		}
 	    }
 	});
 
 	nav.addEventListener("click", function() {
-	    this.parentNode.classList.toggle("collapsed");
-	    this.parentNode.classList.toggle("uncollapsed");
+	    this.parentNode.classList.toggle("closed");
+	    this.parentNode.classList.toggle("open");
 	});
 
-	parts[i].classList.add("collapsed");
-	parts[i].classList.remove("uncollapsed");
+	parts[i].classList.add("closed");
+	parts[i].classList.remove("open");
 
     }
 
