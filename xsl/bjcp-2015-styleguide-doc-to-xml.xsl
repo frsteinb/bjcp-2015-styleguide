@@ -708,7 +708,7 @@
 	<xsl:when test="local-name(.) = 'tbl'">
 	  <xsl:element name="div">
 	    <xsl:attribute name="class">
-	      <xsl:text>table-2</xsl:text>
+	      <xsl:text>table</xsl:text>
 	    </xsl:attribute>
 	    <xsl:for-each select="w:tr">
 	      <xsl:choose>
@@ -744,7 +744,7 @@
 	<xsl:when test="w:r[1]/w:t='Straw'">
 	  <xsl:element name="div">
 	    <xsl:attribute name="class">
-	      <xsl:text>table-2</xsl:text>
+	      <xsl:text>table</xsl:text>
 	    </xsl:attribute>
 	    <xsl:for-each select="w:r[not(w:tab)]">
 	      <xsl:element name="div">

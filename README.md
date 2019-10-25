@@ -129,4 +129,6 @@ See the LICENSE file. Note that this license relates only to the content of this
 - Maybe, some keyboard control?
 - Support editing "p" (not only in "description"), "li", "td".
 - Better rendering of specs with text content, e.g. 33A.
-- navigate by tags?
+- Navigate by: tags, commercial examples, specs
+- Handling IDs correctly in editor and when saving.
+- modifying parts of whole document addressed by getPathTo().

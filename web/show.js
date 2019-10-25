@@ -12,10 +12,13 @@ xhr1.onreadystatechange = function() {
 	    idref = window.location.href.replace(/^.*#/g, '');
 	    var node = document.querySelector("*[id='" + idref + "']");
 	    node.classList.remove("collapsed");
+	    node.classList.add("uncollapsed");
 	    if ((node.parentNode.tagName == "subcategory") || (node.parentNode.tagName == "category")) {
 		node.parentNode.classList.remove("collapsed");
+		node.parentNode.classList.add("uncollapsed");
 		if (node.parentNode.parentNode.tagName == "category") {
 		    node.parentNode.parentNode.classList.remove("collapsed");
+		    node.parentNode.parentNode.classList.add("uncollapsed");
 		}
 	    }
 	    window.location.href = "#" + idref;
@@ -55,20 +58,24 @@ function renderStyleguide(styleguide) {
 		var parts = document.querySelectorAll("category, subcategory");
 		for (var i = 0; i < parts.length; i++) {
 		    parts[i].classList.remove("collapsed");
+		    parts[i].classList.add("uncollapsed");
 		}
 	    } else {
 		var parts = document.querySelectorAll("category, subcategory");
 		for (var i = 0; i < parts.length; i++) {
 		    parts[i].classList.add("collapsed");
+		    parts[i].classList.remove("uncollapsed");
 		}
 	    }
 	});
 
 	nav.addEventListener("click", function() {
 	    this.parentNode.classList.toggle("collapsed");
+	    this.parentNode.classList.toggle("uncollapsed");
 	});
 
 	parts[i].classList.add("collapsed");
+	parts[i].classList.remove("uncollapsed");
 
     }
 

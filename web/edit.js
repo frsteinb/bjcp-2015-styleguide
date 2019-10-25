@@ -20,6 +20,11 @@ var edit_id;
 var edit_element;
 var element_name;
 
+var styleuide_orig;
+var styleuide_auto;
+
+
+
 pell.init({
     element: pelleditor,
     defaultParagraphSeparator: "p",
@@ -65,7 +70,11 @@ pell.init({
 		xhr.onreadystatechange = function() {
 		    if (xhr.readyState === 4) {
 			editor.style.display = "none";
-			edit_element.innerHTML = text;
+			if (element_name == "name") {
+			    edit_element.innerHTML =  edit_id + ": " + text;
+			} else {
+			    edit_element.innerHTML = text;
+			}
 			edit_element.setAttribute("date", "today");
 			edit_element.setAttribute("author", "you");
 			edit_element.setAttribute("addr", "local");
@@ -114,26 +123,6 @@ pell.init({
 
 
 
-var styleguide;
-var styleuide_orig;
-var styleuide_auto;
-var styleguide_node;
-
-
-
-// load styleguide and trigger rendering
-var xhr1 = new XMLHttpRequest();
-xhr1.onreadystatechange = function() {
-    if (xhr1.readyState === 4) {
-	styleguide = xhr1.responseXML.querySelector("styleguide");
-	renderStyleguide(styleguide);
-    }
-}
-xhr1.open('GET', document.querySelector('link[rel="styleguide"]').href, true);
-xhr1.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
-xhr1.responseType = "document";
-xhr1.send();
-
 // load styleguide_orig
 var xhr2 = new XMLHttpRequest();
 xhr2.onreadystatechange = function() {
@@ -151,12 +140,15 @@ var xhr3 = new XMLHttpRequest();
 xhr3.onreadystatechange = function() {
     if (xhr3.readyState === 4) {
 	styleguide_auto = xhr3.responseXML.querySelector("styleguide");
+	// TBD: call initEditor() event driven, when show.js is ready.
+	setTimeout(initEditor, 1000);
     }
 }
 xhr3.open('GET', document.querySelector('link[rel="styleguide-auto"]').href, true);
 xhr3.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
 xhr3.responseType = "document";
 xhr3.send();
+
 
 
 function recalcTodo() {
@@ -183,11 +175,12 @@ function recalcTodo() {
     }
 }
 
-function renderStyleguide(styleguide) {
 
-    styleguide_node = document.importNode(styleguide, true);
+
+function initEditor() {
+
     var editor = document.querySelector("div[id='editor']");
-    editor.parentNode.insertBefore(styleguide_node, editor);
+    //editor.parentNode.insertBefore(styleguide_node, editor);
 
     var parts = styleguide_node.querySelectorAll("name, description, overall-impression, aroma, appearance, flavor, mouthfeel, comments, history, characteristic-ingredients, style-comparison, entry-instructions, commercial-examples, specs");
     for (var i = 0; i < parts.length; i++) {
@@ -213,6 +206,10 @@ function renderStyleguide(styleguide) {
 		text = text.replace(/<p>/g, " ");
 		text = text.replace(/<\/p>/g, " ");
 	    }
+	    if (element_name == "name") {
+		text = text.replace(/^.*: /g, "");
+	    }
+
 	    pelleditor.content.innerHTML = text;
 	    if (lastdate && lastauthor) {
 		text = "last updated by " + lastauthor + " on " + lastdate;
@@ -231,7 +228,11 @@ function renderStyleguide(styleguide) {
 		auto.innerHTML = auto_element.innerHTML;
 	    }
 	    if (undo) {
-		undo.innerHTML = edit_element.innerHTML;
+		if (element_name == "name") {
+		    undo.innerHTML = edit_element.innerHTML.replace(/^.*: /g, "");
+		} else {
+		    undo.innerHTML = edit_element.innerHTML;
+		}
 	    }
 	    if (markup) {
 		markup.innerText = edit_element.innerHTML;
@@ -244,50 +245,11 @@ function renderStyleguide(styleguide) {
 	});
     }
 
-    var parts = styleguide_node.querySelectorAll("chapter, category, subcategory");
-    for (var i = 0; i < parts.length; i++) {
-
-	// add category id to the name element, so that it becomes searchable in browsers
-	if ((parts[i].tagName == "category") || (parts[i].tagName == "subcategory")) {
-	    var id0 = parts[i].getAttribute("id");
-	    var name0 = parts[i].querySelector("name");
-	    if (id0 && name0) {
-		id0 = id0.replace(/\-.*$/,"");
-		name0.textContent = id0 + ": " + name0.textContent;
-	    }
-	}
-
-	// add navigation element
-	var nav = document.createElement("nav");
-	parts[i].insertBefore(nav, parts[i].childNodes[0]);
-    
-	nav.addEventListener("dblclick", function() {
-	    if (this.parentNode.classList.contains("collapsed")) {
-		var parts = document.querySelectorAll("category, subcategory");
-		for (var i = 0; i < parts.length; i++) {
-		    parts[i].classList.remove("collapsed");
-		}
-	    } else {
-		var parts = document.querySelectorAll("category, subcategory");
-		for (var i = 0; i < parts.length; i++) {
-		    parts[i].classList.add("collapsed");
-		}
-	    }
-	});
-
-	nav.addEventListener("click", function() {
-	    this.parentNode.classList.toggle("collapsed");
-	});
-
-	parts[i].classList.add("collapsed");
-
-    }
-
     recalcTodo();
 }
+
 
 
 function copy_to_edit(id) {
     pelleditor.content.innerHTML = document.getElementById(id).innerHTML;
 }
-

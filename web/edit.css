@@ -26,15 +26,15 @@ div#editor {
   font-size: 9pt;
 }
 div#editor-inner {
+    z-index: 2;
     background-color: white;
     pointer-events: all;
-  text-align: left;
-  margin: 10px auto;
-  padding: 5px;
-  width: 90%;
-  z-index: 2;
-  border: 2px solid black;
-  background: #ddd;
+    text-align: left;
+    margin: 10px auto;
+    padding: 5px;
+    width: 90%;
+    border: 2px solid black;
+    background: #ddd;
 }
 div#editor-inner input {
   background: white;
@@ -102,3 +102,5 @@ styleguide nav:not([todo="0"]) {
 styleguide nav:not([todo]) {
     background-color: white;
 }
+
+

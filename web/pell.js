@@ -179,7 +179,8 @@ var init = function init(settings) {
   };
   content.onkeydown = function (event) {
     if (event.key === "Escape") {
-	docancel();
+	//docancel();
+	editor.style.display = "none";
     }
     if (event.key === 'Enter' && queryCommandValue(formatBlock) === 'blockquote') {
       setTimeout(function () {
