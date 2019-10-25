@@ -71,11 +71,11 @@ styleguide div.table-head, styleguide div[class*="table-head"] {
     padding: 10px 0px;
     font-weight: bold;
 }
-styleguide div.table-row, styleguide div[class*="row"] {
+styleguide div.table-row, styleguide div[class*="table-row"] {
     display: table-row;
 }
 
-styleguide div.table-cell, styleguide div[class*="cell"] {
+styleguide div.table-cell, styleguide div[class*="table-cell"] {
     display: table-cell;
     padding: 0px 10px;
     margin: 0px 10px;

@@ -121,14 +121,12 @@ See the LICENSE file. Note that this license relates only to the content of this
 - Artifacts on GitHub?
 - Refactor most of the old initial files.
 - Title Page.
-- Enhance show.html
 - Improve I18n.
 - Revamp editor, probably no longer as an overlay.
-- Improved navigation and dynamic layout.
-- Fix ID display in front of style names. Make them searchable.
 - Maybe, some keyboard control?
 - Support editing "p" (not only in "description"), "li", "td".
 - Better rendering of specs with text content, e.g. 33A.
-- Navigate by: tags, commercial examples, specs
 - Handling IDs correctly in editor and when saving.
 - modifying parts of whole document addressed by getPathTo().
+- Navigate by: tags, commercial examples, specs
+- Render og, fg, srm in additional units.
