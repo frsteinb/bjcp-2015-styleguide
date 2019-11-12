@@ -81,21 +81,25 @@
 	späteren Zeitpunkt sinnvoll erscheint.</li>
       </ul>
       <div>Bisher wurden <span id="translated">?</span> von <span id="total">?</span> Textblöcken (mindestens anfänglich) übersetzt.</div>
+      <div>Dein Kurzname (bevorzugt der Username auf hobbybrauer.de): <input type="text" name="author" id="author"/></div>
+
     </div>
+
     <div id="editor">
       <div id="editor-inner">
         <p>Editing <span id="editstyleid">-</span> "<span id="editstylename">-</span>", element: <span id="editelemname">-</span>, last change: <span id="lastdate">-</span> by <span id="lastauthor">-</span></p>
+        <div id="pelleditor"> </div>
 	<div>Original text:</div>
         <div id="original">-</div>
-	<div>Auto translated text <button id="copy-auto" name="copy-auto" title="copy" onclick="copy_to_edit('auto')">copy</button> :</div>
+	<div>Auto translated text:</div>
         <div id="auto">-</div>
-	<div>Previous text <button id="copy-undo" name="copy-undo" title="copy" onclick="copy_to_edit('undo')">revert</button> :</div>
+	<!--<div>Previous text:</div>-->
         <div id="undo">-</div>
-        <p>Your short name (e.g. from hobbybrauer.de): <input type="text" name="author" id="author"/></p>
-        <div id="pelleditor"> </div>
       </div>
     </div>
+
     <div id="styleguide"/>
+
     <script src="pell.js"> </script>
     <script src="show.js"> </script>
     <script src="edit.js"> </script>

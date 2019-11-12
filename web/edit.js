@@ -48,6 +48,22 @@ pell.init({
 	    }
 	},
 	{
+	    name: 'revert',
+	    icon: 'revert',
+	    title: 'revert',
+	    result: () => {
+		pelleditor.content.innerHTML = undo.innerHTML;
+	    }
+	},
+	{
+	    name: 'auto-translated',
+	    icon: 'auto-translated',
+	    title: 'auto-translated',
+	    result: () => {
+		pelleditor.content.innerHTML = auto.innerHTML;
+	    }
+	},
+	{
 	    name: 'save',
 	    icon: 'save',
 	    title: 'save',
@@ -240,8 +256,16 @@ function initEditor() {
 	    if (render) {
 		render.innerHTML = edit_element.innerHTML;
 	    }
+
+	    this.parentNode.classList.add("open");
+	    this.parentNode.classList.remove("closed");
+
+	    
+	    editor.remove();
+	    edit_element.parentNode.insertBefore(editor, edit_element.nextSibling);
 	    editor.style.display = "block";
 	    pelleditor.content.focus();
+	    
 	});
     }
 

@@ -2,81 +2,102 @@
 /* editor stuff */
 
 .pell-content{
-  border-bottom: 1px solid black;
-}
+    border-bottom: 1px solid black;
+ }
 
 div#editor button[title="copy"],
 div#editor button[title="save"],
-div#editor button[title="cancel"] {
-  width: 70px;
-  background-color: white;
-  padding: 0px 3px;
-  margin: 0px 3px;
-  cursor: pointer;
+div#editor button[title="cancel"],
+div#editor button[title="revert"],
+div#editor button[title="auto-translated"] {
+    /*
+      background-color: white;
+    */
+    width: 70px;
+    padding: 0px 3px;
+    margin: 0px 3px;
+    cursor: pointer;
 }
 div#editor {
-  display: none;
-  position: fixed;
-  width: 100%;
-  top: 0; 
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: Helvetica, Arial, Geneva, sans-serif;
-  font-size: 9pt;
+    display: none;
+    /*
+      position: fixed;
+      width: 100%;
+      top: 0; 
+      left: 0;
+      right: 0;
+      text-align: center;
+    font-family: Helvetica, Arial, Geneva, sans-serif;
+    font-size: 9pt;
+    */
 }
 div#editor-inner {
     z-index: 2;
     background-color: white;
     pointer-events: all;
     text-align: left;
+    /*
     margin: 10px auto;
     padding: 5px;
     width: 90%;
+*/
     border: 2px solid black;
     background: #ddd;
 }
 div#editor-inner input {
-  background: white;
+    background: white;
 }
 div#markup {
-  font-family: courier;
+    font-family: courier;
 }
 div#original p, div#auto p, div#undo p {
     margin:3px 8px;
 }
 div#original {
+    /*
     margin:2px 3px;
     height: auto;
     max-height: 12%;
     overflow-y: auto;
     font-size: 100%;
+    */
 }
 div#auto {
+    /*
     margin:2px 3px;
     height: auto;
     max-height: 12%;
     overflow-y: auto;
+    */
 }
 div#undo {
+    display: none;
+    /*
     margin:2px 3px;
     height: auto;
     max-height: 12%;
     overflow-y: auto;
+    */
 }
 
 div.pell-content {
+    /*
     height: 30%;
     overflow-y: auto;
+    */
 }
 
 
 html, body, div#editor {
+    /*
     height: 100%;
+    */
 }
 div#editor-inner {
+    /*
     padding: 10px;
     height: 95%;
+    */
 }
 
 styleguide *[source] {
