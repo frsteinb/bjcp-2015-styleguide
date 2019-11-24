@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="2">
     <name date="2019-10-18 11:42:12" author="fsb" addr="172.18.0.11">Internationales Lager</name>
+    <description date="2019-11-24 17:04:49" author="unknown" addr="172.18.0.21">
+      <p> Internationale Lager sind die Premium-Massenmarktlager, die in den meisten Ländern der Welt hergestellt werden. Unabhängig davon, ob sie im amerikanischen oder europäischen Stil entwickelt wurden, haben sie alle einen relativ einheitlichen Charakter und werden stark vermarktet. Locker von originalen Lagern vom Pilsner-Typ abgeleitet, mit farbigen Variationen, die zusätzliche Malzaromen aufweisen, während sie die meisten Gaumen ansprechen. In vielen Ländern werden die Stile durch ihre lokalen Ländernamen bezeichnet. Die Verwendung des Begriffs „international“ bedeutet nicht, dass Biere tatsächlich als solche gekennzeichnet sind. Es ist eher eine Kategorisierung von ähnlichen Bieren, die weltweit hergestellt werden. </p>
+    </description>
   </category>
 </styleguide>
