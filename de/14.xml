@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="14">
     <name date="2019-12-08 13:57:21" author="T3K" addr="172.21.0.16">Scottish Ale</name>
+    <description date="2019-12-08 14:12:05" author="T3K" addr="172.21.0.16">
+      <p> Die ursprüngliche Bedeutung von "Schilling" (/ -) Ales wurde jahrelang falsch beschrieben. Eine einzelne Biersorte wurde nie als 60 / -, 70 / - oder 80 / - bezeichnet. Die Schilling beziehen sich nur auf die Kosten des Bierfasses. Das heißt, es gab 54 / - Stouts und 86 / - IPAs und so weiter. Die fraglichen schottischen Biere wurden als <i>Light</i>, <i>Heavy</i> und <i>Export</i> bezeichnet und decken ein Kostenspektrum von etwa 60/ bis 90/ ab, und es handelt sich lediglich um dunkle, malz-fokussierte Biere. Die größeren 120 / - Ales fallen nicht in diese Zuständigkeit, ebenso wie die stärksten schottischen Ales (auch bekannt als Wee Heavy). Die schottischen Richtlinien für leichte und schwere Biere sowie für den Export sind für jede Biersorte nahezu gleich. Mit zunehmender Stammwürze nimmt auch der Charakter der betreffenden Biere zu. In der Vergangenheit waren die drei Biersorten in unterschiedlichen Stärken "parti-gyled" und stellten eine Anpassung an englische Pale Ales dar, jedoch mit reduzierten Stärke -und Hopfenraten sowie dunkleren Farben (oft aufgrund von Karamellzusatz). Modernere Versionen (zumindest nach dem Zweiten Weltkrieg) neigten dazu, komplexere Malzschüttungen zu verwenden. </p>
+    </description>
   </category>
 </styleguide>
