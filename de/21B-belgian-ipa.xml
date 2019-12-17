@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="21">
+    <subcategory id="21B">
+      <subcategory id="21B-belgian-ipa">
+        <name date="2019-12-17 14:39:14" author="unknown" addr="172.21.0.16">Belgian IPA</name>
+      </subcategory>
+    </subcategory>
+  </category>
+</styleguide>
