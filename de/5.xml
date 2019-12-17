@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="5">
+    <name date="2019-12-15 16:19:09" author="T3K" addr="172.21.0.16">Pale Bitter European Beer</name>
+    <description date="2019-12-15 16:21:53" author="T3K" addr="172.21.0.16">
+      <p> Diese Kategorie beschreibt deutsche Biere, die hell sind und eine ausgeglichene bis bittere Balance mit einem milden bis mäßig starken Hopfencharakter und klassischem deutschen Hopfen aufweisen. Sie sind im Allgemeinen üntergärig oder gelagert, um ein geschmeidiges Profil zu erhalten, und sind wie die meisten deutschen Biere sauber vergoren. </p>
+    </description>
+  </category>
+</styleguide>
