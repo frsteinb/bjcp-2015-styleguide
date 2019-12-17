@@ -81,30 +81,32 @@ pell.init({
 		text = text.replace(/^ */,"");
 		text = text.replace(/ *$/,"");
 		
-		var xhr = new XMLHttpRequest();
-		
 		user = author.value;
 		if (! user) {
 		    var r = confirm("Wirklich anonym speicher? (Es wäre nett, wenn Du vor dem Speichern Deinen Nickname oben im umrandeten Kasten eingibst.)");
-		    if (r == true) {
-	                xhr.onreadystatechange = function() {
-	                    if (xhr.readyState === 4) {
-	                        editor.style.display = "none";
-	                        if (element_name == "name") {
-	                            edit_element.innerHTML =  edit_id + ": " + text;
-	                        } else {
-	                            edit_element.innerHTML = text;
-	                        }
-	                        edit_element.setAttribute("date", "today");
-	                        edit_element.setAttribute("author", "you");
-	                        edit_element.setAttribute("addr", "local");
-	                        edit_element.setAttribute("source", "this-session");
-	                        
-	                        recalcTodo();
-			    }
-			}
+		    if (r != true) {
+			return;
                     }
                 }
+
+		var xhr = new XMLHttpRequest();
+		
+	        xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        editor.style.display = "none";
+                        if (element_name == "name") {
+                            edit_element.innerHTML =  edit_id + ": " + text;
+                        } else {
+                            edit_element.innerHTML = text;
+                        }
+                        edit_element.setAttribute("date", "today");
+                        edit_element.setAttribute("author", "you");
+                        edit_element.setAttribute("addr", "local");
+                        edit_element.setAttribute("source", "this-session");
+                        
+                        recalcTodo();
+		    }
+		}
                 
 		xhr.open('POST', "save.cgi?id=" + edit_id + "&elem=" + element_name + "&user=" + user, true);
 		xhr.setRequestHeader('Content-Type','text/xml; charset=UTF-8');
