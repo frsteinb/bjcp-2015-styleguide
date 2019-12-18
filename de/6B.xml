@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="6">
+    <subcategory id="6B">
+      <overall-impression date="2019-12-18 06:11:41" author="danieldee" addr="172.21.0.16">
+        <pre class="tw-data-text tw-text-large tw-ta" id="tw-target-text" dir="ltr" data-placeholder="Übersetzung">Ein elegantes, malziges deutsches Lager mit ausgewogenem, ergänzendem Buchenrauchcharakter. Charakteristisch sind geröstetes Malz mit Aroma und Geschmack, zurückhaltender Bitterkeit, niedrigem bis hohem Rauchgeschmack, sauberem Vergärprofil und einem abgeschwächten Abgang.</pre>
+      </overall-impression>
+    </subcategory>
+  </category>
+</styleguide>
