@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="24">
     <name date="2019-12-19 16:50:55" author="Fe2O3" addr="172.21.0.16">Belgian Ale</name>
+    <description date="2019-12-19 16:57:41" author="Fe2O3" addr="172.21.0.16">
+      <p> Diese Kategorie umfasst die malzigeren bis balancierteren, geschmackvollen belgischen und französischen Ales. </p>
+    </description>
   </category>
 </styleguide>
