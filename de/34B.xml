@@ -11,6 +11,7 @@
       <appearance date="2019-12-21 10:10:05" author="Fe2O3" addr="172.21.0.16">Basierend auf den deklarierten Basisstilen.</appearance>
       <flavor date="2019-12-21 10:10:08" author="Fe2O3" addr="172.21.0.16">Basierend auf den deklarierten Basisstilen.</flavor>
       <mouthfeel date="2019-12-21 10:10:11" author="Fe2O3" addr="172.21.0.16">Basierend auf den deklarierten Basisstilen.</mouthfeel>
+      <comments date="2019-12-21 10:10:31" author="Fe2O3" addr="172.21.0.16">Bestimmt für Spezialtyp-Kombinationen von Stilen, die an anderer Stelle nicht als Spezialtyp-Biere oder als Hybrid- oder Fusionsbiere zwischen anderen vorhandenen Stilen beschrieben sind.</comments>
     </subcategory>
   </category>
 </styleguide>
