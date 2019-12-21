@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="9">
+    <name date="2019-12-21 21:59:42" author="Fe2O3" addr="172.21.0.16">Strong European Beer</name>
     <description date="2019-10-13 17:46:09" author="fsb" addr="192.168.1.242">
       <p> Diese Kategorie enthält geschmacksstärkere und höher alkoholhaltige Lagerbiere aus Deutschland und dem Baltikum. Die meisten sind dunkel, aber einige helle Versionen sind bekannt. </p>
     </description>
