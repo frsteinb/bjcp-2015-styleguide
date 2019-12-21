@@ -3,6 +3,9 @@
   <category id="34">
     <subcategory id="34C">
       <name date="2019-12-21 10:11:58" author="Fe2O3" addr="172.21.0.16">Experimentelles Bier</name>
+      <description date="2019-12-21 10:12:24" author="Fe2O3" addr="172.21.0.16">
+        <p> Dies ist ausdrücklich eine Sammelkategorie für jedes Bier, das nicht in eine bestehende Stilbeschreibung passt. In diesem Stil ist kein Bier „out of style“, es sei denn, es passt woanders hin. Dies ist der letzte Ausweg für jedes Bier, das an einem Wettbewerb teilnimmt. </p>
+      </description>
     </subcategory>
   </category>
 </styleguide>
