@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="34">
+    <name date="2019-12-21 10:18:12" author="Fe2O3" addr="172.21.0.16">Specialty Bier</name>
     <description date="2019-12-21 10:01:24" author="Fe2O3" addr="172.21.0.16">
       <p> Obwohl diese Richtlinien-Kategorie viele Biersorten enthält, ist die Kategorie "Spezialbier" für Biere gedacht, die nirgendwo anders hineinpassen. Da die Anzahl der Specialty-Type-Kategorien ziemlich groß ist, wird erwartet, dass die meisten Biere an anderer Stelle eingereicht werden, es sei denn, sie haben etwas Ungewöhnliches oder Einzigartiges. Bitte überprüfen Sie zuerst die jeweilige Specialty-Type-Kategorie, bevor Sie sich für ein Bier in einem dieser Stile entscheiden. </p>
     </description>
