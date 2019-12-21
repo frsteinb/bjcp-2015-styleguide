@@ -6,6 +6,7 @@
       <description date="2019-12-21 10:09:28" author="Fe2O3" addr="172.21.0.16">
         <p> Dieser Stil ist für Kombinationen vorhandener Stile (Klassische Biere oder Spezialtäten Typen) gedacht, die an keiner anderen Stelle in den Richtlinien definiert sind. Wenn ein Bier mit gemischtem Stil zu einem anderen Stil passt, geben Sie ihn hier nicht ein. </p>
       </description>
+      <overall-impression date="2019-12-21 10:09:59" author="Fe2O3" addr="172.21.0.16">Basierend auf den deklarierten Basisstilen. Wie bei allen Spezialitäten Bieren muss die resultierende Kombination von Biersorten harmonisch und ausgewogen und angenehm zu trinken sein.</overall-impression>
     </subcategory>
   </category>
 </styleguide>
