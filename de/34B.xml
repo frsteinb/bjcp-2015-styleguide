@@ -12,6 +12,7 @@
       <flavor date="2019-12-21 10:10:08" author="Fe2O3" addr="172.21.0.16">Basierend auf den deklarierten Basisstilen.</flavor>
       <mouthfeel date="2019-12-21 10:10:11" author="Fe2O3" addr="172.21.0.16">Basierend auf den deklarierten Basisstilen.</mouthfeel>
       <comments date="2019-12-21 10:10:31" author="Fe2O3" addr="172.21.0.16">Bestimmt für Spezialtyp-Kombinationen von Stilen, die an anderer Stelle nicht als Spezialtyp-Biere oder als Hybrid- oder Fusionsbiere zwischen anderen vorhandenen Stilen beschrieben sind.</comments>
+      <entry-instructions date="2019-12-21 10:11:32" author="Fe2O3" addr="172.21.0.16">Der Teilnehmer <b>muss</b> die Stile angeben, die gemischt werden sollen. Der Teilnehmer <b>kann</b> eine zusätzliche Beschreibung des sensorischen Profils des Biers oder der wesentlichen Eckdaten des resultierenden Biers vorlegen.</entry-instructions>
     </subcategory>
   </category>
 </styleguide>
