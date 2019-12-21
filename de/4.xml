@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="4">
     <name date="2019-12-21 10:19:25" author="Fe2O3" addr="172.21.0.16">Helle malzige Europäische Lager</name>
+    <description date="2019-12-21 10:19:28" author="Fe2O3" addr="172.21.0.16">
+      <p>This style category contains malty, pale, Pilsner malt-driven German lagers of vollbier to starkbier strength. While malty, they are still well-attenuated, clean lagers, as are most German beers.</p>
+    </description>
   </category>
 </styleguide>
