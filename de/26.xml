@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="26">
     <name date="2019-12-22 14:15:50" author="Fe2O3" addr="172.21.0.16">Trappisten Biere</name>
+    <description date="2019-12-22 14:17:01" author="Fe2O3" addr="172.21.0.16">
+      <p><b>Trappist</b> ist eine geschützte Markenbezeichnung und darf kommerziell nur von echten Trappistenklöstern, die ihr eigenes Bier brauen, verwendet werden. Wir können es jedoch verwenden, um die Biersorte oder -stile zu beschreiben, die von diesen Brauereien und denjenigen, die Biere einer ähnlichen Art herstellen, hergestellt werden. Trappistenbiere zeichnen sich alle durch einen sehr hohen Vergärungsgrad, eine hohe Karbonisierung durch Flaschengärung und einen interessanten (und oft aggressiven) Hefecharakter aus. </p>
+    </description>
   </category>
 </styleguide>
