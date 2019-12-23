@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="25">
+    <name date="2019-12-23 11:22:11" author="Fe2O3" addr="172.21.0.16">Strong Belgian Ale</name>
     <description date="2019-12-23 11:22:08" author="Fe2O3" addr="172.21.0.16">
       <p> Diese Kategorie enthält die hellen, gut abgeschwächten, ausgewogenen Biere, die häufig eher vom Hefecharakter als vom Malzgeschmack bestimmt werden und in der Regel einen höheren Alkoholgehalt aufweisen (obwohl es innerhalb der Stile eine Bandbreite gibt). </p>
     </description>
