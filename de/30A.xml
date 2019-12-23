@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="30">
-    <subcategory id="30A"/>
+    <subcategory id="30A">
+      <commercial-examples date="2019-12-23 08:07:45" author="Fe3O2" addr="172.21.0.16">Alesmith Speedway Stout, Bell’s Java Stout, Elysian Avatar Jasmine IPA, Founders Breakfast Stout, Rogue Chipotle Ale, Traquair Jacobite Ale, Young’s Double Chocolate Stout,</commercial-examples>
+    </subcategory>
   </category>
 </styleguide>
