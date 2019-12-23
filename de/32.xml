@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="32">
+    <name date="2019-12-23 07:56:42" author="Fe3O2" addr="172.21.0.16">Rauchbier</name>
     <description date="2019-12-23 07:55:39" author="Fe3O2" addr="172.21.0.16">
       <p> Diese Kategorie enthält Bierspezialitäten mit Rauchcharakter. </p>
     </description>
