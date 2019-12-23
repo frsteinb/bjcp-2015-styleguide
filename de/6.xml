@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="6">
+    <name date="2019-12-23 15:02:09" author="T3K" addr="172.21.0.16">Amber Malty European Lager</name>
     <description date="2019-12-18 09:48:36" author="toaster" addr="172.21.0.16">In dieser Kategorie werden bernsteinfarbene, deutschstämmige, untergärige Lagerbiere mit einer malzigen Ausgeglichenheit und Vollbier- bis Starkbierstärke zusammengefasst.</description>
   </category>
 </styleguide>
