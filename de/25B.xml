@@ -4,6 +4,7 @@
     <subcategory id="25B">
       <name date="2019-12-23 11:35:31" author="Fe2O3" addr="172.21.0.16">Saison</name>
       <commercial-examples date="2019-12-23 11:35:35" author="Fe2O3" addr="172.21.0.16">Ellezelloise Saison, Fantôme Saison, Lefebvre Saison 1900, Saison Dupont Vieille Provision, Saison de Pipaix, Saison Regal, Saison Voisin, Boulevard Tank 7 Farmhouse Ale</commercial-examples>
+      <entry-instructions date="2019-12-23 11:37:29" author="Fe2O3" addr="172.21.0.16">Der Teilnehmer <b>muss</b> die <i>Stärke</i> (<i>Table</i>: 3,5 - 5,0%, <i>Standard</i> : 5,0 - 7,0%, <i>Super</i> : 7,0 - 9,5%) und die <i>Farbe</i> ( <i>hell</i> : SRM 5 - 14, <i>dunkel</i> : SRM 15 - 22) angeben.</entry-instructions>
     </subcategory>
   </category>
 </styleguide>
