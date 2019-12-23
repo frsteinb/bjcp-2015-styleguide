@@ -4,6 +4,9 @@
     <subcategory id="7C">
       <subcategory id="7C-pale-kellerbier">
         <name date="2019-12-23 15:33:58" author="T3K" addr="172.21.0.16">Pale Kellerbier</name>
+        <description date="2019-12-23 15:34:10" author="T3K" addr="172.21.0.16">
+          <p> Ein sehr verbreitetes saisonales Sommerbier, das von vielen Münchner Brauereien gebraut und in den Biergärten serviert wird, wo es sehr beliebt ist. </p>
+        </description>
       </subcategory>
     </subcategory>
   </category>
