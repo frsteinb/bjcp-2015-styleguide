@@ -2,6 +2,7 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="30">
     <subcategory id="30B">
+      <name date="2019-12-24 11:54:17" author="T3K" addr="172.21.0.16">Autumn Seasonal Beer</name>
       <commercial-examples date="2019-12-23 08:06:54" author="Fe3O2" addr="172.21.0.16">Dogfish Head Punkin Ale, Schlafly Pumpkin Ale, Southampton Pumpkin Ale</commercial-examples>
     </subcategory>
   </category>
