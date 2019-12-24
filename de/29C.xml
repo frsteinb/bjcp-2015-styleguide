@@ -3,6 +3,10 @@
   <category id="29">
     <subcategory id="29C">
       <name date="2019-12-24 10:34:04" author="Fe2O3" addr="172.21.0.16">Spezial Fruchtbier</name>
+      <description date="2019-12-24 10:35:10" author="Fe2O3" addr="172.21.0.16">
+        <p> Ein <b>Spezial Frucht Bier</b> ist ein Fruchtbier, dem einige zusätzliche Zutaten oder Verfahren wie fermentierbarer Zucker (Honig, brauner Zucker, Invertzucker usw.) zugesetzt wurden. </p>
+        <p> Weitere Kommentare, insbesondere zur Bewertung des Gleichgewichts zwischen zugesetzten Zutaten und dem <i>Basisbier, finden Sie im</i> Abschnitt <i>Einführung in Spezialbier</i> . </p>
+      </description>
       <commercial-examples date="2019-12-23 08:04:55" author="Fe3O2" addr="172.21.0.16">New Planet Raspberry Ale</commercial-examples>
     </subcategory>
   </category>
