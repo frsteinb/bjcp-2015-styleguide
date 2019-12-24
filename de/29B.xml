@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="29">
-    <subcategory id="29B"/>
+    <subcategory id="29B">
+      <description date="2019-12-24 10:16:13" author="Fe2O3" addr="172.21.0.16">
+        <p> Weitere Kommentare, insbesondere zur Bewertung des Gleichgewichts zwischen zugesetzten Zutaten und dem <i>Basisbier, finden Sie im</i> Abschnitt <i>Einführung in Spezialbier</i>. Es gelten die Begriffsbestimmungen für <i>Obst</i> in der Präambel der Kategorie 29 und für Gewürze in der Präambel der Kategorie 30. In dieser Kategorie ist jede Kombination von Zutaten zulässig, die in den Formaten 29A und 30A gültig sind. Die Verwendung des Wortes <i>Gewürz</i> impliziert nicht, dass nur Gewürze verwendet werden können. Es können alle Gewürze, Kräuter oder Gemüsesorten der Kategorie 30 verwendet werden. </p>
+      </description>
+    </subcategory>
   </category>
 </styleguide>
