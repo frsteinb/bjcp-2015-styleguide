@@ -2,6 +2,7 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="29">
     <subcategory id="29C">
+      <name date="2019-12-24 10:34:04" author="Fe2O3" addr="172.21.0.16">Spezial Fruchtbier</name>
       <commercial-examples date="2019-12-23 08:04:55" author="Fe3O2" addr="172.21.0.16">New Planet Raspberry Ale</commercial-examples>
     </subcategory>
   </category>
