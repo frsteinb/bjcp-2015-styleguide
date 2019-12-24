@@ -2,5 +2,8 @@
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="31">
     <name date="2019-12-24 06:30:06" author="Miicha" addr="172.21.0.16">Alternative Fermentables Beer</name>
+    <description date="2019-12-24 06:30:25" author="Miicha" addr="172.21.0.16">
+      <p> Diese Kategorie enthält Bierspezialitäten mit einigen zusätzlichen Zutaten (Getreide oder Zucker), die einen besonderen Charakter verleihen. </p>
+    </description>
   </category>
 </styleguide>
