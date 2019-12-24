@@ -3,6 +3,9 @@
   <category id="30">
     <subcategory id="30C">
       <name date="2019-12-24 12:10:51" author="T3K" addr="172.21.0.16">Winter Seasonal Beer</name>
+      <description date="2019-12-24 12:11:23" author="T3K" addr="172.21.0.16">
+        <p> Biere der <b>Wintersaison</b> sind Biere, die auf kaltes Wetter und die Weihnachtsferienzeit hindeuten. Sie können Urlaubsgewürze, Spezialzucker und andere Produkte enthalten, die an Glühgewürze oder Weihnachtsdesserts erinnern. Weitere Kommentare, insbesondere zur Bewertung des Gleichgewichts zwischen zugesetzten Zutaten und dem <i>Basisbier, finden Sie im</i> Abschnitt <i>Einführung in Spezialbier</i> . </p>
+      </description>
     </subcategory>
   </category>
 </styleguide>
