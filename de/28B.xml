@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="28">
-    <subcategory id="28B"/>
+    <subcategory id="28B">
+      <overall-impression date="2019-12-24 06:05:28" author="Miicha" addr="172.21.0.16">Eine saure und / oder funky Version eines einfachen Biers.</overall-impression>
+    </subcategory>
   </category>
 </styleguide>
