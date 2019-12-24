@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="21">
+    <subcategory id="21B">
+      <subcategory id="21B-brown-ipa">
+        <name date="2019-12-24 08:44:03" author="Fe2O3" addr="172.21.0.16">Brown IPA</name>
+      </subcategory>
+    </subcategory>
+  </category>
+</styleguide>
