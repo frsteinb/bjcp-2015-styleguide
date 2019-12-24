@@ -12,6 +12,7 @@
       <characteristic-ingredients date="2019-12-24 06:10:19" author="Miicha" addr="172.21.0.16">Praktisch jede Biersorte. Normalerweise durch <i>Lactobacillus</i> und / oder <i>Pediococcus</i> fermentiert, oft in Verbindung mit <i>Saccharomyces</i> und / oder <i>Brettanomyces</i> . Kann auch eine Stilmischung sein. Holz- oder Fassalterung ist sehr verbreitet, aber nicht erforderlich.</characteristic-ingredients>
       <style-comparison date="2019-12-24 06:10:50" author="Miicha" addr="172.21.0.16">Eine saure und / oder funky Version eines Basisstils.</style-comparison>
       <commercial-examples date="2019-12-24 06:10:56" author="Miicha" addr="172.21.0.16">Boulevard Love Child, Cascade Vlad the Imp Aler, Jester King Le Petit Prince, Jolly Pumpkin Calabaza Blanca, Russian River Temptation, The Bruery Rueuze, The Bruery Tart of Darkness</commercial-examples>
+      <entry-instructions date="2019-12-24 06:11:11" author="Miicha" addr="172.21.0.16">Der Teilnehmer <b>muss</b> eine Beschreibung des Bieres, die verwendete Hefe / Bakterien und entweder eine Grundart oder die Zutaten / Spezifikationen / Zielcharakter des Bieres angeben.</entry-instructions>
     </subcategory>
   </category>
 </styleguide>
