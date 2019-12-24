@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
   <category id="28">
-    <subcategory id="28C"/>
+    <subcategory id="28C">
+      <overall-impression date="2019-12-24 06:11:28" author="Miicha" addr="172.21.0.16">Eine saure und / oder flippige Version eines Obst-, Kräuter- oder Gewürzbiers oder eines in Holz gereiften Wildbiers. Wenn das Holz gealtert ist, sollte das Holz nicht der primäre oder dominierende Charakter sein.</overall-impression>
+    </subcategory>
   </category>
 </styleguide>
