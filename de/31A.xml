@@ -3,6 +3,10 @@
   <category id="31">
     <subcategory id="31A">
       <name date="2019-12-24 06:30:51" author="Miicha" addr="172.21.0.16">Alternative Grain Beer</name>
+      <description date="2019-12-24 06:31:34" author="Miicha" addr="172.21.0.16">
+        <p> Ein <b>alternatives fermentierbares Bier</b> ist ein Standardbier (klassischer oder nicht klassischer Stil), dem zusätzliche oder nicht standardmäßige Braukörner (z. B. Roggen, Hafer, Buchweizen, Dinkel, Hirse, Sorghum, Reis usw.) zugesetzt oder ausschließlich verwendet werden. Hier können glutenfreie (GF) Biere aus vollständig glutenfreien Zutaten eingetragen werden, während GF-Biere mit prozessbasierter Glutenentfernung in ihren jeweiligen Grundstilkategorien eingetragen werden sollten. </p>
+        <p> Weitere Kommentare, insbesondere zur Bewertung des Gleichgewichts zwischen zugesetzten Zutaten und dem <i>Basisbier, finden Sie im</i> Abschnitt <i>Einführung in Spezialbier</i> . </p>
+      </description>
     </subcategory>
   </category>
 </styleguide>
