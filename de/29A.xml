@@ -3,6 +3,9 @@
   <category id="29">
     <subcategory id="29A">
       <name date="2019-12-24 10:06:07" author="Fe2O3" addr="172.21.0.16">Fruchtbier</name>
+      <description date="2019-12-24 10:06:28" author="Fe2O3" addr="172.21.0.16">
+        <p>Weitere Kommentare, insbesondere zur Bewertung des Gleichgewichts zwischen zugesetzten Zutaten und dem <i>Basisbier, finden Sie im</i> Abschnitt <i>Einführung in Spezialbier</i> . </p>
+      </description>
     </subcategory>
   </category>
 </styleguide>
