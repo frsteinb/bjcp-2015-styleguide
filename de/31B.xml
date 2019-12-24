@@ -3,6 +3,10 @@
   <category id="31">
     <subcategory id="31B">
       <name date="2019-12-24 06:44:18" author="Miicha" addr="172.21.0.16">Alternative Sugar Beer</name>
+      <description date="2019-12-24 06:45:27" author="Miicha" addr="172.21.0.16">
+        <p> Ein Alternative Sugar Be<b>er</b> ist ein Standardbier (klassischer oder nicht klassischer Stil) mit zusätzlichem fermentierbarem Zucker (z. B. Honig, brauner Zucker, Invertzucker, Melasse, Melassesirup, Ahornsirup, Sorghum usw.). </p>
+        <p> Weitere Kommentare, insbesondere zur Bewertung des Gleichgewichts zwischen zugesetzten Zutaten und dem <i>Basisbier, finden Sie im</i> Abschnitt <i>Einführung in Spezialbier</i> . </p>
+      </description>
     </subcategory>
   </category>
 </styleguide>
