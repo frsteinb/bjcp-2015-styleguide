@@ -5,7 +5,8 @@
     <p>Um den Umfang von Stilbeschreibungen zu reduzieren, verwenden wir einige Kurzformen bzw. einen bestimmten Wortschatz, um komplexere Sachverhalte darzustellen. Wir lassen einige Elemente aus, die nur in Ausnahmefällen von Bedeutung wären. Einige Begriffe können in bestimmten Teilen der Welt unterschiedliche Bedeutungen haben, daher definieren wir unsere Verwendung, um Verwirrung zu vermeiden. Wir identifizieren auch bestimmte Merkmale, die nicht in allen Bierstilen vorhanden sind, damit wir diese Einschränkungen nicht in jedem Stil wiederholen müssen.</p>
     <h3 id="basic-categorization">Grundlegende Kategorisierung</h3>
     <p>Die grundlegendste Kategorisierung der Biersorten nach Hefetypen entspricht moderner handwerklicher Brauereipraxis. Amerikanische Brauer und die meisten anderen Craft-Brauer nennen ein Bier <i>Ale</i>, wenn sie obergärige (Ale-)Hefe verwenden und <i>Lager</i>, wenn sie untergärige (Lager-)Hefe verwenden. Die meisten Kategorisierungssysteme sehen eine dritte Klassifizierung vor, die aufgrund der Methode oft als spontane Gärung bezeichnet wird. <i>Wild</i> ist jedoch ein verbreiteter moderner Craft-Beer-Begriff für diese mit Bakterien oder Nicht-Saccharomyces-Hefen fermentierten Biere. Der Begriff <i>wild</i> bedeutet in diesem Zusammenhang jedoch keine spontane Gärung, da in den meisten Fällen gezielt mit den gewünschten Fermentationsstämmen vergoren wird.</p>
-    <p>In Deutschland und anderen Brauhochburgen der Alten Welt sind die gebräuchlichsten Begriffe zur Unterscheidung der Biere in dieser Hinsicht <i>obergärig</i> und <i>untergärig</i> ("top-fermenting" und "bottom-fermenting"). Die meisten Deutschen halten Ale für eine Art englisches Bier und Lagerbier für eine Methode zur Konditionierung bzw. Reifung von Bier. Sie sprechen also oft von Kölsch als ein obergäriges Lagerbier, nicht ein Ale.</p> <!-- TBD: Ich habe bewusst die strikte Aussage über "die Deutschen" etwas relativiert. Ist das okay? -->
+    <p>In Deutschland und anderen Brauhochburgen der Alten Welt sind die gebräuchlichsten Begriffe zur Unterscheidung der Biere in dieser Hinsicht <i>obergärig</i> und <i>untergärig</i> ("top-fermenting" und "bottom-fermenting"). Die meisten Deutschen halten Ale für eine Art englisches Bier und Lagerbier für eine Methode zur Konditionierung bzw. Reifung von Bier. Sie sprechen also oft von Kölsch als ein obergäriges Lagerbier, nicht ein Ale.</p>
+    <!-- TBD: Ich habe bewusst die strikte Aussage über "die Deutschen" etwas relativiert. Ist das okay? -->
     <p>Englische Brauer könnten, insbesondere im historischen Kontext, Ales getrennt von Portern und Stouts als Biersorten betrachten (und im nächsten Atemzug einen Unterschied zwischen Portern und Stouts verneinen). In einem noch genauer historisch betrachteten Kontext, würden sie womöglich Ale und Bier in der Weise differenzieren, dass Bier im Gegensatz zu Ale gehopft wurde (bzw. stärker gehopft wurde als Ale). Dieses historische Verständnis ist wichtig, um alte Rezepte und Schriften zu verstehen, hat jedoch heute wenig Bedeutung wenn es um gängige Begrifflichkeiten für die Beschreibung von Bier geht.</p>
     <p>Diese Richtlinien versuchen, die modernen Craft-Beer-Definitionen von <i>Ale</i>, <i>Lager</i> und <i>Wild</i> als die Hauptgruppierung von Bierstilen zu verwenden. Es wird jedoch nach Möglichkeit auch auf lokale oder regionale Zusammenhänge eingegangen.</p>
     <h3 id="common-attributes-of-all-beer-styles">Gemeinsame Eigenschaften aller Biersorten</h3>
@@ -186,59 +187,59 @@
       <div class="table-head">Stilfamilie</div>
       <div class="table-row">
         <div class="table-cell">ipa-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">brown-ale-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">pale-ale-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">pale-lager-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">pilsner-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">amber-ale-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">amber-lager-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">dark-lager-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">porter-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">stout-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">bock-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">strong-ale-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">wheat-beer-family</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-row">
         <div class="table-cell">specialty-beer</div>
-        <div class="table-cell"></div>
+        <div class="table-cell"/>
       </div>
       <div class="table-head">Epoche</div>
       <div class="table-row">

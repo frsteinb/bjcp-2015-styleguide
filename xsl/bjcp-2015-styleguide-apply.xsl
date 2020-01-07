@@ -68,7 +68,7 @@
   </xsl:template>
   <xsl:template match="bjcp:tags|bjcp:specs" mode="merge">
   </xsl:template>
-
+  
 
 
   <xsl:template match="bjcp:*">
@@ -98,7 +98,7 @@
 
 
 
-  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples">
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples|bjcp:specs">
     <xsl:variable name="name">
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
@@ -109,7 +109,7 @@
 
 
 
-  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples" mode="merge">
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples|bjcp:specs" mode="merge">
     <xsl:variable name="name">
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>
