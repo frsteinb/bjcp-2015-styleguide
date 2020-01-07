@@ -15,6 +15,7 @@
       <comments date="2019-12-24 06:49:55" author="Miicha" addr="172.21.0.16">Wenn die zusätzlichen Fermentabilien dem Bier keinen unterscheidbaren Charakter verleihen, tragen Sie es in die Basisstilkategorie ein. Ein auf Honig basierendes Bier sollte nicht so viel Honig enthalten, dass es eher wie ein Met mit Bier (z.B. Braggot) als wie ein Honigbier aussieht. Dieser Stil sollte nicht für Stile verwendet werden, bei denen der alternative Zucker für die Stildefinition von grundlegender Bedeutung ist oder bei denen eine kleine Menge Zucker mit neutralem Geschmack verwendet wird, um einfach den Alkoholgehalt zu erhöhen, den Vergärungsgrad zu erhöhen oder den Geschmack oder den Körper aufzuhellen. Diese Biere sollten als normale Grundeinstellung eingegeben werden.</comments>
       <commercial-examples date="2019-12-24 06:50:00" author="Miicha" addr="172.21.0.16">Bell’s Hopslam, Fullers Honey Dew, Lagunitas Brown Shugga’</commercial-examples>
       <entry-instructions date="2019-12-24 06:50:14" author="Miicha" addr="172.21.0.16">Der Teilnehmer <b>muss</b> einen Basisstil angeben, der deklarierte Stil muss jedoch kein <i>klassischer Stil sein</i> . Der Teilnehmer <b>muss</b> die Art des verwendeten Zuckers angeben.</entry-instructions>
+      <specs date="2019-12-24 23:09:19" author="Miicha" addr="172.21.0.16">OG, FG, IBUs, SRM und ABV variieren je nach zugrunde liegendem Basisbier.</specs>
     </subcategory>
   </category>
 </styleguide>

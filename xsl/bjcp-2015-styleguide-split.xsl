@@ -109,7 +109,7 @@
 
 
   <!-- suppress these tags in translations -->
-  <xsl:template match="bjcp:tags|bjcp:specs[bjcp:ibu]">
+  <xsl:template match="bjcp:tags|bjcp:specs[bjcp:* and not(bjcp:*/text())]">
   </xsl:template>
 
 

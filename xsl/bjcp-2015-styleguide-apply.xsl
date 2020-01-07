@@ -109,7 +109,7 @@
 
 
 
-  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples|bjcp:specs" mode="merge">
+  <xsl:template match="bjcp:name|bjcp:description|bjcp:overall-impression|bjcp:aroma|bjcp:appearance|bjcp:flavor|bjcp:mouthfeel|bjcp:comments|bjcp:history|bjcp:characteristic-ingredients|bjcp:style-comparison|bjcp:entry-instructions|bjcp:commercial-examples|bjcp:specs|bjcp:ibu|bjcp:srm|bjcp:og|bjcp:fg|bjcp:abv" mode="merge">
     <xsl:variable name="name">
       <xsl:value-of select="local-name(.)"/>
     </xsl:variable>

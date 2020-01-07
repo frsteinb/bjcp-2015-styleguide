@@ -13,6 +13,7 @@
       <mouthfeel date="2019-12-21 10:04:49" author="Fe2O3" addr="172.21.0.16">Basierend auf deklariertem Klonbier.</mouthfeel>
       <comments date="2019-12-21 10:05:07" author="Fe2O3" addr="172.21.0.16">Bestimmt als Sammelstandort für bestimmte Biere, die auf einzigartigen kommerziellen Beispielen basieren, die nicht zu bestehenden Stilen passen.</comments>
       <entry-instructions date="2019-12-21 10:11:38" author="Fe2O3" addr="172.21.0.16">Der Teilnehmer <b>muss</b> den Namen des geklonten kommerziellen Biers, Spezifikationen (wesentliche Eckdaten) für das Bier und entweder eine kurze sensorische Beschreibung oder eine Liste der für die Herstellung des Biers verwendeten Zutaten angeben. <i>Ohne diese Informationen haben Richter, die mit dem Bier nicht vertraut sind, keine Vergleichsgrundlage.</i></entry-instructions>
+      <specs date="2019-12-24 23:14:08" author="Miicha" addr="172.21.0.16">OG, FG, IBUs, SRM und ABV variieren je nach zugrunde liegendem Basisbierstil</specs>
     </subcategory>
   </category>
 </styleguide>
