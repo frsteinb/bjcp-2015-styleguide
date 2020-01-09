@@ -8,7 +8,7 @@ PROJECTID	= bjcp-styleguide-1570890297003
 LOCATION	= us-central1
 GLOSSARYID	= bjcp-en-de-glossary
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de-auto.xml
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de-auto.xml wordpress-de.sql
 
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
