@@ -50,6 +50,12 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-orig.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
+wordpress-orig.sql: bjcp-2015-styleguide-orig.xml wordpress-pages.xsl
+	xsltproc wordpress-pages.xsl bjcp-2015-styleguide-orig.xml > wordpress-orig.sql
+
+wordpress-de.sql: bjcp-2015-styleguide-orig.xml wordpress-pages.xsl
+	xsltproc --stringparam lang de wordpress-pages.xsl bjcp-2015-styleguide-de.xml > wordpress-de.sql
+
 clean:
 	@rm -rf orig
 	@rm -f bjcp-2015-styleguide-orig.xml
@@ -57,6 +63,7 @@ clean:
 	@rm -f web/bjcp-2015-styleguide-orig.xml
 	@rm -f web/bjcp-2015-styleguide-de.xml
 	@rm -f web/bjcp-2015-styleguide-de-auto.xml
+	@rm -f wordpress-remove.sql wordpress-orig.sql wordpress-de.sql
 	@echo "cleanup done"
 
 distclean: clean
@@ -88,4 +95,19 @@ cache/bjcp-2015-styleguide-de-auto.xml:
 
 delete-glossary:
 	curl -X DELETE -H "Authorization: Bearer "`gcloud auth application-default print-access-token` https://translation.googleapis.com/v3beta1/projects/$(PROJECTID)/locations/$(LOCATION)/glossaries/$(GLOSSARYID)
+
+## WordPress stuff
+
+wordpress-orig: wordpress-orig.sql
+	scp wordpress-orig.sql z:/tmp ; ssh Z 'mysql wordpress < /tmp/wordpress-orig.sql'
+
+wordpress-de: wordpress-de.sql
+	scp wordpress-de.sql z:/tmp ; ssh Z 'mysql wordpress < /tmp/wordpress-de.sql'
+
+wordpress-remove.sql:
+	echo 'DELETE FROM `wp_posts` WHERE post_content LIKE "<!-- auto-generated bjcp post -->%";' > wordpress-remove.sql
+
+wordpress-remove: wordpress-remove.sql
+	mysql wordpress < wordpress-remove.sql
+
 
