@@ -15,6 +15,8 @@ build:
     paths:
     - bjcp-2015-styleguide-orig.xml
     - bjcp-2015-styleguide-de.xml
+    - bjcp-2015-styleguide-orig.pdf
+    - bjcp-2015-styleguide-de.pdf
     - wordpress-de.sql
     expire_in: 1 week
 
