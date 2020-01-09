@@ -50,11 +50,11 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-orig.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
-wordpress-orig.sql: bjcp-2015-styleguide-orig.xml wordpress-pages.xsl
-	xsltproc wordpress-pages.xsl bjcp-2015-styleguide-orig.xml > wordpress-orig.sql
+wordpress-orig.sql: bjcp-2015-styleguide-orig.xml xsl/wordpress-pages.xsl
+	xsltproc xsl/wordpress-pages.xsl bjcp-2015-styleguide-orig.xml > wordpress-orig.sql
 
-wordpress-de.sql: bjcp-2015-styleguide-orig.xml wordpress-pages.xsl
-	xsltproc --stringparam lang de wordpress-pages.xsl bjcp-2015-styleguide-de.xml > wordpress-de.sql
+wordpress-de.sql: bjcp-2015-styleguide-orig.xml xsl/wordpress-pages.xsl
+	xsltproc --stringparam lang de xsl/wordpress-pages.xsl bjcp-2015-styleguide-de.xml > wordpress-de.sql
 
 clean:
 	@rm -rf orig
