@@ -91,7 +91,7 @@ apply:
 translate: cache/bjcp-2015-styleguide-de-auto.xml
 
 cache/bjcp-2015-styleguide-de-auto.xml:
-	if [ "$$GOOGLE_APPLICATION_CREDENTIALS" ] ; then cat bjcp-2015-styleguide-orig.xml | ./translate | xmllint --format - > cache/bjcp-2015-styleguide-de-auto.xml ; else if [ `hostname` != "zbox" ; then curl -s https://familie-steinberg.org/bjcp-styleguide/bjcp-2015-styleguide-de-auto.xml > cache/bjcp-2015-styleguide-de-auto.xml ; fi ; fi
+	@if [ "$$GOOGLE_APPLICATION_CREDENTIALS" ] ; then echo "starting Google translation, be patient..." ; cat bjcp-2015-styleguide-orig.xml | ./translate | xmllint --format - > cache/bjcp-2015-styleguide-de-auto.xml ; else if [ `hostname` != "zbox" ] ; then echo "downloading auto-translated version..." ; curl -s https://familie-steinberg.org/bjcp-styleguide/bjcp-2015-styleguide-de-auto.xml > cache/bjcp-2015-styleguide-de-auto.xml ; fi ; fi
 
 delete-glossary:
 	curl -X DELETE -H "Authorization: Bearer "`gcloud auth application-default print-access-token` https://translation.googleapis.com/v3beta1/projects/$(PROJECTID)/locations/$(LOCATION)/glossaries/$(GLOSSARYID)
