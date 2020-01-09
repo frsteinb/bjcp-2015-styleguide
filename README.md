@@ -23,7 +23,8 @@ Finally, XSL stylesheets get applied to create resulting XML and XHTML documents
 Besides all the contributors to the original BJCP document we would like to thank the authors of translated content that found its way to this project:
 
 - Brausportgruppe e.V. Rhein-Main
-- ...
+- Members from the Forum hobbybrauer.de: Fe2O3, Miicha, T3K, chaosblack, danieldee, toaster, fsb
+- other anonymous contributors
 
 ## Getting Started
 

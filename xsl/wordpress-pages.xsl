@@ -24,18 +24,9 @@
   <xsl:variable name="toppostname">bjcp-styleguide-2015</xsl:variable>
   <xsl:variable name="deletepattern"> auto-generated bjcp post </xsl:variable>
 
-  <xsl:variable name="topposttitle">
-    <xsl:choose>
-      <xsl:when test="$lang = 'de'">BJCP Bierstilrichtlinien 2015</xsl:when>
-      <xsl:otherwise>BJCP Style Guidelines 2015</xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
-  <xsl:variable name="tagtitleprefix">
-    <xsl:choose>
-      <xsl:when test="$lang = 'de'">Bierstile mit Tag</xsl:when>
-      <xsl:otherwise>Style tagged</xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
+
+
+  <xsl:include href="../cache/config-current.xsl"/>
 
   
   
@@ -254,29 +245,6 @@
     </xsl:call-template>
     -->
     <xsl:text><![CDATA[</dd>]]></xsl:text>
-  </xsl:template>
-
-
-  
-  <xsl:template match="*" mode="children">
-    <xsl:variable name="list" select="./*[name]"/>
-    <xsl:for-each select="$list">
-      <xsl:choose>
-        <xsl:when test="position() = 1">
-          <xsl:text><![CDATA[<dt>]]></xsl:text>
-          <xsl:value-of select="substring(concat(translate(substring(local-name(.),1,1),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), substring(local-name(.),2)),1,string-length(local-name(.))-1)"/>
-          <xsl:text><![CDATA[ies</dt>]]></xsl:text>
-          <xsl:text><![CDATA[<dd>]]></xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>, </xsl:text>
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:value-of select="./bjcp:name"/>
-      <xsl:if test="position() = last()">
-        <xsl:text><![CDATA[</dd>]]></xsl:text>
-      </xsl:if>
-    </xsl:for-each>
   </xsl:template>
 
 
@@ -535,12 +503,6 @@
     <xsl:apply-templates select="bjcp:commercial-examples" mode="section"/>
     <xsl:apply-templates select="bjcp:specs"/>
     <xsl:apply-templates select="bjcp:tags" mode="section"/>
-
-    <!--
-    <xsl:apply-templates select="." mode="specialties"/>
-    -->
-    
-    <xsl:apply-templates select="." mode="children"/>
 
     <xsl:call-template name="footer"/>
 

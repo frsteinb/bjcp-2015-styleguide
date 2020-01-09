@@ -8,7 +8,7 @@ PROJECTID	= bjcp-styleguide-1570890297003
 LOCATION	= us-central1
 GLOSSARYID	= bjcp-en-de-glossary
 
-default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de-auto.xml wordpress-de.sql
+default: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-orig.xml web/bjcp-2015-styleguide-de.xml web/bjcp-2015-styleguide-de-auto.xml wordpress-de.sql bjcp-2015-styleguide-orig.pdf bjcp-2015-styleguide-de.pdf
 
 cache/2015_Guidelines_Beer.docx:
 	@if [ ! -d cache ] ; then mkdir cache ; fi
@@ -50,11 +50,25 @@ check: bjcp-2015-styleguide-orig.xml bjcp-2015-styleguide-de.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-orig.xml
 	@xmllint --noout --schema xsd/bjcp-styleguide-2015.xsd bjcp-2015-styleguide-de.xml
 
-wordpress-orig.sql: bjcp-2015-styleguide-orig.xml xsl/wordpress-pages.xsl
+wordpress-orig.sql: bjcp-2015-styleguide-orig.xml xsl/wordpress-pages.xsl xsl/config-orig.xsl
+	cp xsl/config-orig.xsl cache/config-current.xsl
 	xsltproc xsl/wordpress-pages.xsl bjcp-2015-styleguide-orig.xml > wordpress-orig.sql
 
-wordpress-de.sql: bjcp-2015-styleguide-orig.xml xsl/wordpress-pages.xsl
+wordpress-de.sql: bjcp-2015-styleguide-orig.xml xsl/wordpress-pages.xsl xsl/config-orig.xsl xsl/config-de.xsl
+	cp xsl/config-de.xsl cache/config-current.xsl
 	xsltproc --stringparam lang de xsl/wordpress-pages.xsl bjcp-2015-styleguide-de.xml > wordpress-de.sql
+
+bjcp-2015-styleguide-orig.fo: bjcp-2015-styleguide-orig.xml xsl/fo.xsl
+	xsltproc xsl/fo.xsl bjcp-2015-styleguide-orig.xml > bjcp-2015-styleguide-orig.fo
+
+bjcp-2015-styleguide-orig.pdf: bjcp-2015-styleguide-orig.fo
+	fop bjcp-2015-styleguide-orig.fo bjcp-2015-styleguide-orig.pdf
+
+bjcp-2015-styleguide-de.fo: bjcp-2015-styleguide-de.xml xsl/fo.xsl
+	xsltproc --stringparam lang de xsl/fo.xsl bjcp-2015-styleguide-de.xml > bjcp-2015-styleguide-de.fo
+
+bjcp-2015-styleguide-de.pdf: bjcp-2015-styleguide-de.fo
+	fop bjcp-2015-styleguide-de.fo bjcp-2015-styleguide-de.pdf
 
 clean:
 	@rm -rf orig
