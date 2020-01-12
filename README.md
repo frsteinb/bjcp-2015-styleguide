@@ -116,9 +116,9 @@ See the LICENSE file. Note that this license relates only to the content of this
 
 ## TODO
 
-- Add Acknowledgements to futher contributors?
-- Improved tags handling (links, grouped lists, translated meaning, ...)
+- Fix order of alternatives (7C, 21B, 27) by adding a sub-id.
 - Appendices
+- Improved tags handling (links, grouped lists, translated meaning, ...)
 - Artifacts on GitHub?
 - Refactor most of the old initial files.
 - Title Page.
