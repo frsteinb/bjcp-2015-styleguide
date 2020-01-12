@@ -15,12 +15,14 @@
 
   <!-- TBD: Einige Teile dieser Datei sind nur für die deutsche Ausgabe vorbereitet. -->
   <xsl:param name="lang">orig</xsl:param>
+  <xsl:param name="tableprefix">wp</xsl:param>
+  <xsl:param name="userid">1</xsl:param>
+  <xsl:param name="footer"><![CDATA[<p style="font-size: 70%;">Diese Informationen entstammen dem <a href="/stilrichtlinien">Übersetzungsprojekt</a> der <a href="http://dev.bjcp.org/beer-styles/introduction-to-the-2015-guidelines/">BJCP Style Guidelines</a>. Zuletzt aktualisiert: ]]><xsl:value-of select="$date"/><![CDATA[.</p>]]></xsl:param>
 
   
 
   <xsl:variable name="date"><xsl:value-of select="substring(date:date-time(),1,10)"/><xsl:text> </xsl:text><xsl:value-of select="substring(date:date-time(),12,5)"/></xsl:variable>
   <xsl:variable name="posttype">glossary</xsl:variable>
-  <xsl:variable name="postprefix">/glossary/</xsl:variable>
   <xsl:variable name="toppostname">bjcp-styleguide-2015</xsl:variable>
   <xsl:variable name="deletepattern"> auto-generated bjcp post </xsl:variable>
 
@@ -34,16 +36,13 @@
     <xsl:param name="text"/>
     <xsl:param name="replace"/>
     <xsl:param name="with"/>
-
     <xsl:choose>
       <xsl:when test="string-length($replace) = 0">
         <xsl:value-of select="$text"/>
       </xsl:when>
       <xsl:when test="contains($text, $replace)">
-
         <xsl:variable name="before" select="substring-before($text, $replace)"/>
         <xsl:variable name="after" select="substring-after($text, $replace)"/>
-
         <xsl:value-of select="$before"/>
         <xsl:value-of select="$with"/>
         <xsl:call-template name="subst">
@@ -105,7 +104,10 @@
 
 
   <xsl:template name="footer">
+    <xsl:value-of select="$footer"/>
+<!--
     <xsl:text></xsl:text><xsl:text><![CDATA[<p style="font-size: 70%;">Diese Informationen entstammen dem <a href="https://heimbrauconvention.de/index.php/bjcp-styleguide/">Übersetzungsprojekt</a> der <a href="http://dev.bjcp.org/beer-styles/introduction-to-the-2015-guidelines/">BJCP Style Guidelines</a>. Zuletzt aktualisiert: ]]></xsl:text><xsl:value-of select="$date"/><xsl:text><![CDATA[.</p>]]></xsl:text>
+-->
   </xsl:template>
 
 
@@ -113,7 +115,7 @@
   <xsl:template match="/bjcp:styleguide">
     <exsl:document href="-" method="text" encoding="UTF-8"
                    omit-xml-declaration="yes">
-      <xsl:text>DELETE FROM `wp_posts` WHERE post_content LIKE '<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]>%';
+      <xsl:text>DELETE FROM `</xsl:text><xsl:value-of select="$tableprefix"/><xsl:text>_posts` WHERE post_content LIKE '<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]>%';
 </xsl:text>
       <xsl:call-template name="toppost"/>
       <xsl:apply-templates select="( //bjcp:category | //bjcp:subcategory | //bjcp:chapter )"/>
@@ -130,7 +132,6 @@
     </xsl:apply-templates>
     <xsl:text>- - - </xsl:text>
     <xsl:text><![CDATA[<a href="]]></xsl:text>
-    <xsl:value-of select="$postprefix"/>
     <xsl:value-of select="$postname"/>
     <xsl:text><![CDATA[">]]></xsl:text>
     <xsl:text>Alternative: </xsl:text>
@@ -148,26 +149,37 @@
     </xsl:apply-templates>
     <xsl:text>- - </xsl:text>
     <xsl:text><![CDATA[<a href="]]></xsl:text>
-    <xsl:value-of select="$postprefix"/>
     <xsl:value-of select="$postname"/>
     <xsl:text><![CDATA[">]]></xsl:text>
     <xsl:text>Unterkategorie </xsl:text>
-    <xsl:value-of select="@id"/>
-    <xsl:text> (</xsl:text>
+    <xsl:choose>
+      <xsl:when test="contains(@id,'-')">
+	<xsl:value-of select="substring-before(@id,'-')"/>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:value-of select="@id"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>: </xsl:text>
     <xsl:value-of select="bjcp:name"/>
-    <xsl:text>)</xsl:text>
     <xsl:text><![CDATA[</a><br/>]]></xsl:text>
     <xsl:if test="$leaf = 'true' and bjcp:subcategory">
-      <!--<xsl:text><![CDATA[<br/> <br/>Alternativen:<br/>]]></xsl:text>-->
       <xsl:text><![CDATA[</dt><dt>Alternativen</dt><dd>]]></xsl:text>
       <xsl:for-each select="bjcp:subcategory">
 	<xsl:variable name="postname2">bjcp-<xsl:value-of select="translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
 	<xsl:text><![CDATA[- - - <a href="]]></xsl:text>
-	<xsl:value-of select="$postprefix"/>
 	<xsl:value-of select="$postname2"/>
 	<xsl:text><![CDATA[">]]></xsl:text>
-	<xsl:value-of select="../@id"/>
-	<xsl:text> </xsl:text>
+	<xsl:choose>
+	  <xsl:when test="contains(@id,'-')">
+	    <xsl:value-of select="substring-before(@id,'-')"/>
+	    <xsl:text>*</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:value-of select="@id"/>
+	  </xsl:otherwise>
+	</xsl:choose>
+	<xsl:text>: </xsl:text>
 	<xsl:value-of select="bjcp:name"/>
 	<xsl:text><![CDATA[</a><br/>]]></xsl:text>
       </xsl:for-each>
@@ -180,33 +192,36 @@
     <xsl:param name="leaf">true</xsl:param>
     <xsl:variable name="postname">bjcp-<xsl:value-of select="translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
     <xsl:text><![CDATA[<a href="]]></xsl:text>
-    <xsl:value-of select="$postprefix"/>
     <xsl:value-of select="$toppostname"/>
     <xsl:text><![CDATA[">]]></xsl:text>
     <xsl:value-of select="$topposttitle"/>
     <xsl:text><![CDATA[</a><br/>]]></xsl:text>
     <xsl:text>- </xsl:text>
     <xsl:text><![CDATA[<a href="]]></xsl:text>
-    <xsl:value-of select="$postprefix"/>
     <xsl:value-of select="$postname"/>
     <xsl:text><![CDATA[">]]></xsl:text>
     <xsl:text>Kategorie </xsl:text>
     <xsl:value-of select="@id"/>
-    <xsl:text> (</xsl:text>
+    <xsl:text>: </xsl:text>
     <xsl:value-of select="bjcp:name"/>
-    <xsl:text>)</xsl:text>
     <xsl:text><![CDATA[</a><br/>]]></xsl:text>
     <xsl:if test="$leaf = 'true'">
-      <!--<xsl:text><![CDATA[<br/> <br/>Unterkategorien:<br/>]]></xsl:text>-->
       <xsl:text><![CDATA[</dt><dt>Unterkategorien</dt><dd>]]></xsl:text>
       <xsl:for-each select="bjcp:subcategory">
 	<xsl:variable name="postname2">bjcp-<xsl:value-of select="translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
 	<xsl:text><![CDATA[- - <a href="]]></xsl:text>
-	<xsl:value-of select="$postprefix"/>
 	<xsl:value-of select="$postname2"/>
 	<xsl:text><![CDATA[">]]></xsl:text>
-	<xsl:value-of select="@id"/>
-	<xsl:text> </xsl:text>
+	<xsl:choose>
+	  <xsl:when test="contains(@id,'-')">
+	    <xsl:value-of select="substring-before(@id,'-')"/>
+	    <xsl:text>*</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:value-of select="@id"/>
+	  </xsl:otherwise>
+	</xsl:choose>
+	<xsl:text>: </xsl:text>
 	<xsl:value-of select="bjcp:name"/>
 	<xsl:text><![CDATA[</a><br/>]]></xsl:text>
       </xsl:for-each>
@@ -220,8 +235,8 @@
     <xsl:choose>
       <xsl:when test="local-name(.) = 'description'">Beschreibung</xsl:when>
       <xsl:when test="local-name(.) = 'overall-impression'">Gesamteindruck</xsl:when>
-      <xsl:when test="local-name(.) = 'aroma'">Geruch</xsl:when>
       <xsl:when test="local-name(.) = 'appearance'">Erscheinungsbild</xsl:when>
+      <xsl:when test="local-name(.) = 'aroma'">Geruch</xsl:when>
       <xsl:when test="local-name(.) = 'flavor'">Geschmack</xsl:when>
       <xsl:when test="local-name(.) = 'mouthfeel'">Mundgefühl</xsl:when>
       <xsl:when test="local-name(.) = 'comments'">Kommentare</xsl:when>
@@ -237,13 +252,6 @@
     <xsl:text><![CDATA[</dt>]]></xsl:text>
     <xsl:text><![CDATA[<dd>]]></xsl:text>
     <xsl:apply-templates mode="asis"/>
-    <!--
-    <xsl:call-template name="subst">
-      <xsl:with-param name="text" select="."/>
-      <xsl:with-param name="replace">'</xsl:with-param>
-      <xsl:with-param name="with">\'</xsl:with-param>
-    </xsl:call-template>
-    -->
     <xsl:text><![CDATA[</dd>]]></xsl:text>
   </xsl:template>
 
@@ -265,11 +273,11 @@
 	      <xsl:text> IBU</xsl:text>
 	      <xsl:text><![CDATA[</td><td>]]></xsl:text>
 	      <xsl:if test="bjcp:og/@min">
-		<xsl:text>( </xsl:text>
+		<xsl:text>(</xsl:text>
 		<xsl:value-of select="brew:bitterWort(bjcp:ibu/@min, bjcp:og/@max)"/>
 		<xsl:text> - </xsl:text>
 		<xsl:value-of select="brew:bitterWort(bjcp:ibu/@max, bjcp:og/@min)"/>
-		<xsl:text> )</xsl:text>
+		<xsl:text>)</xsl:text>
 	      </xsl:if>
 	      <xsl:text><![CDATA[</td></tr>]]></xsl:text>
 	    </xsl:when>
@@ -392,7 +400,6 @@
     <xsl:if test="@class='table-head'">
       <xsl:text><![CDATA[><td colspan="2" style="font-weight:bold"]]></xsl:text>
     </xsl:if>
-    <!--<xsl:apply-templates select="@*" mode="asis"/>-->
     <xsl:text><![CDATA[>]]></xsl:text>
     <xsl:apply-templates select="* | text()" mode="asis"/>
     <xsl:text><![CDATA[</]]></xsl:text>
@@ -407,7 +414,6 @@
 
   <xsl:template match="bjcp:tag" mode="asis">
     <xsl:text><![CDATA[<a href="]]></xsl:text>
-    <xsl:value-of select="$postprefix"/>
     <xsl:text>bjcp-</xsl:text>
     <xsl:value-of select="text()"/>
     <xsl:text><![CDATA[">]]></xsl:text>
@@ -423,7 +429,6 @@
     <xsl:text><![CDATA[=\']]></xsl:text>
     <xsl:choose>
       <xsl:when test="substring(.,1,1) = '#'">
-	<xsl:value-of select="$postprefix"/>
 	<xsl:text>bjcp-</xsl:text>
 	<xsl:value-of select="translate(substring(.,2),'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/>
       </xsl:when>
@@ -479,7 +484,7 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:variable name="postname">bjcp-<xsl:value-of select="translate($id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
-    <xsl:text>INSERT INTO `wp_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (1,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
+    <xsl:text>INSERT INTO `</xsl:text><xsl:value-of select="$tableprefix"/><xsl:text>_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (</xsl:text><xsl:value-of select="$userid"/><xsl:text>,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
 
     <xsl:text><![CDATA[<dt>Klassifizierung</dt><dd>]]></xsl:text>
     <xsl:apply-templates select="." mode="classification"/>
@@ -507,6 +512,16 @@
     <xsl:call-template name="footer"/>
 
     <xsl:text>','</xsl:text>
+    <xsl:choose>
+      <xsl:when test="contains(@id,'-')">
+	<xsl:value-of select="substring-before(@id,'-')"/>
+	<xsl:text>*</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:value-of select="@id"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>: </xsl:text>
     <xsl:value-of select="$title"/>
     <xsl:text>','','closed','closed','</xsl:text>
     <xsl:value-of select="$postname"/>
@@ -526,7 +541,7 @@
       <xsl:value-of select="bjcp:h2"/>
     </xsl:variable>
     <xsl:variable name="postname">bjcp-<xsl:value-of select="translate($id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
-    <xsl:text>INSERT INTO `wp_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (1,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
+    <xsl:text>INSERT INTO `</xsl:text><xsl:value-of select="$tableprefix"/><xsl:text>_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (</xsl:text><xsl:value-of select="$userid"/><xsl:text>,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
 
     <xsl:apply-templates mode="asis"/>
     
@@ -545,12 +560,11 @@
 
   
   <xsl:template name="toppost">
-    <xsl:text>INSERT INTO `wp_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (1,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
+    <xsl:text>INSERT INTO `</xsl:text><xsl:value-of select="$tableprefix"/><xsl:text>_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (</xsl:text><xsl:value-of select="$userid"/><xsl:text>,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
 
     <xsl:for-each select="( //bjcp:category | //bjcp:chapter )">
       <xsl:variable name="postname">bjcp-<xsl:value-of select="translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
       <xsl:text><![CDATA[<a href="]]></xsl:text>
-      <xsl:value-of select="$postprefix"/>
       <xsl:value-of select="$postname"/>
       <xsl:text><![CDATA[">]]></xsl:text>
       <xsl:choose>
@@ -559,7 +573,7 @@
 	</xsl:when>
 	<xsl:otherwise>
 	  <xsl:value-of select="@id"/>
-	  <xsl:text> </xsl:text>
+	  <xsl:text>: </xsl:text>
 	  <xsl:value-of select="bjcp:name"/>
 	</xsl:otherwise>
       </xsl:choose>
@@ -586,7 +600,7 @@
       <xsl:variable name="tag">
 	<xsl:value-of select="text()"/>
       </xsl:variable>
-      <xsl:text>INSERT INTO `wp_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (1,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
+      <xsl:text>INSERT INTO `</xsl:text><xsl:value-of select="$tableprefix"/><xsl:text>_posts` (post_author,post_date,post_date_gmt,post_content,post_title,post_excerpt,comment_status,ping_status,post_name,to_ping,pinged,post_modified,post_modified_gmt,post_content_filtered,post_type) VALUES (</xsl:text><xsl:value-of select="$userid"/><xsl:text>,NOW(),NOW(),'<![CDATA[<!--]]></xsl:text><xsl:value-of select="$deletepattern"/><xsl:text><![CDATA[-->]]></xsl:text>
 
       <xsl:text><![CDATA[<p>]]></xsl:text>
       <xsl:for-each select="//bjcp:div[@class='table']/bjcp:div[@class='table-row'][bjcp:div[@class='table-cell'] = $tag]">
@@ -599,7 +613,6 @@
       <xsl:for-each select="//bjcp:subcategory[bjcp:tags/bjcp:tag/text() = $tag]">
 	<xsl:variable name="postname">bjcp-<xsl:value-of select="translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/></xsl:variable>
 	<xsl:text><![CDATA[<a href="]]></xsl:text>
-	<xsl:value-of select="$postprefix"/>
 	<xsl:value-of select="$postname"/>
 	<xsl:text><![CDATA[">]]></xsl:text>
 	<xsl:choose>
@@ -610,7 +623,7 @@
 	    <xsl:value-of select="@id"/>
 	  </xsl:otherwise>
 	</xsl:choose>
-	<xsl:text> </xsl:text>
+	<xsl:text>: </xsl:text>
 	<xsl:value-of select="bjcp:name"/>
 	<xsl:text></xsl:text>
 	<xsl:text><![CDATA[</a><br/>]]></xsl:text>

@@ -30,7 +30,7 @@ Besides all the contributors to the original BJCP document we would like to than
 
 - MacOS systems should have all required tools once the XCode App is installed. On Linux you should install some packages, e.g. on Ubuntu:
   ```
-  apt install make curl libxml2-utils xsltproc
+  apt install make curl libxml2-utils xsltproc fop
   ```
   (Sorry, I have no clue what to do on Windows systems.)
 - Clone the GitHub repository to your local system:
