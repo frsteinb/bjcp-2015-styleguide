@@ -58,6 +58,14 @@
       <xsl:value-of select="normalize-space($s)"/>
     </xsl:variable>
     <xsl:choose>
+      <xsl:when test="$title = 'Appendix B: Local Styles'">
+        <xsl:call-template name="category">
+          <xsl:with-param name="title">
+	    <xsl:text>X. </xsl:text>
+            <xsl:value-of select="$title"/>
+          </xsl:with-param>
+        </xsl:call-template>
+      </xsl:when>
       <xsl:when test="substring($title,1,1) > 0">
         <xsl:call-template name="category">
           <xsl:with-param name="title">
@@ -169,6 +177,7 @@
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Aroma</xsl:with-param>
+        <xsl:with-param name="avoid">lúpulo</xsl:with-param>
         <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
@@ -193,6 +202,7 @@
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
         <xsl:with-param name="attribute">Characteristic Ingredients</xsl:with-param>
+        <xsl:with-param name="altattributes">Ingredients</xsl:with-param>
         <xsl:with-param name="id"><xsl:value-of select="$id0"/></xsl:with-param>
       </xsl:apply-templates>
       <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
@@ -246,6 +256,8 @@
 
   <xsl:template match="w:p" mode="attribute">
     <xsl:param name="attribute"/>
+    <xsl:param name="altattributes"/>
+    <xsl:param name="avoid"/>
     <xsl:param name="id"/>
     <xsl:variable name="n">
       <xsl:value-of select="translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')"/>
@@ -270,7 +282,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2')">
-          <xsl:if test="translate(substring(w:r/w:t,1,string-length($attribute)),'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-') = translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')">
+          <xsl:if test="((translate(substring(w:r/w:t,1,string-length($attribute)),'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-') = translate($attribute,'ABCDEFGHIJKLMNOPQRSTUVWXYZ ','abcdefghijklmnopqrstuvwxyz-')) or ((string-length($altattributes) > 0) and contains(concat(',',$altattributes,','), concat(',',substring(w:r/w:t/text(),1,string-length(w:r/w:t)-1),',')))) and ((string-length($avoid) = 0) or not(w:r/w:t[contains(.,$avoid)]))">
             <xsl:element name="{$n}">
               <xsl:apply-templates select="w:r[position() >= 2]"/>
             </xsl:element>
@@ -285,6 +297,12 @@
           <xsl:apply-templates select="following-sibling::w:p[1]" mode="attribute">
             <xsl:with-param name="attribute">
               <xsl:value-of select="$attribute"/>
+            </xsl:with-param>
+            <xsl:with-param name="altattributes">
+              <xsl:value-of select="$altattributes"/>
+            </xsl:with-param>
+            <xsl:with-param name="avoid">
+              <xsl:value-of select="$avoid"/>
             </xsl:with-param>
           </xsl:apply-templates>
         </xsl:if>
@@ -320,15 +338,24 @@
 	</xsl:variable>
 	<xsl:variable name="s2">
 	  <xsl:value-of select="str:replace($s1,'Vital Statistics:','')"/>
+	  <!--
+	  <xsl:value-of select="substring-after($s1,'Vital Statistics:')"/>
+	  -->
 	</xsl:variable>
 	<xsl:variable name="s3">
 	  <xsl:value-of select="str:replace($s2,'::',':')"/>
 	</xsl:variable>
+	<xsl:variable name="s3a">
+	  <xsl:value-of select="str:replace($s3,'%.','%')"/>
+	</xsl:variable>
 	<xsl:variable name="s4">
-	  <xsl:value-of select="str:replace($s3,'%','')"/>
+	  <xsl:value-of select="str:replace($s3a,'%','')"/>
+	</xsl:variable>
+	<xsl:variable name="s4a">
+	  <xsl:value-of select="str:replace($s4,'IBU:','IBUs:')"/>
 	</xsl:variable>
 	<xsl:variable name="s5">
-	  <xsl:value-of select="str:replace($s4,'(varies w/ fruit)','')"/>
+	  <xsl:value-of select="str:replace($s4a,'(varies w/ fruit)','')"/>
 	</xsl:variable>
 	<xsl:variable name="s">
 	  <xsl:value-of select="str:replace($s5,' ','')"/>
@@ -457,7 +484,7 @@
 
   <xsl:template match="w:p" mode="specs-recur">
     <xsl:if test="not(w:pPr/w:pStyle/@w:val='Heading1') and not(w:pPr/w:pStyle/@w:val='Heading2') and not(w:pPr/w:pStyle/@w:val='Heading2first') and not(w:pPr/w:pStyle/@w:val='Heading3') and not(w:pPr/w:pStyle/@w:val='TOC2') and not(w:r/w:t = 'Strength classifications:')">
-      <xsl:if test="w:pPr/w:pStyle/@w:val = 'Specs' or w:pPr/w:pStyle/@w:val = 'SpecsLast' or w:r/w:t = 'SRM:' or w:r/w:t = 'IBUs:' or normalize-space(w:r/w:t) = 'Vital Statistics:'">
+      <xsl:if test="(w:pPr/w:pStyle/@w:val = 'Specs' or w:pPr/w:pStyle/@w:val = 'SpecsLast' or w:r/w:t = 'SRM:' or w:r/w:t = 'IBUs:' or normalize-space(w:r/w:t) = 'Vital Statistics:')">
         <xsl:variable name="s">
           <xsl:for-each select="w:r/w:t | w:r/w:tab">
             <xsl:if test="local-name() = 'tab'">:</xsl:if>
@@ -787,6 +814,20 @@
 	  <xsl:apply-templates select="following-sibling::*[not(w:pPr/w:pStyle/@w:val='ProseList')][1]" mode="in-chapter"/>
 	</xsl:when>	  
 	<xsl:when test="w:pPr/w:pStyle/@w:val='ProseIntro'">
+	  <xsl:element name="p">
+	    <!--<xsl:attribute name="class">intro</xsl:attribute>-->
+	    <xsl:apply-templates select="w:r"/>
+	  </xsl:element>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
+	</xsl:when>
+	<xsl:when test="w:pPr/w:pStyle/@w:val='StyleIntroLast'">
+	  <xsl:element name="p">
+	    <!--<xsl:attribute name="class">intro</xsl:attribute>-->
+	    <xsl:apply-templates select="w:r"/>
+	  </xsl:element>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
+	</xsl:when>
+	<xsl:when test="w:pPr/w:pStyle/@w:val='StyleIntro'">
 	  <xsl:element name="p">
 	    <!--<xsl:attribute name="class">intro</xsl:attribute>-->
 	    <xsl:apply-templates select="w:r"/>

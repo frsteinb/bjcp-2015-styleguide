@@ -116,18 +116,14 @@ See the LICENSE file. Note that this license relates only to the content of this
 
 ## TODO
 
-- Fix order of alternatives (7C, 21B, 27) by adding a sub-id.
-- Appendices
+- Integrate and translate Appendices
+- Integrate and translate Provisional Styles
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Artifacts on GitHub?
 - Refactor most of the old initial files.
 - Title Page.
 - Improve I18n.
-- Revamp editor, probably no longer as an overlay.
-- Maybe, some keyboard control?
 - Support editing "p" (not only in "description"), "li", "td".
 - Better rendering of specs with text content, e.g. 33A.
-- Handling IDs correctly in editor and when saving.
 - modifying parts of whole document addressed by getPathTo().
 - Navigate by: tags, commercial examples, specs
-- Render og, fg, srm in additional units.
