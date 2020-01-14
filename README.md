@@ -116,7 +116,6 @@ See the LICENSE file. Note that this license relates only to the content of this
 
 ## TODO
 
-- Integrate and translate Appendices
 - Integrate and translate Provisional Styles
 - Improved tags handling (links, grouped lists, translated meaning, ...)
 - Artifacts on GitHub?

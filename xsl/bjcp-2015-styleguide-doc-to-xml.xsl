@@ -875,6 +875,91 @@
 	  </xsl:if>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:when>
+	<xsl:when test="w:pPr/w:contextualSpacing">
+	  <xsl:variable name="s">
+	    <xsl:apply-templates select="w:r"/>
+	  </xsl:variable>
+	  <xsl:choose>
+	    <xsl:when test="contains($s, 'remaining beers')">
+	      <xsl:value-of select="$s"/>
+	    </xsl:when>
+	    <xsl:when test="$s = ''">
+	    </xsl:when>
+	    <xsl:when test="not(number(substring($s,1,1)) > 0)">
+	      <xsl:element name="h4">
+		<xsl:text>(</xsl:text>
+		<xsl:value-of select="substring-before(preceding-sibling::*[not(w:pPr/w:contextualSpacing) and (number(substring(w:r/w:t,1,1)) > 0)][1]/w:r/w:t, '.')"/>
+		<xsl:text>)</xsl:text>
+		<xsl:variable name="n">
+		  <xsl:apply-templates select="." mode="counthack"/>
+		</xsl:variable>
+		<xsl:value-of select="string-length($n)"/>
+		<xsl:text>. </xsl:text>
+		<xsl:value-of select="$s"/>
+	      </xsl:element>
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <xsl:element name="a">
+		<xsl:attribute name="href">
+		  <xsl:text>#</xsl:text>
+		  <xsl:choose>
+		    <xsl:when test="not(contains($s,'('))">
+		      <xsl:value-of select="substring-before($s,'.')"/>
+		    </xsl:when>
+		    <xsl:otherwise>
+		      <xsl:value-of select="substring-before($s,'.')"/>
+		      <xsl:variable name="n" select="substring-before(substring-after($s,'('),')')"/>
+		      <xsl:variable name="nn">
+			<xsl:choose>
+			  <xsl:when test="$n = 'Pre-Pro Lager'">Pre-Prohibition Lager</xsl:when>
+			  <xsl:when test="$n = 'Pre-Pro Porter'">Pre-Prohibition Porter</xsl:when>
+			  <xsl:when test="$n = 'all'"></xsl:when>
+			  <xsl:when test="$n = 'Belgian styles only'"></xsl:when>
+			  <xsl:when test="$n = 'non-Belgian styles'"></xsl:when>
+			  <xsl:when test="$n = 'those not already listed'"></xsl:when>
+			  <xsl:otherwise><xsl:value-of select="$n"/></xsl:otherwise>
+			</xsl:choose>
+		      </xsl:variable>
+		      <xsl:if test="string-length($nn)">
+			<xsl:text>-</xsl:text>
+			<xsl:value-of select="translate(normalize-space($nn),'ABCDEFGHIJKLMNOPQRSTUVWXYZ :.()','abcdefghijklmnopqrstuvwxyz-')"/>
+		      </xsl:if>
+		    </xsl:otherwise>
+		  </xsl:choose>
+		</xsl:attribute>
+		<xsl:variable name="n">
+		  <xsl:apply-templates select="." mode="counthack"/>
+		</xsl:variable>
+		<xsl:variable name="n2">
+		  <xsl:apply-templates select="." mode="counthack2"/>
+		</xsl:variable>
+		<xsl:variable name="x">
+		  <xsl:choose>
+		    <xsl:when test="string-length($n2) > 26">
+		      <xsl:value-of select="substring('ABCDEFGHIJKLMNOPQRSTUVWXYZ',string-length($n2)-26,1)"/>
+		      <xsl:value-of select="substring('ABCDEFGHIJKLMNOPQRSTUVWXYZ',string-length($n2)-26,1)"/>
+		    </xsl:when>
+		    <xsl:otherwise>
+		      <xsl:value-of select="substring('ABCDEFGHIJKLMNOPQRSTUVWXYZ',string-length($n2),1)"/>
+		    </xsl:otherwise>
+		  </xsl:choose>
+		</xsl:variable>
+		<xsl:variable name="i">
+		  <xsl:text>(</xsl:text>
+		  <xsl:value-of select="substring-before(preceding-sibling::*[not(w:pPr/w:contextualSpacing) and (number(substring(w:r/w:t,1,1)) > 0)][1]/w:r/w:t, '.')"/>
+		  <xsl:text>)</xsl:text>
+		  <xsl:value-of select="string-length($n)"/>
+		  <xsl:value-of select="$x"/>
+		</xsl:variable>
+		<xsl:value-of select="$x"/>
+		<xsl:text>: </xsl:text>
+		<xsl:value-of select="$s"/>
+	      </xsl:element>
+	      <xsl:element name="br"/>
+	    </xsl:otherwise>
+	  </xsl:choose>
+	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
+	</xsl:when>
 	<xsl:otherwise>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>
 	</xsl:otherwise>
@@ -882,6 +967,28 @@
     </xsl:if>
   </xsl:template>
 
+
+  
+  <xsl:template match="w:p" mode="counthack">
+    <xsl:if test="w:pPr/w:contextualSpacing and w:pPr/w:numPr/w:ilvl">
+      <xsl:if test="w:pPr/w:numPr/w:ilvl/@w:val = '0'">
+	<xsl:text>X</xsl:text>
+      </xsl:if>
+      <xsl:apply-templates select="preceding-sibling::w:p[1]" mode="counthack"/>
+    </xsl:if>
+  </xsl:template>
+
+
+  
+  <xsl:template match="w:p" mode="counthack2">
+    <xsl:if test="w:pPr/w:contextualSpacing and w:pPr/w:numPr/w:ilvl/@w:val='1'">
+      <xsl:text>X</xsl:text>
+      <xsl:apply-templates select="preceding-sibling::w:p[1]" mode="counthack2"/>
+    </xsl:if>
+  </xsl:template>
+
+
+  
   <xsl:template match="w:p" mode="in-chapter-list">
     <xsl:if test="w:pPr/w:pStyle/@w:val='ProseListNumbered' or w:pPr/w:pStyle/@w:val='ProseList'">
       <xsl:element name="li">

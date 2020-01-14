@@ -105,9 +105,6 @@
 
   <xsl:template name="footer">
     <xsl:value-of select="$footer"/>
-<!--
-    <xsl:text></xsl:text><xsl:text><![CDATA[<p style="font-size: 70%;">Diese Informationen entstammen dem <a href="https://heimbrauconvention.de/index.php/bjcp-styleguide/">Übersetzungsprojekt</a> der <a href="http://dev.bjcp.org/beer-styles/introduction-to-the-2015-guidelines/">BJCP Style Guidelines</a>. Zuletzt aktualisiert: ]]></xsl:text><xsl:value-of select="$date"/><xsl:text><![CDATA[.</p>]]></xsl:text>
--->
   </xsl:template>
 
 
@@ -419,6 +416,25 @@
     <xsl:text><![CDATA[">]]></xsl:text>
     <xsl:value-of select="text()"/>
     <xsl:text><![CDATA[</a><br/>]]></xsl:text>
+  </xsl:template>
+
+
+
+  <xsl:template match="bjcp:a" mode="asis">
+    <xsl:text><![CDATA[<]]></xsl:text>
+    <xsl:value-of select="local-name(.)"/>
+    <xsl:apply-templates select="@*" mode="asis"/>
+    <xsl:text><![CDATA[>]]></xsl:text>
+    <xsl:apply-templates select="* | text()" mode="asis"/>
+    <xsl:if test="string-length(text()) = 0">
+      <xsl:variable name="i">
+	<xsl:value-of select="substring-after(@href, '#')"/>
+      </xsl:variable>
+      <xsl:value-of select="//bjcp:subcategory[@id = $i]/bjcp:name"/>
+    </xsl:if>
+    <xsl:text><![CDATA[</]]></xsl:text>
+    <xsl:value-of select="local-name(.)"/>
+    <xsl:text><![CDATA[>]]></xsl:text>
   </xsl:template>
 
 
