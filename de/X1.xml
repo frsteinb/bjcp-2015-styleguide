@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <category id="X">
+    <subcategory id="X1">
+      <name>Dorada Pampeana</name>
+      <description>
+        <p>Vorgeschlagen Stilkategorisierung: Kategorie 18 (Pale American Beer)</p>
+        <p>Zu Beginn waren die Möglichkeiten der argentinischen Heimbrauer sehr begrenzt: Es gab keine Extrakte, nur Pilsener Malz und Cascade-Hopfen, nur Trockenhefen, üblicherweise Nottingham, Windsor oder Safale. Mit diesen Zutaten entwickelten die argentinischen Brauer eine spezielle Version des Blond Ale, Dorada Pampeana.</p>
+      </description>
+    </subcategory>
+  </category>
+</styleguide>

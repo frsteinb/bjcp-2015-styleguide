@@ -210,6 +210,7 @@ function initEditor() {
 	    continue;
 	}
 	parts[i].addEventListener("click", function() {
+	    var auto_element = null;
 	    edit_element = this;
 	    edit_id = edit_element.parentNode.getAttribute("id");
 	    element_name = edit_element.tagName.toLowerCase();
@@ -217,7 +218,9 @@ function initEditor() {
 	    orig_element = orig_record.querySelector(element_name);
 	    orig_record_name = orig_record.querySelector("name").childNodes[0].nodeValue;
 	    auto_record = styleguide_auto.querySelector("*[id='" + edit_id + "']");
-	    auto_element = auto_record.querySelector(element_name);
+	    if (auto_record) {
+		auto_element = auto_record.querySelector(element_name);
+	    }
 	    editlastdate = edit_element.getAttribute("date");
 	    editlastauthor = edit_element.getAttribute("author");
 	    text = edit_element.innerHTML;

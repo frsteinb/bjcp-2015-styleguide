@@ -881,7 +881,9 @@
 	  </xsl:variable>
 	  <xsl:choose>
 	    <xsl:when test="contains($s, 'remaining beers')">
-	      <xsl:value-of select="$s"/>
+	      <xsl:element name="p">
+		<xsl:value-of select="$s"/>
+	      </xsl:element>
 	    </xsl:when>
 	    <xsl:when test="$s = ''">
 	    </xsl:when>
@@ -899,6 +901,7 @@
 	      </xsl:element>
 	    </xsl:when>
 	    <xsl:otherwise>
+	      <xsl:element name="h5">
 	      <xsl:element name="a">
 		<xsl:attribute name="href">
 		  <xsl:text>#</xsl:text>
@@ -955,7 +958,7 @@
 		<xsl:text>: </xsl:text>
 		<xsl:value-of select="$s"/>
 	      </xsl:element>
-	      <xsl:element name="br"/>
+	      </xsl:element>
 	    </xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:apply-templates select="following-sibling::*[1]" mode="in-chapter"/>

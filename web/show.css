@@ -28,6 +28,11 @@ styleguide h4 {
     font-weight: bold;
 }
 
+styleguide h5 {
+    display: block;
+    margin-left: 1em;
+}
+
 styleguide ol {
     display: block;
     list-style-type: decimal;
@@ -92,7 +97,7 @@ styleguide subcategory {
     transition-duration: .3s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     overflow-y: hidden;
-    max-height: 6000px;
+    max-height: 60000px;
 }
 
 styleguide b {

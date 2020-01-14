@@ -83,6 +83,7 @@
       <xsd:element name="h2" type="Headline"/>
       <xsd:element name="h3" type="Headline"/>
       <xsd:element name="h4" type="Headline"/>
+      <xsd:element name="h5" type="Headline"/>
       <xsd:element ref="table"/>
       <xsd:element ref="ul"/>
       <xsd:element ref="ol"/>
@@ -323,6 +324,9 @@
   </xsd:complexType>
 
   <xsd:complexType name="Headline" mixed="true">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="a"/>
+    </xsd:choice>
     <xsd:attribute name="id" type="Id"/>
   </xsd:complexType>
 

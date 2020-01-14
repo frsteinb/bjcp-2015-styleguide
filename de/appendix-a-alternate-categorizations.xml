@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styleguide xmlns="http://heimbrauconvention.de/bjcp-styleguide/2015">
+  <chapter id="appendix-a-alternate-categorizations">
+    <h2>Anhang A: Alternative Kategorisierungen</h2>
+    <p>Many have requested alternate categorizations of the BJCP styles since the guidelines may be used for purposes other than homebrew competitions (e.g., education, research, study). To better meet these needs, additional systems have been developed. The alternate categories are listed, along with the current 2015 Styles from the main guidelines.</p>
+    <h3 id="1-styles-sorted-using-2008-categories-strict">1. Stile sortiert nach Kategirien aus 2008 (Strikt)</h3>
+    <p>This system uses the 2008 categories with the equivalent beer styles from the 2015 guidelines. Any 2015 style not present in the 2008 guidelines is categorized as a Category 23 Specialty Beer.</p>
+    <h3 id="2-styles-sorted-using-2008-guidelines-modified">2. Styles Sorted Using 2008 Guidelines (Modified)</h3>
+    <p>This system uses the 2008 categories with the nearest equivalent beer styles from the 2015 guidelines. New styles introduced in the 2015 guidelines have been added to the (subjectively determined) most appropriate 2008 categories.</p>
+    <h3 id="3-styles-sorted-using-style-family">3. Styles Sorted Using Style Family</h3>
+    <p>This system uses new categories based on the style family or beer style name without regard to country of origin or history; based primarily on color and yeast. Has fewer, broader categories.</p>
+    <h3 id="4-styles-sorted-using-country-of-origin">4. Styles Sorted Using Country of Origin</h3>
+    <p>This system uses new categories based on country of origin. Specialty beers omitted.</p>
+    <h3 id="5-styles-sorted-using-history">5. Styles Sorted Using History</h3>
+    <p>This system attempts to break the styles into groups based on historical development and derived styles in a more granular approach than the style family sorting.</p>
+  </chapter>
+</styleguide>
